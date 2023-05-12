@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewpoint" content="width=device-width", initial-scale="1.0"> 
-        <link rel="stylesheet" href="CSS/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-        <title>Challenge Nay C Diaz</title>
-    </head>
-    <body>
-        <header>
-            <img class="logo" src="img/Logo.png" alt="Logo de alura">
-            <a href="../"><span><i class="fa-solid fa-house"></i></i></span></a>
-        </header>
-        <main>
-            <section>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width" , initial-scale="1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Challenge Nay C Diaz</title>
+</head>
+<body>
+    <header>
+        <img class="logo" height="30px" src="img/Logo.png" alt="Logo de alura">
+        <a href="../../"><span><i class="fa-solid fa-house"></i></i></span></a>
+    </header>
+    <main class="grid-container">
+        <section>
+            <div class="div-encriptador">
                 <textarea class="cajaTexto" cols="30" rows="10" placeholder="Ingrese el texto aqui "></textarea>
                 <div>
                     <h6 class="informacion">Solo letras minusculas y sin acentos</h6>
@@ -25,16 +27,25 @@
                     <button class="botonEnviar" onclick="btnEncriptar()">Encriptar</button>
                     <button class="botonDesencriptador" onclick=" btnDesencriptar()">Desencriptar</button>
                 </div>
-            </section>
-            <section>
-                <textarea class="cajaMensaje" cols="20" rows="12"></textarea>
-                <div>
+            </div>
+
+        </section>
+
+        <section>
+            <div class="div-desencriptador">
+                <textarea class="cajaMensaje" cols="20" rows="9"></textarea>
+                <div class="divBotones">
                     <button class="copiar" onclick="btnCopiar()">Copiar</button>
                 </div>
-            </section>
-        </main>
-        <script src="JS/scrip.js"></script>
-        <script src="https://kit.fontawesome.com/ec383dc983.js" crossorigin="anonymous"></script>
-    </body>
-    <footer></footer>
+            </div>
+        </section>
+    </main>
+    <script src="JS/scrip.js"></script>
+    <script src="https://kit.fontawesome.com/ec383dc983.js" crossorigin="anonymous"></script>
+</body>
+
+<footer>
+    <div></div>
+</footer>
+
 </html>
