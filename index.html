@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewpoint" content="width=device-width", initial-scale="1.0"> 
         <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/reset.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Montserrat:wght@300&display=swap"
@@ -12,21 +13,50 @@
         <title>Nayeli Carrizales Diaz</title>
     </head>
     <body>
-        <header class="grid-container">
-            <div class="div-titulo-principal">
-                <h1 class="laptop"><i class="fa-solid fa-microchip"></i></h1>
-                <h1 class="titulo-principal">Nayeli Carrizales Diaz</h1>
+        <header class="headerPrincipal">
+            <div class="container">
+                <h1 class="headerPrincipal-titulo">
+                    <a href="#">Nayeli C.D.</a>
+                </h1>
+
+                <nav class="headerPrincipal-nav">
+                    <a class="headerPrincipal-nav-link" href="">Sobre mi</a>
+                    <a class="headerPrincipal-nav-link" href="">Skills</a>
+                    <a class="headerPrincipal-nav-link" href="">Hobbies</a>
+                    <a class="headerPrincipal-nav-link" href="">Formacion</a>
+                    <a class="headerPrincipal-nav-link" href="">Proyectos</a>
+                    <a class="headerPrincipal-nav-link headerPrincipal-nav-link-app" href="">nayeli.carrizales.diaz@gmail.com</a>
+                </nav>
+
             </div> 
         </header>
-        <main class="grid-container">
+        <main class="grid-container contenidoPrincipal">
+            <div class="">
+                <div class="div-titulo-principal">
+                    <h1 class="laptop"><i class="fa-solid fa-microchip"></i></h1>
+                    <h1 class="titulo-principal">Nayeli Carrizales Diaz</h1>
+                </div>
+                <div class="">
+                    <h3>Soy formada en ingenieria de tecnologias de la informacion y comunicaciones enfoncado en front-end y actualmente estoy participando del proyecto Oracle ONE en Alura Latam</h3>
+                </div>
+                <div></div>
+            </div>
+            <div class="grid-container">
+                <div class="">
+                    <h1>Sobre Mi</h1>
+                    <p></p>
+                </div>
+            </div>
+        </main>
+        <section class="grid-container">
             <div class="div-btn">
-                <a href="PROYECTOS/challenge/index.html" ><button class="btn-proyecto"><i class="fa-solid fa-laptop-code icon-btn"></i>Encriptador Alura</button></a>
+                <a href="PROYECTOS/challenge/index.html"><button class="btn-proyecto"><i class="fa-solid fa-laptop-code icon-btn"></i>Encriptador Alura</button></a>
             </div>
             <div class="div-btn">
                 <a href="PROYECTOS/invitacion-boda/index.html"><button class="btn-proyecto"><i class="fa-solid fa-envelope-open-text icon-btn"></i>Proyecto Invitación</button></a>
             </div>
             <div class="div-btn"></div>
-        </main>
+        </section>
         <script src="https://kit.fontawesome.com/ec383dc983.js" crossorigin="anonymous"></script>
     </body>
 </html> 
