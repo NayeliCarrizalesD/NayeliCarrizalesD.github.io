@@ -200,9 +200,6 @@ body{
     align-items: center;
 }
 
-
-
-
 .icon-btn{
     background: #925e76;
 }
@@ -251,8 +248,6 @@ body{
     width: 12%; 
     flex-direction: column;
     align-items: center;
-
-
 	height: 130px;
 	background-color: #e2b6c6;
 	/*background-color: #cc9fa8;
@@ -347,16 +342,11 @@ body{
 	background-color: #AF5972;
 	padding-top: 20px;
     margin-top: 20px;
-	margin-bottom: 20px;
     color: #ebebeb;
-
 }
-
 
 .contenido-cards-hobbies {
 	margin-top: 20px;
-	margin-bottom: 20px;
-
     display: flex;
     flex-wrap: wrap;
 }
@@ -424,11 +414,13 @@ body{
 .seccion-formacion {
 	/*background-color: #b66e9d;
 	background-color: #AF5972;*/
-	padding-top: 20px;
-    margin-top: 20px;
+	background-color: #AAC9CE;
+	padding: 25px 0;
+     font-size: 1.3em;
+	line-height: 2;
+
 	margin-bottom: 20px;
 }
-
 
 .contenido-cards-formacion {
 	margin-top: 20px;
