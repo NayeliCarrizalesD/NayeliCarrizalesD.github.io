@@ -393,12 +393,14 @@ body{
 
 .seccion-formacion {
 	/*background-color: #b66e9d;
-	background-color: #AF5972;*/
-	background-color: #AAC9CE;
+	background-color: #AF5972;
+	background-color: #AAC9CE;*/
+	background-color: #034C65;
 	padding: 25px 0;
      font-size: 1.3em;
 	line-height: 2;
 	margin-bottom: 20px;
+	color: #ebebeb;
 }
 
 .contenido-cards-formacion {
@@ -415,7 +417,9 @@ body{
     flex-direction: column;
     align-items: center;
 	height: 150px;
-	background-color: #e2b6c6;
+	background-color: #EBCFC4;
+	background-color: #F4EEE1;
+	background-color: #EFF4F8;
 	/*background-color: #cc9fa8;
 	background-color: #E5C1CD;*/
 	text-align: center;
@@ -426,9 +430,8 @@ body{
 }
 
 .card-formacion:hover {
-
    /* background-color: #FFFBDE;*/
-    background-color: #C78AB6;
+    background-color: #959BBD;
 	box-shadow: 4px 4px 4px #3B3759;
 
 }
