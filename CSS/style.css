@@ -61,8 +61,6 @@ body{
 	background-color: #7aacb3;
 }
 
-
-
 /*.grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -198,24 +196,6 @@ body{
 .contenido-sobre-mi {
     width: 90%;
     align-items: center;
-}
-
-.icon-btn{
-    background: #925e76;
-}
-
-.btn-proyecto{
-    background: #925e76;
-    border: 1px solid #b07a93;
-    border-radius: 25px;
-    color: white;
-    cursor: pointer;
-    height: 67px;
-    margin-left: 30px;
-    width: 328px;
-    font-size: 25px;
-    box-shadow: 0px 4px 5px rgba(0, 0, 0, .50) ;
-
 }
 
 /* skills */
@@ -418,7 +398,6 @@ body{
 	padding: 25px 0;
      font-size: 1.3em;
 	line-height: 2;
-
 	margin-bottom: 20px;
 }
 
@@ -433,11 +412,8 @@ body{
 .card-formacion {
     display: flex;
     width: 23%; 
-
     flex-direction: column;
     align-items: center;
-
-
 	height: 150px;
 	background-color: #e2b6c6;
 	/*background-color: #cc9fa8;
@@ -449,7 +425,6 @@ body{
 	position: relative;
 }
 
-
 .card-formacion:hover {
 
    /* background-color: #FFFBDE;*/
@@ -458,14 +433,104 @@ body{
 
 }
 
-
-
 .card-formacion .texto-card:before {
 	content: '';
 	display: block;
 	width: 50px;
 	height: 50px;
 	margin: 30px auto;
+}
+
+/*seccion proyectos*/
+
+.seccion-proyectos {
+	padding: 25px 0;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.contenido-cards-proyectos {
+	margin-top: 20px;
+	margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.div-btn {
+    margin: 10px;
+}
+
+.icon-btn{
+    background: #925e76;
+}
+
+.btn-proyecto{
+    background: #925e76;
+    border: 1px solid #b07a93;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    width: 328px;
+    font-size: 25px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, .50) ;
+
+}
+
+
+.card-proyectos {
+    display: flex;
+    width: 12%; 
+    flex-direction: column;
+    align-items: center;
+	height: 130px;
+	background-color: #e2b6c6;
+	/*background-color: #cc9fa8;
+	background-color: #E5C1CD;*/
+	text-align: center;
+	margin: 1%;
+	transition: .3s;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, .50);
+	position: relative;
+}
+
+.img-card{
+    width: 80px;
+   margin: 10px;
+}
+
+.texto-card {
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.card:hover {
+
+   /* background-color: #FFFBDE;*/
+    background-color: #C78AB6;
+	box-shadow: 4px 4px 4px #3B3759;
+}
+
+.texto-card:hover{
+    color: white;
+
+}
+
+.card .texto-card:before {
+	content: '';
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin: 20px auto;
 }
 
 
