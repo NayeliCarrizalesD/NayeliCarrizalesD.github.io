@@ -1039,6 +1039,10 @@ img {
   height: 720px;
 }
 
+.seccion-contacto .container {
+  display: flex;
+  flex-direction: column;
+}
 
 button,
 input,
@@ -1056,6 +1060,7 @@ a {
 .profile {
   display: flex;
   align-items: center;
+  align-self: center;
   flex-direction: column;
   padding: 3rem;
   width: 90%;
