@@ -336,7 +336,7 @@ li {
 .texto-carrousel {
   display: flex;
   flex-direction: column;
-padding: 30px 60px;
+  padding: 30px 60px;
   color: white;
   align-self: center;
   justify-content: center;
@@ -1128,7 +1128,7 @@ a {
   }
 }
 
-.btn {
+.btn-contacto-primary {
   border: 0;
   background-color: transparent;
   padding: 0;
@@ -1139,13 +1139,11 @@ a {
   cursor: pointer;
   line-height: 1;
   transition: 0.15s ease;
-
-  &--primary {
-    border-radius: 99em;
-    background-color: #3772ff;
-    background-image: linear-gradient(135deg, #5587ff, #3772ff);
-    color: #fff;
-    padding: 0 1.375em;
+  border-radius: 99em;
+  background-color: #3772ff;
+  background-image: linear-gradient(135deg, #5587ff, #3772ff);
+  color: #fff;
+  padding: 0 1.375em;
 
     &:hover,
     &:focus {
@@ -1153,80 +1151,91 @@ a {
     }
   }
 
-  &--icon {
-    height: 46px;
-    width: 46px;
-    border-radius: 50%;
-    border: 3px solid #343945;
+
+    .btn-contacto-icon {
+      border: 0;
+      background-color: transparent;
+      padding: 0;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      line-height: 1;
+      transition: 0.15s ease;
+      height: 46px;
+      width: 46px;
+      border-radius: 50%;
+      border: 3px solid #343945;
+      color: #7d8396;
+
+      i {
+        font-size: 1.25em;
+      }
+
+      &:hover,
+      &:focus {
+        border-color: #7d8396;
+      }
+    }
+ 
+
+  .profile-links {
+    margin-top: 3.5rem;
+  }
+
+  .link {
+    text-decoration: none;
     color: #7d8396;
+    margin-left: 0.375rem;
+    margin-right: 0.375rem;
 
     i {
       font-size: 1.25em;
     }
+  }
 
-    &:hover,
-    &:focus {
-      border-color: #7d8396;
+
+
+
+  /*--------------------- footer ---------------------*/
+
+  .rodapePrincipal {
+    background-color: #966978;
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+  }
+
+  .rodapePrincipal .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-contenido {
+    text-align: center;
+    align-self: center;
+  }
+
+  .rodapePrincipal .subtitulo {
+    color: #FFF;
+  }
+
+
+  @media (max-width: 576px) {
+
+    main,
+    header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px;
+      margin-left: 20px;
+
+
     }
   }
-}
 
-.profile-links {
-  margin-top: 3.5rem;
-}
-
-.link {
-  text-decoration: none;
-  color: #7d8396;
-  margin-left: 0.375rem;
-  margin-right: 0.375rem;
-
-  i {
-    font-size: 1.25em;
-  }
-}
-
-
-
-
-/*--------------------- footer ---------------------*/
-
-.rodapePrincipal {
-  background-color: #966978;
-  padding-top: 20px;
-  padding-bottom: 30px;
-
-}
-
-.rodapePrincipal .container {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-contenido {
-  text-align: center;
-  align-self: center;
-}
-
-.rodapePrincipal .subtitulo {
-  color: #FFF;
-}
-
-
-@media (max-width: 576px) {
-
-  main,
-  header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px;
-    margin-left: 20px;
-
-
-  }
-}
-
-/*.grid-container {
+  /*.grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 10px;
@@ -1248,7 +1257,7 @@ a {
 
 */
 
-/*background-color: #AAC9CE;
+  /*background-color: #AAC9CE;
 	background-color: #F1FFFA;
 	background-color: #DDDDDA;
 	background-color: #EBCFC4;
