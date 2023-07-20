@@ -1,0 +1,106 @@
+/* ------------------------------ skills----------------------------------------- */
+
+.seccion-skills {
+    padding: 25px 0;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.contenido-cards {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.titulo-card {
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+}
+
+.card {
+    display: flex;
+    width: 12%;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    height: 85px;
+    background-color: #e2b6c6;
+    /*background-color: #cc9fa8;
+	background-color: #E5C1CD;*/
+    margin: 1%;
+    transition: .3s;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, .50);
+    position: relative;
+
+}
+
+.img-card {
+    width: 62px;
+    margin: 5px;
+}
+
+.texto-card {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    height: 100%;
+    justify-content: right;
+}
+
+.card:hover {
+    /* background-color: #FFFBDE;*/
+    background-color: #C78AB6;
+    box-shadow: inset 3px 4px 5px rgba(0, 0, 0, .50);
+    color: white;
+}
+
+.texto-card:hover {
+    color: white;
+}
+
+.card .texto-card:before {
+
+    content: '';
+    display: block;
+    width: 40px;
+    height: 25px;
+    margin: 0px auto;
+}
+
+/* -------------------soft skills-------------------------------------- */
+
+
+.card-soft-skills {
+    display: flex;
+    width: 12%;
+    align-items: center;
+    border-radius: 30px;
+    height: 85px;
+    background-color: #e2b6c6;
+    text-align: center;
+    margin: 1%;
+    transition: .3s;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, .50);
+    position: relative;
+}
+
+.card-soft-skills:hover {
+    background-color: #C78AB6;
+    box-shadow: 0px 4px 5px #3B3759;
+}
+
+.card-soft-skills .texto-card:before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 23px;
+    margin: 0px auto;
+}
