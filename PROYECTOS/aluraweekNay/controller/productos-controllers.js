@@ -19,3 +19,5 @@ const nuevoProducto = (name, imageUrl, price, id) => {
 
     return card
 }
+
+const product = document.querySelector('[data-starWarsCategory]')
