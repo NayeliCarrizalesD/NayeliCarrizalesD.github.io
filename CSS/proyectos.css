@@ -186,6 +186,10 @@ img {
     background-image: url(../IMG/PROYECTOS/screen-2.png);
 }
 
+.card-image-3 {
+    background-image: url(../IMG/PROYECTOS/screen-3.png);
+}
+
 
 
 .card__title {
