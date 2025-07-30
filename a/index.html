@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Rivera - Liquid Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --accent: #f093fb;
+            --bg-primary: #0f0f23;
+            --bg-secondary: #1a1a2e;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+        
+        [data-theme="light"] {
+            --primary: #4f46e5;
+            --secondary: #7c3aed;
+            --accent: #ec4899;
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --glass: rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        body {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            cursor: none;
+        }
+        
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: difference;
+            transition: transform 0.1s ease;
+        }
+        
+        .cursor-trail {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            opacity: 0.7;
+        }
+        
+        /* Interactive Particles */
+        .particle-system {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 50%;
+            opacity: 0.6;
+            transition: all 0.3s ease;
+        }
+        
+        /* Diamond 3D Photo Container */
+        .diamond-container {
+            width: 250px;
+            height: 250px;
+            position: relative;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+            animation: diamondFloat 6s ease-in-out infinite;
+        }
+        
+        .diamond {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            transform-style: preserve-3d;
+            animation: diamondRotate 20s linear infinite;
+        }
+        
+        .diamond-face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, 
+                rgba(102, 126, 234, 0.8) 0%, 
+                rgba(118, 75, 162, 0.8) 50%, 
+                rgba(240, 147, 251, 0.8) 100%);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            transition: all 0.3s ease;
+        }
+        
+        .diamond-face:nth-child(1) { transform: rotateY(0deg) translateZ(100px); }
+        .diamond-face:nth-child(2) { transform: rotateY(90deg) translateZ(100px); }
+        .diamond-face:nth-child(3) { transform: rotateY(180deg) translateZ(100px); }
+        .diamond-face:nth-child(4) { transform: rotateY(270deg) translateZ(100px); }
+        
+        .diamond:hover .diamond-face {
+            background: linear-gradient(135deg, 
+                rgba(240, 147, 251, 0.9) 0%, 
+                rgba(102, 126, 234, 0.9) 50%, 
+                rgba(118, 75, 162, 0.9) 100%);
+            transform: scale(1.1);
+        }
+        
+        @keyframes diamondFloat {
+            0%, 100% { transform: translateY(0px) rotateX(10deg); }
+            50% { transform: translateY(-20px) rotateX(-10deg); }
+        }
+        
+        @keyframes diamondRotate {
+            0% { transform: rotateY(0deg) rotateX(15deg); }
+            100% { transform: rotateY(360deg) rotateX(15deg); }
+        }
+        
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(102, 126, 234, 0.3);
+            border-color: var(--primary);
+        }
+        
+        .glass-card:hover::before {
+            left: 100%;
+        }
+        
+        /* Liquid Morphing Shapes */
+        .liquid-shape {
+            position: absolute;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: liquidMorph 8s ease-in-out infinite;
+        }
+        
+        .liquid-shape:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+        
+        .liquid-shape:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            top: 60%;
+            right: -5%;
+            animation-delay: -2s;
+        }
+        
+        .liquid-shape:nth-child(3) {
+            width: 400px;
+            height: 400px;
+            bottom: -20%;
+            left: 30%;
+            animation-delay: -4s;
+        }
+        
+        @keyframes liquidMorph {
+            0%, 100% {
+                border-radius: 50% 50% 50% 50%;
+                transform: rotate(0deg) scale(1);
+            }
+            25% {
+                border-radius: 60% 40% 30% 70%;
+                transform: rotate(90deg) scale(1.1);
+            }
+            50% {
+                border-radius: 30% 70% 60% 40%;
+                transform: rotate(180deg) scale(0.9);
+            }
+            75% {
+                border-radius: 70% 30% 40% 60%;
+                transform: rotate(270deg) scale(1.05);
+            }
+        }
+        
+        /* Breathing Animation */
+        .breathe {
+            animation: breathe 4s ease-in-out infinite;
+        }
+        
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        /* Wave Effect */
+        .wave-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wave {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            animation: wave 3s ease-in-out infinite;
+        }
+        
+        @keyframes wave {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        /* Skill Orbs */
+        .skill-orb {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin: 0 auto;
+        }
+        
+        .skill-orb::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .skill-orb:hover {
+            transform: scale(1.1) rotateY(180deg);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+        }
+        
+        .skill-orb:hover::before {
+            opacity: 1;
+        }
+        
+        /* Project Cards with AR Effect */
+        .ar-card {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            transition: all 0.4s ease;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        
+        .ar-card:hover {
+            transform: rotateX(10deg) rotateY(10deg) translateZ(20px);
+            box-shadow: 
+                0 30px 60px rgba(102, 126, 234, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+        
+        .ar-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.1) 0%, 
+                transparent 50%, 
+                rgba(102, 126, 234, 0.1) 100%);
+            border-radius: 25px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .ar-card:hover::after {
+            opacity: 1;
+        }
+        
+        /* Asymmetric Grid */
+        .asymmetric-layout {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1.5fr;
+            grid-template-rows: auto auto auto auto;
+            gap: 30px;
+            margin: 80px 0;
+        }
+        
+        .layout-item-1 { grid-column: 1 / 2; grid-row: 1 / 3; }
+        .layout-item-2 { grid-column: 2 / 3; grid-row: 1 / 2; }
+        .layout-item-3 { grid-column: 3 / 4; grid-row: 1 / 4; }
+        .layout-item-4 { grid-column: 1 / 3; grid-row: 3 / 4; }
+        .layout-item-5 { grid-column: 2 / 3; grid-row: 2 / 3; }
+        
+        /* Typewriter with Glitch */
+        .typewriter {
+            overflow: hidden;
+            border-right: 3px solid var(--primary);
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: var(--primary); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .asymmetric-layout {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+            
+            .layout-item-1,
+            .layout-item-2,
+            .layout-item-3,
+            .layout-item-4,
+            .layout-item-5 {
+                grid-column: 1;
+                grid-row: auto;
+            }
+            
+            .diamond-container {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .diamond,
+            .diamond-face {
+                width: 150px;
+                height: 150px;
+            }
+        }
+        
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    
+    <!-- Interactive Particle System -->
+    <div class="particle-system" id="particleSystem"></div>
+    
+    <!-- Liquid Background Shapes -->
+    <div class="liquid-shape"></div>
+    <div class="liquid-shape"></div>
+    <div class="liquid-shape"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-card backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    ALEX.LIQUID
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link hover:text-purple-400 transition-colors" data-en="HOME" data-es="INICIO">INICIO</a>
+                    <a href="#about" class="nav-link hover:text-purple-400 transition-colors" data-en="ABOUT" data-es="ACERCA</a>
+                    <a href="#skills" class="nav-link hover:text-purple-400 transition-colors" data-en="SKILLS" data-es="HABILIDADES">HABILIDADES</a>
+                    <a href="#projects" class="nav-link hover:text-purple-400 transition-colors" data-en="PROJECTS" data-es="PROYECTOS">PROYECTOS</a>
+                    <a href="#contact" class="nav-link hover:text-purple-400 transition-colors" data-en="CONTACT" data-es="CONTACTO">CONTACTO</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button id="langSwitch" class="glass-card px-4 py-2 rounded-full text-sm font-bold hover:bg-purple-500 hover:text-white transition-all">
+                        ES | EN
+                    </button>
+                    <button id="themeSwitch" class="glass-card px-4 py-2 rounded-full hover:bg-purple-500 hover:text-white transition-all">
+                        🌙
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative pt-20">
+        <div class="max-w-7xl mx-auto px-6 z-10">
+            <div class="asymmetric-layout">
+                <!-- Diamond Photo -->
+                <div class="layout-item-1 flex items-center justify-center breathe">
+                    <div class="diamond-container">
+                        <div class="diamond">
+                            <div class="diamond-face">🚀</div>
+                            <div class="diamond-face">💻</div>
+                            <div class="diamond-face">🎨</div>
+                            <div class="diamond-face">⚡</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Title -->
+                <div class="layout-item-2 text-center fade-in">
+                    <h1 class="text-6xl md:text-8xl font-black mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                        ALEX<br>RIVERA
+                    </h1>
+                    <div class="text-2xl md:text-3xl mb-8 h-12 font-bold">
+                        <span id="typewriter" class="typewriter"></span>
+                    </div>
+                </div>
+                
+                <!-- Floating Stats -->
+                <div class="layout-item-3 space-y-6 fade-in">
+                    <div class="glass-card p-6 rounded-2xl wave-container">
+                        <div class="wave"></div>
+                        <h3 class="text-purple-400 font-bold mb-4 font-mono">[SYSTEM.STATUS]</h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span>EDAD:</span>
+                                <span class="text-purple-400">19</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>NIVEL:</span>
+                                <span class="text-pink-400">AVANZADO</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>ESTADO:</span>
+                                <span class="text-green-400">ACTIVO</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>MODO:</span>
+                                <span class="text-blue-400">CREATIVO</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card p-6 rounded-2xl breathe">
+                        <h3 class="text-pink-400 font-bold mb-4 font-mono">[QUICK.ACCESS]</h3>
+                        <div class="space-y-2">
+                            <button class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 rounded-lg hover:scale-105 transition-transform">
+                                GitHub
+                            </button>
+                            <button class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 rounded-lg hover:scale-105 transition-transform">
+                                LinkedIn
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Description -->
+                <div class="layout-item-4 fade-in">
+                    <div class="glass-card p-8 rounded-3xl">
+                        <p class="text-lg mb-6 leading-relaxed" data-en="19-year-old Systems Engineering student passionate about creating liquid, interactive experiences that blend reality with digital innovation. Specializing in Web3, blockchain, and next-generation user interfaces." data-es="Estudiante de Ingeniería en Sistemas de 19 años apasionado por crear experiencias líquidas e interactivas que fusionan la realidad con la innovación digital. Especializado en Web3, blockchain e interfaces de usuario de próxima generación.">
+                            Estudiante de Ingeniería en Sistemas de 19 años apasionado por crear experiencias líquidas e interactivas que fusionan la realidad con la innovación digital. Especializado en Web3, blockchain e interfaces de usuario de próxima generación.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-2xl font-bold hover:scale-105 transition-transform" data-en="EXPLORE UNIVERSE" data-es="EXPLORAR UNIVERSO">
+                                EXPLORAR UNIVERSO
+                            </button>
+                            <button class="glass-card px-8 py-4 rounded-2xl font-bold hover:bg-purple-500 hover:text-white transition-all" data-en="DOWNLOAD CV" data-es="DESCARGAR CV">
+                                DESCARGAR CV
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Floating Element -->
+                <div class="layout-item-5 flex items-center justify-center fade-in">
+                    <div class="glass-card p-6 rounded-full w-32 h-32 flex items-center justify-center text-4xl breathe">
+                        🌟
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 relative z-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent fade-in">
+                <span data-en="LIQUID SKILLS" data-es="HABILIDADES LÍQUIDAS">HABILIDADES LÍQUIDAS</span>
+            </h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">⚛️</div>
+                        <div class="text-xs font-bold">REACT</div>
+                        <div class="text-xs text-purple-400">95%</div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🟨</div>
+                        <div class="text-xs font-bold">JS</div>
+                        <div class="text-xs text-purple-400">92%</div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🐍</div>
+                        <div class="text-xs font-bold">PYTHON</div>
+                        <div class="text-xs text-purple-400">88%</div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">⟠</div>
+                        <div class="text-xs font-bold">WEB3</div>
+                        <div class="text-xs text-purple-400">85%</div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🎨</div>
+                        <div class="text-xs font-bold">UI/UX</div>
+                        <div class="text-xs text-purple-400">90%</div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🔗</div>
+                        <div class="text-xs font-bold">BLOCKCHAIN</div>
+                        <div class="text-xs text-purple-400">82%</div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🚀</div>
+                        <div class="text-xs font-bold">NODE</div>
+                        <div class="text-xs text-purple-400">87%</div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">💎</div>
+                        <div class="text-xs font-bold">SOLIDITY</div>
+                        <div class="text-xs text-purple-400">80%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gradient-to-b from-transparent to-purple-900/20 relative z-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text text-transparent fade-in">
+                <span data-en="LIQUID PROJECTS" data-es="PROYECTOS LÍQUIDOS">PROYECTOS LÍQUIDOS</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="ar-card p-6 fade-in">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                        🌊
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                        LiquidDeFi
+                    </h3>
+                    <p class="text-gray-300 mb-4 text-sm" data-en="Next-generation DeFi protocol with liquid staking and morphing yields" data-es="Protocolo DeFi de próxima generación con staking líquido y rendimientos morfológicos">
+                        Protocolo DeFi de próxima generación con staking líquido y rendimientos morfológicos
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-purple-600 px-3 py-1 rounded-full text-xs">Solidity</span>
+                        <span class="bg-pink-600 px-3 py-1 rounded-full text-xs">React</span>
+                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">Web3</span>
+                    </div>
+                    <button class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="DIVE IN" data-es="SUMERGIRSE">
+                        SUMERGIRSE
+                    </button>
+                </div>
+                
+                <div class="ar-card p-6 fade-in">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                        🎮
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        MetaMorph
+                    </h3>
+                    <p class="text-gray-300 mb-4 text-sm" data-en="Shape-shifting NFT game where characters evolve through liquid transformations" data-es="Juego NFT metamórfico donde los personajes evolucionan a través de transformaciones líquidas">
+                        Juego NFT metamórfico donde los personajes evolucionan a través de transformaciones líquidas
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">Unity</span>
+                        <span class="bg-purple-600 px-3 py-1 rounded-full text-xs">C#</span>
+                        <span class="bg-green-600 px-3 py-1 rounded-full text-xs">NFT</span>
+                    </div>
+                    <button class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="TRANSFORM" data-es="TRANSFORMAR">
+                        TRANSFORMAR
+                    </button>
+                </div>
+                
+                <div class="ar-card p-6 fade-in">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                        🧠
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+                        FluidAI
+                    </h3>
+                    <p class="text-gray-300 mb-4 text-sm" data-en="AI system that adapts and flows like liquid, learning from user interactions" data-es="Sistema de IA que se adapta y fluye como líquido, aprendiendo de las interacciones del usuario">
+                        Sistema de IA que se adapta y fluye como líquido, aprendiendo de las interacciones del usuario
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-green-600 px-3 py-1 rounded-full text-xs">Python</span>
+                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">TensorFlow</span>
+                        <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs">ML</span>
+                    </div>
+                    <button class="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="FLOW" data-es="FLUIR">
+                        FLUIR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative z-10">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent fade-in">
+                <span data-en="LIQUID CONNECTION" data-es="CONEXIÓN LÍQUIDA">CONEXIÓN LÍQUIDA</span>
+            </h2>
+            
+            <p class="text-xl text-gray-300 mb-12 fade-in" data-en="Ready to create something that flows beyond imagination? Let's merge our creative energies and build liquid experiences together." data-es="¿Listo para crear algo que fluya más allá de la imaginación? Fusionemos nuestras energías creativas y construyamos experiencias líquidas juntos.">
+                ¿Listo para crear algo que fluya más allá de la imaginación? Fusionemos nuestras energías creativas y construyamos experiencias líquidas juntos.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="glass-card p-8 rounded-3xl hover:scale-105 transition-transform breathe fade-in">
+                    <div class="text-5xl mb-4">💧</div>
+                    <h3 class="font-bold mb-2 text-purple-400">EMAIL.FLOW</h3>
+                    <p class="text-gray-300">alex.liquid@flow.dev</p>
+                </div>
+                
+                <div class="glass-card p-8 rounded-3xl hover:scale-105 transition-transform breathe fade-in">
+                    <div class="text-5xl mb-4">🌊</div>
+                    <h3 class="font-bold mb-2 text-pink-400">GITHUB.STREAM</h3>
+                    <p class="text-gray-300">@alexliquid</p>
+                </div>
+                
+                <div class="glass-card p-8 rounded-3xl hover:scale-105 transition-transform breathe fade-in">
+                    <div class="text-5xl mb-4">⚡</div>
+                    <h3 class="font-bold mb-2 text-blue-400">LINKEDIN.PULSE</h3>
+                    <p class="text-gray-300">@alex-rivera-liquid</p>
+                </div>
+            </div>
+            
+            <div class="glass-card p-12 rounded-3xl fade-in">
+                <h3 class="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    <span data-en="READY TO FLOW?" data-es="¿LISTO PARA FLUIR?">¿LISTO PARA FLUIR?</span>
+                </h3>
+                <button class="bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:scale-110 transition-transform breathe" data-en="START FLOWING" data-es="COMENZAR A FLUIR">
+                    COMENZAR A FLUIR 🌊
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-gray-400 relative z-10 glass-card">
+        <p data-en="© 2024 Alex Rivera - Flowing Through Digital Dimensions 🌊" data-es="© 2024 Alex Rivera - Fluyendo a Través de Dimensiones Digitales 🌊">
+            © 2024 Alex Rivera - Fluyendo a Través de Dimensiones Digitales 🌊
+        </p>
+    </footer>
+
+    <script>
+        // Global variables
+        let currentLang = 'es';
+        let currentTheme = 'dark';
+        let mouseX = 0;
+        let mouseY = 0;
+        let particles = [];
+        let cursorTrails = [];
+        
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeCursor();
+            initializeParticles();
+            startTypewriter();
+            initializeControls();
+            initializeScrollAnimations();
+        });
+        
+        // Custom cursor
+        function initializeCursor() {
+            const cursor = document.getElementById('cursor');
+            
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                
+                cursor.style.left = mouseX - 10 + 'px';
+                cursor.style.top = mouseY - 10 + 'px';
+                
+                // Create cursor trail
+                createCursorTrail(mouseX, mouseY);
+                
+                // Update particles
+                updateParticles();
+            });
+            
+            // Cursor effects on hover
+            document.querySelectorAll('button, a, .skill-orb').forEach(element => {
+                element.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(2)';
+                });
+                
+                element.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                });
+            });
+        }
+        
+        // Cursor trail
+        function createCursorTrail(x, y) {
+            const trail = document.createElement('div');
+            trail.className = 'cursor-trail';
+            trail.style.left = x - 2 + 'px';
+            trail.style.top = y - 2 + 'px';
+            document.body.appendChild(trail);
+            
+            setTimeout(() => {
+                trail.style.opacity = '0';
+                trail.style.transform = 'scale(0)';
+                setTimeout(() => trail.remove(), 300);
+            }, 100);
+        }
+        
+        // Interactive particles
+        function initializeParticles() {
+            const particleSystem = document.getElementById('particleSystem');
+            
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * window.innerWidth + 'px';
+                particle.style.top = Math.random() * window.innerHeight + 'px';
+                particleSystem.appendChild(particle);
+                
+                particles.push({
+                    element: particle,
+                    x: Math.random() * window.innerWidth,
+                    y: Math.random() * window.innerHeight,
+                    vx: (Math.random() - 0.5) * 2,
+                    vy: (Math.random() - 0.5) * 2
+                });
+            }
+        }
+        
+        function updateParticles() {
+            particles.forEach(particle => {
+                // Move towards mouse
+                const dx = mouseX - particle.x;
+                const dy = mouseY - particle.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < 100) {
+                    particle.vx += dx * 0.0001;
+                    particle.vy += dy * 0.0001;
+                }
+                
+                // Update position
+                particle.x += particle.vx;
+                particle.y += particle.vy;
+                
+                // Bounce off edges
+                if (particle.x < 0 || particle.x > window.innerWidth) particle.vx *= -1;
+                if (particle.y < 0 || particle.y > window.innerHeight) particle.vy *= -1;
+                
+                // Apply friction
+                particle.vx *= 0.99;
+                particle.vy *= 0.99;
+                
+                // Update DOM
+                particle.element.style.left = particle.x + 'px';
+                particle.element.style.top = particle.y + 'px';
+            });
+        }
+        
+        // Typewriter effect
+        function startTypewriter() {
+            const typewriter = document.getElementById('typewriter');
+            const texts = {
+                es: ['DESARROLLADOR LÍQUIDO', 'ARQUITECTO WEB3', 'DISEÑADOR DE EXPERIENCIAS', 'INNOVADOR DIGITAL'],
+                en: ['LIQUID DEVELOPER', 'WEB3 ARCHITECT', 'EXPERIENCE DESIGNER', 'DIGITAL INNOVATOR']
+            };
+            
+            let textIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            
+            function type() {
+                const currentTexts = texts[currentLang];
+                const currentText = currentTexts[textIndex];
+                
+                if (isDeleting) {
+                    typewriter.textContent = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    typewriter.textContent = currentText.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+                
+                let typeSpeed = isDeleting ? 50 : 100;
+                
+                if (!isDeleting && charIndex === currentText.length) {
+                    typeSpeed = 2000;
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    textIndex = (textIndex + 1) % currentTexts.length;
+                    typeSpeed = 500;
+                }
+                
+                setTimeout(type, typeSpeed);
+            }
+            
+            type();
+        }
+        
+        // Controls
+        function initializeControls() {
+            document.getElementById('langSwitch').addEventListener('click', switchLanguage);
+            document.getElementById('themeSwitch').addEventListener('click', switchTheme);
+            
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+        
+        function switchLanguage() {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            
+            document.querySelectorAll('[data-en][data-es]').forEach(element => {
+                element.textContent = element.getAttribute(`data-${currentLang}`);
+            });
+            
+            document.getElementById('langSwitch').textContent = currentLang === 'es' ? 'ES | EN' : 'EN | ES';
+        }
+        
+        function switchTheme() {
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            document.getElementById('themeSwitch').textContent = currentTheme === 'dark' ? '🌙' : '☀️';
+        }
+        
+        // Scroll animations
+        function initializeScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.fade-in').forEach(element => {
+                observer.observe(element);
+            });
+        }
+        
+        // Resize handler
+        window.addEventListener('resize', () => {
+            particles.forEach(particle => {
+                if (particle.x > window.innerWidth) particle.x = window.innerWidth;
+                if (particle.y > window.innerHeight) particle.y = window.innerHeight;
+            });
+        });
+        
+        // Animation loop
+        function animate() {
+            updateParticles();
+            requestAnimationFrame(animate);
+        }
+        
+        animate();
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'966c9508f23ad87a',t:'MTc1Mzc5MTc1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
