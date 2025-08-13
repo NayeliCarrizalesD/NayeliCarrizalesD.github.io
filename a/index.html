@@ -1,773 +1,1086 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nayeli Carrizales</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../CSS/general.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width" , initial-scale="1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/head-style.css">
+    <link rel="stylesheet" href="CSS/contenido-principal-style.css">
+    <link rel="stylesheet" href="CSS/profesional-style.css">
+    <link rel="stylesheet" href="CSS/proyectos.css">
+    <link rel="stylesheet" href="CSS/skills-style.css">
+    <link rel="stylesheet" href="CSS/hobbies-style.css">
+    <link rel="stylesheet" href="CSS/educacion-style.css">
+    <link rel="stylesheet" href="CSS/contacto-style.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <title>Nayeli Carrizales Diaz</title>
 </head>
+
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor" id="cursor"></div>
-    
-    <!-- Interactive Particle System -->
-    <div class="particle-system" id="particleSystem"></div>
-    
-    <!-- Liquid Background Shapes -->
-    <div class="liquid-shape"></div>
-    <div class="liquid-shape"></div>
-    <div class="liquid-shape"></div>
-    
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass-card backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    NAY.DIAZ
+    <header class="headerPrincipal">
+        <div class="container">
+            <h1 class="headerPrincipal-titulo">
+                <a href="#">Nayeli C.D.</a>
+            </h1>
+
+            <nav class="headerPrincipal-nav">
+                <a class="headerPrincipal-nav-link" href="#sobreMi">Sobre mi</a>
+                <a class="headerPrincipal-nav-link" href="#proyectos">Proyectos</a>
+                <a class="headerPrincipal-nav-link" href="#skills">Skills</a>
+                <a class="headerPrincipal-nav-link" href="#hobbies">Hobbies</a>
+                <a class="headerPrincipal-nav-link" href="#formcacion">Formacion</a>
+                <a class="headerPrincipal-nav-link headerPrincipal-nav-link-app"
+                    href="#contacto">nayeli.carrizales.diaz@gmail.com</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="contenidoPrincipal" id="sobreMi">
+        <div class="container">
+
+            <div class="div-nombre">
+                <div class="div-titulo-principal">
+                    <h1 class="icon-fondo"><i class="fa-solid fa-microchip"></i></h1>
+                    <h1 class="titulo-principal">Nayeli Carrizales Diaz</h1>
                 </div>
+
+                <h3>Soy formada en ingenieria de tecnologias de la informacion y comunicaciones, <br> enfoncado en front-end y actualmente estoy participando en el proyecto Oracle ONE en Alura Latam</h3><br>
+
+                <nav class="links-profesionales-nav">
+                    <a class="nav-link-profesional" href="https://github.com/NayeliCarrizalesD" target="_blank">Github
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a class="nav-link-profesional" href="https://www.linkedin.com/in/nayeli-carrizales-diaz/"
+                        target="_blank">LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a class="nav-link-profesional"
+                        href="https://www.dropbox.com/scl/fi/1tzpuuz62ujy3zq40q4cy/Nayeli-Carrizales-CV.pdf?rlkey=1sc2akbciqgs897gabp3k2yih&st=8ncrymbt&dl=0"
+                        target="_blank">Curriculum <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </nav>
+            </div>
+
+            <div class="div-avatar">
+                <img src="IMG/nay-by-save-sin-fondo.png" width="340px">
+            </div>
+        </div>
+    </main>
+
+    <section class="div-sobre-mi">
+        <div class="container">
+
+            <h1 class="titulo-sobre-mi">Sobre Mi</h1><br>
+
+            <div class="contenido-sobre-mi">
+                <p>
+                    Soy Ingeniera en Tecnologías de la Información y Comunicaciones, especializada en desarrollo front-end. Me defino como una persona creativa, proactiva, dinámica y en constante evolución, cualidades que me permiten adaptarme a los cambios tecnológicos y responder con eficiencia a los desafíos del entorno digital.
+                </p>
+                <p>
+                    Valoro mucho el trabajo en equipo, fomentando un ambiente bueno y empático con mis equipos. Creo que las mejores soluciones surgen del respeto mutuo y la cooperación, por eso siempre busco aportar de forma positiva y constructiva en cada proyecto.
+                </p>
+                <p>
+                    Cuento con experiencia en atención al cliente, gestión del tiempo y resolución de problemas. Mantengo una actitud profesional, cualidades que me permiten ofrecer resultados de calidad alineados con los objetivos.
+                </p>
+                <br>
+                <p>
+                    Mi filosofía es simple: nunca dejamos de aprender. Por ello, me mantengo en constante actualización para ofrecer soluciones modernas, funcionales y centradas en la experiencia del usuario.
+                </p>
+                <br>
+
                 
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link hover:text-purple-400 transition-colors" data-en="HOME" data-es="INICIO">INICIO</a>
-                    <a href="#about" class="nav-link hover:text-purple-400 transition-colors" data-en="ABOUT" data-es="ACERCA DE">ACERCA DE</a>
-                    <a href="#projects" class="nav-link hover:text-purple-400 transition-colors" data-en="PROJECTS" data-es="PROYECTOS">PROYECTOS</a>
-                    <a href="#skills" class="nav-link hover:text-purple-400 transition-colors" data-en="SKILLS" data-es="HABILIDADES">HABILIDADES</a>
-                    <a href="#hobbies" class="nav-link hover:text-purple-400 transition-colors" data-en="HOBBIES" data-es="PASATIEMPOS">PASATIEMPOS</a>
-                    <a href="#contact" class="nav-link hover:text-purple-400 transition-colors" data-en="CONTACT" data-es="CONTACTO">CONTACTO</a>
+                <h3 style="font-weight: bold;">Tech Stack</h3>
+                <p> Mi conjunto de herramientas y tecnologías incluye:</p>
+                <ul>
+                   
+                    <li>
+                        ♦ Lenguajes: <strong style="font-weight: bold;">HTML5, CSS3, JavaScript, TypeScript</strong>
+                    </li>
+                    <li>
+                        ♦ Frameworks y Librerías: <strong style="font-weight: bold;">React, Next.js, Tailwind CSS3</strong>
+                    </li>
+                    <li>
+                        ♦ Herramientas de desarrollo: <strong style="font-weight: bold;">Git, GitHub, Visual Studio Code, Figma</strong>
+                    </li>
+                    <li>
+                        ♦ Integración y despliegue: <strong style="font-weight: bold;">Vercel, APIs REST</strong>
+                    </li>
+                    <li>
+                        ♦ Control de versiones y colaboración: <strong style="font-weight: bold;">GitHub Projects, Trello, Notion, Basecamp</strong>
+                    </li>
+                    <li>
+                        ♦ Pruebas y calidad: <strong style="font-weight: bold;">ESLint</strong>
+                    </li>
+                
+                </ul>
+
+                <p>
+                Siempre estoy explorando nuevas tecnologías para mantenerme al día con las mejores prácticas del desarrollo web moderno.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-proyectos" id="proyectos">
+            
+            <!--div class="div-proyectos-carrousel">
+                <h3 class="titulo-card">Experiencia profesional</h3>
+                <section class="carousel" aria-label="Gallery">
+                    <ol class="carousel__viewport">
+                        
+                        <li id="carousel-slide1" tabindex="0" class="carousel__slide">
+                            <div class="carousel__snapper"></div>
+                            
+                            <div class="texto-carrousel">
+                                
+                                <h3> 
+                                    Cargo: 
+                                    <b>
+                                        Especialista en soporte técnico, diseno Web, creador de contenido
+                                    </b>
+                                </h3>
+                                <h3>
+                                    Tipo de empleo: 
+                                    <b>
+                                        Jornada completa 
+                                    </b>
+                                </h3>
+                                <h3>
+                                    Empresa: 
+                                    <b>
+                                        AIPISOFT
+                                    </b>
+                                </h3>
+                                <h3>Tipo de ubicacion: 
+                                    <b>
+                                        Remoto
+                                    </b> 
+                                </h3>
+                                <h3>
+                                    Fecha de inicio: 
+                                    <b>
+                                        Diciembre 2021
+                                    </b>
+
+                                </h3>
+                                <h3>
+                                    Fecha de finalizacion: 
+                                    <b>
+                                        Noviembre 2022
+                                    </b>
+
+                                </h3>
+                                <h3>
+                                    <b>
+                                        Descripcion: 
+                                    </b>
+                                    Dentro de mis funciones era realizar soporte técnico sobre un software contable basado en JAVA, crear documentación
+                                    sobre el mismo software para el usuario, de igual forma estaba encargada del desarrollo y edición de la página web
+                                    informativa.
+                                </h3>
+
+                            </div>
+
+                            <a href="#carousel-slide5" class="carousel__prev">Go to last slide</a>
+                            <a href="#carousel-slide2" class="carousel__next">Go to next slide</a>
+                        </li>
+                        
+                        <li id="carousel-slide2" tabindex="0" class="carousel__slide">
+                            <div class="carousel__snapper"></div>
+
+                            <div class="texto-carrousel">
+                                <h3>
+                                    Cargo:
+                                    <b>
+                                        Desarrollador de front-end
+                                    </b>
+                                </h3>
+                                <h3>
+                                    Tipo de empleo:
+                                    <b>
+                                        Jornada completa
+                                    </b>
+                                </h3>
+                                <h3>
+                                    Empresa:
+                                    <b>
+                                        Soluciones de Innovación Tecnológica
+                                    </b>
+                                </h3>
+                                <h3>Tipo de ubicacion:
+                                    <b>
+                                        Presencial
+                                    </b>
+                                </h3>
+                                <h3>
+                                    Fecha de inicio:
+                                    <b>
+                                        Marzo 2019
+                                    </b>
+                            
+                                </h3>
+                                <h3>
+                                    Fecha de finalizacion:
+                                    <b>
+                                        Enero 2022
+                                    </b>
+                            
+                                </h3>
+                                <h3>
+                                    <b>
+                                        Descripcion:
+                                    </b>
+                                    Funciones principales: desarrollo y edición de páginas web, desde el diseño de casos de usos, diseño y creacion de bases de datos, hasta el maquetado. También desarrollo de funciones mediante JavaScript y JQuery.
+                                </h3>
+                            
+                            </div>
+                                
+                            <a href="#carousel-slide1" class="carousel__prev">Go to previous slide</a>
+                            <a href="#carousel-slide3" class="carousel__next">Go to next slide</a>
+                        </li>
+                        <li id="carousel-slide3" tabindex="0" class="carousel__slide">
+                            <div class="carousel__snapper"></div>
+                            
+                            <div class="texto-carrousel">
+                                <h3>
+                                    Cargo:
+                                    <b>
+                                        Director de proyecto
+                                    </b>
+                                </h3>
+                                <h3>
+                                    Tipo de empleo:
+                                    <b>
+                                        Jornada completa
+                                    </b>
+                                </h3>
+                                <h3>
+                                    Empresa:
+                                    <b>
+                                        Proyectos de Software Odisea
+                                    </b>
+                                </h3>
+                                <h3>Tipo de ubicacion:
+                                    <b>
+                                        Híbrido
+                                    </b>
+                                </h3>
+                                <h3>
+                                    Fecha de inicio:
+                                    <b>
+                                        Enero 20217
+                                    </b>
+                            
+                                </h3>
+                                <h3>
+                                    Fecha de finalizacion:
+                                    <b>
+                                        Junio 2022
+                                    </b>
+                            
+                                </h3>
+                                <h3>
+                                    <b>
+                                        Descripcion:
+                                    </b>
+                                    Funciones principales como, monitorear y coordinar al equipo para realizar proyectos, realizar renuines con los
+                                    clientes para recaudar los datos que se requieren para desarrollar los proyectos, crear casos de usos de los
+                                    proyectos, apoyar en el desarrollo de los mismos, en la parte de front-end y realizar la maquetación de los
+                                    proyectos y diseño de base de
+                                    datos.
+                                </h3>
+                            
+                            </div>
+                            
+                            <a href="#carousel-slide2" class="carousel__prev">Go to previous slide</a>
+                            <a href="#carousel-slide4" class="carousel__next">Go to next slide</a>
+                        </li>
+                        <li id="carousel-slide4" tabindex="0" class="carousel__slide">
+                            <div class="carousel__snapper"></div>
+                        
+                            <div class="texto-carrousel">
+                        
+                                <h3>
+                                    Cargo:
+                                    <b>
+                                        Interno de desarrollo web
+                                    </b>
+                                </h3>
+                                <h3>
+                                    Tipo de empleo:
+                                    <b>
+                                        Contrato de prácticas
+                                    </b>
+                                </h3>
+                                <h3>
+                                    Empresa:
+                                    <b>
+                                        PCBRAPIDO
+                                    </b>
+                                </h3>
+                                <h3>Tipo de ubicacion:
+                                    <b>
+                                        Presencial
+                                    </b>
+                                </h3>
+                                <h3>
+                                    Fecha de inicio:
+                                    <b>
+                                        Agosto 2016
+                                    </b>
+                        
+                                </h3>
+                                <h3>
+                                    Fecha de finalizacion:
+                                    <b>
+                                        Diciembre 2016
+                                    </b>
+                        
+                                </h3>
+                                <h3>
+                                    <b>
+                                        Descripcion:
+                                    </b>
+                                    Funciones principales: crear los casos de uso, para realizar el diseño de la pagina web, diseñar las base de
+                                    datos, desarrollar la pagina web y brindar el mantenimiento de la misma.
+                                </h3>
+                        
+                            </div>
+                        
+                            <a href="#carousel-slide3" class="carousel__prev">Go to previous slide</a>
+                            <a href="#carousel-slide5" class="carousel__next">Go to first slide</a>
+                        </li>
+                        <li id="carousel-slide5" tabindex="0" class="carousel__slide">
+                            <div class="carousel__snapper"></div>
+                            
+                            <div class="texto-carrousel">
+                                
+                                <h3>
+                                    Cargo:
+                                    <b>
+                                        Interno de desarrollo web
+                                    </b>
+                                </h3>
+                                <h3>
+                                    Tipo de empleo:
+                                    <b>
+                                        Contrato de prácticas
+                                    </b>
+                                </h3>
+                                <h3>
+                                    Empresa:
+                                    <b>
+                                        PCBRAPIDO
+                                    </b>
+                                </h3>
+                                <h3>Tipo de ubicacion:
+                                    <b>
+                                        Presencial
+                                    </b>
+                                </h3>
+                                <h3>
+                                    Fecha de inicio:
+                                    <b>
+                                        Agosto 2016
+                                    </b>
+                            
+                                </h3>
+                                <h3>
+                                    Fecha de finalizacion:
+                                    <b>
+                                        Diciembre 2016
+                                    </b>
+                            
+                                </h3>
+                                <h3>
+                                    <b>
+                                        Descripcion:
+                                    </b>
+                                    Funciones principales: crear los casos de uso, para realizar el diseño de la pagina web, diseñar las base de datos, desarrollar la pagina web y brindar el mantenimiento de la misma.
+                                </h3>
+                            
+                            </div>
+
+                            <a href="#carousel-slide4" class="carousel__prev">Go to previous slide</a>
+                            <a href="#carousel-slide1" class="carousel__next">Go to first slide</a>
+                        </li>
+                    </ol>
+                    <aside class="carousel__navigation">
+                        <ol class="carousel__navigation-list">
+                            <li class="carousel__navigation-item">
+                                <a href="#carousel-slide1" class="carousel__navigation-button">Go to slide 1</a>
+                            </li>
+                            <li class="carousel__navigation-item">
+                                <a href="#carousel-slide2" class="carousel__navigation-button">Go to slide 2</a>
+                            </li>
+                            <li class="carousel__navigation-item">
+                                <a href="#carousel-slide3" class="carousel__navigation-button">Go to slide 3</a>
+                            </li>
+                            <li class="carousel__navigation-item">
+                                <a href="#carousel-slide4" class="carousel__navigation-button">Go to slide 4</a>
+                            </li>
+                            <li class="carousel__navigation-item">
+                                <a href="#carousel-slide5" class="carousel__navigation-button">Go to slide 4</a>
+                            </li>
+                        </ol>
+                    </aside>
+                </section>
+            </div-->
+
+            <div class="div-proyectos">
+                <div class="container">
+                    <h3 class="titulo-card">Proyectos </h3>
+
+                    <div class="contenido-cards-proyectos">
+
+                        <ul class="cards-proyecto">
+                            <li class="cards-item-proyecto">
+                                <div class="card-proyecto">
+                                    <div class="card__image card-image-4"></div>
+                                    <div class="card__content">
+                                        <div class="card__title">Página Web Informativa para Restaurante</div>
+                                        <p class="card__text">
+                                            Diseño y desarrollo de una página web sencilla y funcional para un restaurante, enfocada en brindar a los visitantes una experiencia clara y accesible para consultar el menú en línea. La web está optimizada para dispositivos móviles. El objetivo fue ofrecer una solución ligera y rápida para mostrar el menú del restaurante de forma visualmente atractiva y fácil de navegar. Esta construida con:
+                                        </p>
+                            
+                                        <div class="contenido-etiquetas-proyecto">
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/file_type_html_icon_130541.png" class="img-etiqueta-proyecto"> HTML 5
+                                            </div>
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/file_type_css_icon_130661.png" class="img-etiqueta-proyecto"> CSS 3
+                                            </div>
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/file_type_js_official_icon_130509.png" class="img-etiqueta-proyecto"> JavaScript
+                                            </div>
+                        
+                                        </div>
+                            
+                                        <div class="div-btn">
+                                            <a href="https://terra-origen.vercel.app/" target="_blank">
+                                                <button class="btn-proyecto">
+                                                    <i class="fa-solid fa-envelope-open-text icon-btn"></i>Tebex Eufonia
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards-item-proyecto">
+                                <div class="card-proyecto">
+                                    <div class="card__image card-image-4"></div>
+                                    <div class="card__content">
+                                        <div class="card__title">Tienda Tebex</div>
+                                        <p class="card__text">
+                                            Se realizó la personalización visual de una tienda online en la plataforma Tebex, enfocada en mejorar la identidad visual del sitio y alinear su apariencia con la marca del cliente. La intervención se centró en ajustes de estilo mediante CSS y modificaciones específicas en la estructura utilizando Twig, el motor de plantillas que utiliza Tebex., esta construido con:
+                                        </p>
+                            
+                                        <div class="contenido-etiquetas-proyecto">
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/file_type_html_icon_130541.png" class="img-etiqueta-proyecto"> HTML 5
+                                            </div>
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/file_type_css_icon_130661.png" class="img-etiqueta-proyecto"> CSS 3
+                                            </div>
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/twig-1.png" class="img-etiqueta-proyecto"> Twig
+                                            </div>
+                        
+                                        </div>
+                            
+                                        <div class="div-btn">
+                                            <a href="https://eufonia.buycraft.net/">
+                                                <button class="btn-proyecto">
+                                                    <i class="fa-solid fa-envelope-open-text icon-btn"></i>Tebex Eufonia
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards-item-proyecto">
+                                <div class="card-proyecto">
+                                    <div class="card__image card-image-3"></div>
+                                    <div class="card__content">
+                                        <div class="card__title">MGO industrial</div>
+                                        <p class="card__text">
+                                            Este proyecto es la pagina informativa de una empresa que se dedica a importar y exportar materiales, esta construido con:
+                                        </p>
+                            
+                                        <div class="contenido-etiquetas-proyecto">
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/file_type_html_icon_130541.png" class="img-etiqueta-proyecto"> HTML 5
+                                            </div>
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/file_type_css_icon_130661.png" class="img-etiqueta-proyecto"> CSS 3
+                                            </div>
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/file_type_js_official_icon_130509.png" class="img-etiqueta-proyecto"> JavaScript
+                                            </div>
+                        
+                                        </div>
+                            
+                                        <div class="div-btn">
+                                            <a href="https://mgo-industrial.vercel.app/">
+                                                <button class="btn-proyecto">
+                                                    <i class="fa-solid fa-envelope-open-text icon-btn"></i>MGO Industrial
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cards-item-proyecto">
+                                <div class="card-proyecto">
+                                    <div class="card__image card-image-1"></div>
+                                    
+                                    <div class="card__content">
+                                        <div class="card__title">Encriptador de texto Alura</div>
+                                        <p class="card__text">
+                                            Este proyecto parte del programa ONE por Alura Latam, es un encriptador de texto, esta construido con: 
+                                        </p>
+                                        
+                                        <div class="contenido-etiquetas-proyecto">
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/file_type_html_icon_130541.png" class="img-etiqueta-proyecto"> HTML 5
+                                            </div>
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/file_type_css_icon_130661.png" class="img-etiqueta-proyecto"> CSS 3
+                                            </div>
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/file_type_js_official_icon_130509.png" class="img-etiqueta-proyecto"> JavaScript
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="div-btn">
+                                            <a href="PROYECTOS/challenge/index.html">
+                                                <button class="btn-proyecto">
+                                                    <i class="fa-solid fa-laptop-code icon-btn"></i>Encriptador Alura
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            
+                            <li class="cards-item-proyecto">
+                                <div class="card-proyecto">
+                                    <div class="card__image card-image-2"></div>
+                                    <div class="card__content">
+                                        <div class="card__title">Invitacion de Boda</div>
+                                        <p class="card__text">
+                                            Este proyecto es una invitacion de boda, en donde los invitados pueden confirmar su asistencia y cuantas personas, de igual forma pueden ver los detalles del evento. Los organizacores pueden ver reportes, este proyecto esta construido con:
+                                        </p>
+
+                                        <div class="contenido-etiquetas-proyecto">
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/file_type_html_icon_130541.png" class="img-etiqueta-proyecto"> HTML 5
+                                            </div>
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/file_type_css_icon_130661.png" class="img-etiqueta-proyecto"> CSS 3
+                                            </div>
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/file_type_js_official_icon_130509.png" class="img-etiqueta-proyecto"> JavaScript
+                                            </div>
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/folder_postgres_icon_161286.png" class="img-etiqueta-proyecto"> PostgreSQL
+                                            </div>
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/file_type_php_icon_130266.png" class="img-etiqueta-proyecto"> PHP
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="div-btn">
+                                            <a href="PROYECTOS/invitacion-boda/index.html">
+                                                <button class="btn-proyecto">
+                                                    <i class="fa-solid fa-envelope-open-text icon-btn"></i>Proyecto Invitación
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!--li class="cards-item-proyecto">
+                                <div class="card-proyecto">
+                                    <div class="card__image card-image-3"></div>
+                                    <div class="card__content">
+                                        <div class="card__title">MGO Industrial</div>
+                                        <p class="card__text">
+                                            Este proyecto esta construido con:
+                                        </p>
+                            
+                                        <div class="contenido-etiquetas-proyecto">
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/file_type_html_icon_130541.png" class="img-etiqueta-proyecto"> HTML 5
+                                            </div>
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/file_type_css_icon_130661.png" class="img-etiqueta-proyecto"> CSS 3
+                                            </div>
+                                            <div class="etiqueta-proyecto">
+                                                <img src="IMG/file_type_js_official_icon_130509.png" class="img-etiqueta-proyecto"> JavaScript
+                                            </div>
+                            
+                                        </div>
+                            
+                                        <div class="div-btn">
+                                            <a href="https://mgo-industrial.vercel.app/">
+                                                <button class="btn-proyecto">
+                                                    <i class="fa-solid fa-envelope-open-text icon-btn"></i>Proyecto AluraWeek
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li-->
+
+                        </ul>
+
+                    </div>
                 </div>
-                
-                <div class="flex items-center space-x-4">
-                    <button id="langSwitch" class="glass-card px-4 py-2 rounded-full text-sm font-bold hover:bg-purple-500 hover:text-white transition-all">
-                        ES | EN
-                    </button>
-                    <button id="themeSwitch" class="glass-card px-4 py-2 rounded-full hover:bg-purple-500 hover:text-white transition-all">
-                        🌙
-                    </button>
+            </div>
+
+    </section>
+
+    <section class="seccion-skills" id="skills">
+        <div class="container">
+
+            <h3 class="titulo-card">Habilidades y Herramientas</h3>
+
+            <div class="contenido-cards">
+                <div class="card">
+                    <img class="img-card" src="IMG/file_type_html_icon_130541.png">
+                    <h4 class="texto-card">HTML 5</h4>
+                </div>
+
+                <div class="card">
+                    <img class="img-card" src="IMG/file_type_css_icon_130661.png">
+                    <h4 class="texto-card">CSS 3</h4>
+                </div>
+
+                <div class="card">
+                    <img class="img-card" src="IMG/file_type_js_official_icon_130509.png">
+                    <h4 class="texto-card">JavaScript</h4>
+                </div>
+
+                <div class="card">
+                    <img class="img-card" src="IMG/file_type_php_icon_130266.png">
+                    <h4 class="texto-card">PHP</h4>
+                </div>
+                <div class="card">
+                    <img class="img-card" src="IMG/file_type_git_icon_130581.png">
+                    <h4 class="texto-card">Git</h4>
+                </div>
+
+                <div class="card">
+                    <img class="img-card" src="IMG/github-logo_icon-icons.com_73546.png">
+                    <h4 class="texto-card">GitHub</h4>
+                </div>
+                <div class="card">
+                    <img class="img-card" src="IMG/folder_postgres_icon_161286.png">
+                    <h4 class="texto-card">Postegres</h4>
+                </div>
+                <div class="card">
+                    <img class="img-card" src="IMG/file_type_excel_icon_130611.png">
+                    <h4 class="texto-card">Excel</h4>
+                </div>
+
+                <div class="card">
+                    <img class="img-card" src="IMG/file_type_word_icon_130070.png">
+                    <h4 class="texto-card">Word</h4>
+                </div>
+
+                <div class="card">
+                    <img class="img-card" src="IMG/file_type_powerpoint_icon_130245.png">
+                    <h4 class="texto-card">PowerPoint</h4>
+                </div>
+                <div class="card">
+                    <img class="img-card" src="IMG/microsoft_office_teams_logo_icon_145726.png">
+                    <h4 class="texto-card">Teams</h4>
+                </div>
+                <div class="card">
+                    <img class="img-card" src="IMG/microsoft_office_outlook_logo_icon_145721.png">
+                    <h4 class="texto-card">Outlook</h4>
+                </div>
+
+                <div class="card">
+                    <img class="img-card" src="IMG/mysql_original_wordmark_logo_icon_146417.png">
+                    <h4 class="texto-card">MySQL</h4>
+                </div>
+                <div class="card">
+                    <img class="img-card" src="IMG/meta_brand_icon_211716.png">
+                    <h4 class="texto-card">Meta Business</h4>
+                </div>
+
+                <div class="card">
+                    <img class="img-card" src="IMG/file_type_vscode_icon_130084.png">
+                    <h4 class="texto-card">Visual Studio Code</h4>
+                </div>
+
+                <div class="card">
+                    <img class="img-card" src="IMG/Trello_icon-icons.com_66775.png">
+                    <h4 class="texto-card">Trello</h4>
+                </div>
+                <div class="card">
+                    <img class="img-card" src="IMG/figma_logo_icon_170157.png">
+                    <h4 class="texto-card">Figma</h4>
+                </div>
+                <div class="card">
+                    <img class="img-card" src="IMG/file_type_photoshop_icon_130268.png">
+                    <h4 class="texto-card">Photoshop</h4>
+                </div>
+
+                <div class="card">
+                    <img class="img-card" src="IMG/zoom_logo_icon_147196.png">
+                    <h4 class="texto-card">Trello</h4>
+                </div>
+
+                <div class="card">
+                    <img class="img-card" src="IMG/discord_101785.png">
+                    <h4 class="texto-card">Discord</h4>
+                </div>
+                <div class="card">
+                    <img class="img-card" src="IMG/basecamp_logo_icon_147315.png">
+                    <h4 class="texto-card">Basecamp</h4>
+                </div>
+
+                <div class="card">
+                    <img class="img-card" src="IMG/google-bussines.png">
+                    <h4 class="texto-card">Google Busines</h4>
+                </div>
+                <div class="card">
+                    <img class="img-card" src="IMG/google-docs.png">
+                    <h4 class="texto-card">Google Docs</h4>
+                </div>
+
+                <div class="card">
+                    <img class="img-card" src="IMG/google-forms.png">
+                    <h4 class="texto-card">Google Forms</h4>
+                </div>
+                <div class="card">
+                    <img class="img-card" src="IMG/google-Sheets.png">
+                    <h4 class="texto-card">Google Sheets</h4>
+                </div>
+                <div class="card">
+                    <img class="img-card" src="IMG/google-slide.png">
+                    <h4 class="texto-card">Google Slides</h4>
+                </div>
+
+                <div class="card">
+                    <img class="img-card" src="IMG/google_meet_new_logo_icon_159138.png">
+                    <h4 class="texto-card">Google Meet</h4>
+                </div>
+
+
+                <div class="card">
+                    <img class="img-card" src="IMG/Youtube_New_36682.png">
+                    <h4 class="texto-card">Youtube Studio</h4>
+                </div>
+            </div>
+
+            <h3 class="titulo-card">Habilidades blandas</h3>
+
+            <div class="contenido-cards">
+                <div class="card-soft-skills">
+                    <img class="img-card" src="IMG/SOFT-SKILLS/01.png">
+                    <h4 class="texto-card">Organización</h4>
+                </div>
+                <div class="card-soft-skills">
+                    <img class="img-card" src="IMG/SOFT-SKILLS/02.png">
+                    <h4 class="texto-card">Adaptabilidad</h4>
+                </div>
+
+                <div class="card-soft-skills">
+                    <img class="img-card" src="IMG/SOFT-SKILLS/03.png">
+                    <h4 class="texto-card">Gestion de tiempo</h4>
+                </div>
+                <!--div class="card-soft-skills">
+                    <img class="img-card" src="IMG/SOFT-SKILLS/08.png">
+                    <h4 class="texto-card">Responsabilidad</h4>
+                </div-->
+                <div class="card-soft-skills">
+                    <img class="img-card" src="IMG/SOFT-SKILLS/12.png">
+                    <h4 class="texto-card">Colaboración</h4>
+                </div>
+
+                <div class="card-soft-skills">
+                    <img class="img-card" src="IMG/SOFT-SKILLS/06.png">
+                    <h4 class="texto-card">Comunicación</h4>
+                </div>
+
+                <div class="card-soft-skills">
+                    <img class="img-card" src="IMG/SOFT-SKILLS/09.png">
+                    <h4 class="texto-card">Inteligencia emocional</h4>
                 </div>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center relative pt-20">
-        <div class="max-w-7xl mx-auto px-6 z-10">
-            <div class="asymmetric-layout">
-                <!-- Diamond Photo -->
-                <div class="layout-item-1 flex items-center justify-center breathe">
-                    <div class="diamond-container">
-                        <div class="diamond">
-                            <div class="diamond-face">🐙</div>
-                            <div class="diamond-face">💻</div>
-                            <div class="diamond-face">⚛️</div>
-                            <div class="diamond-face">⚡</div>
+    <section class="seccion-hobbies" id="hobbies">
+        <div class="container">
+            <h3 class="titulo-card">Pasatiempos</h3>
+
+            <div class="contenido-cards-hobbies">
+
+                <div class="card-hobbies">
+                    <img class="img-card-hobbies" src="IMG/HOBBIES/01-camara.png">
+                    <h4 class="texto-card-hobbies">Tomar fotos</h4>
+                </div>
+
+                <div class="card-hobbies">
+                    <img class="img-card-hobbies" src="IMG/HOBBIES/03-pc.png">
+                    <h4 class="texto-card-hobbies">Editar imagenes, fotos, etc</h4>
+                </div>
+
+                <div class="card-hobbies">
+                    <img class="img-card-hobbies" src="IMG/HOBBIES/02-audifonos.png">
+                    <h4 class="texto-card-hobbies">Musica</h4>
+                </div>
+
+                <div class="card-hobbies">
+                    <img class="img-card-hobbies" src="IMG/HOBBIES/09-corredora.png">
+                    <h4 class="texto-card-hobbies">Correr</h4>
+                </div>
+
+                <div class="card-hobbies">
+                    <img class="img-card-hobbies" src="IMG/HOBBIES/17-libro.png">
+                    <h4 class="texto-card-hobbies">Leer</h4>
+                </div>
+
+                <div class="card-hobbies">
+                    <img class="img-card-hobbies" src="IMG/HOBBIES/10-hawaiano.png">
+                    <h4 class="texto-card-hobbies">Danzas Polinesias</h4>
+                </div>
+
+                <div class="card-hobbies">
+                    <img class="img-card-hobbies" src="IMG/HOBBIES/11-pastel.png">
+                    <h4 class="texto-card-hobbies">Cocinar postres</h4>
+                </div>
+
+                <div class="card-hobbies">
+                    <img class="img-card-hobbies" src="IMG/HOBBIES/05-karaoke.png">
+                    <h4 class="texto-card-hobbies">Cantar</h4>
+                </div>
+
+                <div class="card-hobbies">
+                    <img class="img-card-hobbies" src="IMG/HOBBIES/08-bailar.png">
+                    <h4 class="texto-card-hobbies">Baile Regional</h4>
+                </div>
+
+                <div class="card-hobbies">
+                    <img class="img-card-hobbies" src="IMG/HOBBIES/15-bici.png">
+                    <h4 class="texto-card-hobbies">Salir en bici</h4>
+                </div>
+
+                <div class="card-hobbies">
+                    <img class="img-card-hobbies" src="IMG/HOBBIES/03-videojuegos.png">
+                    <h4 class="texto-card-hobbies">Jugar videojuegos</h4>
+                </div>
+
+                <div class="card-hobbies">
+                    <img class="img-card-hobbies" src="IMG/HOBBIES/16-cine.png">
+                    <h4 class="texto-card-hobbies">Cine</h4>
+                </div>
+
+                <div class="card-hobbies">
+                    <img class="img-card-hobbies" src="IMG/HOBBIES/14-pintar.png">
+                    <h4 class="texto-card-hobbies">Pintar</h4>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-formacion" id="formcacion">
+
+        <div class="container">
+
+            <h3 class="titulo-card">Formación académica y certificaciones</h3>
+            
+
+            <div class="contenido-cards-formacion">
+
+                <div class="container-carrousel">
+
+                    <div class="card-carrousel-educacion">
+                        <div class="card-img-formacion">
+                            <img class="img-formacion" src="IMG/EDUCACION/DGETI_logo.svg.png">
+                        </div>
+                        
+                        <h3 class="title">CBTis No 46</h3>
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
+
+                        <div class="texto-card-formacion">
+                            <p>Titulo: Tecnico en Informatica</p>
+                            <p>Especialidad: Fisico Matematico</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card-carrousel-educacion">
+                        <div class="card-img-formacion">
+                            <img class="img-formacion" src="IMG/EDUCACION/tec-logo.png">
+                        </div>
+                        <h3 class="title">Tecnologico Nacional de Mexico</h3>
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
+                        <div class="texto-card-formacion">
+                            <p>Titulo: Ingenieria en Tecnologias de <br> la Informacion y Comunicaciones</p>
+                            <p>Especialidad: Desarrollo Web</p>
                         </div>
                     </div>
+
                 </div>
-                
-                <!-- Main Title -->
-                <div class="layout-item-2 text-center fade-in">
-                    <h1 class="text-6xl md:text-8xl font-black mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-                        NAYELI<br>CARRIZALES
-                    </h1>
-                    <div class="text-2xl md:text-3xl mb-8 h-12 font-bold">
-                        <span id="typewriter" class="typewriter"></span>
-                    </div>
-                </div>
-                
-                <!-- Floating Stats -->
-                <div class="layout-item-3 space-y-6 fade-in">
-                    <div class="glass-card p-6 rounded-2xl wave-container">
-                        <div class="wave"></div>
-                        <h3 class="text-purple-400 font-bold mb-4 font-mono">[SYSTEM.DATA]</h3>
-                        <div class="space-y-3 text-sm">
-                            <div class="flex justify-between">
-                                <span>NIVEL:</span>
-                                <span class="text-pink-400">AVANZADO</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>ESTADO:</span>
-                                <span class="text-green-400">ACTIVO</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>MODO:</span>
-                                <span class="text-blue-400">CREATIVO</span>
-                            </div>
+
+                <div class="container-carrousel">
+
+                    <div class="card-carrousel">
+                        <div class="card-img-formacion">
+                            <img class="img-formacion" src="IMG/EDUCACION/activate.png">
                         </div>
+
+                        <h3 class="title">Google Activate</h3>
+
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
+
+                        <div class="div-certificado">
+                            <a href="https://learndigital.withgoogle.com/activate/validate-certificate-code"
+                                target="_blank"><button class="btn-certificado"><i class="fa-solid fa-certificate"></i>
+                                    Certificado</button></a>
+                        </div>
+
+                        <div class="texto-card-formacion">
+                            <p> Digitize your business step by step with Google <br> My Business and YouTube </p>
+                            <p> Expedicion: Julio 2021 </p>
+                            <p> ID: G9CZPA87X </p>
+
+                        </div>
+
                     </div>
+
+                    <div class="card-carrousel">
+
+                        <div class="card-img-formacion">
+                            <img class="img-formacion" src="IMG/EDUCACION/alura.avif">
+                        </div>
+
+                        <h3 class="title">alura Latam</h3>
+
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
+
+                        <div class="div-certificado">
+                            <a href="https://app.aluracursos.com/degree/certificate/d5d6af92-c967-450e-9cc2-ffa744d0265b"
+                                target="_blank"><button class="btn-certificado"><i class="fa-solid fa-certificate"></i>
+                                    Certificado</button></a>
+                        </div>
+
+                        <div class="texto-card-formacion">
+                            Formación Desarrollo Personal G5 - ONE <br>
+                            Expedicion: Mayo 2023 <br>
+                            ID: d5d6af92-c967-450e-9cc2-ffa744d0265b
+                        </div>
+
+                    </div>
+
+                    <div class="card-carrousel">
+                        <div class="card-img-formacion">
+                            <img class="img-formacion" src="IMG/EDUCACION/alura.avif">
+                        </div>
+
+                        <h3 class="title">alura Latam</h3>
+
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
+
+                        <div class="div-certificado">
+                            <a href="https://app.aluracursos.com/degree/certificate/9c7bba14-0d9e-4223-b6e6-7200b35c053b"
+                                target="_blank"><button class="btn-certificado"><i class="fa-solid fa-certificate"></i>
+                                    Certificado</button></a>
+                        </div>
+
+                        <div class="texto-card-formacion">
+                            Formación Principiante en Programación G5 - ONE <br>
+                            Expedicion: Mayo 2023 <br>
+                            ID: 9c7bba14-0d9e-4223-b6e6-7200b35c053b
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="seccion-contacto" id="contacto">
+        <div class="container">
+            <h3 class="titulo-card">Contacto</h3>
+
+            <article class="profile">
+                <div class="profile-image">
+                    <img src="IMG/nay-by-save-fondo.png" />
+                </div>
+                <h2 class="profile-username">Nayeli Carrizales Diaz</h2>
+                <small class="profile-user-handle">nayeli.carrizales.diaz@gmail.com</small>
+                <div class="profile-actions">
+                    <a href="https://www.linkedin.com/in/nayeli-carrizales-diaz/" class="btn-contacto-primary" target="_blank" >LinkedIn</a>
                     
-                    <div class="glass-card p-6 rounded-2xl breathe">
-                        <h3 class="text-pink-400 font-bold mb-4 font-mono">[DEV.PROFILE]</h3>
-                        <div class="space-y-2">
-                            <a href="https://github.com/NayeliCarrizalesD" >
-                                <button class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 rounded-lg hover:scale-105 transition-transform" style="margin-bottom: 1em;">
-                                GitHub
-                            </button>
-                            </a>
-                            <a href="https://www.linkedin.com/in/nayeli-carrizales/" >
-                                <button class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 rounded-lg hover:scale-105 transition-transform" style="margin-bottom: 1em;">
-                                    LinkedIn
-                                </button>
-                            </a>
-                          
-                            <a href="https://www.dropbox.com/scl/fi/1tzpuuz62ujy3zq40q4cy/Nayeli-Carrizales-CV.pdf?rlkey=1sc2akbciqgs897gabp3k2yih&st=8ncrymbt&dl=0" > 
-                                <button class="w-full bg-gradient-to-r from-pink-400 to-pink-600 text-white py-2 rounded-lg hover:scale-105 transition-transform" style="margin-bottom: 1em;">
-                                CV Completo
-                                </button>
-                            </a>
-                        </div>
-                    </div>
                 </div>
-                
-                <!-- Description -->
-                <div class="layout-item-4 fade-in">
-                    <div class="glass-card p-8 rounded-3xl">
-                        <p class="text-lg mb-6 leading-relaxed" 
-                        data-en="I am an Information and Communications Technology Engineer, specializing in front-end development. I define myself as a creative, proactive, dynamic, and constantly evolving person. These qualities allow me to adapt to technological changes and respond efficiently to the challenges of the digital environment.I highly value teamwork, fostering a positive and empathetic environment with my teams. I believe the best solutions emerge from mutual respect and cooperation, which is why I always seek to contribute positively and constructively to each project. I have experience in customer service, time management, and problem-solving. I maintain a professional attitude, qualities that allow me to deliver quality results aligned with objectives. My philosophy is simple: we never stop learning. Therefore, I constantly update myself to offer modern, functional solutions focused on the user experience." 
-                        data-es="Soy Ingeniera en Tecnologías de la Información y Comunicaciones, especializada en desarrollo front-end. Me defino como una persona creativa, proactiva, dinámica y en constante evolución, cualidades que me permiten adaptarme a los cambios tecnológicos y responder con eficiencia a los desafíos del entorno digital. Valoro mucho el trabajo en equipo, fomentando un ambiente bueno y empático con mis equipos. Creo que las mejores soluciones surgen del respeto mutuo y la cooperación, por eso siempre busco aportar de forma positiva y constructiva en cada proyecto. Cuento con experiencia en atención al cliente, gestión del tiempo y resolución de problemas. Mantengo una actitud profesional, cualidades que me permiten ofrecer resultados de calidad alineados con los objetivos. Mi filosofía es simple: nunca dejamos de aprender. Por ello, me mantengo en constante actualización para ofrecer soluciones modernas, funcionales y centradas en la experiencia del usuario.">
-                            Soy Ingeniera en Tecnologías de la Información y Comunicaciones, especializada en desarrollo front-end. Me defino como una persona creativa, proactiva, dinámica y en constante evolución, cualidades que me permiten adaptarme a los cambios tecnológicos y responder con eficiencia a los desafíos del entorno digital.
-                            Valoro mucho el trabajo en equipo, fomentando un ambiente bueno y empático con mis equipos. Creo que las mejores soluciones surgen del respeto mutuo y la cooperación, por eso siempre busco aportar de forma positiva y constructiva en cada proyecto. Cuento con experiencia en atención al cliente, gestión del tiempo y resolución de problemas. Mantengo una actitud profesional, cualidades que me permiten ofrecer resultados de calidad alineados con los objetivos. Mi filosofía es simple: nunca dejamos de aprender. Por ello, me mantengo en constante actualización para ofrecer soluciones modernas, funcionales y centradas en la experiencia del usuario.
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="#projects" >
-                                <button class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-2xl font-bold hover:scale-105 transition-transform" data-en="PROJECT INVENTORY" data-es="INVENTARIO DE PROYECTOS">
-                                    INVENTARIO DE PROYECTOS
-                                </button>
-                            </a>
-                            <a href="https://www.dropbox.com/scl/fi/1tzpuuz62ujy3zq40q4cy/Nayeli-Carrizales-CV.pdf?rlkey=1sc2akbciqgs897gabp3k2yih&st=8ncrymbt&dl=0" > 
-                                <button class="glass-card px-8 py-4 rounded-2xl font-bold hover:bg-purple-500 hover:text-white transition-all" data-en="DOWNLOAD CV" data-es="DESCARGAR CV">
-                                    DESCARGAR CV
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Floating Element -->
-                <div class="layout-item-5 flex items-center justify-center fade-in">
-                    <a href="#projects" >
-                        <div class="glass-card p-6 rounded-full w-32 h-32 flex items-center justify-center text-4xl breathe">
-                            💻
-                        </div>
+                <div class="profile-links">
+                    <a href="https://github.com/NayeliCarrizalesD" target="_blank" class="link link--icon">Github
+                        <i class="fa-solid fa-check"></i>
+                    </a>
+                    <a href="https://www.dropbox.com/scl/fi/1tzpuuz62ujy3zq40q4cy/Nayeli-Carrizales-CV.pdf?rlkey=1sc2akbciqgs897gabp3k2yih&st=8ncrymbt&dl=0" target="_blank" class="link link--icon"> CV
+                        <i class="fa-solid fa-check"></i>
                     </a>
                 </div>
-            </div>
+            </article>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 relative z-10">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent fade-in">
-                <span data-en="TECH STACK" data-es="TECH STACK">TECH STACK</span>
-            </h2>
-
-            <h3 class="text-3xl font-bold text-center mb-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
-                <span data-en="LANGUAGES" data-es="LENGUAJES">LENGUAJES</span>
-            </h3>
-            
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">🟧</div>
-                        <div class="text-xs font-bold">HTML5</div>
-                        <div class="text-xs text-purple-400">98%</div>
-                    </div>
-                </div>
-                
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">🟨</div>
-                        <div class="text-xs font-bold">JAVASCRIPT</div>
-                        <div class="text-xs text-purple-400">90%</div>
-                    </div>
-                </div>
-                
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">🟦</div>
-                        <div class="text-xs font-bold">CSS3</div>
-                        <div class="text-xs text-purple-400">80%</div>
-                    </div>
-                </div>
-                
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">🔠</div>
-                        <div class="text-xs font-bold">TYPESCRIPT</div>
-                        <div class="text-xs text-purple-400">95%</div>
-                    </div>
-                </div>
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">🐍</div>
-                        <div class="text-xs font-bold">PYTHON</div>
-                        <div class="text-xs text-purple-400">50%</div>
-                    </div>
-                </div>
-            </div>
-            
-                
-            <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
-                <span data-en="FRAMEWORKS AND LIBRARIES" data-es="FRAMEWORKS Y LIBRERIAS">FRAMEWORKS Y LIBRERIAS</span>
-            </h3>
-            
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-                <!-- Additional Skills -->
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">⚛️</div>
-                        <div class="text-xs font-bold">REACT</div>
-                        <div class="text-xs text-purple-400">90%</div>
-                    </div>
-                </div>
-                
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">⚫</div>
-                        <div class="text-xs font-bold">Next.js</div>
-                        <div class="text-xs text-purple-400">90%</div>
-                    </div>
-                </div>              
-            
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">🌊</div>
-                        <div class="text-xs font-bold">Tailwind CSS</div>
-                        <div class="text-xs text-purple-400">80%</div>
-                    </div>
-                </div>
-
-                </div>
-                
-            <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
-                <span data-en="DEVELOPMENT TOOLS" data-es="HERRAMIENTAS DE DESARROLLO">HERRAMIENTAS DE DESARROLLO</span>
-            </h3>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">🔀</div>
-                        <div class="text-xs font-bold">GIT</div>
-                        <div class="text-xs text-purple-400">85%</div>
-                    </div>
-                </div>
-                
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">🐙</div>
-                        <div class="text-xs font-bold">GITHUB</div>
-                        <div class="text-xs text-purple-400">85%</div>
-                    </div>
-                </div>
-                
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">🚀</div>
-                        <div class="text-xs font-bold">VSCODE</div>
-                        <div class="text-xs text-purple-400">92%</div>
-                    </div>
-                </div>
-                
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">🟣</div>
-                        <div class="text-xs font-bold">FIGMA</div>
-                        <div class="text-xs text-purple-400">70%</div>
-                    </div>
-                </div>
-            </div>
-
-            <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
-                <span data-en="INTEGRATION AND DEPLOYMENT" data-es="INTEGRACIÓN Y DESPLIEGUE">INTEGRACIÓN Y DESPLIEGUE</span>
-            </h3>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="fade-in">
-                    
-                </div>
-                
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">🚀</div>
-                        <div class="text-xs font-bold">VERCEL</div>
-                        <div class="text-xs text-purple-400">85%</div>
-                    </div>
-                </div>
-                
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">🌐</div>
-                        <div class="text-xs font-bold">APIs REST</div>
-                        <div class="text-xs text-purple-400">70%</div>
-                    </div>
-                </div>
-            </div>
-
-            <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
-                <span data-en="VERSION CONTROL AND COLLABORATION" data-es="CONTROL DE VERSIONES Y COLABORACIÓN">CONTROL DE VERSIONES Y COLABORACIÓN</span>
-            </h3>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">📊</div>
-                        <div class="text-xs font-bold">GITHUB PROJECTS</div>
-                        <div class="text-xs text-purple-400">85%</div>
-                    </div>
-                </div>
-                
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">🗂️</div>
-                        <div class="text-xs font-bold">TRELLO</div>
-                        <div class="text-xs text-purple-400">85%</div>
-                    </div>
-                </div>
-                
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">📓</div>
-                        <div class="text-xs font-bold">NOTION</div>
-                        <div class="text-xs text-purple-400">92%</div>
-                    </div>
-                </div>
-                
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">⛰️</div>
-                        <div class="text-xs font-bold">BASECAMP</div>
-                        <div class="text-xs text-purple-400">70%</div>
-                    </div>
-                </div>
-            </div>
-            
-            <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
-                <span data-en="TESTING AND QUALITY" data-es="PRUEBAS Y CALIDAD">PRUEBAS Y CALIDAD</span>
-            </h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
-                
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">🔍</div>
-                        <div class="text-xs font-bold">ESLint</div>
-                        <div class="text-xs text-purple-400">85%</div>
-                    </div>
-                </div>
-            </div>
+    <footer class="rodapePrincipal">
+        <div class="container">
+        
+            <section class="footer-contenido">
+                <h3 class="subtitulo">Desarrollado por Nayeli Carrizales Diaz <br> 2023 </h3>    
+            </section>
+        
         </div>
-    </section>
+        
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gradient-to-b from-transparent to-purple-900/20 relative z-10">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text text-transparent fade-in">
-                <span data-en="PROJECT INVENTORY" data-es="INVENTARIO DE PROYECTOS">INVENTARIO DE PROYECTOS</span>
-            </h2>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="ar-card p-6 fade-in">
-                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                        <img src="../IMG/PROYECTOS/screen-1.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                        Página Web Informativa para Restaurante
-                    </h3>
-                    <p class="text-gray-300 mb-4 text-sm" data-en="Next-generation DeFi protocol with liquid staking and morphing yields" data-es="Protocolo DeFi de próxima generación con staking líquido y rendimientos morfológicos">
-                        Diseño y desarrollo de una página web sencilla y funcional para un restaurante, enfocada en brindar a los visitantes una experiencia clara y accesible para consultar el menú en línea. La web está optimizada para dispositivos móviles. El objetivo fue ofrecer una solución ligera y rápida para mostrar el menú del restaurante de forma visualmente atractiva y fácil de navegar. Esta construida con:
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">HTML5</span>
-                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">CSS3</span>
-                        <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs">JavaScript</span>
-                    </div>
-                    <a href="https://terra-origen.vercel.app/" target="_blank"> <button class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="DIVE IN" data-es="SUMERGIRSE">
-                        SUMERGIRSE
-                    </button></a>
-                </div>
-                
-                <div class="ar-card p-6 fade-in">
-                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                        <img src="../IMG/PROYECTOS/screen-4.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                        Tienda Tebex
-                    </h3>
-                    <p class="text-gray-300 mb-4 text-sm" data-en="Shape-shifting NFT game where characters evolve through liquid transformations" data-es="Juego NFT metamórfico donde los personajes evolucionan a través de transformaciones líquidas">
-                        Se realizó la personalización visual de una tienda online en la plataforma Tebex, enfocada en mejorar la identidad visual del sitio y alinear su apariencia con la marca del cliente. La intervención se centró en ajustes de estilo mediante CSS y modificaciones específicas en la estructura utilizando Twig, el motor de plantillas que utiliza Tebex., esta construido con:
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">HTML5</span>
-                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">CSS3</span>
-                        <span class="bg-green-600 px-3 py-1 rounded-full text-xs">Twig</span>
-                    </div>
-                    <a href="https://eufonia.buycraft.net/" target="_blank"> <button class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="KNOW IT" data-es="CONOCER">
-                        CONOCER
-                    </button></a>
-                </div>
-                
-                <div class="ar-card p-6 fade-in">
-                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                        🧠
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
-                        Página Web Informativa
-                    </h3>
-                    <p class="text-gray-300 mb-4 text-sm" data-en="AI system that adapts and flows like liquid, learning from user interactions" data-es="Sistema de IA que se adapta y fluye como líquido, aprendiendo de las interacciones del usuario">
-                        Este proyecto es el sitio web informativo de una empresa especializada en la importación y exportación de materiales. Su objetivo es presentar de forma clara sus servicios, valores y canales de contacto, ofreciendo a los clientes una experiencia de navegación sencilla y profesional.
-                        La página fue desarrollada con las siguientes tecnologías:
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-purple-600 px-3 py-1 rounded-full text-xs">React</span>
-                        <span class="bg-blue-800 px-3 py-1 rounded-full text-xs">Tailwind CSS</span>
-                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">TypeScript</span>
-                    </div>
-                    <button class="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="FLOW" data-es="FLUIR">
-                        FLUIR
-                    </button>
-                </div>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="ar-card p-6 fade-in">
-                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                        <img src="../IMG/PROYECTOS/screen-1.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                        Página Web Informativa para Restaurante
-                    </h3>
-                    <p class="text-gray-300 mb-4 text-sm" data-en="Next-generation DeFi protocol with liquid staking and morphing yields" data-es="Protocolo DeFi de próxima generación con staking líquido y rendimientos morfológicos">
-                        Diseño y desarrollo de una página web sencilla y funcional para un restaurante, enfocada en brindar a los visitantes una experiencia clara y accesible para consultar el menú en línea. La web está optimizada para dispositivos móviles. El objetivo fue ofrecer una solución ligera y rápida para mostrar el menú del restaurante de forma visualmente atractiva y fácil de navegar. Esta construida con:
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">HTML5</span>
-                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">CSS3</span>
-                        <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs">JavaScript</span>
-                    </div>
-                    <a href="https://terra-origen.vercel.app/" target="_blank"> <button class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="DIVE IN" data-es="SUMERGIRSE">
-                        SUMERGIRSE
-                    </button></a>
-                </div>
-                
-                <div class="ar-card p-6 fade-in">
-                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                        <img src="../IMG/PROYECTOS/screen-4.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                        Tienda Tebex
-                    </h3>
-                    <p class="text-gray-300 mb-4 text-sm" data-en="Shape-shifting NFT game where characters evolve through liquid transformations" data-es="Juego NFT metamórfico donde los personajes evolucionan a través de transformaciones líquidas">
-                        Se realizó la personalización visual de una tienda online en la plataforma Tebex, enfocada en mejorar la identidad visual del sitio y alinear su apariencia con la marca del cliente. La intervención se centró en ajustes de estilo mediante CSS y modificaciones específicas en la estructura utilizando Twig, el motor de plantillas que utiliza Tebex., esta construido con:
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">HTML5</span>
-                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">CSS3</span>
-                        <span class="bg-green-600 px-3 py-1 rounded-full text-xs">Twig</span>
-                    </div>
-                    <a href="https://eufonia.buycraft.net/" target="_blank"> <button class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="KNOW IT" data-es="CONOCER">
-                        CONOCER
-                    </button></a>
-                </div>
-                
-                <div class="ar-card p-6 fade-in">
-                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                        🧠
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
-                        Página Web Informativa
-                    </h3>
-                    <p class="text-gray-300 mb-4 text-sm" data-en="AI system that adapts and flows like liquid, learning from user interactions" data-es="Sistema de IA que se adapta y fluye como líquido, aprendiendo de las interacciones del usuario">
-                        Este proyecto es el sitio web informativo de una empresa especializada en la importación y exportación de materiales. Su objetivo es presentar de forma clara sus servicios, valores y canales de contacto, ofreciendo a los clientes una experiencia de navegación sencilla y profesional.
-                        La página fue desarrollada con las siguientes tecnologías:
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-purple-600 px-3 py-1 rounded-full text-xs">React</span>
-                        <span class="bg-blue-800 px-3 py-1 rounded-full text-xs">Tailwind CSS</span>
-                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">TypeScript</span>
-                    </div>
-                    <button class="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="FLOW" data-es="FLUIR">
-                        FLUIR
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 relative z-10">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent fade-in">
-                <span data-en="CONTACT" data-es="CONTACTO">CONTACTO</span>
-            </h2>
-            
-            <p class="text-xl text-gray-300 mb-12 fade-in" data-en="Ready to create something that flows beyond imagination? Let's merge our creative energies and build liquid experiences together." data-es="¿Listo para transformar ideas en código y experiencias que perduren? Unamos lógica y creatividad para construir soluciones que fluyen del backend al frontend, conectando datos, diseño y usuarios en perfecta armonía.">
-                ¿Listo para transformar ideas en código y experiencias que perduren? Unamos lógica y creatividad para construir soluciones que fluyen del backend al frontend, conectando datos, diseño y usuarios en perfecta armonía.
-            </p>
-            
-            <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <div class="glass-card p-8 rounded-3xl hover:scale-105 transition-transform breathe fade-in">
-                    <div class="text-5xl mb-4">🚀</div>
-                    <h3 class="font-bold mb-2 text-purple-400">EMAIL.FLOW</h3>
-                    <p class="text-gray-300">nayeli.carrizales.diaz@gmail.com</p>
-                </div>
-                
-                <div class="glass-card p-8 rounded-3xl hover:scale-105 transition-transform breathe fade-in">
-                    <div class="text-5xl mb-4">🐙</div>
-                    <h3 class="font-bold mb-2 text-pink-400">GITHUB.STREAM</h3>
-                    <a href="https://github.com/NayeliCarrizalesD" target="_blank" class="text-gray-300">@NayeliCarrizalesD</a>
-                </div>
-                
-                <div class="glass-card p-8 rounded-3xl hover:scale-105 transition-transform breathe fade-in">
-                    <div class="text-5xl mb-4">🌐</div>
-                    <h3 class="font-bold mb-2 text-blue-400">LINKEDIN.PULSE</h3>
-                    <a href="https://www.linkedin.com/in/nayeli-carrizales-diaz/" target="_blank" class="text-gray-300">@nayeli-carrizales-diaz</a>
-                </div>
-            </div>
-            
-            <!--div class="glass-card p-12 rounded-3xl fade-in">
-                <h3 class="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    <span data-en="READY TO FLOW?" data-es="¿LISTO PARA FLUIR?">¿LISTO PARA FLUIR?</span>
-                </h3>
-                <button class="bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:scale-110 transition-transform breathe" data-en="START FLOWING" data-es="COMENZAR A FLUIR">
-                    COMENZAR A FLUIR 🌊
-                </button>
-            </div-->
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-8 text-center text-gray-400 relative z-10 glass-card">
-        <p data-en="© 2025 Nayeli Carrizales " data-es="© 2025 Nayeli Carrizales ">
-            © 2025 Nayeli Carrizales 
-        </p>
     </footer>
+                
+
+    <script src="https://kit.fontawesome.com/ec383dc983.js" crossorigin="anonymous"></script>
 
     <script>
-        // Global variables
-        let currentLang = 'es';
-        let currentTheme = 'dark';
-        let mouseX = 0;
-        let mouseY = 0;
-        let particles = [];
-        let cursorTrails = [];
-        
-        // Initialize everything
-        document.addEventListener('DOMContentLoaded', function() {
-            initializeCursor();
-            initializeParticles();
-            startTypewriter();
-            initializeControls();
-            initializeScrollAnimations();
-        });
-        
-        // Custom cursor
-        function initializeCursor() {
-            const cursor = document.getElementById('cursor');
-            
-            document.addEventListener('mousemove', (e) => {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-                
-                cursor.style.left = mouseX - 10 + 'px';
-                cursor.style.top = mouseY - 10 + 'px';
-                
-                // Create cursor trail
-                createCursorTrail(mouseX, mouseY);
-                
-                // Update particles
-                updateParticles();
-            });
-            
-            // Cursor effects on hover
-            document.querySelectorAll('button, a, .skill-orb').forEach(element => {
-                element.addEventListener('mouseenter', () => {
-                    cursor.style.transform = 'scale(2)';
-                });
-                
-                element.addEventListener('mouseleave', () => {
-                    cursor.style.transform = 'scale(1)';
-                });
-            });
-        }
-        
-        // Cursor trail
-        function createCursorTrail(x, y) {
-            const trail = document.createElement('div');
-            trail.className = 'cursor-trail';
-            trail.style.left = x - 2 + 'px';
-            trail.style.top = y - 2 + 'px';
-            document.body.appendChild(trail);
-            
-            setTimeout(() => {
-                trail.style.opacity = '0';
-                trail.style.transform = 'scale(0)';
-                setTimeout(() => trail.remove(), 300);
-            }, 100);
-        }
-        
-        // Interactive particles
-        function initializeParticles() {
-            const particleSystem = document.getElementById('particleSystem');
-            
-            for (let i = 0; i < 50; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * window.innerWidth + 'px';
-                particle.style.top = Math.random() * window.innerHeight + 'px';
-                particleSystem.appendChild(particle);
-                
-                particles.push({
-                    element: particle,
-                    x: Math.random() * window.innerWidth,
-                    y: Math.random() * window.innerHeight,
-                    vx: (Math.random() - 0.5) * 2,
-                    vy: (Math.random() - 0.5) * 2
-                });
-            }
-        }
-        
-        function updateParticles() {
-            particles.forEach(particle => {
-                // Move towards mouse
-                const dx = mouseX - particle.x;
-                const dy = mouseY - particle.y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-                
-                if (distance < 100) {
-                    particle.vx += dx * 0.0001;
-                    particle.vy += dy * 0.0001;
-                }
-                
-                // Update position
-                particle.x += particle.vx;
-                particle.y += particle.vy;
-                
-                // Bounce off edges
-                if (particle.x < 0 || particle.x > window.innerWidth) particle.vx *= -1;
-                if (particle.y < 0 || particle.y > window.innerHeight) particle.vy *= -1;
-                
-                // Apply friction
-                particle.vx *= 0.99;
-                particle.vy *= 0.99;
-                
-                // Update DOM
-                particle.element.style.left = particle.x + 'px';
-                particle.element.style.top = particle.y + 'px';
-            });
-        }
-        
-        // Typewriter effect
-        function startTypewriter() {
-            const typewriter = document.getElementById('typewriter');
-            const texts = {
-                es: ['API GATE', 'FRONT END', 'BACK END', 'DESARROLLADORA'],
-                en: ['API GATE', 'FRONT END', 'BACK END', 'DEVELOPER']
-            };
-            
-            let textIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            
-            function type() {
-                const currentTexts = texts[currentLang];
-                const currentText = currentTexts[textIndex];
-                
-                if (isDeleting) {
-                    typewriter.textContent = currentText.substring(0, charIndex - 1);
-                    charIndex--;
-                } else {
-                    typewriter.textContent = currentText.substring(0, charIndex + 1);
-                    charIndex++;
-                }
-                
-                let typeSpeed = isDeleting ? 50 : 100;
-                
-                if (!isDeleting && charIndex === currentText.length) {
-                    typeSpeed = 2000;
-                    isDeleting = true;
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    textIndex = (textIndex + 1) % currentTexts.length;
-                    typeSpeed = 500;
-                }
-                
-                setTimeout(type, typeSpeed);
-            }
-            
-            type();
-        }
-        
-        // Controls
-        function initializeControls() {
-            document.getElementById('langSwitch').addEventListener('click', switchLanguage);
-            document.getElementById('themeSwitch').addEventListener('click', switchTheme);
-            
-            // Smooth scrolling
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        }
-        
-        function switchLanguage() {
-            currentLang = currentLang === 'es' ? 'en' : 'es';
-            
-            document.querySelectorAll('[data-en][data-es]').forEach(element => {
-                element.textContent = element.getAttribute(`data-${currentLang}`);
-            });
-            
-            document.getElementById('langSwitch').textContent = currentLang === 'es' ? 'ES | EN' : 'EN | ES';
-        }
-        
-        function switchTheme() {
-            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', currentTheme);
-            document.getElementById('themeSwitch').textContent = currentTheme === 'dark' ? '🌙' : '☀️';
-        }
-        
-        // Scroll animations
-        function initializeScrollAnimations() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
-            
-            document.querySelectorAll('.fade-in').forEach(element => {
-                observer.observe(element);
-            });
-        }
-        
-        // Resize handler
-        window.addEventListener('resize', () => {
-            particles.forEach(particle => {
-                if (particle.x > window.innerWidth) particle.x = window.innerWidth;
-                if (particle.y > window.innerHeight) particle.y = window.innerHeight;
-            });
-        });
-        
-        // Animation loop
-        function animate() {
-            updateParticles();
-            requestAnimationFrame(animate);
-        }
-        
-        animate();
+
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'966c9508f23ad87a',t:'MTc1Mzc5MTc1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
+
 </html>
