@@ -101,3 +101,24 @@ Este documento recopila la arquitectura técnica y el conjunto de tecnologías, 
   * **Modelado & Almacenamiento:** Google Sheets como repositorio de datos estructurado.
   * **Visualización:** Google Looker Studio conectado como capa de presentación para reportes ejecutivos.
 
+---
+
+## 6. 🏢 Grupo Salinas – Sistemas Web Corporativos en Producción
+* **Empresa:** Grupo Salinas
+* **Control de Versiones & Gestión de Código:** **GitLab Corporativo** (administración de ramas, code reviews, control de versiones y flujos de despliegue).
+* **Soluciones Entregadas a Producción (4 Proyectos Estratégicos):**
+  1. **📱 Registro Único (Móvil & Geografía):**
+     * Plataforma corporativa de registro unificado recién lanzada para dispositivos móviles.
+     * Alcance nacional: da servicio a todos los colaboradores del corporativo y red geográfica en México.
+     * Arquitectura frontend optimizada para alta concurrencia, interfaces responsivas y validación de datos en tiempo real.
+  2. **🎮 Rally Mundialista (Juegos Web Multi-Servidor en Vanilla JS):**
+     * Desarrollo de minijuegos interactivos de alto rendimiento construidos en **Vanilla JavaScript (ES6+), HTML5 Canvas y CSS3** sin dependencias pesadas para asegurar fluidez a 60 FPS.
+     * **Arquitecturas Multi-Servidor Heterogéneas:** Cada juego se desplegó en servidores con configuraciones y sistemas operativos distintos; se diseñó y adaptó la arquitectura de archivos, rutas y assets de la versión original a los requerimientos específicos de cada servidor de destino.
+  3. **🔍 Buscador Dinámico de Ganadores:**
+     * Motor de búsqueda y filtrado de datos en tiempo real para localizar ganadores de dinámicas y activaciones corporativas masivas.
+     * Optimizado para búsquedas instantáneas sobre grandes conjuntos de datos con tiempos de respuesta en milisegundos.
+  4. **⚽ Módulo Copa Socio (Torneo Deportivo Interno):**
+     * Módulo interactivo de visualización deportiva para el torneo institucional de fútbol.
+     * Despliegue de plantillas de equipos, estadísticas de partidos, calendarios y tablas de posiciones actualizadas en tiempo real.
+
+

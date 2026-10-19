@@ -115,11 +115,18 @@
                                 </button>
                             </a>
                           
-                            <a href="CV_Nayeli_Carrizales.html" target="_blank"> 
-                                <button class="w-full bg-gradient-to-r from-pink-400 to-pink-600 text-white py-2 rounded-lg hover:scale-105 transition-transform font-bold" style="margin-bottom: 1em;" data-en="FULL CV" data-es="CV COMPLETO">
-                                    CV COMPLETO
-                                </button>
-                            </a>
+                            <div class="flex gap-2">
+                                <a href="CV_Nayeli_Carrizales.html" target="_blank" class="flex-1"> 
+                                    <button class="w-full bg-gradient-to-r from-pink-400 to-pink-600 text-white py-2 rounded-lg hover:scale-105 transition-transform font-bold text-xs" style="margin-bottom: 1em;">
+                                        CV (ES)
+                                    </button>
+                                </a>
+                                <a href="CV_Nayeli_Carrizales_EN.html" target="_blank" class="flex-1"> 
+                                    <button class="w-full bg-gradient-to-r from-pink-600 to-purple-600 text-white py-2 rounded-lg hover:scale-105 transition-transform font-bold text-xs" style="margin-bottom: 1em;">
+                                        CV (EN)
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -140,8 +147,13 @@
                                 </button>
                             </a>
                             <a href="CV_Nayeli_Carrizales.html" target="_blank"> 
-                                <button class="glass-card px-8 py-4 rounded-2xl font-bold hover:bg-purple-500 hover:text-white transition-all" data-en="DOWNLOAD CV" data-es="DESCARGAR CV">
-                                    DESCARGAR CV
+                                <button class="glass-card px-6 py-4 rounded-2xl font-bold hover:bg-purple-500 hover:text-white transition-all text-sm">
+                                    📄 CV (ESPAÑOL)
+                                </button>
+                            </a>
+                            <a href="CV_Nayeli_Carrizales_EN.html" target="_blank"> 
+                                <button class="glass-card px-6 py-4 rounded-2xl font-bold hover:bg-purple-500 hover:text-white transition-all text-sm">
+                                    🌐 CV (ENGLISH)
                                 </button>
                             </a>
                         </div>
@@ -579,13 +591,67 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20 bg-gradient-to-b from-transparent to-purple-900/20 relative z-10">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text text-transparent fade-in">
+            <h2 class="text-5xl font-bold text-center mb-8 bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text text-transparent fade-in">
                 <span data-en="PROJECT INVENTORY" data-es="INVENTARIO DE PROYECTOS">INVENTARIO DE PROYECTOS</span>
             </h2>
             
+            <!-- Category Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12 fade-in" id="projectFilters">
+                <button class="filter-btn active glass-card px-6 py-2.5 rounded-full text-sm font-bold transition-all border border-purple-500 bg-purple-600/30 text-white" data-filter="all" data-en="All Projects (15)" data-es="Todos los Proyectos (15)">
+                    Todos los Proyectos (15)
+                </button>
+                <button class="filter-btn glass-card px-6 py-2.5 rounded-full text-sm font-bold transition-all border border-blue-500/40 text-gray-300 hover:text-white hover:border-blue-400" data-filter="corporate" data-en="🏢 Enterprise & Work (9)" data-es="🏢 Corporativos & Trabajo (9)">
+                    🏢 Corporativos & Trabajo (9)
+                </button>
+                <button class="filter-btn glass-card px-6 py-2.5 rounded-full text-sm font-bold transition-all border border-purple-500/40 text-gray-300 hover:text-white hover:border-purple-400" data-filter="personal" data-en="🚀 Personal Engineering & Labs (6)" data-es="🚀 Ingeniería Personal & Labs (6)">
+                    🚀 Ingeniería Personal & Labs (6)
+                </button>
+            </div>
+            
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 0. GRUPO SALINAS – SISTEMAS CORPORATIVOS EN PRODUCCIÓN -->
+                <div class="project-card-item ar-card p-6 fade-in border border-blue-500/40 flex flex-col justify-between" data-category="corporate">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                                🏢 CORPORATIVO / PRODUCCIÓN
+                            </span>
+                            <span class="text-xs text-blue-300 font-bold">Grupo Salinas</span>
+                        </div>
+                        <div class="h-48 bg-gradient-to-br from-blue-700 via-indigo-800 to-slate-900 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-blue-500/20">
+                            🏢⚡
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 via-indigo-300 to-teal-300 bg-clip-text text-transparent" data-en="Enterprise Web Systems & Mobile Registry – Grupo Salinas" data-es="Sistemas Web Corporativos & Registro Único – Grupo Salinas">
+                            Sistemas Web Corporativos & Registro Único – Grupo Salinas
+                        </h3>
+                        <p class="text-gray-300 mb-4 text-sm" 
+                           data-en="Delivery of 4 massive-scale production platforms at Grupo Salinas: Unified Registration Platform deployed for mobile devices nationwide across corporate and field staff; World Cup Rally with interactive games in Vanilla JS (HTML5 Canvas/CSS3) modularly adapted to heterogeneous production server architectures; Real-time dynamic winner search engine; and Copa Socio sports league module. Version control and releases managed via GitLab." 
+                           data-es="Desarrollo y entrega de 4 plataformas a producción a escala nacional en Grupo Salinas: Sistema de Registro Único recién lanzado para dispositivos móviles con alcance para colaboradores de corporativo y geografía; Rally Mundialista con juegos interactivos en Vanilla JS (HTML5/CSS3) adaptados a arquitecturas de servidores heterogéneos; Buscador dinámico de ganadores en tiempo real y módulo Copa Socio. Gestión y CI/CD en GitLab.">
+                            Desarrollo y entrega de 4 plataformas a producción a escala nacional en Grupo Salinas: Sistema de Registro Único recién lanzado para dispositivos móviles con alcance para colaboradores de corporativo y geografía; Rally Mundialista con juegos interactivos en Vanilla JS (HTML5/CSS3) adaptados a arquitecturas de servidores heterogéneos; Buscador dinámico de ganadores en tiempo real y módulo Copa Socio. Gestión y CI/CD en GitLab.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-700 px-3 py-1 rounded-full text-xs font-semibold">GitLab</span>
+                            <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">Vanilla JS</span>
+                            <span class="bg-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Multi-Server Arch</span>
+                            <span class="bg-emerald-700 px-3 py-1 rounded-full text-xs font-semibold">Mobile Web</span>
+                            <span class="bg-indigo-600 px-3 py-1 rounded-full text-xs font-semibold">HTML5 Canvas</span>
+                            <span class="bg-cyan-700 px-3 py-1 rounded-full text-xs font-semibold">Alta Concurrencia</span>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-teal-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="4 PRODUCTION SYSTEMS" data-es="4 SISTEMAS EN PRODUCCIÓN">
+                            4 SISTEMAS EN PRODUCCIÓN
+                        </button>
+                    </div>
+                </div>
+
                 <!-- 1. PUNTO DE VENTA (EL PULPO CHELERO) -->
-                <div class="ar-card p-6 fade-in">
+                <div class="project-card-item ar-card p-6 fade-in" data-category="personal">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
+                            🚀 PERSONAL / LAB
+                        </span>
+                    </div>
                     <div class="h-48 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-orange-500/20">
                         🐙🍺
                     </div>
@@ -612,7 +678,12 @@
                 </div>
 
                 <!-- 2. RELOJ CHECADOR (KRONOS SAFE) -->
-                <div class="ar-card p-6 fade-in">
+                <div class="project-card-item ar-card p-6 fade-in" data-category="personal">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
+                            🚀 PERSONAL / LAB
+                        </span>
+                    </div>
                     <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-purple-500/20">
                         🕒⚡
                     </div>
@@ -639,8 +710,14 @@
                 </div>
 
                 <!-- 3. EL TALLER DE MAR -->
-                <a href="https://taller-de-mar-green.vercel.app/" target="_blank" class="block">
+                <a href="https://taller-de-mar-green.vercel.app/" target="_blank" class="project-card-item block" data-category="personal">
                     <div class="ar-card p-6 fade-in">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
+                                🚀 PERSONAL / LAB
+                            </span>
+                            <span class="text-xs text-teal-300 font-bold">Live Demo ↗</span>
+                        </div>
                         <div class="h-48 bg-gradient-to-br from-teal-400 to-cyan-600 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-teal-500/20">
                             🌊✨
                         </div>
@@ -668,7 +745,13 @@
                 </a>
 
                 <!-- 4. TABLERO DE CONTROL DE BODEGA & RASTREO POR FACTURAS -->
-                <div class="ar-card p-6 fade-in">
+                <div class="project-card-item ar-card p-6 fade-in" data-category="corporate">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                            🏢 CORPORATIVO / PRODUCCIÓN
+                        </span>
+                        <span class="text-xs text-amber-300 font-bold">MGO Industrial</span>
+                    </div>
                     <div class="h-48 bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-orange-500/20">
                         📦📑
                     </div>
@@ -694,7 +777,13 @@
                 </div>
 
                 <!-- 5. PIPELINE ETL DE REDES SOCIALES & MÉTRICAS AUTOMATIZADAS -->
-                <div class="ar-card p-6 fade-in">
+                <div class="project-card-item ar-card p-6 fade-in" data-category="corporate">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                            🏢 CORPORATIVO / PRODUCCIÓN
+                        </span>
+                        <span class="text-xs text-indigo-300 font-bold">Eufonia Studios</span>
+                    </div>
                     <div class="h-48 bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-indigo-500/20">
                         📡📊
                     </div>
@@ -720,7 +809,12 @@
                 </div>
 
                 <!-- 6. ERP INTERNO -->
-                <div class="ar-card p-6 fade-in">
+                <div class="project-card-item ar-card p-6 fade-in" data-category="corporate">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                            🏢 CORPORATIVO / PRODUCCIÓN
+                        </span>
+                    </div>
                     <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
                         🚀
                     </div>
@@ -745,9 +839,14 @@
                     </div>
                 <!--/a-->
 
-                <a href="https://eufonia.buycraft.net/" target="_blank">
+                <a href="https://eufonia.buycraft.net/" target="_blank" class="project-card-item block" data-category="corporate">
                     <div class="ar-card p-6 fade-in">
-                        
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                                🏢 CORPORATIVO / PRODUCCIÓN
+                            </span>
+                            <span class="text-xs text-blue-300 font-bold">Eufonia Studios</span>
+                        </div>
                         <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
                             <img src="IMG/PROYECTOS/screen-4.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
                         </div>
@@ -762,14 +861,20 @@
                             <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">CSS3</span>
                             <span class="bg-green-600 px-3 py-1 rounded-full text-xs">Twig</span>
                         </div>
-                            <button class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="KNOW IT" data-es="CONOCER">
+                        <button class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="KNOW IT" data-es="CONOCER">
                             CONOCER
                         </button>
                     </div>
                 </a>
 
-                <a href="https://mgo-industrial-beta.vercel.app/" target="_blank">
+                <a href="https://mgo-industrial-beta.vercel.app/" target="_blank" class="project-card-item block" data-category="corporate">
                     <div class="ar-card p-6 fade-in">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                                🏢 CORPORATIVO / PRODUCCIÓN
+                            </span>
+                            <span class="text-xs text-amber-300 font-bold">MGO Industrial</span>
+                        </div>
                         <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
                             ⚙️
                         </div>
@@ -791,8 +896,13 @@
                     </div>
                 </a>
 
-                <a href="https://terra-origen.vercel.app/" target="_blank"> 
+                <a href="https://terra-origen.vercel.app/" target="_blank" class="project-card-item block" data-category="corporate"> 
                     <div class="ar-card p-6 fade-in">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                                🏢 CORPORATIVO / PRODUCCIÓN
+                            </span>
+                        </div>
                         <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
                             <img src="IMG/PROYECTOS/screen-5.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
                         </div>
@@ -812,33 +922,42 @@
                         </button>               
                     </div>
                 </a>          
-                <!--a href="PROYECTOS/challenge/" target="_blank"--> 
-                    <div class="ar-card p-6 fade-in">
-                        <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                            🗂️
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                            Sistema Web de Control de Honorarios y Gestión de Tareas para Oficina
-                        </h3>
-                        <p class="text-gray-300 mb-4 text-sm" data-en="Customized platform for centrally managing fees, assigning tasks, and monitoring revenue. It includes role-based access control, an interactive dashboard, and tools that streamline organization, reduce errors, and improve internal workflow. It is built with the following technologies:" data-es="Plataforma personalizada para gestionar honorarios, asignar tareas y monitorear ingresos de forma centralizada. Incluye control de acceso por roles, dashboard interactivo y herramientas que optimizan la organización, reducen errores y mejoran el flujo de trabajo interno. Está construido con las siguientes tecnologías:">
-                            Plataforma personalizada para gestionar honorarios, asignar tareas y monitorear ingresos de forma centralizada. Incluye control de acceso por roles, dashboard interactivo y herramientas que optimizan la organización, reducen errores y mejoran el flujo de trabajo interno. Está construido con las siguientes tecnologías:
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-cyan-800 px-3 py-1 rounded-full text-xs">REACT</span>
-                            <span class="bg-green-600 px-3 py-1 rounded-full text-xs">NODE.JS</span>
-                            <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">TypeScript</span>
-                            <span class="bg-blue-300 px-3 py-1 rounded-full text-xs">Tailwind CSS</span>
-                            <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">PostgreSQL</span>
-                            <span class="bg-zinc-600 px-3 py-1 rounded-full text-xs">Vercel</span>
-                            <span class="bg-green-600 px-3 py-1 rounded-full text-xs">Neon</span>
-                        </div>
-                        <!--button class="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="DISCOVER" data-es="DESCUBRIR">
-                            DESCUBRIR
-                        </button-->
+
+                <div class="project-card-item ar-card p-6 fade-in" data-category="corporate">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                            🏢 CORPORATIVO / PRODUCCIÓN
+                        </span>
+                        <span class="text-xs text-blue-300 font-bold">Carrizales Díaz</span>
                     </div>
-                <!--/a-->
-                <a href="PROYECTOS/challenge/" target="_blank"> 
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                        🗂️
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                        Sistema Web de Control de Honorarios y Gestión de Tareas para Oficina
+                    </h3>
+                    <p class="text-gray-300 mb-4 text-sm" data-en="Customized platform for centrally managing fees, assigning tasks, and monitoring revenue. It includes role-based access control, an interactive dashboard, and tools that streamline organization, reduce errors, and improve internal workflow. It is built with the following technologies:" data-es="Plataforma personalizada para gestionar honorarios, asignar tareas y monitorear ingresos de forma centralizada. Incluye control de acceso por roles, dashboard interactivo y herramientas que optimizan la organización, reducen errores y mejoran el flujo de trabajo interno. Está construido con las siguientes tecnologías:">
+                        Plataforma personalizada para gestionar honorarios, asignar tareas y monitorear ingresos de forma centralizada. Incluye control de acceso por roles, dashboard interactivo y herramientas que optimizan la organización, reducen errores y mejoran el flujo de trabajo interno. Está construido con las siguientes tecnologías:
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-cyan-800 px-3 py-1 rounded-full text-xs">REACT</span>
+                        <span class="bg-green-600 px-3 py-1 rounded-full text-xs">NODE.JS</span>
+                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">TypeScript</span>
+                        <span class="bg-blue-300 px-3 py-1 rounded-full text-xs">Tailwind CSS</span>
+                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">PostgreSQL</span>
+                        <span class="bg-zinc-600 px-3 py-1 rounded-full text-xs">Vercel</span>
+                        <span class="bg-green-600 px-3 py-1 rounded-full text-xs">Neon</span>
+                    </div>
+                </div>
+
+                <a href="PROYECTOS/challenge/" target="_blank" class="project-card-item block" data-category="personal"> 
                     <div class="ar-card p-6 fade-in">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
+                                🚀 PERSONAL / LAB
+                            </span>
+                            <span class="text-xs text-purple-300 font-bold">Alura Latam</span>
+                        </div>
                         <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
                             <img src="IMG/PROYECTOS/screen-1.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
                         </div>
@@ -858,8 +977,15 @@
                         </button>
                     </div>
                 </a>
-                <a href="https://alura-geek-nay.vercel.app/" target="_blank">
+
+                <a href="https://alura-geek-nay.vercel.app/" target="_blank" class="project-card-item block" data-category="personal">
                     <div class="ar-card p-6 fade-in">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
+                                🚀 PERSONAL / LAB
+                            </span>
+                            <span class="text-xs text-purple-300 font-bold">Alura Latam</span>
+                        </div>
                         <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
                             🎮
                         </div>
@@ -879,8 +1005,14 @@
                         </button>
                     </div>
                 </a>
-                <a href="PROYECTOS/invitacion-boda/" target="_blank">
+
+                <a href="PROYECTOS/invitacion-boda/" target="_blank" class="project-card-item block" data-category="personal">
                     <div class="ar-card p-6 fade-in">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
+                                🚀 PERSONAL / LAB
+                            </span>
+                        </div>
                         <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
                             <img src="IMG/PROYECTOS/screen-2.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
                         </div>
@@ -900,29 +1032,30 @@
                         </button>
                     </div>
                 </a>
-                <!--a href="PROYECTOS/invitacion-boda/" target="_blank"-->
-                    <div class="ar-card p-6 fade-in">
-                        <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                            📊
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                            Sistema Web para Recopilación de Información de Informe de Gobierno
-                        </h3>
-                        <p class="text-gray-300 mb-4 text-sm" data-en="Platform for centralizing and validating information from various government departments, used in the preparation of the Government Report. It includes access by department, validated forms, an administrative dashboard, and responsive design. This project is built with: " data-es="Plataforma para centralizar y validar información de distintas áreas gubernamentales, utilizada en la preparación del Informe de Gobierno. Incluye acceso por área, formularios validados, panel administrativo y diseño adaptable. Este proyecto esta construido con:">
-                            Plataforma para centralizar y validar información de distintas áreas gubernamentales, utilizada en la preparación del Informe de Gobierno. Incluye acceso por área, formularios validados, panel administrativo y diseño adaptable. Este proyecto esta construido con:
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">HTML5</span>
-                            <span class="bg-purple-600 px-3 py-1 rounded-full text-xs">PHP</span>
-                            <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">CSS3</span>
-                            <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">JAVASCRIPT</span>
-                            <span class="bg-red-600 px-3 py-1 rounded-full text-xs">JQuery</span>
-                        </div>
-                        <!--button class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="ENTER" data-es="ENTRAR">
-                            ENTRAR
-                        </button--> 
+
+                <div class="project-card-item ar-card p-6 fade-in" data-category="corporate">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                            🏢 CORPORATIVO / PRODUCCIÓN
+                        </span>
                     </div>
-                <!--/a-->     
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                        📊
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        Sistema Web para Recopilación de Información de Informe de Gobierno
+                    </h3>
+                    <p class="text-gray-300 mb-4 text-sm" data-en="Platform for centralizing and validating information from various government departments, used in the preparation of the Government Report. It includes access by department, validated forms, an administrative dashboard, and responsive design. This project is built with: " data-es="Plataforma para centralizar y validar información de distintas áreas gubernamentales, utilizada en la preparación del Informe de Gobierno. Incluye acceso por área, formularios validados, panel administrativo y diseño adaptable. Este proyecto esta construido con:">
+                        Plataforma para centralizar y validar información de distintas áreas gubernamentales, utilizada en la preparación del Informe de Gobierno. Incluye acceso por área, formularios validados, panel administrativo y diseño adaptable. Este proyecto esta construido con:
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">HTML5</span>
+                        <span class="bg-purple-600 px-3 py-1 rounded-full text-xs">PHP</span>
+                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">CSS3</span>
+                        <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">JAVASCRIPT</span>
+                        <span class="bg-red-600 px-3 py-1 rounded-full text-xs">JQuery</span>
+                    </div>
+                </div>     
             </div>
         </div>
     </section>
@@ -1013,7 +1146,14 @@
                 <div class="glass-card p-8 rounded-3xl hover:scale-105 transition-transform breathe fade-in">
                     <div class="text-5xl mb-4">🚀</div>
                     <h3 class="font-bold mb-2 text-purple-400">CV.FLOW</h3>
-                    <a href="CV_Nayeli_Carrizales.html" target="_blank" class="text-gray-300 hover:text-purple-400 transition-colors" data-en="Nayeli Carrizales (View / Print)" data-es="Nayeli Carrizales (Ver / Imprimir)">Nayeli Carrizales (Ver / Imprimir)</a>
+                    <div class="flex flex-col gap-2 mt-2">
+                        <a href="CV_Nayeli_Carrizales.html" target="_blank" class="text-gray-300 hover:text-purple-400 transition-colors text-sm font-semibold">
+                            📄 Español (Ver / PDF)
+                        </a>
+                        <a href="CV_Nayeli_Carrizales_EN.html" target="_blank" class="text-gray-300 hover:text-purple-400 transition-colors text-sm font-semibold">
+                            🌐 English (View / PDF)
+                        </a>
+                    </div>
                 </div>
                 
                 <div class="glass-card p-8 rounded-3xl hover:scale-105 transition-transform breathe fade-in">
@@ -1268,6 +1408,27 @@
                             });
                         }
                     }
+                });
+            });
+
+            // Project Category Filters
+            document.querySelectorAll('#projectFilters .filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('#projectFilters .filter-btn').forEach(b => {
+                        b.classList.remove('active', 'bg-purple-600/30', 'text-white', 'border-purple-500');
+                        b.classList.add('text-gray-300');
+                    });
+                    this.classList.add('active', 'bg-purple-600/30', 'text-white', 'border-purple-500');
+                    this.classList.remove('text-gray-300');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    document.querySelectorAll('.project-card-item').forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = '';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
                 });
             });
         }

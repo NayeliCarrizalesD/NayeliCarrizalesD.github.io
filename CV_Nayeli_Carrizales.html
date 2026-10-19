@@ -70,6 +70,26 @@
             box-shadow: 0 4px 10px rgba(43, 122, 75, 0.4);
         }
 
+        .btn-lang {
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            text-decoration: none;
+            padding: 7px 14px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 13px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .btn-lang:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+        }
+
         .cv-container {
             max-width: 820px;
             margin: 24px auto;
@@ -410,9 +430,14 @@
             <span style="opacity: 0.7; font-size: 12px; margin-left: 10px;">Optimizado para perfiles Cloud, AI &
                 Solutions Engineering (Google Careers)</span>
         </div>
-        <button class="btn-print" onclick="window.print()">
-            🖨️ Imprimir / Guardar como PDF
-        </button>
+        <div style="display: flex; gap: 10px; align-items: center;">
+            <a href="CV_Nayeli_Carrizales_EN.html" class="btn-lang">
+                🌐 English Version
+            </a>
+            <button class="btn-print" onclick="window.print()">
+                🖨️ Imprimir / Guardar como PDF
+            </button>
+        </div>
     </div>
 
     <div class="cv-container">
@@ -472,29 +497,41 @@
         <!-- WORK EXPERIENCE -->
         <h2 class="section-title">EXPERIENCIA LABORAL</h2>
 
-        <!-- EXP 1 -->
+        <!-- EXP 1: GRUPO SALINAS -->
         <div class="timeline-item">
             <div class="item-dates">SEPTIEMBRE 2023 – ACTUALIDAD</div>
-            <div class="item-role">ESPECIALISTA EN SISTEMAS WEB Y AUTOMATIZACIÓN DE PROCESOS | GESTOR DE E-COMMERCE
+            <div class="item-role">DESARROLLADORA WEB FRONT-END & SISTEMAS CORPORATIVOS</div>
+            <div class="item-company">Grupo Salinas · Guadalajara / Híbrido</div>
+            <ul class="item-bullets">
+                <li>Lideré y entregué exitosamente <strong>4 proyectos estratégicos a producción</strong>, gestionando ramas, revisiones de código y flujos de despliegue mediante <strong>GitLab corporativo</strong>.</li>
+                <li><strong>Registro Único (Móvil & Geografía):</strong> Desarrollé la arquitectura e interfaz del sistema unificado de registro para dispositivos móviles, dando servicio a escala masiva a colaboradores corporativos y de campo en toda la geografía nacional.</li>
+                <li><strong>Rally Mundialista (Juegos Web Multi-Servidor):</strong> Desarrollé dinámicas y juegos interactivos de alto rendimiento en <strong>Vanilla JavaScript (ES6+), HTML5 y CSS3</strong>. Diseñé y adapté arquitecturas de código modulares para ejecutarse de manera confiable en <strong>diferentes servidores de producción con arquitecturas e infraestructuras heterogéneas</strong>.</li>
+                <li><strong>Buscador Dinámico de Ganadores:</strong> Diseñé un motor de búsqueda y filtrado ágil para identificar ganadores de dinámicas corporativas en tiempo real con alta concurrencia.</li>
+                <li><strong>Módulo Copa Socio:</strong> Desarrollé la interfaz interactiva para el torneo deportivo institucional, permitiendo visualizar equipos, fixtures y clasificaciones en tiempo real.</li>
+            </ul>
+            <div style="margin-top: 4px;">
+                <span class="tech-pill">GitLab Corporativo</span>
+                <span class="tech-pill">JavaScript (Vanilla ES6+)</span>
+                <span class="tech-pill">Arquitecturas Multi-Servidor</span>
+                <span class="tech-pill">Mobile First</span>
+                <span class="tech-pill">HTML5 Canvas / CSS3</span>
+                <span class="tech-pill">Alta Concurrencia</span>
             </div>
+        </div>
+
+        <!-- EXP 2: MGO INDUSTRIAL -->
+        <div class="timeline-item">
+            <div class="item-dates">SEPTIEMBRE 2023 – 2024</div>
+            <div class="item-role">CONSULTORA EN SISTEMAS WEB Y AUTOMATIZACIÓN DE PROCESOS</div>
             <div class="item-company">MGO Industrial · Guadalajara, Jal.</div>
             <ul class="item-bullets">
-                <li>Diseñé e implementé el <strong>Tablero de Control de Bodega y Logística</strong>, automatizando el
-                    registro de entradas y salidas de material con <strong>Google Apps Script</strong> y centralizando
-                    dashboards analíticos en tiempo real en <strong>Google Looker Studio</strong>.</li>
-                <li>Desarrollé la <strong>trazabilidad operativa a nivel de factura y proveedor</strong>, reduciendo
-                    discrepancias de inventario y habilitando alertas automáticas de reabastecimiento crítico.</li>
-                <li>Gestión del ciclo de vida y control de versiones del código corporativo en <strong>GitLab</strong>,
-                    administrando ramas de producción, code reviews y resolución de incidencias.</li>
-                <li>Desarrollé y optimicé la plataforma web corporativa con <strong>React, TypeScript y Tailwind
-                        CSS</strong>, mejorando la velocidad de respuesta y la experiencia de usuario.</li>
-                <li>Gestión técnica de catálogos y sincronización de inventario en plataformas de e-commerce y
-                    marketplaces.</li>
+                <li>Diseñé e implementé el <strong>Tablero de Control de Bodega y Logística</strong>, automatizando el registro de entradas y salidas de material con <strong>Google Apps Script</strong> y centralizando dashboards analíticos en tiempo real en <strong>Google Looker Studio</strong>.</li>
+                <li>Desarrollé la <strong>trazabilidad operativa a nivel de factura y proveedor</strong>, reduciendo discrepancias de inventario y habilitando alertas automáticas de reabastecimiento crítico.</li>
+                <li>Desarrollé y optimicé la plataforma web corporativa con <strong>React, TypeScript y Tailwind CSS</strong>, mejorando la velocidad de respuesta y la experiencia de usuario.</li>
             </ul>
             <div style="margin-top: 4px;">
                 <span class="tech-pill">Google Looker Studio</span>
                 <span class="tech-pill">Google Apps Script</span>
-                <span class="tech-pill">GitLab</span>
                 <span class="tech-pill">React</span>
                 <span class="tech-pill">TypeScript</span>
                 <span class="tech-pill">Tailwind CSS</span>
@@ -585,58 +622,63 @@
         </div>
 
         <!-- RELEVANT PROJECTS -->
-        <h2 class="section-title">PROYECTOS DESTACADOS DE ALTO IMPACTO</h2>
+        <h2 class="section-title">PROYECTOS DESTACADOS</h2>
 
-        <div class="project-card">
-            <div class="project-title">
-                <span>Punto de Venta & KDS en Tiempo Real – El Pulpo Chelero</span>
-                <span style="font-size: 11px; color: #64748b; font-weight: 500;">React 19 · TypeScript · Docker</span>
-            </div>
-            <p class="project-desc">
-                Sistema modular para restaurante con mapa interactivo de mesas, venta rápida, sistema KDS (pantalla de
-                cocina/bar) y arqueo de caja (X y Z). Construido con <strong>React 19, TypeScript, Vite 8, Zustand,
-                    Docker multi-stage y Nginx Alpine</strong>, con alertas sonoras en tiempo real (Web Audio API) e
-                integración con APIs de autenticación y usuarios (Janus/Octopus).
-            </p>
+        <div style="font-size: 11.5px; font-weight: 700; color: #1e293b; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+            <span style="color: var(--accent-green);">🏢</span> PROYECTOS CORPORATIVOS & DE PRODUCCIÓN
         </div>
 
         <div class="project-card">
             <div class="project-title">
-                <span>Reloj Checador Empresarial – Kronos Safe</span>
-                <span style="font-size: 11px; color: #64748b; font-weight: 500;">Next.js 16 · PostgreSQL Neon ·
-                    Drizzle</span>
+                <span>Registro Único Móvil & Rally Mundialista Multi-Servidor</span>
+                <span style="font-size: 11px; color: #64748b; font-weight: 500;">Grupo Salinas · GitLab · Vanilla JS / Mobile</span>
             </div>
             <p class="project-desc">
-                Plataforma de control laboral y asistencias con cálculo automático de horas extras e incidencias.
-                Desarrollada con <strong>Next.js 16, React 19, PostgreSQL Serverless (Neon), Drizzle ORM,
-                    Auth0</strong>, exportación a hojas de cálculo (XLSX) y suite de testing con <strong>Vitest y
-                    Cypress</strong>.
+                Soluciones web de escala nacional entregadas a producción. Incluye el sistema de registro único para colaboradores corporativos y de campo en todo México, y juegos web interactivos adaptados a arquitecturas de servidores heterogéneas con control de versiones en GitLab.
             </p>
         </div>
 
         <div class="project-card">
             <div class="project-title">
                 <span>Tablero de Control de Bodega & Trazabilidad de Facturas</span>
-                <span style="font-size: 11px; color: #64748b; font-weight: 500;">Looker Studio · Apps Script · Sheets
-                    API</span>
+                <span style="font-size: 11px; color: #64748b; font-weight: 500;">MGO Industrial · Looker Studio · Apps Script</span>
             </div>
             <p class="project-desc">
-                Solución de logística empresarial que automatiza entradas/salidas de materiales, cálculo de stock
-                dinámico y alertas automáticas mediante <strong>Google Apps Script</strong>, con visualización analítica
-                por número de factura y proveedor en <strong>Google Looker Studio</strong>.
+                Automatización de entradas/salidas de materiales, cálculo de stock dinámico y alertas automáticas mediante <strong>Google Apps Script</strong>, con visualización analítica por número de factura y proveedor en <strong>Google Looker Studio</strong>.
             </p>
         </div>
 
         <div class="project-card">
             <div class="project-title">
                 <span>Pipeline ETL de Redes Sociales & Métricas Automatizadas</span>
-                <span style="font-size: 11px; color: #64748b; font-weight: 500;">Google Apps Script · APIs REST · JSON
-                    ETL</span>
+                <span style="font-size: 11px; color: #64748b; font-weight: 500;">Eufonia Studios · Google Apps Script · APIs REST</span>
             </div>
             <p class="project-desc">
-                Pipeline programado en la nube que consume APIs REST de plataformas sociales con autenticación por
-                tokens, normaliza métricas clave en <strong>Google Sheets</strong> y alimenta dashboards directivos en
-                <strong>Looker Studio</strong> sin intervención manual.
+                Pipeline programado en la nube que consume APIs REST de plataformas sociales, normaliza métricas clave en <strong>Google Sheets</strong> y alimenta dashboards directivos en <strong>Looker Studio</strong> sin intervención manual.
+            </p>
+        </div>
+
+        <div style="font-size: 11.5px; font-weight: 700; color: #1e293b; text-transform: uppercase; letter-spacing: 0.6px; margin-top: 14px; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+            <span style="color: var(--accent-blue);">🚀</span> PROYECTOS DE INGENIERÍA PERSONAL & ARQUITECTURA OPEN
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">
+                <span>Punto de Venta & KDS en Tiempo Real – El Pulpo Chelero</span>
+                <span style="font-size: 11px; color: #64748b; font-weight: 500;">React 19 · TypeScript · Docker · Nginx</span>
+            </div>
+            <p class="project-desc">
+                Sistema modular para restaurante con mapa interactivo de mesas, pantalla de cocina (KDS) y corte de caja (X y Z). Construido con <strong>React 19, TypeScript, Vite 8, Zustand, Docker multi-stage y Nginx Alpine</strong>, con alertas sonoras en tiempo real (Web Audio API) e integración con APIs de autenticación (Janus/Octopus).
+            </p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">
+                <span>Reloj Checador Empresarial – Kronos Safe</span>
+                <span style="font-size: 11px; color: #64748b; font-weight: 500;">Next.js 16 · PostgreSQL Neon · Drizzle ORM</span>
+            </div>
+            <p class="project-desc">
+                Plataforma de control laboral con cálculo de horas extras e incidencias. Desarrollada con <strong>Next.js 16, React 19, PostgreSQL Serverless (Neon), Drizzle ORM, Auth0</strong>, exportación a hojas de cálculo (XLSX) y suite de testing con <strong>Vitest y Cypress</strong>.
             </p>
         </div>
 
@@ -646,7 +688,7 @@
                 <span style="font-size: 11px; color: #1a73e8; font-weight: 600;"><a href="https://taller-de-mar-green.vercel.app/" target="_blank" style="color: #1a73e8; text-decoration: none;">taller-de-mar-green.vercel.app ↗</a></span>
             </div>
             <p class="project-desc">
-                Plataforma web para estudio creativo con agendamiento de citas, reservaciones a talleres, galería con compresión de imágenes en cliente, confirmaciones vía Resend Email y autenticación con Auth0. Construida con <strong>Next.js 16, React 19, Tailwind CSS, PostgreSQL Neon y Vercel Blob</strong>.
+                Plataforma web para estudio creativo con agendamiento de citas, reservaciones a talleres, compresión de fotos en navegador, confirmaciones vía Resend Email y Auth0. Construida con <strong>Next.js 16, React 19, Tailwind CSS, PostgreSQL Neon y Vercel Blob</strong>.
             </p>
         </div>
 
