@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nayeli Carrizales</title>
+    <title>Nayeli Carrizales | Portafolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/CSS/general.css">
+    <link rel="stylesheet" href="CSS/general.css">
 </head>
 <body>
     <!-- Custom Cursor -->
     <div class="cursor" id="cursor"></div>
     
-    <!-- Interactive Particle System -->
-    <div class="particle-system" id="particleSystem"></div>
+    <!-- High-Performance Interactive Particle Canvas -->
+    <canvas class="particle-system" id="particleCanvas"></canvas>
     
     <!-- Liquid Background Shapes -->
     <div class="liquid-shape"></div>
@@ -145,7 +147,7 @@
                 <div class="layout-item-5 flex items-center justify-center fade-in">
                     <a href="#projects" >
                         <div class="glass-card p-6 rounded-full w-32 h-32 flex items-center justify-center text-4xl breathe">
-                            <img src="/IMG/nay-by-save-sin-fondo.png" alt="Nayeli Carrizales" class="w-full h-full object-cover rounded-full">
+                            <img src="IMG/nay-by-save-sin-fondo.png" alt="Nayeli Carrizales" class="w-full h-full object-cover rounded-full">
                         </div>
                     </a>
                 </div>
@@ -160,11 +162,12 @@
                 <span data-en="TECH STACK" data-es="TECH STACK">TECH STACK</span>
             </h2>
 
+            <!-- LENGUAJES -->
             <h3 class="text-3xl font-bold text-center mb-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
                 <span data-en="LANGUAGES" data-es="LENGUAJES">LENGUAJES</span>
             </h3>
             
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 mb-12">
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">🟧</div>
@@ -177,7 +180,7 @@
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">🟨</div>
                         <div class="text-xs font-bold">JAVASCRIPT</div>
-                        <div class="text-xs text-purple-400">90%</div>
+                        <div class="text-xs text-purple-400">92%</div>
                     </div>
                 </div>
                 
@@ -185,7 +188,7 @@
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">🟦</div>
                         <div class="text-xs font-bold">CSS3</div>
-                        <div class="text-xs text-purple-400">80%</div>
+                        <div class="text-xs text-purple-400">85%</div>
                     </div>
                 </div>
                 
@@ -196,34 +199,42 @@
                         <div class="text-xs text-purple-400">95%</div>
                     </div>
                 </div>
+
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🐘</div>
+                        <div class="text-xs font-bold">SQL / POSTGRES</div>
+                        <div class="text-xs text-purple-400">85%</div>
+                    </div>
+                </div>
+
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">🐍</div>
                         <div class="text-xs font-bold">PYTHON</div>
-                        <div class="text-xs text-purple-400">50%</div>
+                        <div class="text-xs text-purple-400">55%</div>
                     </div>
                 </div>
             </div>
             
-                
+            <!-- FRAMEWORKS Y LIBRERIAS -->
             <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
                 <span data-en="FRAMEWORKS AND LIBRARIES" data-es="FRAMEWORKS Y LIBRERIAS">FRAMEWORKS Y LIBRERIAS</span>
             </h3>
             
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-                <!-- Additional Skills -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-12">
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">⚛️</div>
-                        <div class="text-xs font-bold">REACT</div>
-                        <div class="text-xs text-purple-400">90%</div>
+                        <div class="text-xs font-bold">REACT 19</div>
+                        <div class="text-xs text-purple-400">92%</div>
                     </div>
                 </div>
                 
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">⚫</div>
-                        <div class="text-xs font-bold">Next.js</div>
+                        <div class="text-xs font-bold">NEXT.JS 16</div>
                         <div class="text-xs text-purple-400">90%</div>
                     </div>
                 </div>              
@@ -231,24 +242,164 @@
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">🌊</div>
-                        <div class="text-xs font-bold">Tailwind CSS</div>
+                        <div class="text-xs font-bold">TAILWIND CSS</div>
+                        <div class="text-xs text-purple-400">90%</div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🐻</div>
+                        <div class="text-xs font-bold">ZUSTAND</div>
+                        <div class="text-xs text-purple-400">88%</div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🎨</div>
+                        <div class="text-xs font-bold">REACTSTRAP</div>
+                        <div class="text-xs text-purple-400">80%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BACKEND Y APIS -->
+            <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
+                <span data-en="BACKEND & APIS" data-es="BACKEND Y APIS">BACKEND Y APIS</span>
+            </h3>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-12">
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🟩</div>
+                        <div class="text-xs font-bold">NODE.JS</div>
+                        <div class="text-xs text-purple-400">88%</div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🚂</div>
+                        <div class="text-xs font-bold">EXPRESS.JS</div>
+                        <div class="text-xs text-purple-400">82%</div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">⚡</div>
+                        <div class="text-xs font-bold">NEXT API ROUTES</div>
+                        <div class="text-xs text-purple-400">90%</div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🌐</div>
+                        <div class="text-xs font-bold">APIs REST</div>
+                        <div class="text-xs text-purple-400">88%</div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🔒</div>
+                        <div class="text-xs font-bold">AUTH0 / JWT</div>
+                        <div class="text-xs text-purple-400">85%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BASES DE DATOS Y ORM -->
+            <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
+                <span data-en="DATABASES & ORM" data-es="BASES DE DATOS Y ORM">BASES DE DATOS Y ORM</span>
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🐘</div>
+                        <div class="text-xs font-bold">POSTGRESQL</div>
+                        <div class="text-xs text-purple-400">88%</div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🟢</div>
+                        <div class="text-xs font-bold">NEON SERVERLESS</div>
+                        <div class="text-xs text-purple-400">85%</div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">💧</div>
+                        <div class="text-xs font-bold">DRIZZLE ORM</div>
+                        <div class="text-xs text-purple-400">85%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTENEDORES Y DESPLIEGUE -->
+            <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
+                <span data-en="CONTAINERS & DEPLOYMENT" data-es="CONTENEDORES Y DESPLIEGUE">CONTENEDORES Y DESPLIEGUE</span>
+            </h3>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-12">
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🐳</div>
+                        <div class="text-xs font-bold">DOCKER</div>
                         <div class="text-xs text-purple-400">80%</div>
                     </div>
                 </div>
 
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🟩</div>
+                        <div class="text-xs font-bold">NGINX</div>
+                        <div class="text-xs text-purple-400">78%</div>
+                    </div>
                 </div>
                 
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🚀</div>
+                        <div class="text-xs font-bold">VERCEL</div>
+                        <div class="text-xs text-purple-400">90%</div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">☁️</div>
+                        <div class="text-xs font-bold">VERCEL BLOB</div>
+                        <div class="text-xs text-purple-400">85%</div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">✉️</div>
+                        <div class="text-xs font-bold">RESEND EMAIL</div>
+                        <div class="text-xs text-purple-400">82%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HERRAMIENTAS DE DESARROLLO -->
             <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
                 <span data-en="DEVELOPMENT TOOLS" data-es="HERRAMIENTAS DE DESARROLLO">HERRAMIENTAS DE DESARROLLO</span>
             </h3>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-12">
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">🔀</div>
                         <div class="text-xs font-bold">GIT</div>
-                        <div class="text-xs text-purple-400">85%</div>
+                        <div class="text-xs text-purple-400">88%</div>
                     </div>
                 </div>
                 
@@ -256,15 +407,23 @@
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">🐙</div>
                         <div class="text-xs font-bold">GITHUB</div>
-                        <div class="text-xs text-purple-400">85%</div>
+                        <div class="text-xs text-purple-400">88%</div>
                     </div>
                 </div>
                 
                 <div class="fade-in">
                     <div class="skill-orb">
-                        <div class="text-3xl mb-2">🚀</div>
+                        <div class="text-3xl mb-2">💻</div>
                         <div class="text-xs font-bold">VSCODE</div>
                         <div class="text-xs text-purple-400">92%</div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">⚡</div>
+                        <div class="text-xs font-bold">VITE</div>
+                        <div class="text-xs text-purple-400">90%</div>
                     </div>
                 </div>
                 
@@ -272,43 +431,17 @@
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">🟣</div>
                         <div class="text-xs font-bold">FIGMA</div>
-                        <div class="text-xs text-purple-400">70%</div>
+                        <div class="text-xs text-purple-400">75%</div>
                     </div>
                 </div>
             </div>
 
-            <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
-                <span data-en="INTEGRATION AND DEPLOYMENT" data-es="INTEGRACIÓN Y DESPLIEGUE">INTEGRACIÓN Y DESPLIEGUE</span>
-            </h3>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="fade-in">
-                    
-                </div>
-                
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">🚀</div>
-                        <div class="text-xs font-bold">VERCEL</div>
-                        <div class="text-xs text-purple-400">85%</div>
-                    </div>
-                </div>
-                
-                <div class="fade-in">
-                    <div class="skill-orb">
-                        <div class="text-3xl mb-2">🌐</div>
-                        <div class="text-xs font-bold">APIs REST</div>
-                        <div class="text-xs text-purple-400">70%</div>
-                    </div>
-                </div>
-            </div>
-
+            <!-- CONTROL DE VERSIONES Y COLABORACIÓN -->
             <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
                 <span data-en="VERSION CONTROL AND COLLABORATION" data-es="CONTROL DE VERSIONES Y COLABORACIÓN">CONTROL DE VERSIONES Y COLABORACIÓN</span>
             </h3>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">📊</div>
@@ -342,17 +475,41 @@
                 </div>
             </div>
             
+            <!-- PRUEBAS Y CALIDAD -->
             <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
                 <span data-en="TESTING AND QUALITY" data-es="PRUEBAS Y CALIDAD">PRUEBAS Y CALIDAD</span>
             </h3>
             
-            <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
-                
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">⚡</div>
+                        <div class="text-xs font-bold">VITEST</div>
+                        <div class="text-xs text-purple-400">85%</div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🃏</div>
+                        <div class="text-xs font-bold">JEST / RTL</div>
+                        <div class="text-xs text-purple-400">82%</div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="skill-orb">
+                        <div class="text-3xl mb-2">🌲</div>
+                        <div class="text-xs font-bold">CYPRESS</div>
+                        <div class="text-xs text-purple-400">80%</div>
+                    </div>
+                </div>
+
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">🔍</div>
                         <div class="text-xs font-bold">ESLint</div>
-                        <div class="text-xs text-purple-400">85%</div>
+                        <div class="text-xs text-purple-400">88%</div>
                     </div>
                 </div>
             </div>
@@ -367,14 +524,95 @@
             </h2>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!--a href="#" target="_blank"-->
-                    <div class="ar-card p-6 fade-in">
-                        <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                            🚀
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                            ERP Interno para Empresa
-                        </h3>
+                <!-- 1. PUNTO DE VENTA (EL PULPO CHELERO) -->
+                <div class="ar-card p-6 fade-in">
+                    <div class="h-48 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-orange-500/20">
+                        🐙🍺
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
+                        Punto de Venta & Cocina (POS / KDS)
+                    </h3>
+                    <p class="text-gray-300 mb-4 text-sm" 
+                       data-en="Complete Point of Sale (POS) and Kitchen Display System (KDS) for restaurants and bars. Built with React 19, TypeScript, Vite, Tailwind CSS v4 and Zustand. Features interactive table layout, staff quick-switch with PIN, takeaway mode, thermal tickets, cash drawer cuts (X and Z), and production Docker/Nginx containerization." 
+                       data-es="Sistema completo de Punto de Venta (POS) y Comandas para restaurante y bar. Desarrollado con React 19, TypeScript, Vite, Tailwind CSS v4 y Zustand. Incluye plano interactivo de mesas, cambio rápido de mesero por PIN, pantalla táctil de cocina (KDS) con alertas sonoras en tiempo real, arqueo de caja (cortes X y Z) y despliegue en contenedor con Docker y Nginx.">
+                        Sistema completo de Punto de Venta (POS) y Comandas para restaurante y bar. Desarrollado con React 19, TypeScript, Vite, Tailwind CSS v4 y Zustand. Incluye plano interactivo de mesas, cambio rápido de mesero por PIN, pantalla táctil de cocina (KDS) con alertas sonoras en tiempo real, arqueo de caja (cortes X y Z) y despliegue en contenedor con Docker y Nginx.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React 19</span>
+                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">TypeScript</span>
+                        <span class="bg-purple-600 px-3 py-1 rounded-full text-xs font-semibold">Vite</span>
+                        <span class="bg-blue-500 px-3 py-1 rounded-full text-xs font-semibold">Tailwind v4</span>
+                        <span class="bg-amber-600 px-3 py-1 rounded-full text-xs font-semibold">Zustand</span>
+                        <span class="bg-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Docker</span>
+                        <span class="bg-green-700 px-3 py-1 rounded-full text-xs font-semibold">Nginx</span>
+                    </div>
+                    <button class="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="ACTIVE SYSTEM" data-es="SISTEMA ACTIVO">
+                        SISTEMA ACTIVO
+                    </button>
+                </div>
+
+                <!-- 2. RELOJ CHECADOR (KRONOS SAFE) -->
+                <div class="ar-card p-6 fade-in">
+                    <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-purple-500/20">
+                        🕒⚡
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                        Reloj Checador & Control de Asistencia
+                    </h3>
+                    <p class="text-gray-300 mb-4 text-sm" 
+                       data-en="Enterprise attendance and time-tracking system (Kronos Safe). Developed with Next.js 16, React 19, Auth0, PostgreSQL Serverless (Neon) and Drizzle ORM. Features punch-in kiosk mode, employee incident tracking, automated overtime calculation, and dynamic Excel (XLSX) report generation." 
+                       data-es="Sistema empresarial de control de asistencia de personal y reloj checador (Kronos Safe). Desarrollado con Next.js 16, React 19, Auth0, PostgreSQL Serverless (Neon) y Drizzle ORM. Incluye modo quiosco digital para registro de entradas/salidas, gestión de incidencias de empleados, cálculo automático de horas extra y exportación de reportes a Excel.">
+                        Sistema empresarial de control de asistencia de personal y reloj checador (Kronos Safe). Desarrollado con Next.js 16, React 19, Auth0, PostgreSQL Serverless (Neon) y Drizzle ORM. Incluye modo quiosco digital para registro de entradas/salidas, gestión de incidencias de empleados, cálculo automático de horas extra y exportación de reportes a Excel.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-semibold">Next.js 16</span>
+                        <span class="bg-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React 19</span>
+                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">PostgreSQL</span>
+                        <span class="bg-green-600 px-3 py-1 rounded-full text-xs font-semibold">Neon DB</span>
+                        <span class="bg-cyan-600 px-3 py-1 rounded-full text-xs font-semibold">Drizzle ORM</span>
+                        <span class="bg-orange-600 px-3 py-1 rounded-full text-xs font-semibold">Auth0</span>
+                        <span class="bg-emerald-700 px-3 py-1 rounded-full text-xs font-semibold">Excel (XLSX)</span>
+                    </div>
+                    <button class="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="ACTIVE SYSTEM" data-es="SISTEMA ACTIVO">
+                        SISTEMA ACTIVO
+                    </button>
+                </div>
+
+                <!-- 3. EL TALLER DE MAR -->
+                <div class="ar-card p-6 fade-in">
+                    <div class="h-48 bg-gradient-to-br from-teal-400 to-cyan-600 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-teal-500/20">
+                        🌊✨
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-teal-300 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                        El Taller de Mar – Citas & Talleres
+                    </h3>
+                    <p class="text-gray-300 mb-4 text-sm" 
+                       data-en="Complete management platform for a creative studio. Features appointment scheduling, workshop enrollment, interactive gallery with client-side image compression, and transactional confirmation emails with Resend. Built with Next.js 16, React 19, Tailwind CSS, PostgreSQL Neon, Vercel Blob and Auth0." 
+                       data-es="Plataforma web para estudio creativo que centraliza agendamiento de citas, reservaciones para talleres presenciales, galería interactiva con compresión de fotos en navegador y confirmaciones por correo con Resend. Construido con Next.js 16, React 19, Tailwind CSS, PostgreSQL Neon, Vercel Blob y Auth0.">
+                        Plataforma web para estudio creativo que centraliza agendamiento de citas, reservaciones para talleres presenciales, galería interactiva con compresión de fotos en navegador y confirmaciones por correo con Resend. Construido con Next.js 16, React 19, Tailwind CSS, PostgreSQL Neon, Vercel Blob y Auth0.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-semibold">Next.js 16</span>
+                        <span class="bg-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React 19</span>
+                        <span class="bg-teal-600 px-3 py-1 rounded-full text-xs font-semibold">Tailwind CSS</span>
+                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">PostgreSQL</span>
+                        <span class="bg-zinc-600 px-3 py-1 rounded-full text-xs font-semibold">Vercel Blob</span>
+                        <span class="bg-pink-700 px-3 py-1 rounded-full text-xs font-semibold">Resend Email</span>
+                        <span class="bg-orange-600 px-3 py-1 rounded-full text-xs font-semibold">Auth0</span>
+                    </div>
+                    <button class="w-full bg-gradient-to-r from-teal-500 to-cyan-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="ACTIVE SYSTEM" data-es="SISTEMA ACTIVO">
+                        SISTEMA ACTIVO
+                    </button>
+                </div>
+
+                <!-- 4. ERP INTERNO -->
+                <div class="ar-card p-6 fade-in">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                        🚀
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        ERP Interno para Empresa
+                    </h3>
                         <p class="text-gray-300 mb-4 text-sm" data-en="Development of a custom ERP system for a mineral import and export company, centralizing inventory management, sales, and administration in a single platform. The solution optimizes internal processes, reduces manual errors, and improves traceability, offering greater efficiency and real-time visibility. This project is built with:" data-es="Desarrollo de un sistema ERP a medida para una empresa de importación y exportación de minerales, que centraliza la gestión de inventario, ventas y administración en una sola plataforma. La solución optimiza procesos internos, reduce errores manuales y mejora la trazabilidad, ofreciendo mayor eficiencia y visibilidad en tiempo real. Este proyecto esta construido con:">
                             Desarrollo de un sistema ERP a medida para una empresa de importación y exportación de minerales, que centraliza la gestión de inventario, ventas y administración en una sola plataforma. La solución optimiza procesos internos, reduce errores manuales y mejora la trazabilidad, ofreciendo mayor eficiencia y visibilidad en tiempo real. Este proyecto esta construido con:
                         </p>
@@ -397,7 +635,7 @@
                     <div class="ar-card p-6 fade-in">
                         
                         <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                            <img src="/IMG/PROYECTOS/screen-4.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
+                            <img src="IMG/PROYECTOS/screen-4.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
                         </div>
                         <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                             Personalización y configuración de tienda online en Tebex
@@ -442,7 +680,7 @@
                 <a href="https://terra-origen.vercel.app/" target="_blank"> 
                     <div class="ar-card p-6 fade-in">
                         <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                            <img src="/IMG/PROYECTOS/screen-5.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
+                            <img src="IMG/PROYECTOS/screen-5.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
                         </div>
                         <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                             Página Web Informativa para Restaurante
@@ -488,7 +726,7 @@
                 <a href="PROYECTOS/challenge/" target="_blank"> 
                     <div class="ar-card p-6 fade-in">
                         <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                            <img src="/IMG/PROYECTOS/screen-1.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
+                            <img src="IMG/PROYECTOS/screen-1.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
                         </div>
                         <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                             Encriptador de Texto – Alura
@@ -530,7 +768,7 @@
                 <a href="PROYECTOS/invitacion-boda/" target="_blank">
                     <div class="ar-card p-6 fade-in">
                         <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                            <img src="../IMG/PROYECTOS/screen-2.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
+                            <img src="IMG/PROYECTOS/screen-2.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
                         </div>
                         <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                             Plataforma Web para Confirmación de Asistencia a Evento Social
@@ -571,6 +809,77 @@
                         </button--> 
                     </div>
                 <!--/a-->     
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="py-20 relative z-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent fade-in">
+                <span data-en="HOBBIES & PASSIONS" data-es="PASATIEMPOS E INTERESES">PASATIEMPOS E INTERESES</span>
+            </h2>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div class="hobby-card fade-in">
+                    <img src="IMG/HOBBIES/01-camara.png" alt="Fotografía" class="hobby-img">
+                    <span class="text-xs font-bold" data-en="Photography" data-es="Fotografía">Fotografía</span>
+                </div>
+
+                <div class="hobby-card fade-in">
+                    <img src="IMG/HOBBIES/02-audifonos.png" alt="Música" class="hobby-img">
+                    <span class="text-xs font-bold" data-en="Music" data-es="Música">Música</span>
+                </div>
+
+                <div class="hobby-card fade-in">
+                    <img src="IMG/HOBBIES/10-hawaiano.png" alt="Danzas Polinesias" class="hobby-img">
+                    <span class="text-xs font-bold" data-en="Polynesian Dance" data-es="Danzas Polinesias">Danzas Polinesias</span>
+                </div>
+
+                <div class="hobby-card fade-in">
+                    <img src="IMG/HOBBIES/11-pastel.png" alt="Repostería" class="hobby-img">
+                    <span class="text-xs font-bold" data-en="Baking" data-es="Repostería">Repostería</span>
+                </div>
+
+                <div class="hobby-card fade-in">
+                    <img src="IMG/HOBBIES/08-bailar.png" alt="Baile Regional" class="hobby-img">
+                    <span class="text-xs font-bold" data-en="Folk Dance" data-es="Baile Regional">Baile Regional</span>
+                </div>
+
+                <div class="hobby-card fade-in">
+                    <img src="IMG/HOBBIES/15-bici.png" alt="Ciclismo" class="hobby-img">
+                    <span class="text-xs font-bold" data-en="Cycling" data-es="Ciclismo">Ciclismo</span>
+                </div>
+
+                <div class="hobby-card fade-in">
+                    <img src="IMG/HOBBIES/03-videojuegos.png" alt="Videojuegos" class="hobby-img">
+                    <span class="text-xs font-bold" data-en="Gaming" data-es="Videojuegos">Videojuegos</span>
+                </div>
+
+                <div class="hobby-card fade-in">
+                    <img src="IMG/HOBBIES/16-cine.png" alt="Cine" class="hobby-img">
+                    <span class="text-xs font-bold" data-en="Cinema" data-es="Cine">Cine</span>
+                </div>
+
+                <div class="hobby-card fade-in">
+                    <img src="IMG/HOBBIES/14-pintar.png" alt="Pintar" class="hobby-img">
+                    <span class="text-xs font-bold" data-en="Painting" data-es="Pintura">Pintura</span>
+                </div>
+
+                <div class="hobby-card fade-in">
+                    <img src="IMG/HOBBIES/17-libro.png" alt="Lectura" class="hobby-img">
+                    <span class="text-xs font-bold" data-en="Reading" data-es="Lectura">Lectura</span>
+                </div>
+
+                <div class="hobby-card fade-in">
+                    <img src="IMG/HOBBIES/09-corredora.png" alt="Running" class="hobby-img">
+                    <span class="text-xs font-bold" data-en="Running" data-es="Correr">Correr</span>
+                </div>
+
+                <div class="hobby-card fade-in">
+                    <img src="IMG/HOBBIES/05-karaoke.png" alt="Cantar" class="hobby-img">
+                    <span class="text-xs font-bold" data-en="Singing" data-es="Cantar">Cantar</span>
+                </div>
             </div>
         </div>
     </section>
@@ -625,125 +934,169 @@
     </footer>
 
     <script>
-        // Global variables
+        // High-Performance Engine & State
         let currentLang = 'es';
         let currentTheme = 'dark';
-        let mouseX = 0;
-        let mouseY = 0;
-        let particles = [];
-        let cursorTrails = [];
         
-        // Initialize everything
+        let mouseX = -100, mouseY = -100;
+        let cursorX = -100, cursorY = -100;
+        let isCursorActive = false;
+        
+        let canvas, ctx;
+        let particles = [];
+        const PARTICLE_COUNT = 45;
+
         document.addEventListener('DOMContentLoaded', function() {
             initializeCursor();
             initializeParticles();
             startTypewriter();
             initializeControls();
             initializeScrollAnimations();
+            
+            // Unified smooth animation loop
+            requestAnimationFrame(renderLoop);
         });
-        
-        // Custom cursor
+
+        // 1. Hardware-Accelerated Smooth Cursor
         function initializeCursor() {
             const cursor = document.getElementById('cursor');
-            
-            document.addEventListener('mousemove', (e) => {
+            if (!cursor) return;
+
+            window.addEventListener('mousemove', (e) => {
                 mouseX = e.clientX;
                 mouseY = e.clientY;
-                
-                cursor.style.left = mouseX - 10 + 'px';
-                cursor.style.top = mouseY - 10 + 'px';
-                
-                // Create cursor trail
-                createCursorTrail(mouseX, mouseY);
-                
-                // Update particles
-                updateParticles();
-            });
-            
-            // Cursor effects on hover
-            document.querySelectorAll('button, a, .skill-orb').forEach(element => {
-                element.addEventListener('mouseenter', () => {
-                    cursor.style.transform = 'scale(2)';
-                });
-                
-                element.addEventListener('mouseleave', () => {
-                    cursor.style.transform = 'scale(1)';
-                });
-            });
+                if (!isCursorActive) {
+                    cursorX = mouseX;
+                    cursorY = mouseY;
+                    isCursorActive = true;
+                }
+            }, { passive: true });
+
+            window.addEventListener('mouseleave', () => {
+                mouseX = -100;
+                mouseY = -100;
+            }, { passive: true });
+
+            // Efficient Hover Detection using Event Delegation
+            document.body.addEventListener('mouseover', (e) => {
+                if (e.target.closest('button, a, .skill-orb, .ar-card, .hobby-card, input, select')) {
+                    cursor.classList.add('hovered');
+                }
+            }, { passive: true });
+
+            document.body.addEventListener('mouseout', (e) => {
+                if (e.target.closest('button, a, .skill-orb, .ar-card, .hobby-card, input, select')) {
+                    cursor.classList.remove('hovered');
+                }
+            }, { passive: true });
         }
-        
-        // Cursor trail
-        function createCursorTrail(x, y) {
-            const trail = document.createElement('div');
-            trail.className = 'cursor-trail';
-            trail.style.left = x - 2 + 'px';
-            trail.style.top = y - 2 + 'px';
-            document.body.appendChild(trail);
-            
-            setTimeout(() => {
-                trail.style.opacity = '0';
-                trail.style.transform = 'scale(0)';
-                setTimeout(() => trail.remove(), 300);
-            }, 100);
-        }
-        
-        // Interactive particles
+
+        // 2. High-Performance Canvas Particles (Zero DOM allocations)
         function initializeParticles() {
-            const particleSystem = document.getElementById('particleSystem');
+            canvas = document.getElementById('particleCanvas');
+            if (!canvas) return;
+            ctx = canvas.getContext('2d', { alpha: true });
             
-            for (let i = 0; i < 50; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * window.innerWidth + 'px';
-                particle.style.top = Math.random() * window.innerHeight + 'px';
-                particleSystem.appendChild(particle);
-                
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas, { passive: true });
+
+            particles = [];
+            for (let i = 0; i < PARTICLE_COUNT; i++) {
                 particles.push({
-                    element: particle,
-                    x: Math.random() * window.innerWidth,
-                    y: Math.random() * window.innerHeight,
-                    vx: (Math.random() - 0.5) * 2,
-                    vy: (Math.random() - 0.5) * 2
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.9,
+                    vy: (Math.random() - 0.5) * 0.9,
+                    size: Math.random() * 2 + 1.2,
+                    alpha: Math.random() * 0.5 + 0.25
                 });
             }
         }
-        
-        function updateParticles() {
-            particles.forEach(particle => {
-                // Move towards mouse
-                const dx = mouseX - particle.x;
-                const dy = mouseY - particle.y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-                
-                if (distance < 100) {
-                    particle.vx += dx * 0.0001;
-                    particle.vy += dy * 0.0001;
-                }
-                
-                // Update position
-                particle.x += particle.vx;
-                particle.y += particle.vy;
-                
-                // Bounce off edges
-                if (particle.x < 0 || particle.x > window.innerWidth) particle.vx *= -1;
-                if (particle.y < 0 || particle.y > window.innerHeight) particle.vy *= -1;
-                
-                // Apply friction
-                particle.vx *= 0.99;
-                particle.vy *= 0.99;
-                
-                // Update DOM
-                particle.element.style.left = particle.x + 'px';
-                particle.element.style.top = particle.y + 'px';
-            });
+
+        function resizeCanvas() {
+            if (!canvas) return;
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
         }
-        
-        // Typewriter effect
+
+        // 3. Unified 60+ FPS Rendering Loop
+        function renderLoop() {
+            // Update Cursor with lerp for silky smoothness
+            const cursor = document.getElementById('cursor');
+            if (cursor && isCursorActive) {
+                cursorX += (mouseX - cursorX) * 0.35;
+                cursorY += (mouseY - cursorY) * 0.35;
+                cursor.style.transform = `translate3d(${cursorX - 10}px, ${cursorY - 10}px, 0)`;
+            }
+
+            // Draw Canvas Particles
+            if (ctx && canvas) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                const isDark = currentTheme === 'dark';
+                const rgb = isDark ? '168, 85, 247' : '99, 102, 241';
+
+                for (let i = 0; i < particles.length; i++) {
+                    const p = particles[i];
+
+                    // Subtle mouse deflection
+                    if (mouseX > 0 && mouseY > 0) {
+                        const dx = mouseX - p.x;
+                        const dy = mouseY - p.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < 120 && dist > 0) {
+                            const force = (120 - dist) / 120;
+                            p.vx += (dx / dist) * force * 0.035;
+                            p.vy += (dy / dist) * force * 0.035;
+                        }
+                    }
+
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.vx *= 0.985;
+                    p.vy *= 0.985;
+
+                    // Wrap around boundaries
+                    if (p.x < 0) p.x = canvas.width;
+                    if (p.x > canvas.width) p.x = 0;
+                    if (p.y < 0) p.y = canvas.height;
+                    if (p.y > canvas.height) p.y = 0;
+
+                    // Draw node
+                    ctx.fillStyle = `rgba(${rgb}, ${p.alpha})`;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    // Connect neighboring particles
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const p2 = particles[j];
+                        const djx = p.x - p2.x;
+                        const djy = p.y - p2.y;
+                        const d = Math.sqrt(djx * djx + djy * djy);
+                        if (d < 95) {
+                            ctx.strokeStyle = `rgba(${rgb}, ${(1 - d / 95) * 0.16})`;
+                            ctx.lineWidth = 0.75;
+                            ctx.beginPath();
+                            ctx.moveTo(p.x, p.y);
+                            ctx.lineTo(p2.x, p2.y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            requestAnimationFrame(renderLoop);
+        }
+
+        // 4. Typewriter Effect
+        let typewriterTimeout;
         function startTypewriter() {
             const typewriter = document.getElementById('typewriter');
+            if (!typewriter) return;
+
             const texts = {
-                es: ['API GATE', 'FRONT END', 'BACK END', 'DESARROLLADORA'],
-                en: ['API GATE', 'FRONT END', 'BACK END', 'DEVELOPER']
+                es: ['FULL STACK DEVELOPER', 'FRONT END ENGINEER', 'UI/UX SPECIALIST', 'REACT & NEXT.JS PRO'],
+                en: ['FULL STACK DEVELOPER', 'FRONT END ENGINEER', 'UI/UX SPECIALIST', 'REACT & NEXT.JS PRO']
             };
             
             let textIndex = 0;
@@ -762,43 +1115,49 @@
                     charIndex++;
                 }
                 
-                let typeSpeed = isDeleting ? 50 : 100;
+                let typeSpeed = isDeleting ? 40 : 80;
                 
                 if (!isDeleting && charIndex === currentText.length) {
-                    typeSpeed = 2000;
+                    typeSpeed = 1800;
                     isDeleting = true;
                 } else if (isDeleting && charIndex === 0) {
                     isDeleting = false;
                     textIndex = (textIndex + 1) % currentTexts.length;
-                    typeSpeed = 500;
+                    typeSpeed = 400;
                 }
                 
-                setTimeout(type, typeSpeed);
+                typewriterTimeout = setTimeout(type, typeSpeed);
             }
             
             type();
         }
-        
-        // Controls
+
+        // 5. Controls & Interaction
         function initializeControls() {
-            document.getElementById('langSwitch').addEventListener('click', switchLanguage);
-            document.getElementById('themeSwitch').addEventListener('click', switchTheme);
+            const langBtn = document.getElementById('langSwitch');
+            if (langBtn) langBtn.addEventListener('click', switchLanguage);
+
+            const themeBtn = document.getElementById('themeSwitch');
+            if (themeBtn) themeBtn.addEventListener('click', switchTheme);
             
-            // Smooth scrolling
+            // Smooth Scroll
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId && targetId !== '#') {
+                        const target = document.querySelector(targetId);
+                        if (target) {
+                            e.preventDefault();
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
                     }
                 });
             });
         }
-        
+
         function switchLanguage() {
             currentLang = currentLang === 'es' ? 'en' : 'es';
             
@@ -806,26 +1165,33 @@
                 element.textContent = element.getAttribute(`data-${currentLang}`);
             });
             
-            document.getElementById('langSwitch').textContent = currentLang === 'es' ? 'ES | EN' : 'EN | ES';
+            const langBtn = document.getElementById('langSwitch');
+            if (langBtn) {
+                langBtn.textContent = currentLang === 'es' ? 'ES | EN' : 'EN | ES';
+            }
         }
-        
+
         function switchTheme() {
             currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', currentTheme);
-            document.getElementById('themeSwitch').textContent = currentTheme === 'dark' ? '🌙' : '☀️';
+            const themeBtn = document.getElementById('themeSwitch');
+            if (themeBtn) {
+                themeBtn.textContent = currentTheme === 'dark' ? '🌙' : '☀️';
+            }
         }
-        
-        // Scroll animations
+
+        // 6. Fast Scroll Observer
         function initializeScrollAnimations() {
             const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
+                threshold: 0.08,
+                rootMargin: '0px 0px -40px 0px'
             };
             
-            const observer = new IntersectionObserver(function(entries) {
+            const observer = new IntersectionObserver((entries, obs) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
+                        obs.unobserve(entry.target); // Unobserve once visible for max performance
                     }
                 });
             }, observerOptions);
@@ -834,22 +1200,6 @@
                 observer.observe(element);
             });
         }
-        
-        // Resize handler
-        window.addEventListener('resize', () => {
-            particles.forEach(particle => {
-                if (particle.x > window.innerWidth) particle.x = window.innerWidth;
-                if (particle.y > window.innerHeight) particle.y = window.innerHeight;
-            });
-        });
-        
-        // Animation loop
-        function animate() {
-            updateParticles();
-            requestAnimationFrame(animate);
-        }
-        
-        animate();
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'966c9508f23ad87a',t:'MTc1Mzc5MTc1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
