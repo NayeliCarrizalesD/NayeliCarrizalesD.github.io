@@ -55,7 +55,7 @@ Me destaco por mi capacidad para traducir requerimientos de negocio complejos en
 ## 3. 🏢 Experiencia Laboral en LinkedIn (Puesto en Grupo Salinas)
 > **Cargo:** Desarrolladora Web Front-End / Software Engineer  
 > **Empresa:** Grupo Salinas  
-> **Ubicación:** Guadalajara, Jalisco, México (Híbrido / Remoto)  
+> **Ubicación:** Ciudad de México (CDMX), México  
 > **Periodo:** Septiembre 2023 – Actualidad  
 
 ### Descripción / Viñetas:

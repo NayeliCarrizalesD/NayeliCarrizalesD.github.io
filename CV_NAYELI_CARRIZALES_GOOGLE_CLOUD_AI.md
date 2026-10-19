@@ -1,5 +1,5 @@
 # NAYELI CARRIZALES
-**Guadalajara, Jalisco** · (+52) 481 129 7569 · [nayeli.carrizales.diaz@gmail.com](mailto:nayeli.carrizales.diaz@gmail.com)  
+**Ciudad de México (CDMX), México** · (+52) 481 129 7569 · [nayeli.carrizales.diaz@gmail.com](mailto:nayeli.carrizales.diaz@gmail.com)  
 [LinkedIn](https://www.linkedin.com/in/nayeli-carrizales-diaz/) · [Portafolio Web](https://nayelicarrizalesd.github.io/) · [GitHub](https://github.com/NayeliCarrizalesD)
 
 ---
@@ -23,7 +23,7 @@
 ## EXPERIENCIA LABORAL
 
 ### **DESARROLLADORA WEB FRONT-END & SISTEMAS CORPORATIVOS**
-**Grupo Salinas** | *Septiembre 2023 – Actualidad*
+**Grupo Salinas · Ciudad de México (CDMX)** | *Septiembre 2023 – Actualidad*
 * Lideré y entregué exitosamente **4 proyectos estratégicos a producción**, administrando ramas de despliegue, control de versiones y code reviews mediante **GitLab corporativo**.
 * **Registro Único (Móvil & Geografía):** Diseñé e implementé la arquitectura frontend del sistema corporativo de registro para dispositivos móviles, dando servicio a escala nacional para colaboradores de corporativo y campo.
 * **Rally Mundialista (Juegos Web Multi-Servidor):** Desarrollé minijuegos y dinámicas interactivas en **Vanilla JavaScript (ES6+), HTML5 y CSS3**. Diseñé y adapté arquitecturas de código modulares para ejecutarse de manera confiable en **diferentes servidores de producción con configuraciones e infraestructuras heterogéneas**.

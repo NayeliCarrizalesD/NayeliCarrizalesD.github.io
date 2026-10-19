@@ -597,11 +597,11 @@
             
             <!-- Category Filter Tabs -->
             <div class="flex flex-wrap justify-center gap-3 mb-12 fade-in" id="projectFilters">
-                <button class="filter-btn active glass-card px-6 py-2.5 rounded-full text-sm font-bold transition-all border border-purple-500 bg-purple-600/30 text-white" data-filter="all" data-en="All Projects (15)" data-es="Todos los Proyectos (15)">
-                    Todos los Proyectos (15)
+                <button class="filter-btn active glass-card px-6 py-2.5 rounded-full text-sm font-bold transition-all border border-purple-500 bg-purple-600/30 text-white" data-filter="all" data-en="All Projects (18)" data-es="Todos los Proyectos (18)">
+                    Todos los Proyectos (18)
                 </button>
-                <button class="filter-btn glass-card px-6 py-2.5 rounded-full text-sm font-bold transition-all border border-blue-500/40 text-gray-300 hover:text-white hover:border-blue-400" data-filter="corporate" data-en="🏢 Enterprise & Work (9)" data-es="🏢 Corporativos & Trabajo (9)">
-                    🏢 Corporativos & Trabajo (9)
+                <button class="filter-btn glass-card px-6 py-2.5 rounded-full text-sm font-bold transition-all border border-blue-500/40 text-gray-300 hover:text-white hover:border-blue-400" data-filter="corporate" data-en="🏢 Enterprise & Work (12)" data-es="🏢 Corporativos & Trabajo (12)">
+                    🏢 Corporativos & Trabajo (12)
                 </button>
                 <button class="filter-btn glass-card px-6 py-2.5 rounded-full text-sm font-bold transition-all border border-purple-500/40 text-gray-300 hover:text-white hover:border-purple-400" data-filter="personal" data-en="🚀 Personal Engineering & Labs (6)" data-es="🚀 Ingeniería Personal & Labs (6)">
                     🚀 Ingeniería Personal & Labs (6)
@@ -609,75 +609,112 @@
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- 0. GRUPO SALINAS – SISTEMAS CORPORATIVOS EN PRODUCCIÓN -->
+
+                <!-- 1. SISTEMA DE REGISTRO ÚNICO (MÓVIL & GEOGRAFÍA) -->
                 <div class="project-card-item ar-card p-6 fade-in border border-blue-500/40 flex flex-col justify-between" data-category="corporate">
                     <div>
                         <div class="flex justify-between items-center mb-3">
                             <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
                                 🏢 CORPORATIVO / PRODUCCIÓN
                             </span>
-                            <span class="text-xs text-blue-300 font-bold">Grupo Salinas</span>
+                            <span class="text-xs text-blue-300 font-bold">Grupo Salinas (CDMX)</span>
                         </div>
                         <div class="h-48 bg-gradient-to-br from-blue-700 via-indigo-800 to-slate-900 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-blue-500/20">
-                            🏢⚡
+                            📱🏢
                         </div>
-                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 via-indigo-300 to-teal-300 bg-clip-text text-transparent" data-en="Enterprise Web Systems & Mobile Registry – Grupo Salinas" data-es="Sistemas Web Corporativos & Registro Único – Grupo Salinas">
-                            Sistemas Web Corporativos & Registro Único – Grupo Salinas
+                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 via-indigo-300 to-teal-300 bg-clip-text text-transparent" data-en="Unified Mobile Registry Platform – Grupo Salinas" data-es="Sistema de Registro Único (Móvil & Geografía) – Grupo Salinas">
+                            Sistema de Registro Único (Móvil & Geografía) – Grupo Salinas
                         </h3>
                         <p class="text-gray-300 mb-4 text-sm" 
-                           data-en="Delivery of 4 massive-scale production platforms at Grupo Salinas: Unified Registration Platform deployed for mobile devices nationwide across corporate and field staff; World Cup Rally with interactive games in Vanilla JS (HTML5 Canvas/CSS3) modularly adapted to heterogeneous production server architectures; Real-time dynamic winner search engine; and Copa Socio sports league module. Version control and releases managed via GitLab." 
-                           data-es="Desarrollo y entrega de 4 plataformas a producción a escala nacional en Grupo Salinas: Sistema de Registro Único recién lanzado para dispositivos móviles con alcance para colaboradores de corporativo y geografía; Rally Mundialista con juegos interactivos en Vanilla JS (HTML5/CSS3) adaptados a arquitecturas de servidores heterogéneos; Buscador dinámico de ganadores en tiempo real y módulo Copa Socio. Gestión y CI/CD en GitLab.">
-                            Desarrollo y entrega de 4 plataformas a producción a escala nacional en Grupo Salinas: Sistema de Registro Único recién lanzado para dispositivos móviles con alcance para colaboradores de corporativo y geografía; Rally Mundialista con juegos interactivos en Vanilla JS (HTML5/CSS3) adaptados a arquitecturas de servidores heterogéneos; Buscador dinámico de ganadores en tiempo real y módulo Copa Socio. Gestión y CI/CD en GitLab.
+                           data-en="Frontend architecture and implementation of the enterprise mobile registration system, launched nationwide for corporate and field operations personnel. Features high-performance responsive interfaces, strict onboarding validation workflows, and enterprise version control via GitLab." 
+                           data-es="Diseño e implementación de la arquitectura frontend del sistema de registro corporativo adaptado para dispositivos móviles, brindando servicio a escala nacional tanto para colaboradores de corporativo como de campo y geografía. Implementación de interfaces responsivas de alto rendimiento, flujos de validación y control de versiones en GitLab.">
+                            Diseño e implementación de la arquitectura frontend del sistema de registro corporativo adaptado para dispositivos móviles, brindando servicio a escala nacional tanto para colaboradores de corporativo como de campo y geografía. Implementación de interfaces responsivas de alto rendimiento, flujos de validación y control de versiones en GitLab.
                         </p>
                     </div>
                     <div>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-orange-700 px-3 py-1 rounded-full text-xs font-semibold">GitLab</span>
-                            <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">Vanilla JS</span>
-                            <span class="bg-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Multi-Server Arch</span>
-                            <span class="bg-emerald-700 px-3 py-1 rounded-full text-xs font-semibold">Mobile Web</span>
-                            <span class="bg-indigo-600 px-3 py-1 rounded-full text-xs font-semibold">HTML5 Canvas</span>
+                            <span class="bg-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Mobile First</span>
+                            <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">JavaScript ES6+</span>
+                            <span class="bg-indigo-600 px-3 py-1 rounded-full text-xs font-semibold">CSS3 / HTML5</span>
                             <span class="bg-cyan-700 px-3 py-1 rounded-full text-xs font-semibold">Alta Concurrencia</span>
+                            <span class="bg-emerald-700 px-3 py-1 rounded-full text-xs font-semibold">Escala Nacional</span>
                         </div>
-                        <button class="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-teal-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="4 PRODUCTION SYSTEMS" data-es="4 SISTEMAS EN PRODUCCIÓN">
-                            4 SISTEMAS EN PRODUCCIÓN
+                        <button class="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-teal-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="IN PRODUCTION" data-es="EN PRODUCCIÓN">
+                            EN PRODUCCIÓN
                         </button>
                     </div>
                 </div>
 
-                <!-- 1. PUNTO DE VENTA (EL PULPO CHELERO) -->
-                <div class="project-card-item ar-card p-6 fade-in" data-category="personal">
+                <!-- 2. PIPELINE ETL DE REDES SOCIALES & MÉTRICAS AUTOMATIZADAS -->
+                <div class="project-card-item ar-card p-6 fade-in" data-category="corporate">
                     <div class="flex justify-between items-center mb-3">
-                        <span class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
-                            🚀 PERSONAL / LAB
+                        <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                            🏢 CORPORATIVO / PRODUCCIÓN
                         </span>
+                        <span class="text-xs text-indigo-300 font-bold">Eufonia Studios</span>
                     </div>
-                    <div class="h-48 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-orange-500/20">
-                        🐙🍺
+                    <div class="h-48 bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-indigo-500/20">
+                        📡📊
                     </div>
-                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
-                        Punto de Venta & Cocina (POS / KDS)
+                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-indigo-300 via-purple-400 to-pink-400 bg-clip-text text-transparent" data-en="Social Media ETL Pipeline & Automated Analytics" data-es="Pipeline ETL de Redes Sociales & Métricas Automatizadas">
+                        Pipeline ETL de Redes Sociales & Métricas Automatizadas
                     </h3>
                     <p class="text-gray-300 mb-4 text-sm" 
-                       data-en="Complete Point of Sale (POS) and Kitchen Display System (KDS) for restaurants and bars. Built with React 19, TypeScript, Vite, Tailwind CSS v4 and Zustand. Features interactive table layout, staff quick-switch with PIN, takeaway mode, thermal tickets, cash drawer cuts (X and Z), and production Docker/Nginx containerization." 
-                       data-es="Sistema completo de Punto de Venta (POS) y Comandas para restaurante y bar. Desarrollado con React 19, TypeScript, Vite, Tailwind CSS v4 y Zustand. Incluye plano interactivo de mesas, cambio rápido de mesero por PIN, pantalla táctil de cocina (KDS) con alertas sonoras en tiempo real, arqueo de caja (cortes X y Z) y despliegue en contenedor con Docker y Nginx.">
-                        Sistema completo de Punto de Venta (POS) y Comandas para restaurante y bar. Desarrollado con React 19, TypeScript, Vite, Tailwind CSS v4 y Zustand. Incluye plano interactivo de mesas, cambio rápido de mesero por PIN, pantalla táctil de cocina (KDS) con alertas sonoras en tiempo real, arqueo de caja (cortes X y Z) y despliegue en contenedor con Docker y Nginx.
+                       data-en="Automated data ingestion and transformation pipeline that periodically consumes multi-platform social media REST APIs using Google Apps Script triggers. Normalizes audience engagement, reach, and conversion metrics directly into Google Sheets, feeding executive Looker Studio dashboards for data-driven decisions without manual reporting." 
+                       data-es="Pipeline automatizado de ingesta y transformación de datos que consume APIs REST de redes sociales mediante triggers programados en Google Apps Script. Normaliza métricas de rendimiento (alcance, engagement, conversiones) en Google Sheets y alimenta dashboards ejecutivos en Looker Studio para toma de decisiones sin intervención manual.">
+                        Pipeline automatizado de ingesta y transformación de datos que consume APIs REST de redes sociales mediante triggers programados en Google Apps Script. Normaliza métricas de rendimiento (alcance, engagement, conversiones) en Google Sheets y alimenta dashboards ejecutivos en Looker Studio para toma de decisiones sin intervención manual.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React 19</span>
-                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">TypeScript</span>
-                        <span class="bg-purple-600 px-3 py-1 rounded-full text-xs font-semibold">Vite</span>
-                        <span class="bg-blue-500 px-3 py-1 rounded-full text-xs font-semibold">Tailwind v4</span>
-                        <span class="bg-amber-600 px-3 py-1 rounded-full text-xs font-semibold">Zustand</span>
-                        <span class="bg-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Docker</span>
-                        <span class="bg-green-700 px-3 py-1 rounded-full text-xs font-semibold">Nginx</span>
+                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">Google Apps Script</span>
+                        <span class="bg-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">APIs REST / OAuth</span>
+                        <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">Looker Studio</span>
+                        <span class="bg-emerald-600 px-3 py-1 rounded-full text-xs font-semibold">Google Sheets</span>
+                        <span class="bg-pink-700 px-3 py-1 rounded-full text-xs font-semibold">ETL & Data Pipeline</span>
+                        <span class="bg-purple-600 px-3 py-1 rounded-full text-xs font-semibold">JSON Automation</span>
                     </div>
-                    <button class="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="ACTIVE SYSTEM" data-es="SISTEMA ACTIVO">
-                        SISTEMA ACTIVO
+                    <button class="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="AUTOMATION ACTIVE" data-es="AUTOMATIZACIÓN ACTIVA">
+                        AUTOMATIZACIÓN ACTIVA
                     </button>
                 </div>
 
-                <!-- 2. RELOJ CHECADOR (KRONOS SAFE) -->
+                <!-- 3. RALLY MUNDIALISTA (JUEGOS WEB MULTI -->
+                <div class="project-card-item ar-card p-6 fade-in border border-emerald-500/40 flex flex-col justify-between" data-category="corporate">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                                🏢 CORPORATIVO / PRODUCCIÓN
+                            </span>
+                            <span class="text-xs text-emerald-300 font-bold">Grupo Salinas (CDMX)</span>
+                        </div>
+                        <div class="h-48 bg-gradient-to-br from-emerald-700 via-teal-800 to-slate-900 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-teal-500/20">
+                            🎮⚽
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-300 bg-clip-text text-transparent" data-en="World Cup Rally & Multi-Server Interactive Web Games – Grupo Salinas" data-es="Rally Mundialista (Juegos Web Multi-Servidor) – Grupo Salinas">
+                            Rally Mundialista (Juegos Web Multi-Servidor) – Grupo Salinas
+                        </h3>
+                        <p class="text-gray-300 mb-4 text-sm" 
+                           data-en="Interactive web mini-games and gamified dynamics built in Vanilla JavaScript (ES6+), HTML5 Canvas, and CSS3. Modular architectural adaptation to run reliably across heterogeneous production servers with differing environments and infrastructure constraints." 
+                           data-es="Desarrollo de minijuegos interactivos y dinámicas web desarrollados en Vanilla JavaScript (ES6+), HTML5 Canvas y CSS3. Adaptación modular de la arquitectura de código para garantizar compatibilidad y ejecución confiable a través de múltiples servidores de producción con infraestructuras, configuraciones y restricciones técnicas heterogéneas.">
+                            Desarrollo de minijuegos interactivos y dinámicas web desarrollados en Vanilla JavaScript (ES6+), HTML5 Canvas y CSS3. Adaptación modular de la arquitectura de código para garantizar compatibilidad y ejecución confiable a través de múltiples servidores de producción con infraestructuras, configuraciones y restricciones técnicas heterogéneas.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">Vanilla JS</span>
+                            <span class="bg-indigo-600 px-3 py-1 rounded-full text-xs font-semibold">HTML5 Canvas</span>
+                            <span class="bg-teal-700 px-3 py-1 rounded-full text-xs font-semibold">Multi-Server Arch</span>
+                            <span class="bg-orange-700 px-3 py-1 rounded-full text-xs font-semibold">GitLab</span>
+                            <span class="bg-purple-700 px-3 py-1 rounded-full text-xs font-semibold">Game Logic</span>
+                            <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">Animaciones CSS3</span>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="IN PRODUCTION" data-es="EN PRODUCCIÓN">
+                            EN PRODUCCIÓN
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4. RELOJ CHECADOR & CONTROL DE ASISTENCIA -->
                 <div class="project-card-item ar-card p-6 fade-in" data-category="personal">
                     <div class="flex justify-between items-center mb-3">
                         <span class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
@@ -709,7 +746,75 @@
                     </button>
                 </div>
 
-                <!-- 3. EL TALLER DE MAR -->
+                <!-- 5. TABLERO DE CONTROL DE BODEGA & TRAZABILIDAD DE FACTURAS -->
+                <div class="project-card-item ar-card p-6 fade-in" data-category="corporate">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                            🏢 CORPORATIVO / PRODUCCIÓN
+                        </span>
+                        <span class="text-xs text-amber-300 font-bold">MGO Industrial</span>
+                    </div>
+                    <div class="h-48 bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-orange-500/20">
+                        📦📑
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-amber-300 via-orange-400 to-red-400 bg-clip-text text-transparent" data-en="Warehouse Logistics & Invoice Tracking Dashboard" data-es="Tablero de Control de Bodega & Trazabilidad de Facturas">
+                        Tablero de Control de Bodega & Trazabilidad de Facturas
+                    </h3>
+                    <p class="text-gray-300 mb-4 text-sm" 
+                       data-en="Enterprise logistics solution automating warehouse material inflow/outflow logging with Google Apps Script and generating real-time business intelligence dashboards via Google Looker Studio. Features invoice-level operational traceability, dynamic inventory balancing, automated low-stock notifications, and cross-department visibility." 
+                       data-es="Solución integral para gestión de almacén y logística que automatiza el registro de entradas y salidas de material mediante Google Apps Script y genera tableros de Business Intelligence en tiempo real con Google Looker Studio. Integra trazabilidad operativa por número de factura, balance dinámico de inventarios, alertas de reabastecimiento y visibilidad interdepartamental.">
+                        Solución integral para gestión de almacén y logística que automatiza el registro de entradas y salidas de material mediante Google Apps Script y genera tableros de Business Intelligence en tiempo real con Google Looker Studio. Integra trazabilidad operativa por número de factura, balance dinámico de inventarios, alertas de reabastecimiento y visibilidad interdepartamental.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">Looker Studio</span>
+                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">Google Apps Script</span>
+                        <span class="bg-emerald-600 px-3 py-1 rounded-full text-xs font-semibold">Google Sheets API</span>
+                        <span class="bg-amber-600 px-3 py-1 rounded-full text-xs font-semibold">JavaScript</span>
+                        <span class="bg-purple-600 px-3 py-1 rounded-full text-xs font-semibold">Business Intelligence</span>
+                        <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-semibold">Logística & Facturación</span>
+                    </div>
+                    <button class="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="ENTERPRISE SYSTEM" data-es="SISTEMA EMPRESARIAL">
+                        SISTEMA EMPRESARIAL
+                    </button>
+                </div>
+
+                <!-- 6. BUSCADOR DINÁMICO DE GANADORES EN TIEMPO REAL -->
+                <div class="project-card-item ar-card p-6 fade-in border border-amber-500/40 flex flex-col justify-between" data-category="corporate">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                                🏢 CORPORATIVO / PRODUCCIÓN
+                            </span>
+                            <span class="text-xs text-amber-300 font-bold">Grupo Salinas (CDMX)</span>
+                        </div>
+                        <div class="h-48 bg-gradient-to-br from-amber-700 via-orange-800 to-slate-900 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-amber-500/20">
+                            🔍🏆
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-amber-400 via-orange-300 to-yellow-300 bg-clip-text text-transparent" data-en="Dynamic Real-Time Winners Search Engine – Grupo Salinas" data-es="Buscador Dinámico de Ganadores en Tiempo Real – Grupo Salinas">
+                            Buscador Dinámico de Ganadores en Tiempo Real – Grupo Salinas
+                        </h3>
+                        <p class="text-gray-300 mb-4 text-sm" 
+                           data-en="High-velocity real-time search and reactive filtering engine for massive queries of dynamic winners across nationwide corporate campaigns. Built to handle heavy concurrency spikes with instantaneous response times, client-side indexing, and smooth UX." 
+                           data-es="Desarrollo de motor de búsqueda y filtrado reactivo de alta velocidad para la consulta masiva de ganadores de dinámicas y activaciones institucionales. Diseñado para tolerar picos de concurrencia elevados con tiempos de respuesta instantáneos, indexación en cliente y navegación fluida.">
+                            Desarrollo de motor de búsqueda y filtrado reactivo de alta velocidad para la consulta masiva de ganadores de dinámicas y activaciones institucionales. Diseñado para tolerar picos de concurrencia elevados con tiempos de respuesta instantáneos, indexación en cliente y navegación fluida.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">JavaScript ES6+</span>
+                            <span class="bg-amber-700 px-3 py-1 rounded-full text-xs font-semibold">Búsqueda Reactiva</span>
+                            <span class="bg-orange-700 px-3 py-1 rounded-full text-xs font-semibold">GitLab</span>
+                            <span class="bg-cyan-700 px-3 py-1 rounded-full text-xs font-semibold">Alta Concurrencia</span>
+                            <span class="bg-purple-700 px-3 py-1 rounded-full text-xs font-semibold">Filtros Dinámicos</span>
+                            <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">Optimización UX</span>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-yellow-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="IN PRODUCTION" data-es="EN PRODUCCIÓN">
+                            EN PRODUCCIÓN
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 7. EL TALLER DE MAR -->
                 <a href="https://taller-de-mar-green.vercel.app/" target="_blank" class="project-card-item block" data-category="personal">
                     <div class="ar-card p-6 fade-in">
                         <div class="flex justify-between items-center mb-3">
@@ -744,71 +849,128 @@
                     </div>
                 </a>
 
-                <!-- 4. TABLERO DE CONTROL DE BODEGA & RASTREO POR FACTURAS -->
+                <!-- 8. PUNTO DE VENTA & COCINA (POS / KDS) -->
+                <div class="project-card-item ar-card p-6 fade-in" data-category="personal">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
+                            🚀 PERSONAL / LAB
+                        </span>
+                    </div>
+                    <div class="h-48 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-orange-500/20">
+                        🐙🍺
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
+                        Punto de Venta & Cocina (POS / KDS)
+                    </h3>
+                    <p class="text-gray-300 mb-4 text-sm" 
+                       data-en="Complete Point of Sale (POS) and Kitchen Display System (KDS) for restaurants and bars. Built with React 19, TypeScript, Vite, Tailwind CSS v4 and Zustand. Features interactive table layout, staff quick-switch with PIN, takeaway mode, thermal tickets, cash drawer cuts (X and Z), and production Docker/Nginx containerization." 
+                       data-es="Sistema completo de Punto de Venta (POS) y Comandas para restaurante y bar. Desarrollado con React 19, TypeScript, Vite, Tailwind CSS v4 y Zustand. Incluye plano interactivo de mesas, cambio rápido de mesero por PIN, pantalla táctil de cocina (KDS) con alertas sonoras en tiempo real, arqueo de caja (cortes X y Z) y despliegue en contenedor con Docker y Nginx.">
+                        Sistema completo de Punto de Venta (POS) y Comandas para restaurante y bar. Desarrollado con React 19, TypeScript, Vite, Tailwind CSS v4 y Zustand. Incluye plano interactivo de mesas, cambio rápido de mesero por PIN, pantalla táctil de cocina (KDS) con alertas sonoras en tiempo real, arqueo de caja (cortes X y Z) y despliegue en contenedor con Docker y Nginx.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React 19</span>
+                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">TypeScript</span>
+                        <span class="bg-purple-600 px-3 py-1 rounded-full text-xs font-semibold">Vite</span>
+                        <span class="bg-blue-500 px-3 py-1 rounded-full text-xs font-semibold">Tailwind v4</span>
+                        <span class="bg-amber-600 px-3 py-1 rounded-full text-xs font-semibold">Zustand</span>
+                        <span class="bg-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Docker</span>
+                        <span class="bg-green-700 px-3 py-1 rounded-full text-xs font-semibold">Nginx</span>
+                    </div>
+                    <button class="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="ACTIVE SYSTEM" data-es="SISTEMA ACTIVO">
+                        SISTEMA ACTIVO
+                    </button>
+                </div>
+
+                <!-- 9. MÓDULO COPA SOCIO (TORNEO DEPORTIVO INSTITUCIONAL) -->
+                <div class="project-card-item ar-card p-6 fade-in border border-indigo-500/40 flex flex-col justify-between" data-category="corporate">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                                🏢 CORPORATIVO / PRODUCCIÓN
+                            </span>
+                            <span class="text-xs text-indigo-300 font-bold">Grupo Salinas (CDMX)</span>
+                        </div>
+                        <div class="h-48 bg-gradient-to-br from-indigo-700 via-purple-800 to-slate-900 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-indigo-500/20">
+                            ⚽📊
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-300 bg-clip-text text-transparent" data-en="Copa Socio Tournament & League Module – Grupo Salinas" data-es="Módulo Copa Socio (Torneo Deportivo Institucional) – Grupo Salinas">
+                            Módulo Copa Socio (Torneo Deportivo Institucional) – Grupo Salinas
+                        </h3>
+                        <p class="text-gray-300 mb-4 text-sm" 
+                           data-en="Interactive corporate sports tournament tracking module. Provides live visualization of team rosters, match fixtures, league standings, and real-time statistics, seamlessly integrated into the institutional portal with GitLab CI/CD." 
+                           data-es="Desarrollo de módulo interactivo para el seguimiento del torneo deportivo interno corporativo. Visualización en tiempo real de equipos, roles de juego, tablas de posiciones, clasificaciones y estadísticas de partidos, integrado a la plataforma institucional con control de despliegues en GitLab.">
+                            Desarrollo de módulo interactivo para el seguimiento del torneo deportivo interno corporativo. Visualización en tiempo real de equipos, roles de juego, tablas de posiciones, clasificaciones y estadísticas de partidos, integrado a la plataforma institucional con control de despliegues en GitLab.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">JavaScript ES6+</span>
+                            <span class="bg-orange-700 px-3 py-1 rounded-full text-xs font-semibold">GitLab</span>
+                            <span class="bg-indigo-600 px-3 py-1 rounded-full text-xs font-semibold">UI Interactiva</span>
+                            <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">Tablas de Posiciones</span>
+                            <span class="bg-emerald-700 px-3 py-1 rounded-full text-xs font-semibold">Estadísticas en Vivo</span>
+                            <span class="bg-pink-700 px-3 py-1 rounded-full text-xs font-semibold">Torneo Corporativo</span>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="IN PRODUCTION" data-es="EN PRODUCCIÓN">
+                            EN PRODUCCIÓN
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 10. SISTEMA WEB DE CONTROL DE HONORARIOS Y GESTIÓN DE TAREAS PARA OFICINA -->
                 <div class="project-card-item ar-card p-6 fade-in" data-category="corporate">
                     <div class="flex justify-between items-center mb-3">
                         <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
                             🏢 CORPORATIVO / PRODUCCIÓN
                         </span>
-                        <span class="text-xs text-amber-300 font-bold">MGO Industrial</span>
+                        <span class="text-xs text-blue-300 font-bold">Carrizales Díaz</span>
                     </div>
-                    <div class="h-48 bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-orange-500/20">
-                        📦📑
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                        🗂️
                     </div>
-                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-amber-300 via-orange-400 to-red-400 bg-clip-text text-transparent" data-en="Warehouse Logistics & Invoice Tracking Dashboard" data-es="Tablero de Control de Bodega & Trazabilidad de Facturas">
-                        Tablero de Control de Bodega & Trazabilidad de Facturas
+                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                        Sistema Web de Control de Honorarios y Gestión de Tareas para Oficina
                     </h3>
-                    <p class="text-gray-300 mb-4 text-sm" 
-                       data-en="Enterprise logistics solution automating warehouse material inflow/outflow logging with Google Apps Script and generating real-time business intelligence dashboards via Google Looker Studio. Features invoice-level operational traceability, dynamic inventory balancing, automated low-stock notifications, and cross-department visibility." 
-                       data-es="Solución integral para gestión de almacén y logística que automatiza el registro de entradas y salidas de material mediante Google Apps Script y genera tableros de Business Intelligence en tiempo real con Google Looker Studio. Integra trazabilidad operativa por número de factura, balance dinámico de inventarios, alertas de reabastecimiento y visibilidad interdepartamental.">
-                        Solución integral para gestión de almacén y logística que automatiza el registro de entradas y salidas de material mediante Google Apps Script y genera tableros de Business Intelligence en tiempo real con Google Looker Studio. Integra trazabilidad operativa por número de factura, balance dinámico de inventarios, alertas de reabastecimiento y visibilidad interdepartamental.
+                    <p class="text-gray-300 mb-4 text-sm" data-en="Customized platform for centrally managing fees, assigning tasks, and monitoring revenue. It includes role-based access control, an interactive dashboard, and tools that streamline organization, reduce errors, and improve internal workflow. It is built with the following technologies:" data-es="Plataforma personalizada para gestionar honorarios, asignar tareas y monitorear ingresos de forma centralizada. Incluye control de acceso por roles, dashboard interactivo y herramientas que optimizan la organización, reducen errores y mejoran el flujo de trabajo interno. Está construido con las siguientes tecnologías:">
+                        Plataforma personalizada para gestionar honorarios, asignar tareas y monitorear ingresos de forma centralizada. Incluye control de acceso por roles, dashboard interactivo y herramientas que optimizan la organización, reducen errores y mejoran el flujo de trabajo interno. Está construido con las siguientes tecnologías:
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">Looker Studio</span>
-                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">Google Apps Script</span>
-                        <span class="bg-emerald-600 px-3 py-1 rounded-full text-xs font-semibold">Google Sheets API</span>
-                        <span class="bg-amber-600 px-3 py-1 rounded-full text-xs font-semibold">JavaScript</span>
-                        <span class="bg-purple-600 px-3 py-1 rounded-full text-xs font-semibold">Business Intelligence</span>
-                        <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-semibold">Logística & Facturación</span>
+                        <span class="bg-cyan-800 px-3 py-1 rounded-full text-xs">REACT</span>
+                        <span class="bg-green-600 px-3 py-1 rounded-full text-xs">NODE.JS</span>
+                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">TypeScript</span>
+                        <span class="bg-blue-300 px-3 py-1 rounded-full text-xs">Tailwind CSS</span>
+                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">PostgreSQL</span>
+                        <span class="bg-zinc-600 px-3 py-1 rounded-full text-xs">Vercel</span>
+                        <span class="bg-green-600 px-3 py-1 rounded-full text-xs">Neon</span>
                     </div>
-                    <button class="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="ENTERPRISE SYSTEM" data-es="SISTEMA EMPRESARIAL">
-                        SISTEMA EMPRESARIAL
-                    </button>
                 </div>
 
-                <!-- 5. PIPELINE ETL DE REDES SOCIALES & MÉTRICAS AUTOMATIZADAS -->
+                <!-- 11. SISTEMA WEB PARA RECOPILACIÓN DE INFORMACIÓN DE INFORME DE GOBIERNO -->
                 <div class="project-card-item ar-card p-6 fade-in" data-category="corporate">
                     <div class="flex justify-between items-center mb-3">
                         <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
                             🏢 CORPORATIVO / PRODUCCIÓN
                         </span>
-                        <span class="text-xs text-indigo-300 font-bold">Eufonia Studios</span>
                     </div>
-                    <div class="h-48 bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-indigo-500/20">
-                        📡📊
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                        📊
                     </div>
-                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-indigo-300 via-purple-400 to-pink-400 bg-clip-text text-transparent" data-en="Social Media ETL Pipeline & Automated Analytics" data-es="Pipeline ETL de Redes Sociales & Métricas Automatizadas">
-                        Pipeline ETL de Redes Sociales & Métricas Automatizadas
+                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        Sistema Web para Recopilación de Información de Informe de Gobierno
                     </h3>
-                    <p class="text-gray-300 mb-4 text-sm" 
-                       data-en="Automated data ingestion and transformation pipeline that periodically consumes multi-platform social media REST APIs using Google Apps Script triggers. Normalizes audience engagement, reach, and conversion metrics directly into Google Sheets, feeding executive Looker Studio dashboards for data-driven decisions without manual reporting." 
-                       data-es="Pipeline automatizado de ingesta y transformación de datos que consume APIs REST de redes sociales mediante triggers programados en Google Apps Script. Normaliza métricas de rendimiento (alcance, engagement, conversiones) en Google Sheets y alimenta dashboards ejecutivos en Looker Studio para toma de decisiones sin intervención manual.">
-                        Pipeline automatizado de ingesta y transformación de datos que consume APIs REST de redes sociales mediante triggers programados en Google Apps Script. Normaliza métricas de rendimiento (alcance, engagement, conversiones) en Google Sheets y alimenta dashboards ejecutivos en Looker Studio para toma de decisiones sin intervención manual.
+                    <p class="text-gray-300 mb-4 text-sm" data-en="Platform for centralizing and validating information from various government departments, used in the preparation of the Government Report. It includes access by department, validated forms, an administrative dashboard, and responsive design. This project is built with: " data-es="Plataforma para centralizar y validar información de distintas áreas gubernamentales, utilizada en la preparación del Informe de Gobierno. Incluye acceso por área, formularios validados, panel administrativo y diseño adaptable. Este proyecto esta construido con:">
+                        Plataforma para centralizar y validar información de distintas áreas gubernamentales, utilizada en la preparación del Informe de Gobierno. Incluye acceso por área, formularios validados, panel administrativo y diseño adaptable. Este proyecto esta construido con:
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">Google Apps Script</span>
-                        <span class="bg-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">APIs REST / OAuth</span>
-                        <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">Looker Studio</span>
-                        <span class="bg-emerald-600 px-3 py-1 rounded-full text-xs font-semibold">Google Sheets</span>
-                        <span class="bg-pink-700 px-3 py-1 rounded-full text-xs font-semibold">ETL & Data Pipeline</span>
-                        <span class="bg-purple-600 px-3 py-1 rounded-full text-xs font-semibold">JSON Automation</span>
+                        <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">HTML5</span>
+                        <span class="bg-purple-600 px-3 py-1 rounded-full text-xs">PHP</span>
+                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">CSS3</span>
+                        <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">JAVASCRIPT</span>
+                        <span class="bg-red-600 px-3 py-1 rounded-full text-xs">JQuery</span>
                     </div>
-                    <button class="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="AUTOMATION ACTIVE" data-es="AUTOMATIZACIÓN ACTIVA">
-                        AUTOMATIZACIÓN ACTIVA
-                    </button>
                 </div>
 
-                <!-- 6. ERP INTERNO -->
+                <!-- 12. ERP INTERNO PARA EMPRESA -->
                 <div class="project-card-item ar-card p-6 fade-in" data-category="corporate">
                     <div class="flex justify-between items-center mb-3">
                         <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
@@ -839,34 +1001,35 @@
                     </div>
                 <!--/a-->
 
-                <a href="https://eufonia.buycraft.net/" target="_blank" class="project-card-item block" data-category="corporate">
+                <!-- 13. PLATAFORMA WEB PARA CONFIRMACIÓN DE ASISTENCIA A EVENTO SOCIAL -->
+                <a href="PROYECTOS/invitacion-boda/" target="_blank" class="project-card-item block" data-category="personal">
                     <div class="ar-card p-6 fade-in">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
-                                🏢 CORPORATIVO / PRODUCCIÓN
+                            <span class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
+                                🚀 PERSONAL / LAB
                             </span>
-                            <span class="text-xs text-blue-300 font-bold">Eufonia Studios</span>
                         </div>
                         <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                            <img src="IMG/PROYECTOS/screen-4.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
+                            <img src="IMG/PROYECTOS/screen-2.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
                         </div>
                         <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                            Personalización y configuración de tienda online en Tebex
+                            Plataforma Web para Confirmación de Asistencia a Evento Social
                         </h3>
-                        <p class="text-gray-300 mb-4 text-sm" data-en="An online store was visually customized on the Tebex platform, focusing on improving the site's visual identity and aligning its appearance with the client's brand. The intervention focused on CSS style adjustments and specific structural modifications using Twig, the template engine used by Tebex. It is built with:" data-es="Se realizó la personalización visual de una tienda online en la plataforma Tebex, enfocada en mejorar la identidad visual del sitio y alinear su apariencia con la marca del cliente. La intervención se centró en ajustes de estilo mediante CSS y modificaciones específicas en la estructura utilizando Twig, el motor de plantillas que utiliza Tebex., esta construido con:">
-                            Se realizó la personalización visual de una tienda online en la plataforma Tebex, enfocada en mejorar la identidad visual del sitio y alinear su apariencia con la marca del cliente. La intervención se centró en ajustes de estilo mediante CSS y modificaciones específicas en la estructura utilizando Twig, el motor de plantillas que utiliza Tebex., esta construido con:
+                        <p class="text-gray-300 mb-4 text-sm" data-en="This project is a wedding invitation, where guests can RSVP and confirm their attendance, as well as view event details. Organizers can view reports. This project is built with:" data-es="Este proyecto es una invitacion de boda, en donde los invitados pueden confirmar su asistencia y cuantas personas, de igual forma pueden ver los detalles del evento. Los organizacores pueden ver reportes, este proyecto esta construido con:">
+                            Este proyecto es una invitacion de boda, en donde los invitados pueden confirmar su asistencia y cuantas personas, de igual forma pueden ver los detalles del evento. Los organizacores pueden ver reportes, este proyecto esta construido con:
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">HTML5</span>
                             <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">CSS3</span>
                             <span class="bg-green-600 px-3 py-1 rounded-full text-xs">Twig</span>
                         </div>
-                        <button class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="KNOW IT" data-es="CONOCER">
-                            CONOCER
+                        <button class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="ENTER" data-es="ENTRAR">
+                            ENTRAR
                         </button>
                     </div>
                 </a>
 
+                <!-- 14. SITIO WEB CORPORATIVO PARA EMPRESA DE IMPORTACIÓN Y EXPORTACIÓN DE MATERIALES -->
                 <a href="https://mgo-industrial-beta.vercel.app/" target="_blank" class="project-card-item block" data-category="corporate">
                     <div class="ar-card p-6 fade-in">
                         <div class="flex justify-between items-center mb-3">
@@ -896,6 +1059,36 @@
                     </div>
                 </a>
 
+                <!-- 15. PERSONALIZACIÓN Y CONFIGURACIÓN DE TIENDA ONLINE EN TEBEX -->
+                <a href="https://eufonia.buycraft.net/" target="_blank" class="project-card-item block" data-category="corporate">
+                    <div class="ar-card p-6 fade-in">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                                🏢 CORPORATIVO / PRODUCCIÓN
+                            </span>
+                            <span class="text-xs text-blue-300 font-bold">Eufonia Studios</span>
+                        </div>
+                        <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                            <img src="IMG/PROYECTOS/screen-4.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                            Personalización y configuración de tienda online en Tebex
+                        </h3>
+                        <p class="text-gray-300 mb-4 text-sm" data-en="An online store was visually customized on the Tebex platform, focusing on improving the site's visual identity and aligning its appearance with the client's brand. The intervention focused on CSS style adjustments and specific structural modifications using Twig, the template engine used by Tebex. It is built with:" data-es="Se realizó la personalización visual de una tienda online en la plataforma Tebex, enfocada en mejorar la identidad visual del sitio y alinear su apariencia con la marca del cliente. La intervención se centró en ajustes de estilo mediante CSS y modificaciones específicas en la estructura utilizando Twig, el motor de plantillas que utiliza Tebex., esta construido con:">
+                            Se realizó la personalización visual de una tienda online en la plataforma Tebex, enfocada en mejorar la identidad visual del sitio y alinear su apariencia con la marca del cliente. La intervención se centró en ajustes de estilo mediante CSS y modificaciones específicas en la estructura utilizando Twig, el motor de plantillas que utiliza Tebex., esta construido con:
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">HTML5</span>
+                            <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">CSS3</span>
+                            <span class="bg-green-600 px-3 py-1 rounded-full text-xs">Twig</span>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="KNOW IT" data-es="CONOCER">
+                            CONOCER
+                        </button>
+                    </div>
+                </a>
+
+                <!-- 16. PÁGINA WEB INFORMATIVA PARA RESTAURANTE -->
                 <a href="https://terra-origen.vercel.app/" target="_blank" class="project-card-item block" data-category="corporate"> 
                     <div class="ar-card p-6 fade-in">
                         <div class="flex justify-between items-center mb-3">
@@ -921,63 +1114,9 @@
                             SUMERGIRSE
                         </button>               
                     </div>
-                </a>          
-
-                <div class="project-card-item ar-card p-6 fade-in" data-category="corporate">
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
-                            🏢 CORPORATIVO / PRODUCCIÓN
-                        </span>
-                        <span class="text-xs text-blue-300 font-bold">Carrizales Díaz</span>
-                    </div>
-                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                        🗂️
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                        Sistema Web de Control de Honorarios y Gestión de Tareas para Oficina
-                    </h3>
-                    <p class="text-gray-300 mb-4 text-sm" data-en="Customized platform for centrally managing fees, assigning tasks, and monitoring revenue. It includes role-based access control, an interactive dashboard, and tools that streamline organization, reduce errors, and improve internal workflow. It is built with the following technologies:" data-es="Plataforma personalizada para gestionar honorarios, asignar tareas y monitorear ingresos de forma centralizada. Incluye control de acceso por roles, dashboard interactivo y herramientas que optimizan la organización, reducen errores y mejoran el flujo de trabajo interno. Está construido con las siguientes tecnologías:">
-                        Plataforma personalizada para gestionar honorarios, asignar tareas y monitorear ingresos de forma centralizada. Incluye control de acceso por roles, dashboard interactivo y herramientas que optimizan la organización, reducen errores y mejoran el flujo de trabajo interno. Está construido con las siguientes tecnologías:
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-cyan-800 px-3 py-1 rounded-full text-xs">REACT</span>
-                        <span class="bg-green-600 px-3 py-1 rounded-full text-xs">NODE.JS</span>
-                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">TypeScript</span>
-                        <span class="bg-blue-300 px-3 py-1 rounded-full text-xs">Tailwind CSS</span>
-                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">PostgreSQL</span>
-                        <span class="bg-zinc-600 px-3 py-1 rounded-full text-xs">Vercel</span>
-                        <span class="bg-green-600 px-3 py-1 rounded-full text-xs">Neon</span>
-                    </div>
-                </div>
-
-                <a href="PROYECTOS/challenge/" target="_blank" class="project-card-item block" data-category="personal"> 
-                    <div class="ar-card p-6 fade-in">
-                        <div class="flex justify-between items-center mb-3">
-                            <span class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
-                                🚀 PERSONAL / LAB
-                            </span>
-                            <span class="text-xs text-purple-300 font-bold">Alura Latam</span>
-                        </div>
-                        <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                            <img src="IMG/PROYECTOS/screen-1.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
-                        </div>
-                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                            Encriptador de Texto – Alura
-                        </h3>
-                        <p class="text-gray-300 mb-4 text-sm" data-en="This project is part of Alura Latam's ONE program. It is a web application that allows you to easily encrypt and decrypt text, following a set of defined rules to transform words. Its objective is to practice programming logic, DOM manipulation, and event handling in JavaScript. It is built with the following technologies:" data-es="Este proyecto forma parte del programa ONE de Alura Latam. Se trata de una aplicación web que permite encriptar y desencriptar texto de manera sencilla, siguiendo un conjunto de reglas definidas para transformar las palabras. Su objetivo es practicar lógica de programación, manipulación del DOM y manejo de eventos en JavaScript. Está construido con las siguientes tecnologías:">
-                            Este proyecto forma parte del programa ONE de Alura Latam. Se trata de una aplicación web que permite encriptar y desencriptar texto de manera sencilla, siguiendo un conjunto de reglas definidas para transformar las palabras. Su objetivo es practicar lógica de programación, manipulación del DOM y manejo de eventos en JavaScript. Está construido con las siguientes tecnologías:
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">HTML5</span>
-                            <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">CSS3</span>
-                            <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs">JavaScript</span>
-                        </div>
-                        <button class="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="DISCOVER" data-es="DESCUBRIR">
-                            DESCUBRIR
-                        </button>
-                    </div>
                 </a>
 
+                <!-- 17. ALURA GEEK -->
                 <a href="https://alura-geek-nay.vercel.app/" target="_blank" class="project-card-item block" data-category="personal">
                     <div class="ar-card p-6 fade-in">
                         <div class="flex justify-between items-center mb-3">
@@ -1006,56 +1145,34 @@
                     </div>
                 </a>
 
-                <a href="PROYECTOS/invitacion-boda/" target="_blank" class="project-card-item block" data-category="personal">
+                <!-- 18. ENCRIPTADOR DE TEXTO -->
+                <a href="PROYECTOS/challenge/" target="_blank" class="project-card-item block" data-category="personal"> 
                     <div class="ar-card p-6 fade-in">
                         <div class="flex justify-between items-center mb-3">
                             <span class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
                                 🚀 PERSONAL / LAB
                             </span>
+                            <span class="text-xs text-purple-300 font-bold">Alura Latam</span>
                         </div>
-                        <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                            <img src="IMG/PROYECTOS/screen-2.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
+                        <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                            <img src="IMG/PROYECTOS/screen-1.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
                         </div>
-                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                            Plataforma Web para Confirmación de Asistencia a Evento Social
+                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                            Encriptador de Texto – Alura
                         </h3>
-                        <p class="text-gray-300 mb-4 text-sm" data-en="This project is a wedding invitation, where guests can RSVP and confirm their attendance, as well as view event details. Organizers can view reports. This project is built with:" data-es="Este proyecto es una invitacion de boda, en donde los invitados pueden confirmar su asistencia y cuantas personas, de igual forma pueden ver los detalles del evento. Los organizacores pueden ver reportes, este proyecto esta construido con:">
-                            Este proyecto es una invitacion de boda, en donde los invitados pueden confirmar su asistencia y cuantas personas, de igual forma pueden ver los detalles del evento. Los organizacores pueden ver reportes, este proyecto esta construido con:
+                        <p class="text-gray-300 mb-4 text-sm" data-en="This project is part of Alura Latam's ONE program. It is a web application that allows you to easily encrypt and decrypt text, following a set of defined rules to transform words. Its objective is to practice programming logic, DOM manipulation, and event handling in JavaScript. It is built with the following technologies:" data-es="Este proyecto forma parte del programa ONE de Alura Latam. Se trata de una aplicación web que permite encriptar y desencriptar texto de manera sencilla, siguiendo un conjunto de reglas definidas para transformar las palabras. Su objetivo es practicar lógica de programación, manipulación del DOM y manejo de eventos en JavaScript. Está construido con las siguientes tecnologías:">
+                            Este proyecto forma parte del programa ONE de Alura Latam. Se trata de una aplicación web que permite encriptar y desencriptar texto de manera sencilla, siguiendo un conjunto de reglas definidas para transformar las palabras. Su objetivo es practicar lógica de programación, manipulación del DOM y manejo de eventos en JavaScript. Está construido con las siguientes tecnologías:
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">HTML5</span>
                             <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">CSS3</span>
-                            <span class="bg-green-600 px-3 py-1 rounded-full text-xs">Twig</span>
+                            <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs">JavaScript</span>
                         </div>
-                        <button class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="ENTER" data-es="ENTRAR">
-                            ENTRAR
+                        <button class="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="DISCOVER" data-es="DESCUBRIR">
+                            DESCUBRIR
                         </button>
                     </div>
                 </a>
-
-                <div class="project-card-item ar-card p-6 fade-in" data-category="corporate">
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
-                            🏢 CORPORATIVO / PRODUCCIÓN
-                        </span>
-                    </div>
-                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                        📊
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                        Sistema Web para Recopilación de Información de Informe de Gobierno
-                    </h3>
-                    <p class="text-gray-300 mb-4 text-sm" data-en="Platform for centralizing and validating information from various government departments, used in the preparation of the Government Report. It includes access by department, validated forms, an administrative dashboard, and responsive design. This project is built with: " data-es="Plataforma para centralizar y validar información de distintas áreas gubernamentales, utilizada en la preparación del Informe de Gobierno. Incluye acceso por área, formularios validados, panel administrativo y diseño adaptable. Este proyecto esta construido con:">
-                        Plataforma para centralizar y validar información de distintas áreas gubernamentales, utilizada en la preparación del Informe de Gobierno. Incluye acceso por área, formularios validados, panel administrativo y diseño adaptable. Este proyecto esta construido con:
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">HTML5</span>
-                        <span class="bg-purple-600 px-3 py-1 rounded-full text-xs">PHP</span>
-                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">CSS3</span>
-                        <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">JAVASCRIPT</span>
-                        <span class="bg-red-600 px-3 py-1 rounded-full text-xs">JQuery</span>
-                    </div>
-                </div>     
             </div>
         </div>
     </section>
