@@ -32,6 +32,7 @@ Este documento recopila la arquitectura técnica y el conjunto de tecnologías, 
 
 ## 2. 🌊 Taller de Mar (*Sistema de Citas y Talleres*)
 * **Ubicación:** `../TALLER-DE-MAR/taller-de-mar`
+* **Demo Activo en Producción:** [https://taller-de-mar-green.vercel.app/](https://taller-de-mar-green.vercel.app/)
 * **Descripción:** Plataforma web para la gestión de servicios y citas, inscripción a talleres, galería interactiva de trabajos y sistema de reseñas/valoraciones.
 
 ### Stack Tecnológico:
