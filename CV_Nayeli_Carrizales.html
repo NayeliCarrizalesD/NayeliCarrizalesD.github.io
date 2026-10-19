@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayeli Carrizales – Curriculum Vitae</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #111827;
+            --accent-green: #2b7a4b;
+            --accent-blue: #1a73e8;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --text-light: #6b7280;
+            --border-light: #e5e7eb;
+            --bg-pill: #f3f4f6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-main);
+            background: #f8fafc;
+            line-height: 1.5;
+            font-size: 13.5px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .no-print-bar {
+            background: #1e293b;
+            color: #fff;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .btn-print {
+            background: linear-gradient(135deg, #2b7a4b, #1b5e20);
+            color: #fff;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+
+        .btn-print:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(43, 122, 75, 0.4);
+        }
+
+        .cv-container {
+            max-width: 820px;
+            margin: 24px auto;
+            background: #ffffff;
+            padding: 48px 52px;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
+        }
+
+        /* HEADER */
+        .cv-header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1.5px solid #d1d5db;
+            margin-bottom: 22px;
+        }
+
+        .cv-header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        .cv-header .contact-line {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .cv-header .contact-line a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .cv-header .contact-line a:hover {
+            color: var(--accent-green);
+            text-decoration: underline;
+        }
+
+        .cv-header .links-line {
+            font-size: 11.5px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            color: var(--accent-blue);
+        }
+
+        .cv-header .links-line a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .cv-header .links-line a:hover {
+            text-decoration: underline;
+        }
+
+        /* SUMMARY */
+        .summary-box {
+            font-size: 12.8px;
+            color: #374151;
+            text-align: justify;
+            line-height: 1.58;
+            margin-bottom: 24px;
+            padding: 12px 16px;
+            background: #fafbfb;
+            border-left: 3px solid var(--accent-green);
+            border-radius: 0 6px 6px 0;
+        }
+
+        /* SECTIONS */
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: #111827;
+            text-transform: uppercase;
+            margin-top: 22px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #e5e7eb;
+        }
+
+        /* TIMELINE ITEMS */
+        .timeline-item {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 18px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            bottom: -8px;
+            width: 2px;
+            border-left: 2px dotted #cbd5e1;
+        }
+
+        .timeline-item:last-child::before {
+            bottom: 4px;
+        }
+
+        .timeline-item::after {
+            content: "";
+            position: absolute;
+            left: -3px;
+            top: 5px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-green);
+        }
+
+        .item-dates {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            color: #64748b;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .item-role {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--accent-green);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin-bottom: 2px;
+        }
+
+        .item-company {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+
+        .item-bullets {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .item-bullets li {
+            position: relative;
+            padding-left: 14px;
+            font-size: 12.2px;
+            color: #374151;
+            line-height: 1.48;
+            margin-bottom: 3.5px;
+        }
+
+        .item-bullets li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-green);
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        .tech-pill {
+            display: inline-block;
+            background: #f1f5f9;
+            color: #334155;
+            font-size: 10.5px;
+            font-weight: 600;
+            padding: 1.5px 7px;
+            border-radius: 4px;
+            margin-right: 4px;
+            margin-top: 3px;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* SKILLS GRID */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 18px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .skill-group {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 10px 14px;
+            border-radius: 6px;
+        }
+
+        .skill-group h4 {
+            font-size: 11.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #0f172a;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .skill-group p {
+            font-size: 11.5px;
+            color: #475569;
+            line-height: 1.45;
+        }
+
+        /* PROJECTS */
+        .project-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-left: 3px solid var(--accent-blue);
+            border-radius: 4px;
+            padding: 10px 14px;
+            margin-bottom: 10px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .project-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #0f172a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3px;
+        }
+
+        .project-desc {
+            font-size: 11.8px;
+            color: #374151;
+            line-height: 1.45;
+            margin-bottom: 5px;
+        }
+
+        /* CERTS & EDUCATION */
+        .cert-item {
+            margin-bottom: 10px;
+            font-size: 12px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .cert-date {
+            font-size: 10.5px;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+        }
+
+        .cert-name {
+            font-weight: 700;
+            color: var(--accent-green);
+            text-transform: uppercase;
+        }
+
+        .cert-issuer {
+            color: #475569;
+            font-size: 11.5px;
+        }
+
+        .cert-id {
+            color: #64748b;
+            font-size: 10.5px;
+            font-family: monospace;
+        }
+
+        /* PRINT MEDIA STYLES */
+        @media print {
+            body {
+                background: #ffffff;
+                font-size: 11.8px;
+            }
+
+            .no-print-bar {
+                display: none !important;
+            }
+
+            .cv-container {
+                max-width: 100%;
+                margin: 0;
+                padding: 15mm 16mm;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .timeline-item, .project-card, .skill-group, .cert-item {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            a {
+                color: inherit !important;
+                text-decoration: none !important;
+            }
+
+            @page {
+                size: letter portrait;
+                margin: 8mm 6mm;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print-bar">
+        <div>
+            <strong>Curriculum Vitae – Nayeli Carrizales</strong> 
+            <span style="opacity: 0.7; font-size: 12px; margin-left: 10px;">Optimizado para perfiles Cloud, AI & Solutions Engineering (Google Careers)</span>
+        </div>
+        <button class="btn-print" onclick="window.print()">
+            🖨️ Imprimir / Guardar como PDF
+        </button>
+    </div>
+
+    <div class="cv-container">
+        <!-- HEADER -->
+        <header class="cv-header">
+            <h1>NAYELI CARRIZALES</h1>
+            <div class="contact-line">
+                <span>Guadalajara, Jalisco, México</span> •
+                <span>(+52) 481 129 7569</span> •
+                <a href="mailto:nayeli.carrizales.diaz@gmail.com">nayeli.carrizales.diaz@gmail.com</a>
+            </div>
+            <div class="links-line">
+                <a href="https://www.linkedin.com/in/nayeli-carrizales-diaz/" target="_blank">linkedin.com/in/nayeli-carrizales-diaz</a> •
+                <a href="https://nayelicarrizalesd.github.io/" target="_blank">nayelicarrizalesd.github.io</a> •
+                <a href="https://github.com/NayeliCarrizalesD" target="_blank">github.com/NayeliCarrizalesD</a>
+            </div>
+        </header>
+
+        <!-- PROFESSIONAL SUMMARY -->
+        <div class="summary-box">
+            <strong>Ingeniera en Tecnologías de la Información y Comunicaciones (Graduada con Honores)</strong> con amplia experiencia en arquitectura de software full stack, automatización de flujos empresariales y pipelines de datos en la nube. Especialista en la construcción de sistemas de alto desempeño con <strong>React 19, Next.js 16, TypeScript, PostgreSQL y Docker</strong>, combinados con soluciones nativas del <strong>ecosistema de Google (Google Apps Script, Google Looker Studio, Google Sheets API)</strong> y plataformas agénticas asistidas por IA (<strong>Google Antigravity IDE & CLI, AWS Kiro</strong>). Experiencia comprobada en control de versiones y ciclo de desarrollo corporativo en <strong>GitLab</strong>, consumo e integración de APIs REST seguras, y trazabilidad logística y financiera.
+        </div>
+
+        <!-- TECHNICAL SKILLS -->
+        <h2 class="section-title">HABILIDADES TÉCNICAS</h2>
+        <div class="skills-grid">
+            <div class="skill-group">
+                <h4>☁️ Cloud, IA & Contenedores</h4>
+                <p>Google Antigravity IDE & CLI, AWS Kiro AI IDE, Google Cloud (Fundamentos), Docker, Docker Compose, Nginx Alpine, Vercel, Neon Serverless.</p>
+            </div>
+            <div class="skill-group">
+                <h4>📊 Business Intelligence & ETL Google</h4>
+                <p>Google Looker Studio, Google Apps Script, Google Sheets API, Time-driven Triggers, Automatización de reportes, Consumo de APIs REST / OAuth.</p>
+            </div>
+            <div class="skill-group">
+                <h4>💻 Frontend & Estado Reactivo</h4>
+                <p>React 19, Next.js 16 (App Router), TypeScript, JavaScript (ES6+), Vite 8, Tailwind CSS v4, Zustand, React Router DOM, HTML5 / CSS3.</p>
+            </div>
+            <div class="skill-group">
+                <h4>⚙️ Backend, Bases de Datos & QA</h4>
+                <p>Node.js, Express, Next.js API Routes, PostgreSQL, Drizzle ORM, Auth0, Vitest, Cypress, <strong>GitLab (uso corporativo)</strong>, GitHub.</p>
+            </div>
+        </div>
+
+        <!-- WORK EXPERIENCE -->
+        <h2 class="section-title">EXPERIENCIA LABORAL</h2>
+
+        <!-- EXP 1 -->
+        <div class="timeline-item">
+            <div class="item-dates">SEPTIEMBRE 2023 – ACTUALIDAD</div>
+            <div class="item-role">ESPECIALISTA EN SISTEMAS WEB Y AUTOMATIZACIÓN DE PROCESOS | GESTOR DE E-COMMERCE</div>
+            <div class="item-company">MGO Industrial · Guadalajara, Jal.</div>
+            <ul class="item-bullets">
+                <li>Diseñé e implementé el <strong>Tablero de Control de Bodega y Logística</strong>, automatizando el registro de entradas y salidas de material con <strong>Google Apps Script</strong> y centralizando dashboards analíticos en tiempo real en <strong>Google Looker Studio</strong>.</li>
+                <li>Desarrollé la <strong>trazabilidad operativa a nivel de factura y proveedor</strong>, reduciendo discrepancias de inventario y habilitando alertas automáticas de reabastecimiento crítico.</li>
+                <li>Gestión del ciclo de vida y control de versiones del código corporativo en <strong>GitLab</strong>, administrando ramas de producción, code reviews y resolución de incidencias.</li>
+                <li>Desarrollé y optimicé la plataforma web corporativa con <strong>React, TypeScript y Tailwind CSS</strong>, mejorando la velocidad de respuesta y la experiencia de usuario.</li>
+                <li>Gestión técnica de catálogos y sincronización de inventario en plataformas de e-commerce y marketplaces.</li>
+            </ul>
+            <div style="margin-top: 4px;">
+                <span class="tech-pill">Google Looker Studio</span>
+                <span class="tech-pill">Google Apps Script</span>
+                <span class="tech-pill">GitLab</span>
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">TypeScript</span>
+                <span class="tech-pill">Tailwind CSS</span>
+            </div>
+        </div>
+
+        <!-- EXP 2 -->
+        <div class="timeline-item">
+            <div class="item-dates">MARZO 2024 – MARZO 2025</div>
+            <div class="item-role">ESPECIALISTA EN OPTIMIZACIÓN DE PROCESOS & ANALÍTICA DE DATOS</div>
+            <div class="item-company">Eufonia Studios</div>
+            <ul class="item-bullets">
+                <li>Diseñé un <strong>Pipeline ETL automatizado para ingesta de métricas de redes sociales</strong>, consumiendo periódicamente APIs REST externas mediante scripts en <strong>Google Apps Script</strong>.</li>
+                <li>Estructuré, normalicé y procesé objetos JSON complejos (alcance, engagement, conversiones) dentro de <strong>Google Sheets</strong> para su integración directa y sin fricción manual.</li>
+                <li>Construí dashboards ejecutivos en <strong>Google Looker Studio</strong> para la visualización estratégica de métricas de talento, campañas digitales y rendimiento operativo.</li>
+                <li>Implementé fórmulas avanzadas, validaciones y macros automatizadas, reduciendo los tiempos manuales de reporte en un 80%.</li>
+            </ul>
+            <div style="margin-top: 4px;">
+                <span class="tech-pill">Google Apps Script</span>
+                <span class="tech-pill">APIs REST / OAuth</span>
+                <span class="tech-pill">Looker Studio</span>
+                <span class="tech-pill">Google Sheets</span>
+                <span class="tech-pill">ETL / Pipelines</span>
+            </div>
+        </div>
+
+        <!-- EXP 3 -->
+        <div class="timeline-item">
+            <div class="item-dates">SEPTIEMBRE 2022 – SEPTIEMBRE 2023</div>
+            <div class="item-role">DESARROLLO FULL STACK</div>
+            <div class="item-company">Carrizales Díaz, Contadores Públicos</div>
+            <ul class="item-bullets">
+                <li>Desarrollo integral de plataforma web para el <strong>Control de Honorarios y Gestión de Tareas</strong> de la firma.</li>
+                <li>Arquitectura frontend con <strong>React y Tailwind CSS</strong> e implementación de backend con <strong>Node.js y PostgreSQL</strong>.</li>
+                <li>Implementación de control de acceso por roles (RBAC) y panel administrativo para seguimiento de productividad y cobros.</li>
+            </ul>
+            <div style="margin-top: 4px;">
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">PostgreSQL</span>
+                <span class="tech-pill">Tailwind CSS</span>
+            </div>
+        </div>
+
+        <!-- EXP 4 -->
+        <div class="timeline-item">
+            <div class="item-dates">NOVIEMBRE 2021 – NOVIEMBRE 2022</div>
+            <div class="item-role">ESPECIALISTA EN SOPORTE TÉCNICO & SISTEMAS</div>
+            <div class="item-company">Aipisoft</div>
+            <ul class="item-bullets">
+                <li>Atención y diagnóstico de incidencias de software y plataformas administrativas empresariales.</li>
+                <li>Elaboración de instructivos operativos y documentación técnica para integración de sistemas contables.</li>
+                <li>Colaboración estrecha con equipos de desarrollo para la priorización y depuración ágil de fallas.</li>
+            </ul>
+        </div>
+
+        <!-- EXP 5 -->
+        <div class="timeline-item">
+            <div class="item-dates">MARZO 2019 – ENERO 2022</div>
+            <div class="item-role">DESARROLLADOR WEB & CREACIÓN DE SISTEMAS WEB</div>
+            <div class="item-company">Soluciones de Innovación Tecnológica</div>
+            <ul class="item-bullets">
+                <li>Desarrollo de páginas y sistemas web desde cero a la medida de requerimientos de clientes.</li>
+                <li>Diseño y estructuración de bases de datos relacionales, consumo de endpoints y maquetación web.</li>
+            </ul>
+        </div>
+
+        <!-- EXP 6 -->
+        <div class="timeline-item">
+            <div class="item-dates">ENERO 2017 – JUNIO 2021</div>
+            <div class="item-role">COORDINADORA DE PROYECTOS WEB & DESARROLLADORA FRONT-END</div>
+            <div class="item-company">Proyectos de Software Odisea</div>
+            <ul class="item-bullets">
+                <li>Monitoreo técnico de proyectos, levantamiento de requerimientos y diseño de casos de uso funcionales.</li>
+                <li>Desarrollo front-end, maquetación responsiva y diseño de esquemas de datos.</li>
+            </ul>
+        </div>
+
+        <!-- RELEVANT PROJECTS -->
+        <h2 class="section-title">PROYECTOS DESTACADOS DE ALTO IMPACTO</h2>
+
+        <div class="project-card">
+            <div class="project-title">
+                <span>Punto de Venta & KDS en Tiempo Real – El Pulpo Chelero</span>
+                <span style="font-size: 11px; color: #64748b; font-weight: 500;">React 19 · TypeScript · Docker</span>
+            </div>
+            <p class="project-desc">
+                Sistema modular para restaurante con mapa interactivo de mesas, venta rápida, sistema KDS (pantalla de cocina/bar) y arqueo de caja (X y Z). Construido con <strong>React 19, TypeScript, Vite 8, Zustand, Docker multi-stage y Nginx Alpine</strong>, con alertas sonoras en tiempo real (Web Audio API) e integración con APIs de autenticación y usuarios (Janus/Octopus).
+            </p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">
+                <span>Reloj Checador Empresarial – Kronos Safe</span>
+                <span style="font-size: 11px; color: #64748b; font-weight: 500;">Next.js 16 · PostgreSQL Neon · Drizzle</span>
+            </div>
+            <p class="project-desc">
+                Plataforma de control laboral y asistencias con cálculo automático de horas extras e incidencias. Desarrollada con <strong>Next.js 16, React 19, PostgreSQL Serverless (Neon), Drizzle ORM, Auth0</strong>, exportación a hojas de cálculo (XLSX) y suite de testing con <strong>Vitest y Cypress</strong>.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">
+                <span>Tablero de Control de Bodega & Trazabilidad de Facturas</span>
+                <span style="font-size: 11px; color: #64748b; font-weight: 500;">Looker Studio · Apps Script · Sheets API</span>
+            </div>
+            <p class="project-desc">
+                Solución de logística empresarial que automatiza entradas/salidas de materiales, cálculo de stock dinámico y alertas automáticas mediante <strong>Google Apps Script</strong>, con visualización analítica por número de factura y proveedor en <strong>Google Looker Studio</strong>.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">
+                <span>Pipeline ETL de Redes Sociales & Métricas Automatizadas</span>
+                <span style="font-size: 11px; color: #64748b; font-weight: 500;">Google Apps Script · APIs REST · JSON ETL</span>
+            </div>
+            <p class="project-desc">
+                Pipeline programado en la nube que consume APIs REST de plataformas sociales con autenticación por tokens, normaliza métricas clave en <strong>Google Sheets</strong> y alimenta dashboards directivos en <strong>Looker Studio</strong> sin intervención manual.
+            </p>
+        </div>
+
+        <!-- EDUCATION -->
+        <h2 class="section-title">FORMACIÓN ACADÉMICA</h2>
+        <div class="timeline-item" style="margin-bottom: 12px;">
+            <div class="item-dates">FEBRERO 2017</div>
+            <div class="item-role">INGENIERÍA EN TECNOLOGÍAS DE LA INFORMACIÓN Y COMUNICACIONES</div>
+            <div class="item-company">Tecnológico Nacional de México</div>
+            <ul class="item-bullets">
+                <li><strong>Título con Honores</strong> por excelencia académica.</li>
+                <li>Participación destacada en el Evento Nacional de Innovación Tecnológica.</li>
+            </ul>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <h2 class="section-title">CURSOS Y CERTIFICACIONES</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
+            <div class="cert-item">
+                <div class="cert-date">OCTUBRE 2023</div>
+                <div class="cert-name">Formación React G5 - ONE</div>
+                <div class="cert-issuer">Oracle Next Education & Alura LATAM</div>
+                <div class="cert-id">ID: 5a3d12b6-a6e3-4a4f-a676-2812f9ef711c</div>
+            </div>
+
+            <div class="cert-item">
+                <div class="cert-date">JULIO 2023</div>
+                <div class="cert-name">Protege tu Negocio: Ciberseguridad en el Teletrabajo</div>
+                <div class="cert-issuer">Google Actívate</div>
+                <div class="cert-id">ID: 6RB TFH APU</div>
+            </div>
+
+            <div class="cert-item">
+                <div class="cert-date">JULIO 2023</div>
+                <div class="cert-name">EF SET English Certificate 54/100 (B2 Upper Intermediate)</div>
+                <div class="cert-issuer">EF International Language Centers</div>
+            </div>
+
+            <div class="cert-item">
+                <div class="cert-date">JUNIO 2023</div>
+                <div class="cert-name">Layouts Responsivos: Mobile First</div>
+                <div class="cert-issuer">Alura LATAM</div>
+                <div class="cert-id">ID: 8d101849-4049-4ed8-92ee-a795b20b6aa0</div>
+            </div>
+
+            <div class="cert-item" style="grid-column: span 2;">
+                <div class="cert-date">JULIO 2021</div>
+                <div class="cert-name">Digitaliza tu Negocio Paso a Paso con Google My Business y YouTube</div>
+                <div class="cert-issuer">Google Actívate</div>
+                <div class="cert-id">ID: G9CZPA87X</div>
+            </div>
+        </div>
+
+        <!-- APTITUDES -->
+        <h2 class="section-title">APTITUDES & COMPETENCIAS</h2>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; font-size: 11.8px; color: #374151;">
+            <div>• Pensamiento crítico & resolución analítica</div>
+            <div>• Arquitectura de software & DevOps ágil</div>
+            <div>• Liderazgo técnico & mentoría</div>
+            <div>• Optimización de procesos empresariales</div>
+            <div>• Comunicación ejecutiva & técnica</div>
+            <div>• Adaptabilidad a nuevas herramientas & IA agéntica</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

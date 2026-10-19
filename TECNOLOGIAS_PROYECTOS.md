@@ -5,7 +5,7 @@ Este documento recopila la arquitectura técnica y el conjunto de tecnologías, 
 ---
 
 ## 1. 🕒 Reloj Checador (*Kronos Safe*)
-* **Ubicación:** `../../RELOJ-CHECADOR/kronos-safe`
+* **Ubicación:** `../RELOJ-CHECADOR/kronos-safe`
 * **Descripción:** Sistema empresarial para control de asistencia laboral, gestión de empleados, registro de incidencias, cálculo de horas extras y exportación de reportes operativos.
 
 ### Stack Tecnológico:
@@ -31,7 +31,7 @@ Este documento recopila la arquitectura técnica y el conjunto de tecnologías, 
 ---
 
 ## 2. 🌊 Taller de Mar (*Sistema de Citas y Talleres*)
-* **Ubicación:** `../../TALLER-DE-MAR/taller-de-mar`
+* **Ubicación:** `../TALLER-DE-MAR/taller-de-mar`
 * **Descripción:** Plataforma web para la gestión de servicios y citas, inscripción a talleres, galería interactiva de trabajos y sistema de reseñas/valoraciones.
 
 ### Stack Tecnológico:
@@ -57,7 +57,7 @@ Este documento recopila la arquitectura técnica y el conjunto de tecnologías, 
 ---
 
 ## 3. 🐙🍺 Punto de Venta (*El Pulpo Chelero - POS & Cocina*)
-* **Ubicación:** `../../PUNTO-DE-VENTA-RESTAURANTE`
+* **Ubicación:** `../PUNTO-DE-VENTA-RESTAURANTE`
 * **Descripción:** Sistema integral de Punto de Venta (POS) y Comandas diseñado para restaurantes y bares. Incluye mapa interactivo de mesas, venta en mostrador/takeaway, KDS (Kitchen Display System / pantalla para cocina y bar), arqueo/corte de caja (X y Z) e impresión de tickets térmicos.
 
 ### Stack Tecnológico:
@@ -79,3 +79,24 @@ Este documento recopila la arquitectura técnica y el conjunto de tecnologías, 
   * **Docker Compose**
   * **Nginx Alpine** (servidor web ultraligero para producción)
   * Script PowerShell para despliegue automatizado por FTP (`scripts/deploy-ftp.ps1`)
+
+---
+
+## 4. 📦📑 Tablero de Control de Bodega & Trazabilidad de Facturas
+* **Descripción:** Solución corporativa para gestión de almacén, logística e inventarios. Automatiza el registro de entradas y salidas de materiales mediante Google Apps Script y genera tableros analíticos en tiempo real con Google Looker Studio.
+* **Stack Tecnológico:**
+  * **Business Intelligence & Visualización:** Google Looker Studio (dashboards interactivos, métricas de inventario, stock crítico).
+  * **Automatización & Scripting:** Google Apps Script (JavaScript moderno para validaciones, generación de IDs y triggers de actualización).
+  * **Almacenamiento & Modelado de Datos:** Google Sheets / Google Sheets API (estructuración relacional de hojas para entradas, salidas y catálogo).
+  * **Trazabilidad:** Rastreo operativo detallado vinculado por número de factura y proveedor.
+
+---
+
+## 5. 📡📊 Pipeline ETL de Redes Sociales & Métricas Automatizadas
+* **Descripción:** Pipeline automatizado de extracción, transformación y carga (ETL) que consume APIs REST de diversas plataformas de redes sociales periódicamente para consolidar métricas de alcance, interacción y conversiones.
+* **Stack Tecnológico:**
+  * **Automatización & ETL:** Google Apps Script con Time-driven Triggers para ejecución periódica desatendida.
+  * **Integraciones & Consumo de APIs:** APIs REST externas mediante `UrlFetchApp`, autenticación con tokens/headers HTTP y normalización de JSON.
+  * **Modelado & Almacenamiento:** Google Sheets como repositorio de datos estructurado.
+  * **Visualización:** Google Looker Studio conectado como capa de presentación para reportes ejecutivos.
+
