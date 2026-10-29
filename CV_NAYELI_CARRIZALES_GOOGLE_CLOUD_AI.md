@@ -22,18 +22,19 @@
 
 ## EXPERIENCIA LABORAL
 
-### **DESARROLLADORA WEB FRONT-END & SISTEMAS CORPORATIVOS**
-**Grupo Salinas · Ciudad de México (CDMX)** | *Septiembre 2023 – Actualidad*
-* Lideré y entregué exitosamente **4 proyectos estratégicos a producción**, administrando ramas de despliegue, control de versiones y code reviews mediante **GitLab corporativo**.
-* **Registro Único (Móvil & Geografía):** Diseñé e implementé la arquitectura frontend del sistema corporativo de registro para dispositivos móviles, dando servicio a escala nacional para colaboradores de corporativo y campo.
-* **Rally Mundialista (Juegos Web Multi-Servidor):** Desarrollé minijuegos y dinámicas interactivas en **Vanilla JavaScript (ES6+), HTML5 y CSS3**. Diseñé y adapté arquitecturas de código modulares para ejecutarse de manera confiable en **diferentes servidores de producción con configuraciones e infraestructuras heterogéneas**.
-* **Buscador Dinámico de Ganadores:** Implementé un motor de búsqueda y filtrado en tiempo real con alta concurrencia para dinámicas y activaciones corporativas.
-* **Módulo Copa Socio:** Desarrollé la interfaz interactiva para el torneo deportivo institucional, permitiendo visualizar equipos, fixtures y clasificaciones en tiempo real.
+### **CONSULTORA SENIOR EN DESARROLLO FRONT-END & SISTEMAS CORPORATIVOS**
+**Grupo Salinas · Ciudad de México (CDMX)** | *Noviembre 2025 – Actualidad*
+* Liderazgo técnico en arquitectura frontend y entrega a producción de **plataformas corporativas estratégicas de escala nacional**, administrando gobernanza de código, ramas de despliegue y revisiones técnicas mediante **GitLab corporativo**.
+* **Sistema de Onboarding & Registro Móvil (React 19 & Vite):** Diseñé e implementé la arquitectura frontend para dispositivos móviles con validaciones reactivas estrictas y diseño Mobile-First, garantizando alta disponibilidad para colaboradores en todo México.
+* **Ecosistema de Gamificación & Engagement Multi-Servidor:** Desarrollé dinámicas interactivas y juegos web de alto rendimiento (60 FPS) con **TypeScript, HTML5 Canvas y Framer Motion**. Diseñé y adapté arquitecturas de código modulares para operar de forma confiable en **múltiples servidores de producción con configuraciones técnicas heterogéneas**, con prototipado contenerizado en **Docker**.
+* **Buscador Reactivo de Alta Concurrencia (React & SCSS):** Implementé un motor dinámico de consulta y filtrado instantáneo en cliente, diseñado para absorber picos masivos de concurrencia y tráfico simultáneo.
+* **Portal Deportivo Institucional & Reportería (React & Axios):** Plataforma para torneos deportivos con actualización de fixtures y estadísticas en tiempo real, e integración de exportación automática de reportes ejecutivos en PDF mediante **PDFMake**.
+* **Portal Corporativo de Bienestar & Analítica Visual (React, TypeScript & ECharts):** Construí tableros analíticos interactivos con **ECharts**, validación tipada estricta (**Zod + React Hook Form**), manejo de estado global con **Zustand** y especificaciones para despliegues empresariales en servidores **IIS (Windows Server)**.
 
 ---
 
 ### **CONSULTORA EN SISTEMAS WEB Y AUTOMATIZACIÓN DE PROCESOS**
-**MGO Industrial** | *Septiembre 2023 – 2024*
+**MGO Industrial** | *Septiembre 2023 – Octubre 2025*
 * Diseñé e implementé el **Tablero de Control de Bodega y Logística**, automatizando el flujo de entradas/salidas de materiales mediante **Google Apps Script** y consolidando métricas operativas en tiempo real en **Google Looker Studio**.
 * Establecí un sistema de **trazabilidad de inventarios a nivel de factura y proveedor**, mitigando discrepancias de existencias y habilitando alertas automáticas de reorden.
 * Desarrollé y optimicé la plataforma web corporativa con **React, TypeScript y Tailwind CSS**, mejorando la velocidad de respuesta y la experiencia de usuario.
@@ -41,7 +42,7 @@
 ---
 
 ### **ESPECIALISTA EN OPTIMIZACIÓN DE PROCESOS & ANALÍTICA DE DATOS**
-**Eufonia Studios** | *Marzo 2024 – Marzo 2025*
+**Eufonia Studios** | *Marzo 2024 – Diciembre 2025*
 * Diseñé e implementé un **Pipeline ETL automatizado para ingesta de métricas de redes sociales**, consumiendo periódicamente APIs REST externas mediante scripts programados en **Google Apps Script**.
 * Centralicé, limpié y normalicé estructuras JSON (alcance, engagement, conversiones) dentro de **Google Sheets**, creando un modelo de datos estructurado sin fricción manual.
 * Construí tableros de Business Intelligence en **Google Looker Studio** para la visualización ejecutiva del rendimiento de talento, reclutamiento y campañas digitales.

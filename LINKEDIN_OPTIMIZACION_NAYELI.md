@@ -53,15 +53,16 @@ Me destaco por mi capacidad para traducir requerimientos de negocio complejos en
 ---
 
 ## 3. 🏢 Experiencia Laboral en LinkedIn (Puesto en Grupo Salinas)
-> **Cargo:** Desarrolladora Web Front-End / Software Engineer  
+> **Cargo:** Consultor Senior en Desarrollo Front-end / Software Engineer  
 > **Empresa:** Grupo Salinas  
 > **Ubicación:** Ciudad de México (CDMX), México  
-> **Periodo:** Septiembre 2023 – Actualidad  
+> **Periodo:** Noviembre 2025 – Actualidad  
 
 ### Descripción / Viñetas:
-* Liderazgo técnico en la arquitectura y entrega a producción de **4 proyectos estratégicos de escala nacional**, gestionando el control de versiones, ramas de release y code reviews mediante **GitLab corporativo**.
-* **Registro Único (Móvil & Geografía):** Desarrollo de la plataforma corporativa unificada para dispositivos móviles, brindando servicio a miles de colaboradores del corporativo y de la red geográfica nacional.
-* **Rally Mundialista (Juegos Web Multi-Servidor):** Creación de dinámicas interactivas y juegos de alto rendimiento en **Vanilla JavaScript, HTML5 Canvas y CSS3**. Adaptación modular de la arquitectura del código fuente para su despliegue y compatibilidad en múltiples servidores con infraestructuras heterogéneas.
-* **Buscador de Ganadores:** Implementación de un motor dinámico de búsqueda y filtrado en tiempo real para activaciones corporativas masivas con alta concurrencia.
-* **Módulo Copa Socio:** Desarrollo de la interfaz interactiva para el torneo deportivo institucional, permitiendo visualizar estadísticas, equipos y calendarios en tiempo real.
-* **Aptitudes clave:** GitLab · JavaScript (Vanilla ES6+) · Mobile Web · Arquitecturas Multi-Servidor · HTML5 Canvas · Rendimiento Web y Optimización.
+* Liderazgo técnico en arquitectura frontend y entrega a producción de **plataformas corporativas estratégicas de escala nacional**, gestionando gobernanza de código, ramas de release y code reviews mediante **GitLab corporativo**.
+* **Plataforma Web de Onboarding & Registro Móvil (React 19 & Vite):** Diseño de la arquitectura frontend para dispositivos móviles con enfoque Mobile-First y validaciones reactivas estrictas, dando servicio con alta disponibilidad a colaboradores de corporativo y campo en todo el país.
+* **Ecosistema de Gamificación & Engagement Multi-Servidor:** Desarrollo de dinámicas interactivas y minijuegos web de alto rendimiento (60 FPS) con **TypeScript, HTML5 Canvas y Framer Motion**. Adaptación de arquitecturas de software para su ejecución homogénea en diferentes servidores de producción con arquitecturas e infraestructuras heterogéneas, complementado con prototipado en **Docker**.
+* **Motor Reactivo de Búsqueda y Filtrado en Tiempo Real (React & SCSS):** Implementación de un motor dinámico de consulta y filtrado instantáneo en cliente, diseñado para mitigar latencia y absorber picos masivos de concurrencia simultánea en activaciones masivas.
+* **Portal Deportivo Institucional & Reportería Dinámica (React & Axios):** Plataforma para torneos deportivos con actualización de fixtures y estadísticas en vivo, e integración de exportación automática de reportes ejecutivos en PDF mediante **PDFMake**.
+* **Portal Corporativo de Bienestar & Analítica Visual (React, TypeScript & ECharts):** Construcción de tableros analíticos interactivos con **ECharts**, validación tipada estricta (**Zod + React Hook Form**), gestión de estado en **Zustand** y especificaciones para despliegues empresariales en servidores **IIS (Windows Server)**.
+* **Aptitudes clave:** React 19 · TypeScript · GitLab Corporativo · Vite · ECharts · Zustand · Zod · Framer Motion · HTML5 Canvas · PDFMake · Docker · Despliegues IIS · Mobile First · Rendimiento Web y Optimización.

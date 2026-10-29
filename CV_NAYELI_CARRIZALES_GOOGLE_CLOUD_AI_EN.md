@@ -23,18 +23,19 @@
 
 ## WORK EXPERIENCE
 
-### **FRONT-END WEB DEVELOPER & ENTERPRISE SYSTEMS**
-**Grupo Salinas · Mexico City (CDMX)** | *September 2023 – Present*
-* Successfully spearheaded and shipped **4 strategic production web projects**, managing deployment branches, version control, and code reviews via **enterprise GitLab**.
-* **Unified Registry (Mobile & Geography):** Architected and implemented the frontend for the enterprise mobile onboarding and registration platform, serving nationwide corporate and field personnel.
-* **World Cup Rally (Multi-Server Web Games):** Engineered interactive web mini-games in **Vanilla JavaScript (ES6+), HTML5, and CSS3**. Designed and adapted modular codebases to execute reliably across **heterogeneous production servers with distinct infrastructures and server environments**.
-* **Dynamic Winners Search Engine:** Delivered a high-concurrency real-time search and filtering engine for nationwide corporate promotional campaigns.
-* **Copa Socio Sports Module:** Developed the real-time interactive UI for the corporate soccer tournament, displaying live fixtures, rosters, standings, and match statistics.
+### **SENIOR FRONTEND DEVELOPER & ENTERPRISE SYSTEMS CONSULTANT**
+**Grupo Salinas · Mexico City (CDMX)** | *November 2025 – Present*
+* Technical leadership in frontend architecture and production delivery of **strategic enterprise web platforms deployed nationwide**, managing releases, branch workflows, and code governance via **corporate GitLab**.
+* **Mobile Onboarding & Unified Registry (React 19 & Vite):** Architected and deployed the responsive mobile-first frontend serving nationwide corporate and field personnel, with strict client-side validation workflows.
+* **Multi-Server Gamification & Engagement Ecosystem:** Engineered high-performance interactive dynamics (60 FPS) utilizing **TypeScript, HTML5 Canvas, and Framer Motion**. Modularized codebases to execute reliably across **heterogeneous production servers with varied OS and infrastructure requirements**, backed by containerized environments in **Docker**.
+* **High-Concurrency Reactive Search Engine (React & SCSS):** Built an instant client-side indexing and filtering engine engineered to handle high-velocity queries and peak concurrency during nationwide corporate campaigns.
+* **Sports Tournament Tracking & Dynamic Reporting (React & Axios):** Developed interactive tournament interface with live fixtures, team rosters, and automated client-side PDF reporting using **PDFMake**.
+* **Corporate Wellbeing & Visual Analytics Portal (React, TypeScript & ECharts):** Created data-driven portals featuring interactive data visualizations (**ECharts**), strictly typed validation schemas (**Zod + React Hook Form**), **Zustand** global state, and deployment on enterprise **IIS (Windows Server)** environments.
 
 ---
 
 ### **SYSTEMS CONSULTANT & PROCESS AUTOMATION SPECIALIST**
-**MGO Industrial** | *September 2023 – 2024*
+**MGO Industrial** | *September 2023 – October 2025*
 * Architected and implemented the **Warehouse & Logistics Control Dashboard**, automating inbound/outbound material logging through **Google Apps Script** and consolidating live operational metrics in **Google Looker Studio**.
 * Engineered **invoice- and vendor-level inventory traceability**, significantly eliminating physical inventory discrepancies and enabling automated reorder alerts.
 * Developed and optimized the corporate web platform with **React, TypeScript, and Tailwind CSS**, boosting response times and improving UX.
@@ -42,7 +43,7 @@
 ---
 
 ### **PROCESS OPTIMIZATION & DATA ANALYTICS SPECIALIST**
-**Eufonia Studios** | *March 2024 – March 2025*
+**Eufonia Studios** | *March 2024 – December 2025*
 * Engineered an **automated ETL pipeline for social media metrics ingestion**, periodically polling external REST APIs via time-driven scheduled jobs in **Google Apps Script**.
 * Centralized, cleaned, and normalized nested JSON payloads (reach, engagement, impressions, conversion rates) within **Google Sheets**, establishing an automated, frictionless operational data store.
 * Built executive Business Intelligence dashboards in **Google Looker Studio** for executive visibility into talent performance, recruitment funnels, and marketing campaigns.

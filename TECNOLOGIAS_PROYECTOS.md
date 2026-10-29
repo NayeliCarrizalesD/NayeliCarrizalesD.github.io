@@ -105,20 +105,27 @@ Este documento recopila la arquitectura técnica y el conjunto de tecnologías, 
 
 ## 6. 🏢 Grupo Salinas – Sistemas Web Corporativos en Producción
 * **Empresa:** Grupo Salinas
-* **Control de Versiones & Gestión de Código:** **GitLab Corporativo** (administración de ramas, code reviews, control de versiones y flujos de despliegue).
-* **Soluciones Entregadas a Producción (4 Proyectos Estratégicos):**
-  1. **📱 Registro Único (Móvil & Geografía):**
+* **Ubicación & Período:** Ciudad de México (CDMX) | Noviembre 2025 – Actualidad
+* **Control de Versiones & Gobernanza de Código:** **GitLab Corporativo** (administración de ramas, code reviews, control de versiones y flujos de despliegue).
+* **Soluciones Entregadas a Producción:**
+  1. **📱 Plataforma Web de Onboarding & Registro Móvil:**
+     * **Stack:** **React 19**, **Vite**, JavaScript ES6+, ESLint 9, Mobile-First responsive.
      * Plataforma corporativa de registro unificado recién lanzada para dispositivos móviles.
-     * Alcance nacional: da servicio a todos los colaboradores del corporativo y red geográfica en México.
-     * Arquitectura frontend optimizada para alta concurrencia, interfaces responsivas y validación de datos en tiempo real.
-  2. **🎮 Rally Mundialista (Juegos Web Multi-Servidor en Vanilla JS):**
-     * Desarrollo de minijuegos interactivos de alto rendimiento construidos en **Vanilla JavaScript (ES6+), HTML5 Canvas y CSS3** sin dependencias pesadas para asegurar fluidez a 60 FPS.
-     * **Arquitecturas Multi-Servidor Heterogéneas:** Cada juego se desplegó en servidores con configuraciones y sistemas operativos distintos; se diseñó y adaptó la arquitectura de archivos, rutas y assets de la versión original a los requerimientos específicos de cada servidor de destino.
-  3. **🔍 Buscador Dinámico de Ganadores:**
-     * Motor de búsqueda y filtrado de datos en tiempo real para localizar ganadores de dinámicas y activaciones corporativas masivas.
-     * Optimizado para búsquedas instantáneas sobre grandes conjuntos de datos con tiempos de respuesta en milisegundos.
-  4. **⚽ Módulo Copa Socio (Torneo Deportivo Interno):**
-     * Módulo interactivo de visualización deportiva para el torneo institucional de fútbol.
-     * Despliegue de plantillas de equipos, estadísticas de partidos, calendarios y tablas de posiciones actualizadas en tiempo real.
-
-
+     * Cobertura masiva a escala nacional para colaboradores de corporativo y campo en México.
+     * Validación estricta y reactiva de formularios en cliente con interfaz fluida.
+  2. **🎮 Ecosistema de Gamificación & Engagement Multi-Servidor:**
+     * **Stack:** **TypeScript**, **HTML5 Canvas**, **Framer Motion**, Vanilla JS ES6+, **Node.js / Express**, **Docker Compose**.
+     * Dinámicas interactivas y minijuegos web de alto rendimiento garantizando 60 FPS sin dependencias innecesarias.
+     * **Arquitecturas Multi-Servidor Heterogéneas:** Código modular adaptado para ejecutarse con total estabilidad en múltiples servidores de producción con distintas configuraciones y sistemas operativos.
+  3. **🔍 Motor Reactivo de Búsqueda y Filtrado en Tiempo Real:**
+     * **Stack:** **React**, **React Router**, **Vite**, **SCSS**.
+     * Motor de búsqueda y filtrado de datos instantáneo en cliente para activaciones corporativas y dinámicas masivas.
+     * Diseñado para absorber picos elevados de concurrencia simultánea con latencia cero.
+  4. **⚽ Portal Deportivo Institucional & Reportería Dinámica:**
+     * **Stack:** **React**, **Axios**, **PDFMake**, **Vite**, **SCSS**.
+     * Módulo institucional para seguimiento de torneos deportivos con visualización de tablas, fixtures y estadísticas en vivo.
+     * Generación y descarga automática de reportes ejecutivos en PDF directamente en el navegador del usuario.
+  5. **📊 Portal Corporativo de Bienestar & Analítica Visual:**
+     * **Stack:** **React**, **TypeScript**, **Tailwind CSS**, **ECharts / ECharts-for-React**, **Zod**, **React Hook Form**, **Zustand**, **Vitest**, **Servidores IIS (Windows Server)**.
+     * Tableros analíticos interactivos con gráficos avanzados para seguimiento de métricas y rendimiento.
+     * Validación tipada estricta de extremo a extremo y especificaciones de despliegue en infraestructura empresarial IIS.
