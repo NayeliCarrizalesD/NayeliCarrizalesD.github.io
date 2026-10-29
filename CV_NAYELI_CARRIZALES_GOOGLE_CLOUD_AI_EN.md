@@ -88,7 +88,7 @@
 ### **ENTERPRISE & CLIENT SOLUTIONS**
 * **Unified Mobile Registry & Multi-Server Games (Grupo Salinas):** Enterprise platforms deployed across distributed environments using **GitLab, JavaScript ES6+, HTML5, and CSS3**.
 * **Warehouse & Logistics Control Dashboard (MGO Industrial):** Inbound/outbound inventory tracking by invoice and vendor with **Google Apps Script & Looker Studio**.
-* **Social Media ETL & Analytics Pipeline (Eufonia Studios):** Automated API data extraction, JSON parsing, and executive dashboards in **Looker Studio & Apps Script**.
+* **Social Media ETL & Analytics Pipeline (Eufonia Studios):** Automated API data extraction, web scraping, custom spreadsheet formulas (@customfunction), and embedded JSONPath query engine in **Google Sheets & Apps Script**.
 * **Taller de Mar – E-Commerce & Workshop Platform:** High-performance web application with **React 19, TypeScript, Tailwind CSS**, and modern routing. *(Live: [taller-de-mar-green.vercel.app](https://taller-de-mar-green.vercel.app/))*
 * **Professional Fee & Task Manager (Carrizales Díaz):** Full stack internal operations platform with **React, Node.js, and PostgreSQL**.
 * **Government Report Data Centralizer:** Secure multi-department data collection and validation dashboard with **PHP, MySQL, and JavaScript**.

@@ -65,17 +65,17 @@ Integración de pipelines de datos vía REST APIs y web scraping avanzado con ex
 🔹 MOTOR DE CONSULTAS JSONPATH DINÁMICO:
 Implementación de un parser embebido en Apps Script para evaluar consultas estructuradas directamente desde celdas de cálculo, permitiendo extraer atributos anidados de APIs JSON sin necesidad de infraestructura externa.
 
-🔹 BUSINESS INTELLIGENCE & REPORTES:
-Modelado y visualización de tableros de control en Google Looker Studio y Google Sheets para monitoreo de KPIs de desempeño de creadores y funnel de talento.
+🔹 AUTOMATIZACIÓN DE REPORTES & SEGUIMIENTO EN GOOGLE SHEETS:
+Modelado de sistemas de control, métricas de desempeño y seguimiento automatizado de candidatos y creadores mediante fórmulas avanzadas y Google Apps Script.
 
 🔹 GESTIÓN Y RECLUTAMIENTO ESPECIALIZADO:
 Publicación de vacantes, filtrado técnico de candidatos, coordinación de entrevistas y seguimiento integral del proceso de contratación con bases de datos automatizadas y trazables.
 
-Stack clave: Google Apps Script · Google Sheets API · Web Scraping · Expresiones Regulares (RegEx) · Google Looker Studio · APIs REST · YouTube Data API v3 · JSONPath · Automatización de Procesos.
+Stack clave: Google Apps Script · Google Sheets API · Web Scraping · Expresiones Regulares (RegEx) · APIs REST · YouTube Data API v3 · JSONPath · Automatización de Procesos · Fórmulas Custom.
 ```
 
 * **Aptitudes a asociar:**  
-  `Google Apps Script` · `Google Sheets` · `Extracción de datos web` · `Expresiones regulares (RegEx)` · `Google Looker Studio` · `APIs REST` · `YouTube Data API` · `Automatización de procesos` · `Análisis de datos`
+  `Google Apps Script` · `Google Sheets` · `Extracción de datos web` · `Expresiones regulares (RegEx)` · `APIs REST` · `YouTube Data API` · `JSONPath` · `Automatización de procesos` · `Análisis de datos`
 
 ---
 
