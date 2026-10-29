@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,40 +10,50 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="CSS/general.css">
 </head>
+
 <body>
     <!-- Custom Cursor -->
     <div class="cursor" id="cursor"></div>
-    
+
     <!-- High-Performance Interactive Particle Canvas -->
     <canvas class="particle-system" id="particleCanvas"></canvas>
-    
+
     <!-- Liquid Background Shapes -->
     <div class="liquid-shape"></div>
     <div class="liquid-shape"></div>
     <div class="liquid-shape"></div>
-    
+
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 glass-card backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <div
+                    class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                     NAY.DIAZ
                 </div>
-                
+
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link hover:text-purple-400 transition-colors" data-en="HOME" data-es="INICIO">INICIO</a>
-                    <a href="#about" class="nav-link hover:text-purple-400 transition-colors" data-en="ABOUT" data-es="ACERCA DE">ACERCA DE</a>
-                    <a href="#skills" class="nav-link hover:text-purple-400 transition-colors" data-en="SKILLS" data-es="HABILIDADES">HABILIDADES</a>
-                    <a href="#projects" class="nav-link hover:text-purple-400 transition-colors" data-en="PROJECTS" data-es="PROYECTOS">PROYECTOS</a>
-                    <a href="#hobbies" class="nav-link hover:text-purple-400 transition-colors" data-en="HOBBIES" data-es="PASATIEMPOS">PASATIEMPOS</a>
-                    <a href="#contact" class="nav-link hover:text-purple-400 transition-colors" data-en="CONTACT" data-es="CONTACTO">CONTACTO</a>
+                    <a href="#home" class="nav-link hover:text-purple-400 transition-colors" data-en="HOME"
+                        data-es="INICIO">INICIO</a>
+                    <a href="#about" class="nav-link hover:text-purple-400 transition-colors" data-en="ABOUT"
+                        data-es="ACERCA DE">ACERCA DE</a>
+                    <a href="#skills" class="nav-link hover:text-purple-400 transition-colors" data-en="SKILLS"
+                        data-es="HABILIDADES">HABILIDADES</a>
+                    <a href="#projects" class="nav-link hover:text-purple-400 transition-colors" data-en="PROJECTS"
+                        data-es="PROYECTOS">PROYECTOS</a>
+                    <a href="#hobbies" class="nav-link hover:text-purple-400 transition-colors" data-en="HOBBIES"
+                        data-es="PASATIEMPOS">PASATIEMPOS</a>
+                    <a href="#contact" class="nav-link hover:text-purple-400 transition-colors" data-en="CONTACT"
+                        data-es="CONTACTO">CONTACTO</a>
                 </div>
-                
+
                 <div class="flex items-center space-x-4">
-                    <button id="langSwitch" class="glass-card px-4 py-2 rounded-full text-sm font-bold hover:bg-purple-500 hover:text-white transition-all">
+                    <button id="langSwitch"
+                        class="glass-card px-4 py-2 rounded-full text-sm font-bold hover:bg-purple-500 hover:text-white transition-all">
                         ES | EN
                     </button>
-                    <button id="themeSwitch" class="glass-card px-4 py-2 rounded-full hover:bg-purple-500 hover:text-white transition-all">
+                    <button id="themeSwitch"
+                        class="glass-card px-4 py-2 rounded-full hover:bg-purple-500 hover:text-white transition-all">
                         🌙
                     </button>
                 </div>
@@ -65,17 +76,18 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Main Title -->
                 <div class="layout-item-2 text-center fade-in">
-                    <h1 class="text-6xl md:text-8xl font-black mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                    <h1
+                        class="text-6xl md:text-8xl font-black mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
                         NAYELI<br>CARRIZALES
                     </h1>
                     <div class="text-2xl md:text-3xl mb-8 h-12 font-bold">
                         <span id="typewriter" class="typewriter"></span>
                     </div>
                 </div>
-                
+
                 <!-- Floating Stats -->
                 <div class="layout-item-3 space-y-6 fade-in">
                     <div class="glass-card p-6 rounded-2xl wave-container">
@@ -100,29 +112,37 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="glass-card p-6 rounded-2xl breathe">
                         <h3 class="text-pink-400 font-bold mb-4 font-mono">[DEV.PROFILE]</h3>
                         <div class="space-y-2">
-                            <a href="https://github.com/NayeliCarrizalesD" target="_blank" >
-                                <button class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 rounded-lg hover:scale-105 transition-transform" style="margin-bottom: 1em;">
-                                GitHub
-                            </button>
+                            <a href="https://github.com/NayeliCarrizalesD" target="_blank">
+                                <button
+                                    class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 rounded-lg hover:scale-105 transition-transform"
+                                    style="margin-bottom: 1em;">
+                                    GitHub
+                                </button>
                             </a>
                             <a href="https://www.linkedin.com/in/nayeli-carrizales/" target="_blank">
-                                <button class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 rounded-lg hover:scale-105 transition-transform" style="margin-bottom: 1em;">
+                                <button
+                                    class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 rounded-lg hover:scale-105 transition-transform"
+                                    style="margin-bottom: 1em;">
                                     LinkedIn
                                 </button>
                             </a>
-                          
+
                             <div class="flex gap-2">
-                                <a href="CV_Nayeli_Carrizales.html" target="_blank" class="flex-1"> 
-                                    <button class="w-full bg-gradient-to-r from-pink-400 to-pink-600 text-white py-2 rounded-lg hover:scale-105 transition-transform font-bold text-xs" style="margin-bottom: 1em;">
+                                <a href="CV_Nayeli_Carrizales.html" target="_blank" class="flex-1">
+                                    <button
+                                        class="w-full bg-gradient-to-r from-pink-400 to-pink-600 text-white py-2 rounded-lg hover:scale-105 transition-transform font-bold text-xs"
+                                        style="margin-bottom: 1em;">
                                         CV (ES)
                                     </button>
                                 </a>
-                                <a href="CV_Nayeli_Carrizales_EN.html" target="_blank" class="flex-1"> 
-                                    <button class="w-full bg-gradient-to-r from-pink-600 to-purple-600 text-white py-2 rounded-lg hover:scale-105 transition-transform font-bold text-xs" style="margin-bottom: 1em;">
+                                <a href="CV_Nayeli_Carrizales_EN.html" target="_blank" class="flex-1">
+                                    <button
+                                        class="w-full bg-gradient-to-r from-pink-600 to-purple-600 text-white py-2 rounded-lg hover:scale-105 transition-transform font-bold text-xs"
+                                        style="margin-bottom: 1em;">
                                         CV (EN)
                                     </button>
                                 </a>
@@ -130,41 +150,55 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Description -->
                 <div class="layout-item-4 fade-in" id="about">
                     <div class="glass-card p-8 rounded-3xl">
-                        <p class="text-lg mb-6 leading-relaxed" 
-                        data-en="I am an Information and Communications Technology Engineer specializing in software engineering, cloud architecture, and Artificial Intelligence solutions. I have hands-on experience building end-to-end applications, scalable APIs, and automated workflows using containerized environments (Docker), modern databases (SQL/PostgreSQL), and robust programming in Python and TypeScript. I leverage cutting-edge agentic development and AI platforms including Google Antigravity (IDE & CLI) and AWS Kiro IDE, streamlining the software lifecycle and integrating Generative AI into production-grade solutions. I specialize in bridging complex business requirements with high-impact architectures, combining technical rigor with strong client consulting and cross-functional collaboration." 
-                        data-es="Soy Ingeniera en Tecnologías de la Información y Comunicaciones, especializada en desarrollo de software, arquitectura cloud y soluciones de Inteligencia Artificial. Cuento con experiencia diseñando e implementando aplicaciones de punta a punta, APIs escalables y flujos automatizados con arquitecturas en contenedores (Docker), bases de datos modernas (SQL/PostgreSQL) y lenguajes como Python y TypeScript. Integro herramientas de vanguardia en desarrollo agéntico e IA como Google Antigravity (IDE & CLI) y AWS Kiro IDE, potenciando la eficiencia del ciclo de vida del software y la orquestación de modelos de IA Generativa. Me enfoco en traducir necesidades complejas de negocio en soluciones tecnológicas de alto impacto, combinando rigor técnico con una sólida capacidad de colaboración y consultoría con clientes.">
-                            Soy Ingeniera en Tecnologías de la Información y Comunicaciones, especializada en desarrollo de software, arquitectura cloud y soluciones de Inteligencia Artificial. Cuento con experiencia diseñando e implementando aplicaciones de punta a punta, APIs escalables y flujos automatizados con arquitecturas en contenedores (Docker), bases de datos modernas (SQL/PostgreSQL) y lenguajes como Python y TypeScript.
-                            Integro herramientas de vanguardia en desarrollo agéntico e IA como Google Antigravity (IDE & CLI) y AWS Kiro IDE, potenciando la eficiencia del ciclo de vida del software y la orquestación de modelos de IA Generativa. Me enfoco en traducir necesidades complejas de negocio en soluciones tecnológicas de alto impacto, combinando rigor técnico con una sólida capacidad de colaboración y consultoría con clientes.
+                        <p class="text-lg mb-6 leading-relaxed"
+                            data-en="I am an Information and Communications Technology Engineer specializing in software engineering, cloud architecture, and Artificial Intelligence solutions. I have hands-on experience building end-to-end applications, scalable APIs, and automated workflows using containerized environments (Docker), modern databases (SQL/PostgreSQL), and robust programming in Python and TypeScript. I leverage cutting-edge agentic development and AI platforms including Google Antigravity (IDE & CLI) and AWS Kiro IDE, streamlining the software lifecycle and integrating Generative AI into production-grade solutions. I specialize in bridging complex business requirements with high-impact architectures, combining technical rigor with strong client consulting and cross-functional collaboration."
+                            data-es="Soy Ingeniera en Tecnologías de la Información y Comunicaciones, especializada en desarrollo de software, arquitectura cloud y soluciones de Inteligencia Artificial. Cuento con experiencia diseñando e implementando aplicaciones de punta a punta, APIs escalables y flujos automatizados con arquitecturas en contenedores (Docker), bases de datos modernas (SQL/PostgreSQL) y lenguajes como Python y TypeScript. Integro herramientas de vanguardia en desarrollo agéntico e IA como Google Antigravity (IDE & CLI) y AWS Kiro IDE, potenciando la eficiencia del ciclo de vida del software y la orquestación de modelos de IA Generativa. Me enfoco en traducir necesidades complejas de negocio en soluciones tecnológicas de alto impacto, combinando rigor técnico con una sólida capacidad de colaboración y consultoría con clientes.">
+                            Soy Ingeniera en Tecnologías de la Información y Comunicaciones, especializada en desarrollo
+                            de software, arquitectura cloud y soluciones de Inteligencia Artificial. Cuento con
+                            experiencia diseñando e implementando aplicaciones de punta a punta, APIs escalables y
+                            flujos automatizados con arquitecturas en contenedores (Docker), bases de datos modernas
+                            (SQL/PostgreSQL) y lenguajes como Python y TypeScript.
+                            Integro herramientas de vanguardia en desarrollo agéntico e IA como Google Antigravity (IDE
+                            & CLI) y AWS Kiro IDE, potenciando la eficiencia del ciclo de vida del software y la
+                            orquestación de modelos de IA Generativa. Me enfoco en traducir necesidades complejas de
+                            negocio en soluciones tecnológicas de alto impacto, combinando rigor técnico con una sólida
+                            capacidad de colaboración y consultoría con clientes.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="#projects" >
-                                <button class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-2xl font-bold hover:scale-105 transition-transform" data-en="PROJECT INVENTORY" data-es="INVENTARIO DE PROYECTOS">
+                            <a href="#projects">
+                                <button
+                                    class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-2xl font-bold hover:scale-105 transition-transform"
+                                    data-en="PROJECT INVENTORY" data-es="INVENTARIO DE PROYECTOS">
                                     INVENTARIO DE PROYECTOS
                                 </button>
                             </a>
-                            <a href="CV_Nayeli_Carrizales.html" target="_blank"> 
-                                <button class="glass-card px-6 py-4 rounded-2xl font-bold hover:bg-purple-500 hover:text-white transition-all text-sm">
+                            <a href="CV_Nayeli_Carrizales.html" target="_blank">
+                                <button
+                                    class="glass-card px-6 py-4 rounded-2xl font-bold hover:bg-purple-500 hover:text-white transition-all text-sm">
                                     📄 CV (ESPAÑOL)
                                 </button>
                             </a>
-                            <a href="CV_Nayeli_Carrizales_EN.html" target="_blank"> 
-                                <button class="glass-card px-6 py-4 rounded-2xl font-bold hover:bg-purple-500 hover:text-white transition-all text-sm">
+                            <a href="CV_Nayeli_Carrizales_EN.html" target="_blank">
+                                <button
+                                    class="glass-card px-6 py-4 rounded-2xl font-bold hover:bg-purple-500 hover:text-white transition-all text-sm">
                                     🌐 CV (ENGLISH)
                                 </button>
                             </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Floating Element -->
                 <div class="layout-item-5 flex items-center justify-center fade-in">
-                    <a href="#projects" >
-                        <div class="glass-card p-6 rounded-full w-32 h-32 flex items-center justify-center text-4xl breathe">
-                            <img src="IMG/nay-by-save-sin-fondo.png" alt="Nayeli Carrizales" class="w-full h-full object-cover rounded-full">
+                    <a href="#projects">
+                        <div
+                            class="glass-card p-6 rounded-full w-32 h-32 flex items-center justify-center text-4xl breathe">
+                            <img src="IMG/nay-by-save-sin-fondo.png" alt="Nayeli Carrizales"
+                                class="w-full h-full object-cover rounded-full">
                         </div>
                     </a>
                 </div>
@@ -175,15 +209,17 @@
     <!-- Skills Section -->
     <section id="skills" class="py-20 relative z-10">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent fade-in">
+            <h2
+                class="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent fade-in">
                 <span data-en="TECH STACK" data-es="TECH STACK">TECH STACK</span>
             </h2>
 
             <!-- LENGUAJES -->
-            <h3 class="text-3xl font-bold text-center mb-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
+            <h3
+                class="text-3xl font-bold text-center mb-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
                 <span data-en="LANGUAGES" data-es="LENGUAJES">LENGUAJES</span>
             </h3>
-            
+
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 mb-12">
                 <div class="fade-in">
                     <div class="skill-orb">
@@ -192,7 +228,7 @@
                         <div class="text-xs text-purple-400">98%</div>
                     </div>
                 </div>
-                
+
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">🟨</div>
@@ -200,7 +236,7 @@
                         <div class="text-xs text-purple-400">92%</div>
                     </div>
                 </div>
-                
+
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">🟦</div>
@@ -208,7 +244,7 @@
                         <div class="text-xs text-purple-400">85%</div>
                     </div>
                 </div>
-                
+
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">🔠</div>
@@ -233,12 +269,13 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- FRAMEWORKS Y LIBRERIAS -->
-            <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
+            <h3
+                class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
                 <span data-en="FRAMEWORKS AND LIBRARIES" data-es="FRAMEWORKS Y LIBRERIAS">FRAMEWORKS Y LIBRERIAS</span>
             </h3>
-            
+
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-12">
                 <div class="fade-in">
                     <div class="skill-orb">
@@ -247,15 +284,15 @@
                         <div class="text-xs text-purple-400">92%</div>
                     </div>
                 </div>
-                
+
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">⚫</div>
                         <div class="text-xs font-bold">NEXT.JS 16</div>
                         <div class="text-xs text-purple-400">90%</div>
                     </div>
-                </div>              
-            
+                </div>
+
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">🌊</div>
@@ -282,7 +319,8 @@
             </div>
 
             <!-- BACKEND Y APIS -->
-            <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
+            <h3
+                class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
                 <span data-en="BACKEND & APIS" data-es="BACKEND Y APIS">BACKEND Y APIS</span>
             </h3>
 
@@ -329,7 +367,8 @@
             </div>
 
             <!-- BASES DE DATOS Y ORM -->
-            <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
+            <h3
+                class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
                 <span data-en="DATABASES & ORM" data-es="BASES DE DATOS Y ORM">BASES DE DATOS Y ORM</span>
             </h3>
 
@@ -360,10 +399,12 @@
             </div>
 
             <!-- CONTENEDORES Y DESPLIEGUE -->
-            <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
-                <span data-en="CONTAINERS & DEPLOYMENT" data-es="CONTENEDORES Y DESPLIEGUE">CONTENEDORES Y DESPLIEGUE</span>
+            <h3
+                class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
+                <span data-en="CONTAINERS & DEPLOYMENT" data-es="CONTENEDORES Y DESPLIEGUE">CONTENEDORES Y
+                    DESPLIEGUE</span>
             </h3>
-            
+
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-12">
                 <div class="fade-in">
                     <div class="skill-orb">
@@ -380,7 +421,7 @@
                         <div class="text-xs text-purple-400">78%</div>
                     </div>
                 </div>
-                
+
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">🚀</div>
@@ -407,10 +448,12 @@
             </div>
 
             <!-- HERRAMIENTAS DE DESARROLLO E IA -->
-            <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
-                <span data-en="AI & DEVELOPMENT TOOLS" data-es="HERRAMIENTAS DE DESARROLLO E IA">HERRAMIENTAS DE DESARROLLO E IA</span>
+            <h3
+                class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
+                <span data-en="AI & DEVELOPMENT TOOLS" data-es="HERRAMIENTAS DE DESARROLLO E IA">HERRAMIENTAS DE
+                    DESARROLLO E IA</span>
             </h3>
-            
+
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 mb-12">
                 <div class="fade-in">
                     <div class="skill-orb">
@@ -451,7 +494,7 @@
                         <div class="text-xs text-purple-400">88%</div>
                     </div>
                 </div>
-                
+
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">🐙</div>
@@ -459,7 +502,7 @@
                         <div class="text-xs text-purple-400">88%</div>
                     </div>
                 </div>
-                
+
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">🟣</div>
@@ -470,10 +513,12 @@
             </div>
 
             <!-- ANALÍTICA, BUSINESS INTELLIGENCE & AUTOMATIZACIÓN -->
-            <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
-                <span data-en="ANALYTICS, BI & AUTOMATION" data-es="ANALÍTICA, BI & AUTOMATIZACIÓN">ANALÍTICA, BI & AUTOMATIZACIÓN</span>
+            <h3
+                class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
+                <span data-en="ANALYTICS, BI & AUTOMATION" data-es="ANALÍTICA, BI & AUTOMATIZACIÓN">ANALÍTICA, BI &
+                    AUTOMATIZACIÓN</span>
             </h3>
-            
+
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-12">
                 <div class="fade-in">
                     <div class="skill-orb">
@@ -509,10 +554,12 @@
             </div>
 
             <!-- CONTROL DE VERSIONES Y COLABORACIÓN -->
-            <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
-                <span data-en="VERSION CONTROL AND COLLABORATION" data-es="CONTROL DE VERSIONES Y COLABORACIÓN">CONTROL DE VERSIONES Y COLABORACIÓN</span>
+            <h3
+                class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
+                <span data-en="VERSION CONTROL AND COLLABORATION" data-es="CONTROL DE VERSIONES Y COLABORACIÓN">CONTROL
+                    DE VERSIONES Y COLABORACIÓN</span>
             </h3>
-            
+
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
                 <div class="fade-in">
                     <div class="skill-orb">
@@ -521,7 +568,7 @@
                         <div class="text-xs text-purple-400">85%</div>
                     </div>
                 </div>
-                
+
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">🗂️</div>
@@ -529,7 +576,7 @@
                         <div class="text-xs text-purple-400">85%</div>
                     </div>
                 </div>
-                
+
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">📓</div>
@@ -537,7 +584,7 @@
                         <div class="text-xs text-purple-400">92%</div>
                     </div>
                 </div>
-                
+
                 <div class="fade-in">
                     <div class="skill-orb">
                         <div class="text-3xl mb-2">⛰️</div>
@@ -546,12 +593,13 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- PRUEBAS Y CALIDAD -->
-            <h3 class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
+            <h3
+                class="text-3xl font-bold text-center mb-5 my-5 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent fade-in">
                 <span data-en="TESTING AND QUALITY" data-es="PRUEBAS Y CALIDAD">PRUEBAS Y CALIDAD</span>
             </h3>
-            
+
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
                 <div class="fade-in">
                     <div class="skill-orb">
@@ -591,56 +639,79 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20 bg-gradient-to-b from-transparent to-purple-900/20 relative z-10">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-8 bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text text-transparent fade-in">
+            <h2
+                class="text-5xl font-bold text-center mb-8 bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text text-transparent fade-in">
                 <span data-en="PROJECT INVENTORY" data-es="INVENTARIO DE PROYECTOS">INVENTARIO DE PROYECTOS</span>
             </h2>
-            
+
             <!-- Category Filter Tabs -->
             <div class="flex flex-wrap justify-center gap-3 mb-12 fade-in" id="projectFilters">
-                <button class="filter-btn active glass-card px-6 py-2.5 rounded-full text-sm font-bold transition-all border border-purple-500 bg-purple-600/30 text-white" data-filter="all" data-en="All Projects (18)" data-es="Todos los Proyectos (18)">
-                    Todos los Proyectos (18)
+                <button
+                    class="filter-btn active glass-card px-6 py-2.5 rounded-full text-sm font-bold transition-all border border-purple-500 bg-purple-600/30 text-white"
+                    data-filter="all" data-en="Principal Projects (18)" data-es="Proyectos Principales (18)">
+                    Proyectos Principales (18)
                 </button>
-                <button class="filter-btn glass-card px-6 py-2.5 rounded-full text-sm font-bold transition-all border border-blue-500/40 text-gray-300 hover:text-white hover:border-blue-400" data-filter="corporate" data-en="🏢 Enterprise & Work (12)" data-es="🏢 Corporativos & Trabajo (12)">
+                <button
+                    class="filter-btn glass-card px-6 py-2.5 rounded-full text-sm font-bold transition-all border border-blue-500/40 text-gray-300 hover:text-white hover:border-blue-400"
+                    data-filter="corporate" data-en="🏢 Enterprise & Work (12)"
+                    data-es="🏢 Corporativos & Trabajo (12)">
                     🏢 Corporativos & Trabajo (12)
                 </button>
-                <button class="filter-btn glass-card px-6 py-2.5 rounded-full text-sm font-bold transition-all border border-purple-500/40 text-gray-300 hover:text-white hover:border-purple-400" data-filter="personal" data-en="🚀 Personal Engineering & Labs (6)" data-es="🚀 Ingeniería Personal & Labs (6)">
+                <button
+                    class="filter-btn glass-card px-6 py-2.5 rounded-full text-sm font-bold transition-all border border-purple-500/40 text-gray-300 hover:text-white hover:border-purple-400"
+                    data-filter="personal" data-en="🚀 Personal Engineering & Labs (6)"
+                    data-es="🚀 Ingeniería Personal & Labs (6)">
                     🚀 Ingeniería Personal & Labs (6)
                 </button>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- 1. SISTEMA DE REGISTRO ÚNICO (MÓVIL & GEOGRAFÍA) -->
-                <div class="project-card-item ar-card p-6 fade-in border border-blue-500/40 flex flex-col justify-between" data-category="corporate">
+                <div class="project-card-item ar-card p-6 fade-in border border-blue-500/40 flex flex-col justify-between"
+                    data-category="corporate">
                     <div>
                         <div class="flex justify-between items-center mb-3">
-                            <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                            <span
+                                class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                                data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
                                 🏢 CORPORATIVO / PRODUCCIÓN
                             </span>
                             <span class="text-xs text-blue-300 font-bold">Grupo Salinas (CDMX)</span>
                         </div>
-                        <div class="h-48 bg-gradient-to-br from-blue-700 via-indigo-800 to-slate-900 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-blue-500/20">
+                        <div
+                            class="h-48 bg-gradient-to-br from-blue-700 via-indigo-800 to-slate-900 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-blue-500/20">
                             📱🏢
                         </div>
-                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 via-indigo-300 to-teal-300 bg-clip-text text-transparent" data-en="Unified Mobile Registry Platform – Grupo Salinas" data-es="Sistema de Registro Único (Móvil & Geografía) – Grupo Salinas">
+                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 via-indigo-300 to-teal-300 bg-clip-text text-transparent"
+                            data-en="Unified Mobile Registry Platform – Grupo Salinas"
+                            data-es="Sistema de Registro Único (Móvil & Geografía) – Grupo Salinas">
                             Sistema de Registro Único (Móvil & Geografía) – Grupo Salinas
                         </h3>
-                        <p class="text-gray-300 mb-4 text-sm" 
-                           data-en="Frontend architecture and implementation of the enterprise mobile registration system, launched nationwide for corporate and field operations personnel. Features high-performance responsive interfaces, strict onboarding validation workflows, and enterprise version control via GitLab." 
-                           data-es="Diseño e implementación de la arquitectura frontend del sistema de registro corporativo adaptado para dispositivos móviles, brindando servicio a escala nacional tanto para colaboradores de corporativo como de campo y geografía. Implementación de interfaces responsivas de alto rendimiento, flujos de validación y control de versiones en GitLab.">
-                            Diseño e implementación de la arquitectura frontend del sistema de registro corporativo adaptado para dispositivos móviles, brindando servicio a escala nacional tanto para colaboradores de corporativo como de campo y geografía. Implementación de interfaces responsivas de alto rendimiento, flujos de validación y control de versiones en GitLab.
+                        <p class="text-gray-300 mb-4 text-sm"
+                            data-en="Frontend architecture and implementation of the enterprise mobile registration system, launched nationwide for corporate and field operations personnel. Features high-performance responsive interfaces, strict onboarding validation workflows, and enterprise version control via GitLab."
+                            data-es="Diseño e implementación de la arquitectura frontend del sistema de registro corporativo adaptado para dispositivos móviles, brindando servicio a escala nacional tanto para colaboradores de corporativo como de campo y geografía. Implementación de interfaces responsivas de alto rendimiento, flujos de validación y control de versiones en GitLab.">
+                            Diseño e implementación de la arquitectura frontend del sistema de registro corporativo
+                            adaptado para dispositivos móviles, brindando servicio a escala nacional tanto para
+                            colaboradores de corporativo como de campo y geografía. Implementación de interfaces
+                            responsivas de alto rendimiento, flujos de validación y control de versiones en GitLab.
                         </p>
                     </div>
                     <div>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-orange-700 px-3 py-1 rounded-full text-xs font-semibold">GitLab</span>
                             <span class="bg-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Mobile First</span>
-                            <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">JavaScript ES6+</span>
+                            <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">JavaScript
+                                ES6+</span>
                             <span class="bg-indigo-600 px-3 py-1 rounded-full text-xs font-semibold">CSS3 / HTML5</span>
-                            <span class="bg-cyan-700 px-3 py-1 rounded-full text-xs font-semibold">Alta Concurrencia</span>
-                            <span class="bg-emerald-700 px-3 py-1 rounded-full text-xs font-semibold">Escala Nacional</span>
+                            <span class="bg-cyan-700 px-3 py-1 rounded-full text-xs font-semibold">Alta
+                                Concurrencia</span>
+                            <span class="bg-emerald-700 px-3 py-1 rounded-full text-xs font-semibold">Escala
+                                Nacional</span>
                         </div>
-                        <button class="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-teal-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="IN PRODUCTION" data-es="EN PRODUCCIÓN">
+                        <button
+                            class="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-teal-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold"
+                            data-en="IN PRODUCTION" data-es="EN PRODUCCIÓN">
                             EN PRODUCCIÓN
                         </button>
                     </div>
@@ -649,66 +720,91 @@
                 <!-- 2. PIPELINE ETL DE REDES SOCIALES & MÉTRICAS AUTOMATIZADAS -->
                 <div class="project-card-item ar-card p-6 fade-in" data-category="corporate">
                     <div class="flex justify-between items-center mb-3">
-                        <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                        <span
+                            class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                            data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
                             🏢 CORPORATIVO / PRODUCCIÓN
                         </span>
                         <span class="text-xs text-indigo-300 font-bold">Eufonia Studios</span>
                     </div>
-                    <div class="h-48 bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-indigo-500/20">
+                    <div
+                        class="h-48 bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-indigo-500/20">
                         📡📊
                     </div>
-                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-indigo-300 via-purple-400 to-pink-400 bg-clip-text text-transparent" data-en="Social Media ETL Pipeline & Automated Analytics" data-es="Pipeline ETL de Redes Sociales & Métricas Automatizadas">
+                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-indigo-300 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                        data-en="Social Media ETL Pipeline & Automated Analytics"
+                        data-es="Pipeline ETL de Redes Sociales & Métricas Automatizadas">
                         Pipeline ETL de Redes Sociales & Métricas Automatizadas
                     </h3>
-                    <p class="text-gray-300 mb-4 text-sm" 
-                       data-en="Automated data ingestion and transformation pipeline consuming multi-platform video/stream REST APIs and web scraping via Google Apps Script. Features custom spreadsheet formulas (@customfunction) and embedded JSONPath queries in Google Sheets for real-time creator analytics and talent evaluation." 
-                       data-es="Pipeline automatizado de ingesta y transformación de datos que consume APIs REST de video/streaming y web scraping con Google Apps Script. Integra fórmulas personalizadas (@customfunction) y motor de consultas JSONPath directamente en Google Sheets para análisis en tiempo real y selección de talento.">
-                        Pipeline automatizado de ingesta y transformación de datos que consume APIs REST de video/streaming y web scraping con Google Apps Script. Integra fórmulas personalizadas (@customfunction) y motor de consultas JSONPath directamente en Google Sheets para análisis en tiempo real y selección de talento.
+                    <p class="text-gray-300 mb-4 text-sm"
+                        data-en="Automated data ingestion and transformation pipeline consuming multi-platform video/stream REST APIs and web scraping via Google Apps Script. Features custom spreadsheet formulas (@customfunction) and embedded JSONPath queries in Google Sheets for real-time creator analytics and talent evaluation."
+                        data-es="Pipeline automatizado de ingesta y transformación de datos que consume APIs REST de video/streaming y web scraping con Google Apps Script. Integra fórmulas personalizadas (@customfunction) y motor de consultas JSONPath directamente en Google Sheets para análisis en tiempo real y selección de talento.">
+                        Pipeline automatizado de ingesta y transformación de datos que consume APIs REST de
+                        video/streaming y web scraping con Google Apps Script. Integra fórmulas personalizadas
+                        (@customfunction) y motor de consultas JSONPath directamente en Google Sheets para análisis en
+                        tiempo real y selección de talento.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">Google Apps Script</span>
-                        <span class="bg-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">APIs REST / OAuth</span>
+                        <span class="bg-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">APIs REST /
+                            OAuth</span>
                         <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">Looker Studio</span>
                         <span class="bg-emerald-600 px-3 py-1 rounded-full text-xs font-semibold">Google Sheets</span>
-                        <span class="bg-pink-700 px-3 py-1 rounded-full text-xs font-semibold">ETL & Data Pipeline</span>
+                        <span class="bg-pink-700 px-3 py-1 rounded-full text-xs font-semibold">ETL & Data
+                            Pipeline</span>
                         <span class="bg-purple-600 px-3 py-1 rounded-full text-xs font-semibold">JSON Automation</span>
                     </div>
-                    <button class="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="AUTOMATION ACTIVE" data-es="AUTOMATIZACIÓN ACTIVA">
+                    <button
+                        class="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold"
+                        data-en="AUTOMATION ACTIVE" data-es="AUTOMATIZACIÓN ACTIVA">
                         AUTOMATIZACIÓN ACTIVA
                     </button>
                 </div>
 
                 <!-- 3. RALLY MUNDIALISTA (JUEGOS WEB MULTI -->
-                <div class="project-card-item ar-card p-6 fade-in border border-emerald-500/40 flex flex-col justify-between" data-category="corporate">
+                <div class="project-card-item ar-card p-6 fade-in border border-emerald-500/40 flex flex-col justify-between"
+                    data-category="corporate">
                     <div>
                         <div class="flex justify-between items-center mb-3">
-                            <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                            <span
+                                class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                                data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
                                 🏢 CORPORATIVO / PRODUCCIÓN
                             </span>
                             <span class="text-xs text-emerald-300 font-bold">Grupo Salinas (CDMX)</span>
                         </div>
-                        <div class="h-48 bg-gradient-to-br from-emerald-700 via-teal-800 to-slate-900 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-teal-500/20">
+                        <div
+                            class="h-48 bg-gradient-to-br from-emerald-700 via-teal-800 to-slate-900 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-teal-500/20">
                             🎮⚽
                         </div>
-                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-300 bg-clip-text text-transparent" data-en="World Cup Rally & Multi-Server Interactive Web Games – Grupo Salinas" data-es="Rally Mundialista (Juegos Web Multi-Servidor) – Grupo Salinas">
+                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-300 bg-clip-text text-transparent"
+                            data-en="World Cup Rally & Multi-Server Interactive Web Games – Grupo Salinas"
+                            data-es="Rally Mundialista (Juegos Web Multi-Servidor) – Grupo Salinas">
                             Rally Mundialista (Juegos Web Multi-Servidor) – Grupo Salinas
                         </h3>
-                        <p class="text-gray-300 mb-4 text-sm" 
-                           data-en="Interactive web mini-games and gamified dynamics built in Vanilla JavaScript (ES6+), HTML5 Canvas, and CSS3. Modular architectural adaptation to run reliably across heterogeneous production servers with differing environments and infrastructure constraints." 
-                           data-es="Desarrollo de minijuegos interactivos y dinámicas web desarrollados en Vanilla JavaScript (ES6+), HTML5 Canvas y CSS3. Adaptación modular de la arquitectura de código para garantizar compatibilidad y ejecución confiable a través de múltiples servidores de producción con infraestructuras, configuraciones y restricciones técnicas heterogéneas.">
-                            Desarrollo de minijuegos interactivos y dinámicas web desarrollados en Vanilla JavaScript (ES6+), HTML5 Canvas y CSS3. Adaptación modular de la arquitectura de código para garantizar compatibilidad y ejecución confiable a través de múltiples servidores de producción con infraestructuras, configuraciones y restricciones técnicas heterogéneas.
+                        <p class="text-gray-300 mb-4 text-sm"
+                            data-en="Interactive web mini-games and gamified dynamics built in Vanilla JavaScript (ES6+), HTML5 Canvas, and CSS3. Modular architectural adaptation to run reliably across heterogeneous production servers with differing environments and infrastructure constraints."
+                            data-es="Desarrollo de minijuegos interactivos y dinámicas web desarrollados en Vanilla JavaScript (ES6+), HTML5 Canvas y CSS3. Adaptación modular de la arquitectura de código para garantizar compatibilidad y ejecución confiable a través de múltiples servidores de producción con infraestructuras, configuraciones y restricciones técnicas heterogéneas.">
+                            Desarrollo de minijuegos interactivos y dinámicas web desarrollados en Vanilla JavaScript
+                            (ES6+), HTML5 Canvas y CSS3. Adaptación modular de la arquitectura de código para garantizar
+                            compatibilidad y ejecución confiable a través de múltiples servidores de producción con
+                            infraestructuras, configuraciones y restricciones técnicas heterogéneas.
                         </p>
                     </div>
                     <div>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">Vanilla JS</span>
                             <span class="bg-indigo-600 px-3 py-1 rounded-full text-xs font-semibold">HTML5 Canvas</span>
-                            <span class="bg-teal-700 px-3 py-1 rounded-full text-xs font-semibold">Multi-Server Arch</span>
+                            <span class="bg-teal-700 px-3 py-1 rounded-full text-xs font-semibold">Multi-Server
+                                Arch</span>
                             <span class="bg-orange-700 px-3 py-1 rounded-full text-xs font-semibold">GitLab</span>
                             <span class="bg-purple-700 px-3 py-1 rounded-full text-xs font-semibold">Game Logic</span>
-                            <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">Animaciones CSS3</span>
+                            <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">Animaciones
+                                CSS3</span>
                         </div>
-                        <button class="w-full bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="IN PRODUCTION" data-es="EN PRODUCCIÓN">
+                        <button
+                            class="w-full bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold"
+                            data-en="IN PRODUCTION" data-es="EN PRODUCCIÓN">
                             EN PRODUCCIÓN
                         </button>
                     </div>
@@ -717,20 +813,27 @@
                 <!-- 4. RELOJ CHECADOR & CONTROL DE ASISTENCIA -->
                 <div class="project-card-item ar-card p-6 fade-in" data-category="personal">
                     <div class="flex justify-between items-center mb-3">
-                        <span class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
+                        <span
+                            class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                            data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
                             🚀 PERSONAL / LAB
                         </span>
                     </div>
-                    <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-purple-500/20">
+                    <div
+                        class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-purple-500/20">
                         🕒⚡
                     </div>
-                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    <h3
+                        class="text-xl font-bold mb-3 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                         Reloj Checador & Control de Asistencia
                     </h3>
-                    <p class="text-gray-300 mb-4 text-sm" 
-                       data-en="Enterprise attendance and time-tracking system (Kronos Safe). Developed with Next.js 16, React 19, Auth0, PostgreSQL Serverless (Neon) and Drizzle ORM. Features punch-in kiosk mode, employee incident tracking, automated overtime calculation, and dynamic Excel (XLSX) report generation." 
-                       data-es="Sistema empresarial de control de asistencia de personal y reloj checador (Kronos Safe). Desarrollado con Next.js 16, React 19, Auth0, PostgreSQL Serverless (Neon) y Drizzle ORM. Incluye modo quiosco digital para registro de entradas/salidas, gestión de incidencias de empleados, cálculo automático de horas extra y exportación de reportes a Excel.">
-                        Sistema empresarial de control de asistencia de personal y reloj checador (Kronos Safe). Desarrollado con Next.js 16, React 19, Auth0, PostgreSQL Serverless (Neon) y Drizzle ORM. Incluye modo quiosco digital para registro de entradas/salidas, gestión de incidencias de empleados, cálculo automático de horas extra y exportación de reportes a Excel.
+                    <p class="text-gray-300 mb-4 text-sm"
+                        data-en="Enterprise attendance and time-tracking system (Kronos Safe). Developed with Next.js 16, React 19, Auth0, PostgreSQL Serverless (Neon) and Drizzle ORM. Features punch-in kiosk mode, employee incident tracking, automated overtime calculation, and dynamic Excel (XLSX) report generation."
+                        data-es="Sistema empresarial de control de asistencia de personal y reloj checador (Kronos Safe). Desarrollado con Next.js 16, React 19, Auth0, PostgreSQL Serverless (Neon) y Drizzle ORM. Incluye modo quiosco digital para registro de entradas/salidas, gestión de incidencias de empleados, cálculo automático de horas extra y exportación de reportes a Excel.">
+                        Sistema empresarial de control de asistencia de personal y reloj checador (Kronos Safe).
+                        Desarrollado con Next.js 16, React 19, Auth0, PostgreSQL Serverless (Neon) y Drizzle ORM.
+                        Incluye modo quiosco digital para registro de entradas/salidas, gestión de incidencias de
+                        empleados, cálculo automático de horas extra y exportación de reportes a Excel.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-semibold">Next.js 16</span>
@@ -741,7 +844,9 @@
                         <span class="bg-orange-600 px-3 py-1 rounded-full text-xs font-semibold">Auth0</span>
                         <span class="bg-emerald-700 px-3 py-1 rounded-full text-xs font-semibold">Excel (XLSX)</span>
                     </div>
-                    <button class="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="ACTIVE SYSTEM" data-es="SISTEMA ACTIVO">
+                    <button
+                        class="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold"
+                        data-en="ACTIVE SYSTEM" data-es="SISTEMA ACTIVO">
                         SISTEMA ACTIVO
                     </button>
                 </div>
@@ -749,90 +854,128 @@
                 <!-- 5. TABLERO DE CONTROL DE BODEGA & TRAZABILIDAD DE FACTURAS -->
                 <div class="project-card-item ar-card p-6 fade-in" data-category="corporate">
                     <div class="flex justify-between items-center mb-3">
-                        <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                        <span
+                            class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                            data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
                             🏢 CORPORATIVO / PRODUCCIÓN
                         </span>
                         <span class="text-xs text-amber-300 font-bold">MGO Industrial</span>
                     </div>
-                    <div class="h-48 bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-orange-500/20">
+                    <div
+                        class="h-48 bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-orange-500/20">
                         📦📑
                     </div>
-                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-amber-300 via-orange-400 to-red-400 bg-clip-text text-transparent" data-en="Warehouse Logistics & Invoice Tracking Dashboard" data-es="Tablero de Control de Bodega & Trazabilidad de Facturas">
+                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-amber-300 via-orange-400 to-red-400 bg-clip-text text-transparent"
+                        data-en="Warehouse Logistics & Invoice Tracking Dashboard"
+                        data-es="Tablero de Control de Bodega & Trazabilidad de Facturas">
                         Tablero de Control de Bodega & Trazabilidad de Facturas
                     </h3>
-                    <p class="text-gray-300 mb-4 text-sm" 
-                       data-en="Enterprise logistics solution automating warehouse material inflow/outflow logging with Google Apps Script and generating real-time business intelligence dashboards via Google Looker Studio. Features invoice-level operational traceability, dynamic inventory balancing, automated low-stock notifications, and cross-department visibility." 
-                       data-es="Solución integral para gestión de almacén y logística que automatiza el registro de entradas y salidas de material mediante Google Apps Script y genera tableros de Business Intelligence en tiempo real con Google Looker Studio. Integra trazabilidad operativa por número de factura, balance dinámico de inventarios, alertas de reabastecimiento y visibilidad interdepartamental.">
-                        Solución integral para gestión de almacén y logística que automatiza el registro de entradas y salidas de material mediante Google Apps Script y genera tableros de Business Intelligence en tiempo real con Google Looker Studio. Integra trazabilidad operativa por número de factura, balance dinámico de inventarios, alertas de reabastecimiento y visibilidad interdepartamental.
+                    <p class="text-gray-300 mb-4 text-sm"
+                        data-en="Enterprise logistics solution automating warehouse material inflow/outflow logging with Google Apps Script and generating real-time business intelligence dashboards via Google Looker Studio. Features invoice-level operational traceability, dynamic inventory balancing, automated low-stock notifications, and cross-department visibility."
+                        data-es="Solución integral para gestión de almacén y logística que automatiza el registro de entradas y salidas de material mediante Google Apps Script y genera tableros de Business Intelligence en tiempo real con Google Looker Studio. Integra trazabilidad operativa por número de factura, balance dinámico de inventarios, alertas de reabastecimiento y visibilidad interdepartamental.">
+                        Solución integral para gestión de almacén y logística que automatiza el registro de entradas y
+                        salidas de material mediante Google Apps Script y genera tableros de Business Intelligence en
+                        tiempo real con Google Looker Studio. Integra trazabilidad operativa por número de factura,
+                        balance dinámico de inventarios, alertas de reabastecimiento y visibilidad interdepartamental.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">Looker Studio</span>
                         <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">Google Apps Script</span>
-                        <span class="bg-emerald-600 px-3 py-1 rounded-full text-xs font-semibold">Google Sheets API</span>
+                        <span class="bg-emerald-600 px-3 py-1 rounded-full text-xs font-semibold">Google Sheets
+                            API</span>
                         <span class="bg-amber-600 px-3 py-1 rounded-full text-xs font-semibold">JavaScript</span>
-                        <span class="bg-purple-600 px-3 py-1 rounded-full text-xs font-semibold">Business Intelligence</span>
-                        <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-semibold">Logística & Facturación</span>
+                        <span class="bg-purple-600 px-3 py-1 rounded-full text-xs font-semibold">Business
+                            Intelligence</span>
+                        <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-semibold">Logística &
+                            Facturación</span>
                     </div>
-                    <button class="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="ENTERPRISE SYSTEM" data-es="SISTEMA EMPRESARIAL">
+                    <button
+                        class="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold"
+                        data-en="ENTERPRISE SYSTEM" data-es="SISTEMA EMPRESARIAL">
                         SISTEMA EMPRESARIAL
                     </button>
                 </div>
 
                 <!-- 6. BUSCADOR DINÁMICO DE GANADORES EN TIEMPO REAL -->
-                <div class="project-card-item ar-card p-6 fade-in border border-amber-500/40 flex flex-col justify-between" data-category="corporate">
+                <div class="project-card-item ar-card p-6 fade-in border border-amber-500/40 flex flex-col justify-between"
+                    data-category="corporate">
                     <div>
                         <div class="flex justify-between items-center mb-3">
-                            <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                            <span
+                                class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                                data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
                                 🏢 CORPORATIVO / PRODUCCIÓN
                             </span>
                             <span class="text-xs text-amber-300 font-bold">Grupo Salinas (CDMX)</span>
                         </div>
-                        <div class="h-48 bg-gradient-to-br from-amber-700 via-orange-800 to-slate-900 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-amber-500/20">
+                        <div
+                            class="h-48 bg-gradient-to-br from-amber-700 via-orange-800 to-slate-900 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-amber-500/20">
                             🔍🏆
                         </div>
-                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-amber-400 via-orange-300 to-yellow-300 bg-clip-text text-transparent" data-en="Dynamic Real-Time Winners Search Engine – Grupo Salinas" data-es="Buscador Dinámico de Ganadores en Tiempo Real – Grupo Salinas">
+                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-amber-400 via-orange-300 to-yellow-300 bg-clip-text text-transparent"
+                            data-en="Dynamic Real-Time Winners Search Engine – Grupo Salinas"
+                            data-es="Buscador Dinámico de Ganadores en Tiempo Real – Grupo Salinas">
                             Buscador Dinámico de Ganadores en Tiempo Real – Grupo Salinas
                         </h3>
-                        <p class="text-gray-300 mb-4 text-sm" 
-                           data-en="High-velocity real-time search and reactive filtering engine for massive queries of dynamic winners across nationwide corporate campaigns. Built to handle heavy concurrency spikes with instantaneous response times, client-side indexing, and smooth UX." 
-                           data-es="Desarrollo de motor de búsqueda y filtrado reactivo de alta velocidad para la consulta masiva de ganadores de dinámicas y activaciones institucionales. Diseñado para tolerar picos de concurrencia elevados con tiempos de respuesta instantáneos, indexación en cliente y navegación fluida.">
-                            Desarrollo de motor de búsqueda y filtrado reactivo de alta velocidad para la consulta masiva de ganadores de dinámicas y activaciones institucionales. Diseñado para tolerar picos de concurrencia elevados con tiempos de respuesta instantáneos, indexación en cliente y navegación fluida.
+                        <p class="text-gray-300 mb-4 text-sm"
+                            data-en="High-velocity real-time search and reactive filtering engine for massive queries of dynamic winners across nationwide corporate campaigns. Built to handle heavy concurrency spikes with instantaneous response times, client-side indexing, and smooth UX."
+                            data-es="Desarrollo de motor de búsqueda y filtrado reactivo de alta velocidad para la consulta masiva de ganadores de dinámicas y activaciones institucionales. Diseñado para tolerar picos de concurrencia elevados con tiempos de respuesta instantáneos, indexación en cliente y navegación fluida.">
+                            Desarrollo de motor de búsqueda y filtrado reactivo de alta velocidad para la consulta
+                            masiva de ganadores de dinámicas y activaciones institucionales. Diseñado para tolerar picos
+                            de concurrencia elevados con tiempos de respuesta instantáneos, indexación en cliente y
+                            navegación fluida.
                         </p>
                     </div>
                     <div>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">JavaScript ES6+</span>
-                            <span class="bg-amber-700 px-3 py-1 rounded-full text-xs font-semibold">Búsqueda Reactiva</span>
+                            <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">JavaScript
+                                ES6+</span>
+                            <span class="bg-amber-700 px-3 py-1 rounded-full text-xs font-semibold">Búsqueda
+                                Reactiva</span>
                             <span class="bg-orange-700 px-3 py-1 rounded-full text-xs font-semibold">GitLab</span>
-                            <span class="bg-cyan-700 px-3 py-1 rounded-full text-xs font-semibold">Alta Concurrencia</span>
-                            <span class="bg-purple-700 px-3 py-1 rounded-full text-xs font-semibold">Filtros Dinámicos</span>
-                            <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">Optimización UX</span>
+                            <span class="bg-cyan-700 px-3 py-1 rounded-full text-xs font-semibold">Alta
+                                Concurrencia</span>
+                            <span class="bg-purple-700 px-3 py-1 rounded-full text-xs font-semibold">Filtros
+                                Dinámicos</span>
+                            <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">Optimización
+                                UX</span>
                         </div>
-                        <button class="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-yellow-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="IN PRODUCTION" data-es="EN PRODUCCIÓN">
+                        <button
+                            class="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-yellow-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold"
+                            data-en="IN PRODUCTION" data-es="EN PRODUCCIÓN">
                             EN PRODUCCIÓN
                         </button>
                     </div>
                 </div>
 
                 <!-- 7. EL TALLER DE MAR -->
-                <a href="https://taller-de-mar-green.vercel.app/" target="_blank" class="project-card-item block" data-category="personal">
+                <a href="https://taller-de-mar-green.vercel.app/" target="_blank" class="project-card-item block"
+                    data-category="personal">
                     <div class="ar-card p-6 fade-in">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
+                            <span
+                                class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                                data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
                                 🚀 PERSONAL / LAB
                             </span>
                             <span class="text-xs text-teal-300 font-bold">Live Demo ↗</span>
                         </div>
-                        <div class="h-48 bg-gradient-to-br from-teal-400 to-cyan-600 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-teal-500/20">
+                        <div
+                            class="h-48 bg-gradient-to-br from-teal-400 to-cyan-600 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-teal-500/20">
                             🌊✨
                         </div>
-                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-teal-300 via-cyan-400 to-blue-400 bg-clip-text text-transparent" data-en="El Taller de Mar – Booking & Workshops" data-es="El Taller de Mar – Citas & Talleres">
+                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-teal-300 via-cyan-400 to-blue-400 bg-clip-text text-transparent"
+                            data-en="El Taller de Mar – Booking & Workshops"
+                            data-es="El Taller de Mar – Citas & Talleres">
                             El Taller de Mar – Citas & Talleres
                         </h3>
-                        <p class="text-gray-300 mb-4 text-sm" 
-                           data-en="Complete management platform for a creative studio. Features appointment scheduling, workshop enrollment, interactive gallery with client-side image compression, and transactional confirmation emails with Resend. Built with Next.js 16, React 19, Tailwind CSS, PostgreSQL Neon, Vercel Blob and Auth0." 
-                           data-es="Plataforma web para estudio creativo que centraliza agendamiento de citas, reservaciones para talleres presenciales, galería interactiva con compresión de fotos en navegador y confirmaciones por correo con Resend. Construido con Next.js 16, React 19, Tailwind CSS, PostgreSQL Neon, Vercel Blob y Auth0.">
-                            Plataforma web para estudio creativo que centraliza agendamiento de citas, reservaciones para talleres presenciales, galería interactiva con compresión de fotos en navegador y confirmaciones por correo con Resend. Construido con Next.js 16, React 19, Tailwind CSS, PostgreSQL Neon, Vercel Blob y Auth0.
+                        <p class="text-gray-300 mb-4 text-sm"
+                            data-en="Complete management platform for a creative studio. Features appointment scheduling, workshop enrollment, interactive gallery with client-side image compression, and transactional confirmation emails with Resend. Built with Next.js 16, React 19, Tailwind CSS, PostgreSQL Neon, Vercel Blob and Auth0."
+                            data-es="Plataforma web para estudio creativo que centraliza agendamiento de citas, reservaciones para talleres presenciales, galería interactiva con compresión de fotos en navegador y confirmaciones por correo con Resend. Construido con Next.js 16, React 19, Tailwind CSS, PostgreSQL Neon, Vercel Blob y Auth0.">
+                            Plataforma web para estudio creativo que centraliza agendamiento de citas, reservaciones
+                            para talleres presenciales, galería interactiva con compresión de fotos en navegador y
+                            confirmaciones por correo con Resend. Construido con Next.js 16, React 19, Tailwind CSS,
+                            PostgreSQL Neon, Vercel Blob y Auth0.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-zinc-700 px-3 py-1 rounded-full text-xs font-semibold">Next.js 16</span>
@@ -843,7 +986,9 @@
                             <span class="bg-pink-700 px-3 py-1 rounded-full text-xs font-semibold">Resend Email</span>
                             <span class="bg-orange-600 px-3 py-1 rounded-full text-xs font-semibold">Auth0</span>
                         </div>
-                        <button class="w-full bg-gradient-to-r from-teal-500 to-cyan-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="VIEW LIVE PROJECT ↗" data-es="VER PROYECTO EN VIVO ↗">
+                        <button
+                            class="w-full bg-gradient-to-r from-teal-500 to-cyan-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold"
+                            data-en="VIEW LIVE PROJECT ↗" data-es="VER PROYECTO EN VIVO ↗">
                             VER PROYECTO EN VIVO ↗
                         </button>
                     </div>
@@ -852,20 +997,27 @@
                 <!-- 8. PUNTO DE VENTA & COCINA (POS / KDS) -->
                 <div class="project-card-item ar-card p-6 fade-in" data-category="personal">
                     <div class="flex justify-between items-center mb-3">
-                        <span class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
+                        <span
+                            class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                            data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
                             🚀 PERSONAL / LAB
                         </span>
                     </div>
-                    <div class="h-48 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-orange-500/20">
+                    <div
+                        class="h-48 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-orange-500/20">
                         🐙🍺
                     </div>
-                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
+                    <h3
+                        class="text-xl font-bold mb-3 bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
                         Punto de Venta & Cocina (POS / KDS)
                     </h3>
-                    <p class="text-gray-300 mb-4 text-sm" 
-                       data-en="Complete Point of Sale (POS) and Kitchen Display System (KDS) for restaurants and bars. Built with React 19, TypeScript, Vite, Tailwind CSS v4 and Zustand. Features interactive table layout, staff quick-switch with PIN, takeaway mode, thermal tickets, cash drawer cuts (X and Z), and production Docker/Nginx containerization." 
-                       data-es="Sistema completo de Punto de Venta (POS) y Comandas para restaurante y bar. Desarrollado con React 19, TypeScript, Vite, Tailwind CSS v4 y Zustand. Incluye plano interactivo de mesas, cambio rápido de mesero por PIN, pantalla táctil de cocina (KDS) con alertas sonoras en tiempo real, arqueo de caja (cortes X y Z) y despliegue en contenedor con Docker y Nginx.">
-                        Sistema completo de Punto de Venta (POS) y Comandas para restaurante y bar. Desarrollado con React 19, TypeScript, Vite, Tailwind CSS v4 y Zustand. Incluye plano interactivo de mesas, cambio rápido de mesero por PIN, pantalla táctil de cocina (KDS) con alertas sonoras en tiempo real, arqueo de caja (cortes X y Z) y despliegue en contenedor con Docker y Nginx.
+                    <p class="text-gray-300 mb-4 text-sm"
+                        data-en="Complete Point of Sale (POS) and Kitchen Display System (KDS) for restaurants and bars. Built with React 19, TypeScript, Vite, Tailwind CSS v4 and Zustand. Features interactive table layout, staff quick-switch with PIN, takeaway mode, thermal tickets, cash drawer cuts (X and Z), and production Docker/Nginx containerization."
+                        data-es="Sistema completo de Punto de Venta (POS) y Comandas para restaurante y bar. Desarrollado con React 19, TypeScript, Vite, Tailwind CSS v4 y Zustand. Incluye plano interactivo de mesas, cambio rápido de mesero por PIN, pantalla táctil de cocina (KDS) con alertas sonoras en tiempo real, arqueo de caja (cortes X y Z) y despliegue en contenedor con Docker y Nginx.">
+                        Sistema completo de Punto de Venta (POS) y Comandas para restaurante y bar. Desarrollado con
+                        React 19, TypeScript, Vite, Tailwind CSS v4 y Zustand. Incluye plano interactivo de mesas,
+                        cambio rápido de mesero por PIN, pantalla táctil de cocina (KDS) con alertas sonoras en tiempo
+                        real, arqueo de caja (cortes X y Z) y despliegue en contenedor con Docker y Nginx.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="bg-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">React 19</span>
@@ -876,42 +1028,60 @@
                         <span class="bg-blue-700 px-3 py-1 rounded-full text-xs font-semibold">Docker</span>
                         <span class="bg-green-700 px-3 py-1 rounded-full text-xs font-semibold">Nginx</span>
                     </div>
-                    <button class="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="ACTIVE SYSTEM" data-es="SISTEMA ACTIVO">
+                    <button
+                        class="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold"
+                        data-en="ACTIVE SYSTEM" data-es="SISTEMA ACTIVO">
                         SISTEMA ACTIVO
                     </button>
                 </div>
 
                 <!-- 9. MÓDULO COPA SOCIO (TORNEO DEPORTIVO INSTITUCIONAL) -->
-                <div class="project-card-item ar-card p-6 fade-in border border-indigo-500/40 flex flex-col justify-between" data-category="corporate">
+                <div class="project-card-item ar-card p-6 fade-in border border-indigo-500/40 flex flex-col justify-between"
+                    data-category="corporate">
                     <div>
                         <div class="flex justify-between items-center mb-3">
-                            <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                            <span
+                                class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                                data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
                                 🏢 CORPORATIVO / PRODUCCIÓN
                             </span>
                             <span class="text-xs text-indigo-300 font-bold">Grupo Salinas (CDMX)</span>
                         </div>
-                        <div class="h-48 bg-gradient-to-br from-indigo-700 via-purple-800 to-slate-900 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-indigo-500/20">
+                        <div
+                            class="h-48 bg-gradient-to-br from-indigo-700 via-purple-800 to-slate-900 rounded-2xl flex items-center justify-center text-6xl mb-6 shadow-lg shadow-indigo-500/20">
                             ⚽📊
                         </div>
-                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-300 bg-clip-text text-transparent" data-en="Copa Socio Tournament & League Module – Grupo Salinas" data-es="Módulo Copa Socio (Torneo Deportivo Institucional) – Grupo Salinas">
+                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-300 bg-clip-text text-transparent"
+                            data-en="Copa Socio Tournament & League Module – Grupo Salinas"
+                            data-es="Módulo Copa Socio (Torneo Deportivo Institucional) – Grupo Salinas">
                             Módulo Copa Socio (Torneo Deportivo Institucional) – Grupo Salinas
                         </h3>
-                        <p class="text-gray-300 mb-4 text-sm" 
-                           data-en="Interactive corporate sports tournament tracking module. Provides live visualization of team rosters, match fixtures, league standings, and real-time statistics, seamlessly integrated into the institutional portal with GitLab CI/CD." 
-                           data-es="Desarrollo de módulo interactivo para el seguimiento del torneo deportivo interno corporativo. Visualización en tiempo real de equipos, roles de juego, tablas de posiciones, clasificaciones y estadísticas de partidos, integrado a la plataforma institucional con control de despliegues en GitLab.">
-                            Desarrollo de módulo interactivo para el seguimiento del torneo deportivo interno corporativo. Visualización en tiempo real de equipos, roles de juego, tablas de posiciones, clasificaciones y estadísticas de partidos, integrado a la plataforma institucional con control de despliegues en GitLab.
+                        <p class="text-gray-300 mb-4 text-sm"
+                            data-en="Interactive corporate sports tournament tracking module. Provides live visualization of team rosters, match fixtures, league standings, and real-time statistics, seamlessly integrated into the institutional portal with GitLab CI/CD."
+                            data-es="Desarrollo de módulo interactivo para el seguimiento del torneo deportivo interno corporativo. Visualización en tiempo real de equipos, roles de juego, tablas de posiciones, clasificaciones y estadísticas de partidos, integrado a la plataforma institucional con control de despliegues en GitLab.">
+                            Desarrollo de módulo interactivo para el seguimiento del torneo deportivo interno
+                            corporativo. Visualización en tiempo real de equipos, roles de juego, tablas de posiciones,
+                            clasificaciones y estadísticas de partidos, integrado a la plataforma institucional con
+                            control de despliegues en GitLab.
                         </p>
                     </div>
                     <div>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">JavaScript ES6+</span>
+                            <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs font-semibold">JavaScript
+                                ES6+</span>
                             <span class="bg-orange-700 px-3 py-1 rounded-full text-xs font-semibold">GitLab</span>
-                            <span class="bg-indigo-600 px-3 py-1 rounded-full text-xs font-semibold">UI Interactiva</span>
-                            <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">Tablas de Posiciones</span>
-                            <span class="bg-emerald-700 px-3 py-1 rounded-full text-xs font-semibold">Estadísticas en Vivo</span>
-                            <span class="bg-pink-700 px-3 py-1 rounded-full text-xs font-semibold">Torneo Corporativo</span>
+                            <span class="bg-indigo-600 px-3 py-1 rounded-full text-xs font-semibold">UI
+                                Interactiva</span>
+                            <span class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">Tablas de
+                                Posiciones</span>
+                            <span class="bg-emerald-700 px-3 py-1 rounded-full text-xs font-semibold">Estadísticas en
+                                Vivo</span>
+                            <span class="bg-pink-700 px-3 py-1 rounded-full text-xs font-semibold">Torneo
+                                Corporativo</span>
                         </div>
-                        <button class="w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold" data-en="IN PRODUCTION" data-es="EN PRODUCCIÓN">
+                        <button
+                            class="w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-3 rounded-xl hover:scale-105 transition-transform font-bold"
+                            data-en="IN PRODUCTION" data-es="EN PRODUCCIÓN">
                             EN PRODUCCIÓN
                         </button>
                     </div>
@@ -920,19 +1090,28 @@
                 <!-- 10. SISTEMA WEB DE CONTROL DE HONORARIOS Y GESTIÓN DE TAREAS PARA OFICINA -->
                 <div class="project-card-item ar-card p-6 fade-in" data-category="corporate">
                     <div class="flex justify-between items-center mb-3">
-                        <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                        <span
+                            class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                            data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
                             🏢 CORPORATIVO / PRODUCCIÓN
                         </span>
                         <span class="text-xs text-blue-300 font-bold">Carrizales Díaz</span>
                     </div>
-                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                    <div
+                        class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
                         🗂️
                     </div>
-                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    <h3
+                        class="text-xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                         Sistema Web de Control de Honorarios y Gestión de Tareas para Oficina
                     </h3>
-                    <p class="text-gray-300 mb-4 text-sm" data-en="Customized platform for centrally managing fees, assigning tasks, and monitoring revenue. It includes role-based access control, an interactive dashboard, and tools that streamline organization, reduce errors, and improve internal workflow. It is built with the following technologies:" data-es="Plataforma personalizada para gestionar honorarios, asignar tareas y monitorear ingresos de forma centralizada. Incluye control de acceso por roles, dashboard interactivo y herramientas que optimizan la organización, reducen errores y mejoran el flujo de trabajo interno. Está construido con las siguientes tecnologías:">
-                        Plataforma personalizada para gestionar honorarios, asignar tareas y monitorear ingresos de forma centralizada. Incluye control de acceso por roles, dashboard interactivo y herramientas que optimizan la organización, reducen errores y mejoran el flujo de trabajo interno. Está construido con las siguientes tecnologías:
+                    <p class="text-gray-300 mb-4 text-sm"
+                        data-en="Customized platform for centrally managing fees, assigning tasks, and monitoring revenue. It includes role-based access control, an interactive dashboard, and tools that streamline organization, reduce errors, and improve internal workflow. It is built with the following technologies:"
+                        data-es="Plataforma personalizada para gestionar honorarios, asignar tareas y monitorear ingresos de forma centralizada. Incluye control de acceso por roles, dashboard interactivo y herramientas que optimizan la organización, reducen errores y mejoran el flujo de trabajo interno. Está construido con las siguientes tecnologías:">
+                        Plataforma personalizada para gestionar honorarios, asignar tareas y monitorear ingresos de
+                        forma centralizada. Incluye control de acceso por roles, dashboard interactivo y herramientas
+                        que optimizan la organización, reducen errores y mejoran el flujo de trabajo interno. Está
+                        construido con las siguientes tecnologías:
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="bg-cyan-800 px-3 py-1 rounded-full text-xs">REACT</span>
@@ -948,18 +1127,26 @@
                 <!-- 11. SISTEMA WEB PARA RECOPILACIÓN DE INFORMACIÓN DE INFORME DE GOBIERNO -->
                 <div class="project-card-item ar-card p-6 fade-in" data-category="corporate">
                     <div class="flex justify-between items-center mb-3">
-                        <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                        <span
+                            class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                            data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
                             🏢 CORPORATIVO / PRODUCCIÓN
                         </span>
                     </div>
-                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                    <div
+                        class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
                         📊
                     </div>
-                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    <h3
+                        class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                         Sistema Web para Recopilación de Información de Informe de Gobierno
                     </h3>
-                    <p class="text-gray-300 mb-4 text-sm" data-en="Platform for centralizing and validating information from various government departments, used in the preparation of the Government Report. It includes access by department, validated forms, an administrative dashboard, and responsive design. This project is built with: " data-es="Plataforma para centralizar y validar información de distintas áreas gubernamentales, utilizada en la preparación del Informe de Gobierno. Incluye acceso por área, formularios validados, panel administrativo y diseño adaptable. Este proyecto esta construido con:">
-                        Plataforma para centralizar y validar información de distintas áreas gubernamentales, utilizada en la preparación del Informe de Gobierno. Incluye acceso por área, formularios validados, panel administrativo y diseño adaptable. Este proyecto esta construido con:
+                    <p class="text-gray-300 mb-4 text-sm"
+                        data-en="Platform for centralizing and validating information from various government departments, used in the preparation of the Government Report. It includes access by department, validated forms, an administrative dashboard, and responsive design. This project is built with: "
+                        data-es="Plataforma para centralizar y validar información de distintas áreas gubernamentales, utilizada en la preparación del Informe de Gobierno. Incluye acceso por área, formularios validados, panel administrativo y diseño adaptable. Este proyecto esta construido con:">
+                        Plataforma para centralizar y validar información de distintas áreas gubernamentales, utilizada
+                        en la preparación del Informe de Gobierno. Incluye acceso por área, formularios validados, panel
+                        administrativo y diseño adaptable. Este proyecto esta construido con:
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">HTML5</span>
@@ -973,79 +1160,111 @@
                 <!-- 12. ERP INTERNO PARA EMPRESA -->
                 <div class="project-card-item ar-card p-6 fade-in" data-category="corporate">
                     <div class="flex justify-between items-center mb-3">
-                        <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                        <span
+                            class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                            data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
                             🏢 CORPORATIVO / PRODUCCIÓN
                         </span>
                     </div>
-                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                    <div
+                        class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
                         🚀
                     </div>
-                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    <h3
+                        class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                         ERP Interno para Empresa
                     </h3>
-                        <p class="text-gray-300 mb-4 text-sm" data-en="Development of a custom ERP system for a mineral import and export company, centralizing inventory management, sales, and administration in a single platform. The solution optimizes internal processes, reduces manual errors, and improves traceability, offering greater efficiency and real-time visibility. This project is built with:" data-es="Desarrollo de un sistema ERP a medida para una empresa de importación y exportación de minerales, que centraliza la gestión de inventario, ventas y administración en una sola plataforma. La solución optimiza procesos internos, reduce errores manuales y mejora la trazabilidad, ofreciendo mayor eficiencia y visibilidad en tiempo real. Este proyecto esta construido con:">
-                            Desarrollo de un sistema ERP a medida para una empresa de importación y exportación de minerales, que centraliza la gestión de inventario, ventas y administración en una sola plataforma. La solución optimiza procesos internos, reduce errores manuales y mejora la trazabilidad, ofreciendo mayor eficiencia y visibilidad en tiempo real. Este proyecto esta construido con:
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-cyan-800 px-3 py-1 rounded-full text-xs">REACT</span>
-                            <span class="bg-green-600 px-3 py-1 rounded-full text-xs">NODE.JS</span>
-                            <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">TypeScript</span>
-                            <span class="bg-blue-300 px-3 py-1 rounded-full text-xs">Tailwind CSS</span>
-                            <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">PostgreSQL</span>
-                            <span class="bg-zinc-600 px-3 py-1 rounded-full text-xs">Vercel</span>
-                            <span class="bg-green-600 px-3 py-1 rounded-full text-xs">Neon</span>
-                        </div>
-                        <!--button class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="ENTER" data-es="ENTRAR">
+                    <p class="text-gray-300 mb-4 text-sm"
+                        data-en="Development of a custom ERP system for a mineral import and export company, centralizing inventory management, sales, and administration in a single platform. The solution optimizes internal processes, reduces manual errors, and improves traceability, offering greater efficiency and real-time visibility. This project is built with:"
+                        data-es="Desarrollo de un sistema ERP a medida para una empresa de importación y exportación de minerales, que centraliza la gestión de inventario, ventas y administración en una sola plataforma. La solución optimiza procesos internos, reduce errores manuales y mejora la trazabilidad, ofreciendo mayor eficiencia y visibilidad en tiempo real. Este proyecto esta construido con:">
+                        Desarrollo de un sistema ERP a medida para una empresa de importación y exportación de
+                        minerales, que centraliza la gestión de inventario, ventas y administración en una sola
+                        plataforma. La solución optimiza procesos internos, reduce errores manuales y mejora la
+                        trazabilidad, ofreciendo mayor eficiencia y visibilidad en tiempo real. Este proyecto esta
+                        construido con:
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-cyan-800 px-3 py-1 rounded-full text-xs">REACT</span>
+                        <span class="bg-green-600 px-3 py-1 rounded-full text-xs">NODE.JS</span>
+                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">TypeScript</span>
+                        <span class="bg-blue-300 px-3 py-1 rounded-full text-xs">Tailwind CSS</span>
+                        <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">PostgreSQL</span>
+                        <span class="bg-zinc-600 px-3 py-1 rounded-full text-xs">Vercel</span>
+                        <span class="bg-green-600 px-3 py-1 rounded-full text-xs">Neon</span>
+                    </div>
+                    <!--button class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="ENTER" data-es="ENTRAR">
                             ENTRAR
                         </button-->
-                    </div>
+                </div>
                 <!--/a-->
 
                 <!-- 13. PLATAFORMA WEB PARA CONFIRMACIÓN DE ASISTENCIA A EVENTO SOCIAL -->
-                <a href="PROYECTOS/invitacion-boda/" target="_blank" class="project-card-item block" data-category="personal">
+                <a href="PROYECTOS/invitacion-boda/" target="_blank" class="project-card-item block"
+                    data-category="personal">
                     <div class="ar-card p-6 fade-in">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
+                            <span
+                                class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                                data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
                                 🚀 PERSONAL / LAB
                             </span>
                         </div>
-                        <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                            <img src="IMG/PROYECTOS/screen-2.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
+                        <div
+                            class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                            <img src="IMG/PROYECTOS/screen-2.png" alt="Project Thumbnail"
+                                class="w-full h-full object-cover rounded-2xl">
                         </div>
-                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        <h3
+                            class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                             Plataforma Web para Confirmación de Asistencia a Evento Social
                         </h3>
-                        <p class="text-gray-300 mb-4 text-sm" data-en="This project is a wedding invitation, where guests can RSVP and confirm their attendance, as well as view event details. Organizers can view reports. This project is built with:" data-es="Este proyecto es una invitacion de boda, en donde los invitados pueden confirmar su asistencia y cuantas personas, de igual forma pueden ver los detalles del evento. Los organizacores pueden ver reportes, este proyecto esta construido con:">
-                            Este proyecto es una invitacion de boda, en donde los invitados pueden confirmar su asistencia y cuantas personas, de igual forma pueden ver los detalles del evento. Los organizacores pueden ver reportes, este proyecto esta construido con:
+                        <p class="text-gray-300 mb-4 text-sm"
+                            data-en="This project is a wedding invitation, where guests can RSVP and confirm their attendance, as well as view event details. Organizers can view reports. This project is built with:"
+                            data-es="Este proyecto es una invitacion de boda, en donde los invitados pueden confirmar su asistencia y cuantas personas, de igual forma pueden ver los detalles del evento. Los organizacores pueden ver reportes, este proyecto esta construido con:">
+                            Este proyecto es una invitacion de boda, en donde los invitados pueden confirmar su
+                            asistencia y cuantas personas, de igual forma pueden ver los detalles del evento. Los
+                            organizacores pueden ver reportes, este proyecto esta construido con:
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">HTML5</span>
                             <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">CSS3</span>
                             <span class="bg-green-600 px-3 py-1 rounded-full text-xs">Twig</span>
                         </div>
-                        <button class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="ENTER" data-es="ENTRAR">
+                        <button
+                            class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform"
+                            data-en="ENTER" data-es="ENTRAR">
                             ENTRAR
                         </button>
                     </div>
                 </a>
 
                 <!-- 14. SITIO WEB CORPORATIVO PARA EMPRESA DE IMPORTACIÓN Y EXPORTACIÓN DE MATERIALES -->
-                <a href="https://mgo-industrial-beta.vercel.app/" target="_blank" class="project-card-item block" data-category="corporate">
+                <a href="https://mgo-industrial-beta.vercel.app/" target="_blank" class="project-card-item block"
+                    data-category="corporate">
                     <div class="ar-card p-6 fade-in">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                            <span
+                                class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                                data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
                                 🏢 CORPORATIVO / PRODUCCIÓN
                             </span>
                             <span class="text-xs text-amber-300 font-bold">MGO Industrial</span>
                         </div>
-                        <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                        <div
+                            class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
                             ⚙️
                         </div>
-                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+                        <h3
+                            class="text-xl font-bold mb-3 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
                             Sitio web corporativo para empresa de importación y exportación de materiales
                         </h3>
-                        <p class="text-gray-300 mb-4 text-sm" data-en="This project is the informational website of a company specializing in the import and export of materials. Its objective is to clearly present its services, values, and contact channels, offering customers a simple and professional browsing experience. The page was developed with the following technologies:" data-es="Este proyecto es el sitio web informativo de una empresa especializada en la importación y exportación de materiales. Su objetivo es presentar de forma clara sus servicios, valores y canales de contacto, ofreciendo a los clientes una experiencia de navegación sencilla y profesional. La página fue desarrollada con las siguientes tecnologías:">
-                            Este proyecto es el sitio web informativo de una empresa especializada en la importación y exportación de materiales. Su objetivo es presentar de forma clara sus servicios, valores y canales de contacto, ofreciendo a los clientes una experiencia de navegación sencilla y profesional.
+                        <p class="text-gray-300 mb-4 text-sm"
+                            data-en="This project is the informational website of a company specializing in the import and export of materials. Its objective is to clearly present its services, values, and contact channels, offering customers a simple and professional browsing experience. The page was developed with the following technologies:"
+                            data-es="Este proyecto es el sitio web informativo de una empresa especializada en la importación y exportación de materiales. Su objetivo es presentar de forma clara sus servicios, valores y canales de contacto, ofreciendo a los clientes una experiencia de navegación sencilla y profesional. La página fue desarrollada con las siguientes tecnologías:">
+                            Este proyecto es el sitio web informativo de una empresa especializada en la importación y
+                            exportación de materiales. Su objetivo es presentar de forma clara sus servicios, valores y
+                            canales de contacto, ofreciendo a los clientes una experiencia de navegación sencilla y
+                            profesional.
                             La página fue desarrollada con las siguientes tecnologías:
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
@@ -1053,122 +1272,178 @@
                             <span class="bg-blue-800 px-3 py-1 rounded-full text-xs">Tailwind CSS</span>
                             <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">TypeScript</span>
                         </div>
-                        <button class="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="EXPLORE" data-es="EXPLORAR">
+                        <button
+                            class="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white py-3 rounded-xl hover:scale-105 transition-transform"
+                            data-en="EXPLORE" data-es="EXPLORAR">
                             EXPLORAR
                         </button>
                     </div>
                 </a>
 
                 <!-- 15. PERSONALIZACIÓN Y CONFIGURACIÓN DE TIENDA ONLINE EN TEBEX -->
-                <a href="https://eufonia.buycraft.net/" target="_blank" class="project-card-item block" data-category="corporate">
+                <a href="https://eufonia.buycraft.net/" target="_blank" class="project-card-item block"
+                    data-category="corporate">
                     <div class="ar-card p-6 fade-in">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                            <span
+                                class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                                data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
                                 🏢 CORPORATIVO / PRODUCCIÓN
                             </span>
                             <span class="text-xs text-blue-300 font-bold">Eufonia Studios</span>
                         </div>
-                        <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                            <img src="IMG/PROYECTOS/screen-4.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
+                        <div
+                            class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                            <img src="IMG/PROYECTOS/screen-4.png" alt="Project Thumbnail"
+                                class="w-full h-full object-cover rounded-2xl">
                         </div>
-                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        <h3
+                            class="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                             Personalización y configuración de tienda online en Tebex
                         </h3>
-                        <p class="text-gray-300 mb-4 text-sm" data-en="An online store was visually customized on the Tebex platform, focusing on improving the site's visual identity and aligning its appearance with the client's brand. The intervention focused on CSS style adjustments and specific structural modifications using Twig, the template engine used by Tebex. It is built with:" data-es="Se realizó la personalización visual de una tienda online en la plataforma Tebex, enfocada en mejorar la identidad visual del sitio y alinear su apariencia con la marca del cliente. La intervención se centró en ajustes de estilo mediante CSS y modificaciones específicas en la estructura utilizando Twig, el motor de plantillas que utiliza Tebex., esta construido con:">
-                            Se realizó la personalización visual de una tienda online en la plataforma Tebex, enfocada en mejorar la identidad visual del sitio y alinear su apariencia con la marca del cliente. La intervención se centró en ajustes de estilo mediante CSS y modificaciones específicas en la estructura utilizando Twig, el motor de plantillas que utiliza Tebex., esta construido con:
+                        <p class="text-gray-300 mb-4 text-sm"
+                            data-en="An online store was visually customized on the Tebex platform, focusing on improving the site's visual identity and aligning its appearance with the client's brand. The intervention focused on CSS style adjustments and specific structural modifications using Twig, the template engine used by Tebex. It is built with:"
+                            data-es="Se realizó la personalización visual de una tienda online en la plataforma Tebex, enfocada en mejorar la identidad visual del sitio y alinear su apariencia con la marca del cliente. La intervención se centró en ajustes de estilo mediante CSS y modificaciones específicas en la estructura utilizando Twig, el motor de plantillas que utiliza Tebex., esta construido con:">
+                            Se realizó la personalización visual de una tienda online en la plataforma Tebex, enfocada
+                            en mejorar la identidad visual del sitio y alinear su apariencia con la marca del cliente.
+                            La intervención se centró en ajustes de estilo mediante CSS y modificaciones específicas en
+                            la estructura utilizando Twig, el motor de plantillas que utiliza Tebex., esta construido
+                            con:
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">HTML5</span>
                             <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">CSS3</span>
                             <span class="bg-green-600 px-3 py-1 rounded-full text-xs">Twig</span>
                         </div>
-                        <button class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="KNOW IT" data-es="CONOCER">
+                        <button
+                            class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-xl hover:scale-105 transition-transform"
+                            data-en="KNOW IT" data-es="CONOCER">
                             CONOCER
                         </button>
                     </div>
                 </a>
 
                 <!-- 16. PÁGINA WEB INFORMATIVA PARA RESTAURANTE -->
-                <a href="https://terra-origen.vercel.app/" target="_blank" class="project-card-item block" data-category="corporate"> 
+                <a href="https://terra-origen.vercel.app/" target="_blank" class="project-card-item block"
+                    data-category="corporate">
                     <div class="ar-card p-6 fade-in">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
+                            <span
+                                class="bg-blue-900/80 text-blue-300 border border-blue-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                                data-en="🏢 ENTERPRISE / PRODUCTION" data-es="🏢 CORPORATIVO / PRODUCCIÓN">
                                 🏢 CORPORATIVO / PRODUCCIÓN
                             </span>
                         </div>
-                        <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                            <img src="IMG/PROYECTOS/screen-5.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
+                        <div
+                            class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                            <img src="IMG/PROYECTOS/screen-5.png" alt="Project Thumbnail"
+                                class="w-full h-full object-cover rounded-2xl">
                         </div>
-                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                        <h3
+                            class="text-xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                             Página Web Informativa para Restaurante
                         </h3>
-                        <p class="text-gray-300 mb-4 text-sm" data-en="Design and development of a simple and functional website for a restaurant, focused on providing visitors with a clear and accessible experience when browsing the online menu. The website is optimized for mobile devices. The goal was to offer a lightweight and fast solution to display the restaurant menu in a visually appealing and easy-to-navigate manner. It is built with:" data-es="Diseño y desarrollo de una página web sencilla y funcional para un restaurante, enfocada en brindar a los visitantes una experiencia clara y accesible para consultar el menú en línea. La web está optimizada para dispositivos móviles. El objetivo fue ofrecer una solución ligera y rápida para mostrar el menú del restaurante de forma visualmente atractiva y fácil de navegar. Esta construida con:">
-                            Diseño y desarrollo de una página web sencilla y funcional para un restaurante, enfocada en brindar a los visitantes una experiencia clara y accesible para consultar el menú en línea. La web está optimizada para dispositivos móviles. El objetivo fue ofrecer una solución ligera y rápida para mostrar el menú del restaurante de forma visualmente atractiva y fácil de navegar. Esta construida con:
+                        <p class="text-gray-300 mb-4 text-sm"
+                            data-en="Design and development of a simple and functional website for a restaurant, focused on providing visitors with a clear and accessible experience when browsing the online menu. The website is optimized for mobile devices. The goal was to offer a lightweight and fast solution to display the restaurant menu in a visually appealing and easy-to-navigate manner. It is built with:"
+                            data-es="Diseño y desarrollo de una página web sencilla y funcional para un restaurante, enfocada en brindar a los visitantes una experiencia clara y accesible para consultar el menú en línea. La web está optimizada para dispositivos móviles. El objetivo fue ofrecer una solución ligera y rápida para mostrar el menú del restaurante de forma visualmente atractiva y fácil de navegar. Esta construida con:">
+                            Diseño y desarrollo de una página web sencilla y funcional para un restaurante, enfocada en
+                            brindar a los visitantes una experiencia clara y accesible para consultar el menú en línea.
+                            La web está optimizada para dispositivos móviles. El objetivo fue ofrecer una solución
+                            ligera y rápida para mostrar el menú del restaurante de forma visualmente atractiva y fácil
+                            de navegar. Esta construida con:
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">HTML5</span>
                             <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">CSS3</span>
                             <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs">JavaScript</span>
                         </div>
-                        <button class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="DIVE IN" data-es="SUMERGIRSE">
+                        <button
+                            class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-xl hover:scale-105 transition-transform"
+                            data-en="DIVE IN" data-es="SUMERGIRSE">
                             SUMERGIRSE
-                        </button>               
+                        </button>
                     </div>
                 </a>
 
                 <!-- 17. ALURA GEEK -->
-                <a href="https://alura-geek-nay.vercel.app/" target="_blank" class="project-card-item block" data-category="personal">
+                <a href="https://alura-geek-nay.vercel.app/" target="_blank" class="project-card-item block"
+                    data-category="personal">
                     <div class="ar-card p-6 fade-in">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
+                            <span
+                                class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                                data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
                                 🚀 PERSONAL / LAB
                             </span>
                             <span class="text-xs text-purple-300 font-bold">Alura Latam</span>
                         </div>
-                        <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                        <div
+                            class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
                             🎮
                         </div>
-                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+                        <h3
+                            class="text-xl font-bold mb-3 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
                             Alura Geek
                         </h3>
-                        <p class="text-gray-300 mb-4 text-sm" data-en="E-commerce web application developed as part of Alura LATAM's ONE program. This virtual store focuses on geeky and tech products, with features to manage the catalog, dynamically display products, and provide an intuitive shopping experience. It is built with modern web technologies and designed with a scalable architecture, allowing for easy maintenance and future expansion." data-es="Aplicación web de comercio electrónico desarrollada como parte del programa ONE de Alura LATAM. Se trata de una tienda virtual enfocada en productos geek y tecnológicos, con funcionalidades para gestionar el catálogo, mostrar productos de forma dinámica y brindar una experiencia de compra intuitiva. Está construida con tecnologías web modernas y pensada con una arquitectura escalable, lo que permite su fácil mantenimiento y expansión a futuro.">
-                            Aplicación web de comercio electrónico desarrollada como parte del programa ONE de Alura LATAM. Se trata de una tienda virtual enfocada en productos geek y tecnológicos, con funcionalidades para gestionar el catálogo, mostrar productos de forma dinámica y brindar una experiencia de compra intuitiva. Está construida con tecnologías web modernas y pensada con una arquitectura escalable, lo que permite su fácil mantenimiento y expansión a futuro.
+                        <p class="text-gray-300 mb-4 text-sm"
+                            data-en="E-commerce web application developed as part of Alura LATAM's ONE program. This virtual store focuses on geeky and tech products, with features to manage the catalog, dynamically display products, and provide an intuitive shopping experience. It is built with modern web technologies and designed with a scalable architecture, allowing for easy maintenance and future expansion."
+                            data-es="Aplicación web de comercio electrónico desarrollada como parte del programa ONE de Alura LATAM. Se trata de una tienda virtual enfocada en productos geek y tecnológicos, con funcionalidades para gestionar el catálogo, mostrar productos de forma dinámica y brindar una experiencia de compra intuitiva. Está construida con tecnologías web modernas y pensada con una arquitectura escalable, lo que permite su fácil mantenimiento y expansión a futuro.">
+                            Aplicación web de comercio electrónico desarrollada como parte del programa ONE de Alura
+                            LATAM. Se trata de una tienda virtual enfocada en productos geek y tecnológicos, con
+                            funcionalidades para gestionar el catálogo, mostrar productos de forma dinámica y brindar
+                            una experiencia de compra intuitiva. Está construida con tecnologías web modernas y pensada
+                            con una arquitectura escalable, lo que permite su fácil mantenimiento y expansión a futuro.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-purple-600 px-3 py-1 rounded-full text-xs">React</span>
                             <span class="bg-blue-800 px-3 py-1 rounded-full text-xs">CSS3</span>
                             <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">TypeScript</span>
                         </div>
-                        <button class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="OPEN" data-es="ABRIR">
+                        <button
+                            class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-xl hover:scale-105 transition-transform"
+                            data-en="OPEN" data-es="ABRIR">
                             ABRIR
                         </button>
                     </div>
                 </a>
 
                 <!-- 18. ENCRIPTADOR DE TEXTO -->
-                <a href="PROYECTOS/challenge/" target="_blank" class="project-card-item block" data-category="personal"> 
+                <a href="PROYECTOS/challenge/" target="_blank" class="project-card-item block" data-category="personal">
                     <div class="ar-card p-6 fade-in">
                         <div class="flex justify-between items-center mb-3">
-                            <span class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide" data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
+                            <span
+                                class="bg-purple-900/80 text-purple-300 border border-purple-500/60 px-3 py-1 rounded-full text-xs font-bold tracking-wide"
+                                data-en="🚀 PERSONAL / LAB" data-es="🚀 PERSONAL / LAB">
                                 🚀 PERSONAL / LAB
                             </span>
                             <span class="text-xs text-purple-300 font-bold">Alura Latam</span>
                         </div>
-                        <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
-                            <img src="IMG/PROYECTOS/screen-1.png" alt="Project Thumbnail" class="w-full h-full object-cover rounded-2xl">
+                        <div
+                            class="h-48 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center text-6xl mb-6">
+                            <img src="IMG/PROYECTOS/screen-1.png" alt="Project Thumbnail"
+                                class="w-full h-full object-cover rounded-2xl">
                         </div>
-                        <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                        <h3
+                            class="text-xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                             Encriptador de Texto – Alura
                         </h3>
-                        <p class="text-gray-300 mb-4 text-sm" data-en="This project is part of Alura Latam's ONE program. It is a web application that allows you to easily encrypt and decrypt text, following a set of defined rules to transform words. Its objective is to practice programming logic, DOM manipulation, and event handling in JavaScript. It is built with the following technologies:" data-es="Este proyecto forma parte del programa ONE de Alura Latam. Se trata de una aplicación web que permite encriptar y desencriptar texto de manera sencilla, siguiendo un conjunto de reglas definidas para transformar las palabras. Su objetivo es practicar lógica de programación, manipulación del DOM y manejo de eventos en JavaScript. Está construido con las siguientes tecnologías:">
-                            Este proyecto forma parte del programa ONE de Alura Latam. Se trata de una aplicación web que permite encriptar y desencriptar texto de manera sencilla, siguiendo un conjunto de reglas definidas para transformar las palabras. Su objetivo es practicar lógica de programación, manipulación del DOM y manejo de eventos en JavaScript. Está construido con las siguientes tecnologías:
+                        <p class="text-gray-300 mb-4 text-sm"
+                            data-en="This project is part of Alura Latam's ONE program. It is a web application that allows you to easily encrypt and decrypt text, following a set of defined rules to transform words. Its objective is to practice programming logic, DOM manipulation, and event handling in JavaScript. It is built with the following technologies:"
+                            data-es="Este proyecto forma parte del programa ONE de Alura Latam. Se trata de una aplicación web que permite encriptar y desencriptar texto de manera sencilla, siguiendo un conjunto de reglas definidas para transformar las palabras. Su objetivo es practicar lógica de programación, manipulación del DOM y manejo de eventos en JavaScript. Está construido con las siguientes tecnologías:">
+                            Este proyecto forma parte del programa ONE de Alura Latam. Se trata de una aplicación web
+                            que permite encriptar y desencriptar texto de manera sencilla, siguiendo un conjunto de
+                            reglas definidas para transformar las palabras. Su objetivo es practicar lógica de
+                            programación, manipulación del DOM y manejo de eventos en JavaScript. Está construido con
+                            las siguientes tecnologías:
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-orange-600 px-3 py-1 rounded-full text-xs">HTML5</span>
                             <span class="bg-blue-600 px-3 py-1 rounded-full text-xs">CSS3</span>
                             <span class="bg-yellow-600 px-3 py-1 rounded-full text-xs">JavaScript</span>
                         </div>
-                        <button class="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white py-3 rounded-xl hover:scale-105 transition-transform" data-en="DISCOVER" data-es="DESCUBRIR">
+                        <button
+                            class="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white py-3 rounded-xl hover:scale-105 transition-transform"
+                            data-en="DISCOVER" data-es="DESCUBRIR">
                             DESCUBRIR
                         </button>
                     </div>
@@ -1180,10 +1455,11 @@
     <!-- Hobbies Section -->
     <section id="hobbies" class="py-20 relative z-10">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent fade-in">
+            <h2
+                class="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent fade-in">
                 <span data-en="HOBBIES & PASSIONS" data-es="PASATIEMPOS E INTERESES">PASATIEMPOS E INTERESES</span>
             </h2>
-            
+
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 <div class="hobby-card fade-in">
                     <img src="IMG/HOBBIES/01-camara.png" alt="Fotografía" class="hobby-img">
@@ -1197,7 +1473,8 @@
 
                 <div class="hobby-card fade-in">
                     <img src="IMG/HOBBIES/10-hawaiano.png" alt="Danzas Polinesias" class="hobby-img">
-                    <span class="text-xs font-bold" data-en="Polynesian Dance" data-es="Danzas Polinesias">Danzas Polinesias</span>
+                    <span class="text-xs font-bold" data-en="Polynesian Dance" data-es="Danzas Polinesias">Danzas
+                        Polinesias</span>
                 </div>
 
                 <div class="hobby-card fade-in">
@@ -1251,46 +1528,58 @@
     <!-- Contact Section -->
     <section id="contact" class="py-20 relative z-10">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent fade-in">
+            <h2
+                class="text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent fade-in">
                 <span data-en="CONTACT" data-es="CONTACTO">CONTACTO</span>
             </h2>
-            
-            <p class="text-xl text-gray-300 mb-12 fade-in" data-en="Ready to create something that flows beyond imagination? Let's merge our creative energies and build liquid experiences together." data-es="¿Listo para transformar ideas en código y experiencias que perduren? Unamos lógica y creatividad para construir soluciones que fluyen del backend al frontend, conectando datos, diseño y usuarios en perfecta armonía.">
-                ¿Listo para transformar ideas en código y experiencias que perduren? Unamos lógica y creatividad para construir soluciones que fluyen del backend al frontend, conectando datos, diseño y usuarios en perfecta armonía.
+
+            <p class="text-xl text-gray-300 mb-12 fade-in"
+                data-en="Ready to create something that flows beyond imagination? Let's merge our creative energies and build liquid experiences together."
+                data-es="¿Listo para transformar ideas en código y experiencias que perduren? Unamos lógica y creatividad para construir soluciones que fluyen del backend al frontend, conectando datos, diseño y usuarios en perfecta armonía.">
+                ¿Listo para transformar ideas en código y experiencias que perduren? Unamos lógica y creatividad para
+                construir soluciones que fluyen del backend al frontend, conectando datos, diseño y usuarios en perfecta
+                armonía.
             </p>
-            
+
             <div class="grid md:grid-cols-3 gap-8 mb-12">
                 <div class="glass-card p-8 rounded-3xl hover:scale-105 transition-transform breathe fade-in">
                     <div class="text-5xl mb-4">🚀</div>
                     <h3 class="font-bold mb-2 text-purple-400">CV.FLOW</h3>
                     <div class="flex flex-col gap-2 mt-2">
-                        <a href="CV_Nayeli_Carrizales.html" target="_blank" class="text-gray-300 hover:text-purple-400 transition-colors text-sm font-semibold">
+                        <a href="CV_Nayeli_Carrizales.html" target="_blank"
+                            class="text-gray-300 hover:text-purple-400 transition-colors text-sm font-semibold">
                             📄 Español (Ver / PDF)
                         </a>
-                        <a href="CV_Nayeli_Carrizales_EN.html" target="_blank" class="text-gray-300 hover:text-purple-400 transition-colors text-sm font-semibold">
+                        <a href="CV_Nayeli_Carrizales_EN.html" target="_blank"
+                            class="text-gray-300 hover:text-purple-400 transition-colors text-sm font-semibold">
                             🌐 English (View / PDF)
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="glass-card p-8 rounded-3xl hover:scale-105 transition-transform breathe fade-in">
                     <div class="text-5xl mb-4">🐙</div>
                     <h3 class="font-bold mb-2 text-pink-400">GITHUB.STREAM</h3>
-                    <a href="https://github.com/NayeliCarrizalesD" target="_blank" class="text-gray-300">@NayeliCarrizalesD</a>
+                    <a href="https://github.com/NayeliCarrizalesD" target="_blank"
+                        class="text-gray-300">@NayeliCarrizalesD</a>
                 </div>
-                
+
                 <div class="glass-card p-8 rounded-3xl hover:scale-105 transition-transform breathe fade-in">
                     <div class="text-5xl mb-4">🌐</div>
                     <h3 class="font-bold mb-2 text-blue-400">LINKEDIN.PULSE</h3>
-                    <a href="https://www.linkedin.com/in/nayeli-carrizales-diaz/" target="_blank" class="text-gray-300">@nayeli-carrizales-diaz</a>
+                    <a href="https://www.linkedin.com/in/nayeli-carrizales-diaz/" target="_blank"
+                        class="text-gray-300">@nayeli-carrizales-diaz</a>
                 </div>
             </div>
-            
+
             <div class="glass-card p-12 rounded-3xl fade-in">
-                <h3 class="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <h3
+                    class="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                     <span data-en="EMAIL" data-es="EMAIL">EMAIL</span>
                 </h3>
-                <button class="bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 text-white px-12 py-6 rounded-2xl font-bold lg:text-xl sm:text-sm hover:scale-110 transition-transform breathe" data-en="START FLOWING" data-es="COMENZAR A FLUIR">
+                <button
+                    class="bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 text-white px-12 py-6 rounded-2xl font-bold lg:text-xl sm:text-sm hover:scale-110 transition-transform breathe"
+                    data-en="START FLOWING" data-es="COMENZAR A FLUIR">
                     📩 nayeli.carrizales.diaz@gmail.com
                 </button>
             </div>
@@ -1300,7 +1589,7 @@
     <!-- Footer -->
     <footer class="py-8 text-center text-gray-400 relative z-10 glass-card">
         <p data-en="© 2025 Nayeli Carrizales " data-es="© 2025 Nayeli Carrizales ">
-            © 2025 Nayeli Carrizales 
+            © 2025 Nayeli Carrizales
         </p>
     </footer>
 
@@ -1308,22 +1597,22 @@
         // High-Performance Engine & State
         let currentLang = 'es';
         let currentTheme = 'dark';
-        
+
         let mouseX = -100, mouseY = -100;
         let cursorX = -100, cursorY = -100;
         let isCursorActive = false;
-        
+
         let canvas, ctx;
         let particles = [];
         const PARTICLE_COUNT = 45;
 
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             initializeCursor();
             initializeParticles();
             startTypewriter();
             initializeControls();
             initializeScrollAnimations();
-            
+
             // Unified smooth animation loop
             requestAnimationFrame(renderLoop);
         });
@@ -1367,7 +1656,7 @@
             canvas = document.getElementById('particleCanvas');
             if (!canvas) return;
             ctx = canvas.getContext('2d', { alpha: true });
-            
+
             resizeCanvas();
             window.addEventListener('resize', resizeCanvas, { passive: true });
 
@@ -1469,15 +1758,15 @@
                 es: ['CLOUD & AI ENGINEER', 'SOFTWARE ENGINEER', 'AGENTIC AI DEVELOPER', 'FULL STACK DEVELOPER'],
                 en: ['CLOUD & AI ENGINEER', 'SOFTWARE ENGINEER', 'AGENTIC AI DEVELOPER', 'FULL STACK DEVELOPER']
             };
-            
+
             let textIndex = 0;
             let charIndex = 0;
             let isDeleting = false;
-            
+
             function type() {
                 const currentTexts = texts[currentLang];
                 const currentText = currentTexts[textIndex];
-                
+
                 if (isDeleting) {
                     typewriter.textContent = currentText.substring(0, charIndex - 1);
                     charIndex--;
@@ -1485,9 +1774,9 @@
                     typewriter.textContent = currentText.substring(0, charIndex + 1);
                     charIndex++;
                 }
-                
+
                 let typeSpeed = isDeleting ? 40 : 80;
-                
+
                 if (!isDeleting && charIndex === currentText.length) {
                     typeSpeed = 1800;
                     isDeleting = true;
@@ -1496,10 +1785,10 @@
                     textIndex = (textIndex + 1) % currentTexts.length;
                     typeSpeed = 400;
                 }
-                
+
                 typewriterTimeout = setTimeout(type, typeSpeed);
             }
-            
+
             type();
         }
 
@@ -1510,10 +1799,10 @@
 
             const themeBtn = document.getElementById('themeSwitch');
             if (themeBtn) themeBtn.addEventListener('click', switchTheme);
-            
+
             // Smooth Scroll
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
+                anchor.addEventListener('click', function (e) {
                     const targetId = this.getAttribute('href');
                     if (targetId && targetId !== '#') {
                         const target = document.querySelector(targetId);
@@ -1530,14 +1819,14 @@
 
             // Project Category Filters
             document.querySelectorAll('#projectFilters .filter-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
+                btn.addEventListener('click', function () {
                     document.querySelectorAll('#projectFilters .filter-btn').forEach(b => {
                         b.classList.remove('active', 'bg-purple-600/30', 'text-white', 'border-purple-500');
                         b.classList.add('text-gray-300');
                     });
                     this.classList.add('active', 'bg-purple-600/30', 'text-white', 'border-purple-500');
                     this.classList.remove('text-gray-300');
-                    
+
                     const filter = this.getAttribute('data-filter');
                     document.querySelectorAll('.project-card-item').forEach(card => {
                         if (filter === 'all' || card.getAttribute('data-category') === filter) {
@@ -1552,11 +1841,11 @@
 
         function switchLanguage() {
             currentLang = currentLang === 'es' ? 'en' : 'es';
-            
+
             document.querySelectorAll('[data-en][data-es]').forEach(element => {
                 element.textContent = element.getAttribute(`data-${currentLang}`);
             });
-            
+
             const langBtn = document.getElementById('langSwitch');
             if (langBtn) {
                 langBtn.textContent = currentLang === 'es' ? 'ES | EN' : 'EN | ES';
@@ -1578,7 +1867,7 @@
                 threshold: 0.08,
                 rootMargin: '0px 0px -40px 0px'
             };
-            
+
             const observer = new IntersectionObserver((entries, obs) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -1587,11 +1876,12 @@
                     }
                 });
             }, observerOptions);
-            
+
             document.querySelectorAll('.fade-in').forEach(element => {
                 observer.observe(element);
             });
         }
     </script>
 </body>
+
 </html>

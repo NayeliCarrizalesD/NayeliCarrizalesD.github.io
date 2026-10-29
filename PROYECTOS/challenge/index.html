@@ -1,51 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewpoint" content="width=device-width" , initial-scale="1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    <title>Challenge Nay C Diaz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Encriptador de Texto — Challenge Oracle ONE & Alura</title>
 </head>
+
 <body>
-    <header>
-        <img class="logo" height="30px" src="img/Logo.png" alt="Logo de alura">
-        <a href="../../"><span><i class="fa-solid fa-house"></i></i></span></a>
+    <header class="app-header">
+        <a href="../../" class="logo-link">
+            <img class="logo" src="img/Logo.png" alt="Logo de Alura">
+        </a>
+        <a href="../../" class="btn-home" title="Volver al Portafolio">
+            <i class="fa-solid fa-house"></i>
+            <span>Volver</span>
+        </a>
     </header>
+
     <main class="grid-container">
-        <section>
+        <!-- Input section -->
+        <section class="section-encriptador">
             <div class="div-encriptador">
-                <textarea class="cajaTexto" cols="30" rows="10" placeholder="Ingrese el texto aqui "></textarea>
-                <div>
-                    <h6 class="informacion">Solo letras minusculas y sin acentos</h6>
+                <textarea class="cajaTexto" placeholder="Ingrese el texto aquí..." autofocus></textarea>
+                
+                <div class="informacion-box">
+                    <span class="info-icon"><i class="fa-solid fa-circle-exclamation"></i></span>
+                    <h6 class="informacion">Solo letras minúsculas y sin acentos</h6>
                 </div>
+                
                 <div class="divBotones">
-                    <button class="botonEnviar" onclick="btnEncriptar()">Encriptar</button>
-                    <button class="botonDesencriptador" onclick=" btnDesencriptar()">Desencriptar</button>
+                    <button class="botonEnviar" onclick="btnEncriptar()">
+                        <i class="fa-solid fa-lock"></i> Encriptar
+                    </button>
+                    <button class="botonDesencriptador" onclick="btnDesencriptar()">
+                        <i class="fa-solid fa-lock-open"></i> Desencriptar
+                    </button>
                 </div>
             </div>
-
         </section>
 
-        <section>
+        <!-- Output section -->
+        <section class="section-desencriptador">
             <div class="div-desencriptador">
-                <textarea class="cajaMensaje" cols="20" rows="9"></textarea>
-                <div class="divBotones">
-                    <button class="copiar" onclick="btnCopiar()">Copiar</button>
+                <textarea class="cajaMensaje" placeholder="Ningún mensaje fue encontrado" readonly></textarea>
+                <div class="divBotones divBotones-copiar">
+                    <button class="copiar" onclick="btnCopiar()">
+                        <i class="fa-regular fa-copy"></i> Copiar Mensaje
+                    </button>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer class="app-footer">
+        <p>Desarrollado por <strong>Nayeli Carrizales</strong> · Challenge Oracle ONE & Alura Latam</p>
+    </footer>
+
     <script src="JS/scrip.js"></script>
     <script src="https://kit.fontawesome.com/ec383dc983.js" crossorigin="anonymous"></script>
 </body>
-
-<footer>
-    <div></div>
-</footer>
 
 </html>
