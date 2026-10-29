@@ -34,10 +34,12 @@
 ---
 
 ### **CONSULTORA EN SISTEMAS WEB Y AUTOMATIZACIÓN DE PROCESOS**
-**MGO Industrial** | *Septiembre 2023 – Octubre 2025*
-* Diseñé e implementé el **Tablero de Control de Bodega y Logística**, automatizando el flujo de entradas/salidas de materiales mediante **Google Apps Script** y consolidando métricas operativas en tiempo real en **Google Looker Studio**.
-* Establecí un sistema de **trazabilidad de inventarios a nivel de factura y proveedor**, mitigando discrepancias de existencias y habilitando alertas automáticas de reorden.
-* Desarrollé y optimicé la plataforma web corporativa con **React, TypeScript y Tailwind CSS**, mejorando la velocidad de respuesta y la experiencia de usuario.
+**MGO Industrial (Grupo MGO · Química OB · Overseas)** | *Septiembre 2023 – Octubre 2025*
+* Diseñé e implementé el ecosistema de **Business Intelligence Integral (Inventarios, Ventas y Compras)** en **Google Looker Studio**, consolidando el control de más de **489k unidades en entradas y 381k en salidas**.
+* Digitalicé el flujo operativo de almacén conectando captura en piso con **Google Forms** hacia repositorios estructurados en **Google Sheets** para administración, automatizando conciliación de existencias, cálculo de costos y alertas con **Google Apps Script**.
+* Desarrollé la **trazabilidad operativa y aduanal por lote, pedimento de importación, factura transportista y precios bi-moneda (USD/MXN)**, eliminando discrepancias físicas de inventario y agilizando auditorías.
+* Diseñé un **flujo automatizado de solicitud y autorización de vacaciones (HR Automation)** integrando **Google Forms, Google Sheets y Google Apps Script (GmailApp)** para envío de solicitudes a jefaturas y notificación de resolución por correo al empleado.
+* Diseñé, desarrollé y desplegué **3 sitios y plataformas web corporativas** para las unidades de negocio del grupo (**MGO Industrial**, el portal del **Restaurante** y la firma química hermana **Química OB**), utilizando **React, TypeScript y Tailwind CSS** con alta optimización de rendimiento.
 
 ---
 
@@ -84,7 +86,7 @@
 
 ### 🏢 **PROYECTOS CORPORATIVOS & DE PRODUCCIÓN EMPRESARIAL**
 
-* **Registro Único Móvil & Plataforma Multi-Servidor (Grupo Salinas):**
+* **Plataforma Corporativa de Registro Móvil & Ecosistema Multi-Servidor (Grupo Salinas):**
   * Solución de registro corporativo de alcance nacional para dispositivos móviles (colaboradores corporativos y red geográfica).
   * Dinámicas interactivas y juegos en Vanilla JS con arquitecturas adaptadas para despliegue en múltiples servidores heterogéneos. Control de versiones y ciclo de vida en **GitLab**.
 

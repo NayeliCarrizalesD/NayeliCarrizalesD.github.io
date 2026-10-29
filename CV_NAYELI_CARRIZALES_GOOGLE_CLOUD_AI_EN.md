@@ -35,10 +35,12 @@
 ---
 
 ### **SYSTEMS CONSULTANT & PROCESS AUTOMATION SPECIALIST**
-**MGO Industrial** | *September 2023 – October 2025*
-* Architected and implemented the **Warehouse & Logistics Control Dashboard**, automating inbound/outbound material logging through **Google Apps Script** and consolidating live operational metrics in **Google Looker Studio**.
-* Engineered **invoice- and vendor-level inventory traceability**, significantly eliminating physical inventory discrepancies and enabling automated reorder alerts.
-* Developed and optimized the corporate web platform with **React, TypeScript, and Tailwind CSS**, boosting response times and improving UX.
+**MGO Industrial (MGO Group · Química OB · Overseas)** | *September 2023 – October 2025*
+* Architected and deployed an end-to-end **Enterprise Supply Chain & BI Suite (Inventory, Sales, and Procurement)** in **Google Looker Studio**, overseeing **489k+ inbound and 381k+ outbound units**.
+* Bridged warehouse floor operations and office administration: deployed mobile logging with **Google Forms** feeding structured data pipelines in **Google Sheets**, with automated reconciliation and reorder logic scripted in **Google Apps Script**.
+* Engineered strict **lot-level, customs declaration (pedimento), carrier invoice, and dual-currency (USD/MXN) inventory traceability**, eliminating inventory shrinkage and accelerating audit reporting.
+* Designed an automated **Vacation Request & Approval Workflow (HR Automation)** connecting **Google Forms, Google Sheets, and Apps Script (GmailApp)** for management approvals and employee email notifications.
+* Designed, built, and launched **3 corporate and commercial websites** for the business group (**MGO Industrial**, the group's **Restaurant**, and sister company **Química OB**) utilizing **React, TypeScript, and Tailwind CSS**.
 
 ---
 

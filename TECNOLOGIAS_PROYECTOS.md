@@ -83,13 +83,23 @@ Este documento recopila la arquitectura técnica y el conjunto de tecnologías, 
 
 ---
 
-## 4. 📦📑 Tablero de Control de Bodega & Trazabilidad de Facturas
-* **Descripción:** Solución corporativa para gestión de almacén, logística e inventarios. Automatiza el registro de entradas y salidas de materiales mediante Google Apps Script y genera tableros analíticos en tiempo real con Google Looker Studio.
+## 4. 📊 Control de Inventarios, Logística & Comercio Exterior (Grupo MGO · Química OB · Overseas)
+* **Empresas Integradas:** MGO Industrial, Química OB y Overseas (ORSA).
+* **Flujo Operativo End-to-End:**
+  1. **Piso / Bodega:** Personal operativo captura entradas y salidas de material en tiempo real mediante **Google Forms** optimizados para dispositivos móviles.
+  2. **Oficina / Administración:** Recepción automática en **Google Sheets** estructurados, donde **Google Apps Script** valida folios, calcula costos y sincroniza compras vs. ventas.
+  3. **Dirección / BI:** **Google Looker Studio** (3 páginas analíticas) conectado mediante *Data Blending* relacional entre entradas, salidas e inventario consolidado.
+* **Escala & Métricas Reales:**
+  * **489.3 mil** kg/unidades en Total Entradas.
+  * **381.3 mil** kg/unidades en Total Salidas.
+  * **108.1 mil** kg/unidades en Existencias Activas.
 * **Stack Tecnológico:**
-  * **Business Intelligence & Visualización:** Google Looker Studio (dashboards interactivos, métricas de inventario, stock crítico).
-  * **Automatización & Scripting:** Google Apps Script (JavaScript moderno para validaciones, generación de IDs y triggers de actualización).
-  * **Almacenamiento & Modelado de Datos:** Google Sheets / Google Sheets API (estructuración relacional de hojas para entradas, salidas y catálogo).
-  * **Trazabilidad:** Rastreo operativo detallado vinculado por número de factura y proveedor.
+  * **Business Intelligence:** Google Looker Studio (*Página 1: Inventario General*, *Página 2: Ventas por Cliente*, *Página 3: Compras & Aduanas*).
+  * **Automatización:** Google Apps Script (triggers de cálculo, conciliación y alertas).
+  * **Captura & Repositorio:** Google Forms y Google Sheets (modelado relacional multi-fuente).
+  * **Trazabilidad de Comercio Exterior:** Trazabilidad estricta por Lote, Pedimento de importación, Factura transportista y Precios bi-moneda (USD y MXN).
+  * **Desarrollo de Portales Web Corporativos Multi-Marca:** Diseño y maquetación frontend de los 3 sitios web del grupo empresarial (MGO Industrial, el sitio comercial del Restaurante y la firma química hermana Química OB) desarrollados con React, TypeScript y Tailwind CSS.
+  * **Automatización de Procesos de RRHH (People Operations):** Sistema de autoservicio para solicitud de vacaciones implementado con Google Forms, base de datos en Google Sheets y disparadores basados en eventos con Google Apps Script (`onFormSubmit`, `onEdit` y `GmailApp`) para notificar al jefe inmediato y enviar la confirmación de autorización por correo electrónico al colaborador.
 
 ---
 

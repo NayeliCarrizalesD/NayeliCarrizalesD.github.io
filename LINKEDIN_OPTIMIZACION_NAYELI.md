@@ -1,68 +1,114 @@
 # Propuestas de Contenido para LinkedIn – Nayeli Carrizales
-Este documento contiene textos estratégicos listos para copiar y pegar en tu perfil y feed de **LinkedIn**, diseñados para captar la atención de reclutadores tecnológicos y de empresas de primer nivel como **Google (Google Cloud / AI / Software Engineering)**.
+Este documento contiene textos estratégicos listos para copiar y pegar en tu perfil de **LinkedIn** (Sección de Experiencia, Acerca de, y Feed), redactados con **nombres genéricos y descriptivos** para proteger la confidencialidad, privacidad y políticas internas de empresa (NDAs).
 
 ---
 
-## 1. 🚀 Publicación (Post para el Feed de LinkedIn)
-> **Objetivo:** Comunicar tu experiencia real en producción a escala masiva, tu dominio de GitLab y arquitecturas multi-servidor, posicionándote como una ingeniera capaz de resolver retos de infraestructura y frontend de alta concurrencia.
-
-### Texto del Post:
-
-El desarrollo de software en entornos corporativos de gran escala te enseña que el código no solo debe funcionar bien: debe ser resiliente, modular y adaptarse a ecosistemas de infraestructura muy diversos. ⚡
-
-Durante mi trayectoria en **Grupo Salinas**, he tenido la satisfacción de llevar **4 proyectos estratégicos a producción**, enfrentando retos de alta concurrencia, despliegues heterogéneos y alcance nacional:
-
-📱 **Registro Único (Móvil & Geografía):** Recientemente lanzamos la versión para dispositivos móviles, una solución unificada que da servicio a miles de colaboradores del corporativo y de la red geográfica en todo el país.
-🎮 **Rally Mundialista (Juegos Web Multi-Servidor):** Desarrollo de experiencias dinámicas e interactivas construidas con **Vanilla JavaScript (ES6+), HTML5 Canvas y CSS3**, optimizadas para máxima fluidez a 60 FPS sin dependencias pesadas. El mayor reto técnico fue modularizar y adaptar la arquitectura del código fuente para ejecutarse de manera confiable en múltiples servidores con configuraciones e infraestructuras heterogéneas.
-🔍 **Buscador Dinámico de Ganadores:** Motor de filtrado y búsqueda instantánea para dinámicas corporativas masivas, respondiendo en milisegundos bajo picos de alta concurrencia.
-⚽ **Módulo Copa Socio:** Interfaz dinámica para el torneo deportivo institucional, desplegando fixtures, estadísticas y clasificaciones en tiempo real.
-
-Todo este flujo administrado a través de **GitLab corporativo**, aplicando buenas prácticas de ramas protegidas, code reviews e integración continua.
-
-A la par de estos proyectos corporativos, continúo explorando la frontera tecnológica con arquitecturas en la nube, contenedores Docker, Next.js 16 / React 19 y flujos agénticos asistidos por IA (**Google Antigravity IDE & CLI**, **AWS Kiro**).
-
-Construir soluciones de software que impactan a miles de personas todos los días es lo que más me apasiona. ¡Vamos por los siguientes retos! 🚀
-
----
-*#SoftwareEngineering #FrontendDeveloper #WebDevelopment #JavaScript #GitLab #ProductionReady #CloudEngineering #WomenInTech #GrupoSalinas*
+## 🏢 SECCIÓN: EXPERIENCIA EN LINKEDIN (Listos para Copiar y Pegar)
 
 ---
 
-## 2. 🌟 Sección "Acerca de" (About de tu Perfil de LinkedIn)
-> **Objetivo:** Optimización SEO para que los algoritmos y reclutadores de Google, Amazon y empresas globales encuentren tu perfil al buscar *Cloud AI Engineer*, *Frontend Developer* o *Full Stack*.
+### 1️⃣ GRUPO SALINAS
+* **Cargo:** Consultor Senior en Desarrollo Front-end
+* **Tipo de empleo:** Jornada completa
+* **Nombre de la empresa:** Grupo Salinas
+* **Ubicación:** Ciudad de México, México
+* **Tipo de ubicación:** Presencial / Híbrido
+* **Fechas:** nov. de 2025 – actualidad
+* **Sector:** Servicios y tecnologías de la información
 
-### Texto para "Acerca de":
+#### 📋 Descripción para pegar en LinkedIn:
+```text
+Liderazgo en arquitectura frontend y puesta en producción de 5 plataformas web estratégicas de escala nacional, gestionando gobernanza de código, ramas de release y code reviews mediante GitLab corporativo:
 
-Soy **Ingeniera en Tecnologías de la Información y Comunicaciones (Graduada con Honores)**, apasionada por la arquitectura de software web, la automatización en la nube y el desarrollo de soluciones de alto impacto empresarial.
+🔹 PLATAFORMA CORPORATIVA DE REGISTRO & ONBOARDING MÓVIL (React 19 & Vite):
+Diseño y desarrollo de la plataforma corporativa con enfoque Mobile-First y validaciones reactivas estrictas, garantizando alta disponibilidad y rendimiento fluido para miles de colaboradores de corporativo y geografía en todo el país.
 
-Actualmente formo parte del equipo de desarrollo en **Grupo Salinas**, donde he liderado la entrega de **4 sistemas estratégicos a producción**, entre ellos la plataforma corporativa de **Registro Único Móvil** con alcance a nivel nacional, y dinámicas web interactivas desarrolladas en **Vanilla JavaScript** adaptadas a **arquitecturas multi-servidor heterogéneas**, gestionando el ciclo de vida del código mediante **GitLab**.
+🔹 ECOSISTEMA DE GAMIFICACIÓN WEB & DINÁMICAS MULTI-SERVIDOR:
+Desarrollo de dinámicas web interactivas y minijuegos de alto rendimiento (60 FPS) construidos con TypeScript, HTML5 Canvas y Framer Motion. Adaptación y modularización de la arquitectura de software para su ejecución homogénea en diferentes servidores de producción con configuraciones técnicas heterogéneas, complementado con prototipado en Docker.
 
-Mi experiencia combina el rigor de la ingeniería de software corporativa con el desarrollo de soluciones modernas full stack y automatización de datos:
+🔹 MOTOR REACTIVO DE BÚSQUEDA Y FILTRADO EN TIEMPO REAL:
+Motor de consulta y filtrado en tiempo real de alta velocidad desarrollado en React y SCSS, diseñado para mitigar latencia y absorber picos masivos de concurrencia simultánea durante activaciones institucionales.
 
-🔹 **Sistemas Web & Frontend:** React 19, Next.js 16 (App Router), TypeScript, JavaScript moderno (ES6+), Zustand, Tailwind CSS, Vite y HTML5 Canvas para experiencias interactivas.  
-🔹 **Infraestructura & Contenedores:** Docker, Docker Compose, Nginx Alpine, Vercel y bases de datos relacionales serverless (PostgreSQL / Neon, Drizzle ORM).  
-🔹 **Automatización & Ecosistema Google:** Google Apps Script, Google Looker Studio (Business Intelligence), Google Sheets API, consumo e ingesta de APIs REST/OAuth.  
-🔹 **Desarrollo Agéntico & Herramientas de IA:** Google Antigravity IDE & CLI y AWS Kiro AI IDE para la orquestación y aceleración del ciclo de vida del software.
+🔹 PORTAL DE GESTIÓN DE TORNEOS DEPORTIVOS & REPORTERÍA EJECUTIVA:
+Interfaz interactiva para torneos deportivos corporativos con actualización en vivo de fixtures, tablas y estadísticas (React + Axios), integrando un motor de exportación de reportes ejecutivos en PDF mediante PDFMake.
 
-Me destaco por mi capacidad para traducir requerimientos de negocio complejos en arquitecturas técnicas escalables, priorizando la experiencia del usuario, la trazabilidad de datos y la excelencia operativa.
+🔹 PORTAL CORPORATIVO DE BIENESTAR & ANALÍTICA VISUAL:
+Construcción de tableros analíticos interactivos con Apache ECharts, validación tipada estricta (Zod + React Hook Form), gestión de estado con Zustand y especificaciones técnicas para despliegues empresariales en servidores Microsoft IIS (Windows Server).
 
-📫 **Contacto:** nayeli.carrizales.diaz@gmail.com  
-🌐 **Portafolio:** https://nayelicarrizalesd.github.io/  
-💻 **GitHub:** https://github.com/NayeliCarrizalesD  
+Stack clave: React 19 · TypeScript · GitLab Corporativo · Vite · Apache ECharts · Zustand · Zod · Framer Motion · HTML5 Canvas · PDFMake · Docker · Microsoft IIS · Mobile First.
+```
+
+* **Aptitudes a asociar:**  
+  `React.js` · `TypeScript` · `GitLab` · `Vite` · `Apache ECharts` · `Zustand` · `Docker` · `HTML5 Canvas` · `Microsoft IIS` · `Framer Motion`
 
 ---
 
-## 3. 🏢 Experiencia Laboral en LinkedIn (Puesto en Grupo Salinas)
-> **Cargo:** Consultor Senior en Desarrollo Front-end / Software Engineer  
-> **Empresa:** Grupo Salinas  
-> **Ubicación:** Ciudad de México (CDMX), México  
-> **Periodo:** Noviembre 2025 – Actualidad  
+### 2️⃣ EUFONIA STUDIOS
+* **Cargo:** Analista de Talento y Optimización de Procesos
+* **Tipo de empleo:** Jornada parcial
+* **Nombre de la empresa:** Eufonia Studios
+* **Ubicación:** México
+* **Tipo de ubicación:** En remoto
+* **Fechas:** mar. de 2024 – dic. de 2025 · 1 año 10 meses
+* **Sector:** Medios digitales / Entretenimiento / Software
 
-### Descripción / Viñetas:
-* Liderazgo técnico en arquitectura frontend y entrega a producción de **plataformas corporativas estratégicas de escala nacional**, gestionando gobernanza de código, ramas de release y code reviews mediante **GitLab corporativo**.
-* **Plataforma Web de Onboarding & Registro Móvil (React 19 & Vite):** Diseño de la arquitectura frontend para dispositivos móviles con enfoque Mobile-First y validaciones reactivas estrictas, dando servicio con alta disponibilidad a colaboradores de corporativo y campo en todo el país.
-* **Ecosistema de Gamificación & Engagement Multi-Servidor:** Desarrollo de dinámicas interactivas y minijuegos web de alto rendimiento (60 FPS) con **TypeScript, HTML5 Canvas y Framer Motion**. Adaptación de arquitecturas de software para su ejecución homogénea en diferentes servidores de producción con arquitecturas e infraestructuras heterogéneas, complementado con prototipado en **Docker**.
-* **Motor Reactivo de Búsqueda y Filtrado en Tiempo Real (React & SCSS):** Implementación de un motor dinámico de consulta y filtrado instantáneo en cliente, diseñado para mitigar latencia y absorber picos masivos de concurrencia simultánea en activaciones masivas.
-* **Portal Deportivo Institucional & Reportería Dinámica (React & Axios):** Plataforma para torneos deportivos con actualización de fixtures y estadísticas en vivo, e integración de exportación automática de reportes ejecutivos en PDF mediante **PDFMake**.
-* **Portal Corporativo de Bienestar & Analítica Visual (React, TypeScript & ECharts):** Construcción de tableros analíticos interactivos con **ECharts**, validación tipada estricta (**Zod + React Hook Form**), gestión de estado en **Zustand** y especificaciones para despliegues empresariales en servidores **IIS (Windows Server)**.
-* **Aptitudes clave:** React 19 · TypeScript · GitLab Corporativo · Vite · ECharts · Zustand · Zod · Framer Motion · HTML5 Canvas · PDFMake · Docker · Despliegues IIS · Mobile First · Rendimiento Web y Optimización.
+#### 📋 Descripción para pegar en LinkedIn:
+```text
+Diseño e implementación de sistemas de automatización, analítica de datos e ingesta multicanal de métricas para optimizar operaciones internas, benchmarking de creadores y procesos de selección:
+
+🔹 MOTOR DE INGESTA & SCRAPING MULTICANAL:
+Desarrollo de funciones personalizadas en Google Apps Script (@customfunction) para Google Sheets (=TIKTOKACCOUNTSTATS, =KICKSTREAMSTATS, =TWITCHCHANNELSTATS, =YOUTUBECHANNELSTATS, =IMPORTJSONAPI) para la recolección automática de estadísticas de video y streams.
+
+🔹 EXTRACCIÓN Y NORMALIZACIÓN DE MÉTRICAS EN TIEMPO REAL:
+Integración de pipelines de datos vía REST APIs y web scraping avanzado con expresiones regulares (RegEx) para TikTok (seguidores y likes normalizando sufijos K/M a enteros numéricos), YouTube Data API v3, Kick (vía KickAnalyst) y Twitch (vía SullyGnome).
+
+🔹 MOTOR DE CONSULTAS JSONPATH DINÁMICO:
+Implementación de un parser embebido en Apps Script para evaluar consultas estructuradas directamente desde celdas de cálculo, permitiendo extraer atributos anidados de APIs JSON sin necesidad de infraestructura externa.
+
+🔹 BUSINESS INTELLIGENCE & REPORTES:
+Modelado y visualización de tableros de control en Google Looker Studio y Google Sheets para monitoreo de KPIs de desempeño de creadores y funnel de talento.
+
+🔹 GESTIÓN Y RECLUTAMIENTO ESPECIALIZADO:
+Publicación de vacantes, filtrado técnico de candidatos, coordinación de entrevistas y seguimiento integral del proceso de contratación con bases de datos automatizadas y trazables.
+
+Stack clave: Google Apps Script · Google Sheets API · Web Scraping · Expresiones Regulares (RegEx) · Google Looker Studio · APIs REST · YouTube Data API v3 · JSONPath · Automatización de Procesos.
+```
+
+* **Aptitudes a asociar:**  
+  `Google Apps Script` · `Google Sheets` · `Extracción de datos web` · `Expresiones regulares (RegEx)` · `Google Looker Studio` · `APIs REST` · `YouTube Data API` · `Automatización de procesos` · `Análisis de datos`
+
+---
+
+### 3️⃣ MGO INDUSTRIAL
+* **Cargo:** Especialista en Sistemas Web y Automatización de Procesos, Gestor de E-commerce
+* **Tipo de empleo:** Jornada completa
+* **Nombre de la empresa:** MGO Industrial
+* **Ubicación:** Tlajomulco de Zúñiga, Jalisco, México
+* **Tipo de ubicación:** Presencial
+* **Fechas:** sept. de 2023 – oct. de 2025 · 2 años 2 meses
+* **Sector:** Comercio mayorista / Químicos / E-commerce
+
+#### 📋 Descripción para pegar en LinkedIn:
+```text
+Arquitectura y automatización de procesos operativos, logísticos y comerciales, integrando desarrollo web, flujos de datos en tiempo real y Business Intelligence:
+
+🔹 ARQUITECTURA DE DATOS DE 3 CAPAS (BODEGA ➔ OFICINA ➔ DIRECCIÓN):
+Diseño de un ecosistema integral de captura y visualización de datos:
+1. Captura operativa en campo/bodega mediante formularios móviles con Google Forms (entradas, salidas, conteos físicos).
+2. Centralización y procesamiento en Google Sheets automatizado con Google Apps Script (validaciones, conciliaciones de inventario y alertas).
+3. Dashboard ejecutivo en Google Looker Studio en tiempo real: Control multi-empresa (MGO Industrial, Química OB, Overseas) supervisando +489K unidades de entrada, +381K unidades de salida y +108K de stock activo, con trazabilidad aduanal por lote de producción, pedimentos y precios bimoneda (USD / MXN).
+
+🔹 AUTOMATIZACIÓN DE FLUJOS ADMINISTRATIVOS (RRHH & OPERACIONES):
+Diseño e implementación de un sistema automatizado de solicitud y autorización de vacaciones mediante Google Forms + Google Sheets + Apps Script (GmailApp), notificando automáticamente a jefaturas y emitiendo resoluciones formales al colaborador vía correo electrónico.
+
+🔹 DESARROLLO DE PLATAFORMAS WEB CORPORATIVAS:
+Diseño, desarrollo y puesta en producción de 3 sitios web comerciales para el grupo empresarial (sitio institucional MGO Industrial, sitio corporativo de Química OB y portal comercial para restaurante El Pulpo Chelero) implementando React, TypeScript y Tailwind CSS.
+
+🔹 GESTIÓN Y OPTIMIZACIÓN DE E-COMMERCE:
+Administración y optimización de canales digitales (Mercado Libre, Amazon, WooCommerce/Shopify): publicación y catalogación de productos, automatización de precios/inventarios, monitoreo de métricas de tráfico y conversión, y atención al cliente.
+
+Stack clave: Google Looker Studio (BI) · Google Apps Script · Google Sheets · React.js · TypeScript · Tailwind CSS · Automatización RPA · Trazabilidad Aduanal · E-commerce (Mercado Libre, Amazon) · APIs REST.
+```
+
+* **Aptitudes a asociar:**  
+  `Google Looker Studio` · `Google Apps Script` · `Google Sheets` · `React.js` · `TypeScript` · `Tailwind CSS` · `Automatización de procesos` · `Gestión de inventarios` · `E-commerce` · `Mercado Libre` · `Amazon`
