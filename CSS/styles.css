@@ -1,0 +1,2500 @@
+/* ==========================================================================
+   CYBERPUNK HUASTECO THEME — NAYELI CARRIZALES DÍAZ
+   Inspiración: Cultura Huasteca (San Luis Potosí, México) + Cyberpunk Tech
+   Paleta: Deep Obsidian Violet, Neon Magenta, Flor de Cempasúchil, Cyber Cyan
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+    /* Color Palette */
+    --bg-void: #07030c;
+    --bg-deep: #0d0617;
+    --bg-card: rgba(20, 9, 32, 0.72);
+    --bg-card-hover: rgba(30, 14, 48, 0.88);
+    --bg-card-solid: #150a24;
+    --bg-glass: rgba(255, 255, 255, 0.03);
+
+    /* Neon Huasteca Accents */
+    --neon-pink: #ff007f;
+    --neon-magenta: #ff1493;
+    --neon-rose: #ff2e93;
+    --neon-coral: #ff5e7e;
+    --neon-orange: #ff7a00;
+    --neon-cempasuchil: #ff9100;
+    --neon-gold: #ffb700;
+    --neon-cyan: #00f0ff;
+    --cyber-purple: #9d4edd;
+
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #e6d8f5;
+    --text-muted: #a491b8;
+    --text-dim: #6e5a84;
+
+    /* Glows & Shadows */
+    --glow-pink: 0 0 20px rgba(255, 0, 127, 0.55), 0 0 40px rgba(255, 0, 127, 0.25);
+    --glow-orange: 0 0 20px rgba(255, 122, 0, 0.55), 0 0 40px rgba(255, 122, 0, 0.25);
+    --glow-subtle: 0 0 15px rgba(255, 0, 127, 0.3);
+    --glow-box: inset 0 0 20px rgba(255, 0, 127, 0.15), 0 10px 30px rgba(0, 0, 0, 0.6);
+
+    /* Borders */
+    --border-neon: 1px solid rgba(255, 0, 127, 0.45);
+    --border-orange: 1px solid rgba(255, 122, 0, 0.45);
+    --border-subtle: 1px solid rgba(255, 255, 255, 0.08);
+    --border-gradient: linear-gradient(135deg, var(--neon-pink), var(--neon-orange));
+
+    /* Layout */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+    --max-w: 1240px;
+}
+
+/* Base Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+}
+
+body {
+    background-color: var(--bg-void);
+    color: var(--text-primary);
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    background-image: 
+        radial-gradient(circle at 15% 20%, rgba(255, 0, 127, 0.09) 0%, transparent 45%),
+        radial-gradient(circle at 85% 65%, rgba(255, 122, 0, 0.07) 0%, transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(157, 78, 221, 0.08) 0%, transparent 50%),
+        linear-gradient(180deg, #07030c 0%, #0d0617 50%, #08030e 100%);
+    background-attachment: fixed;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-void);
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--neon-pink), var(--neon-orange));
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-pink);
+    box-shadow: 0 0 10px var(--neon-pink);
+}
+
+/* Cyber Scanlines Effect Overlay (Subtle) */
+.scanlines-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0) 2px,
+        rgba(0, 0, 0, 0.15) 3px,
+        rgba(0, 0, 0, 0.15) 4px
+    );
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.35;
+}
+
+/* Traditional Huasteco Geometric Corner Borders */
+.huasteca-frame-tl, .huasteca-frame-tr, .huasteca-frame-bl, .huasteca-frame-br {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+    z-index: 900;
+    opacity: 0.75;
+    transition: opacity 0.3s ease;
+}
+.huasteca-frame-tl { top: 12px; left: 12px; border-top: 2px solid var(--neon-pink); border-left: 2px solid var(--neon-pink); }
+.huasteca-frame-tr { top: 12px; right: 12px; border-top: 2px solid var(--neon-orange); border-right: 2px solid var(--neon-orange); }
+.huasteca-frame-bl { bottom: 12px; left: 12px; border-bottom: 2px solid var(--neon-orange); border-left: 2px solid var(--neon-orange); }
+.huasteca-frame-br { bottom: 12px; right: 12px; border-bottom: 2px solid var(--neon-pink); border-right: 2px solid var(--neon-pink); }
+
+.huasteca-frame-tl::after, .huasteca-frame-tr::after, .huasteca-frame-bl::after, .huasteca-frame-br::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--neon-pink);
+    box-shadow: 0 0 8px var(--neon-pink);
+}
+.huasteca-frame-tl::after { top: -5px; left: -5px; }
+.huasteca-frame-tr::after { top: -5px; right: -5px; background: var(--neon-orange); box-shadow: 0 0 8px var(--neon-orange); }
+.huasteca-frame-bl::after { bottom: -5px; left: -5px; background: var(--neon-orange); box-shadow: 0 0 8px var(--neon-orange); }
+.huasteca-frame-br::after { bottom: -5px; right: -5px; }
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ==========================================================================
+   NAVIGATION BAR (Floating Cyber Pill)
+   ========================================================================== */
+.header-nav {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-pill-container {
+    background: rgba(18, 8, 30, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 0, 127, 0.35);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 0, 127, 0.2);
+    border-radius: 9999px;
+    padding: 8px 18px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 1050px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 1.5px;
+}
+
+.huasteca-mini-flower {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 6px rgba(255, 0, 127, 0.8));
+    animation: florPulseNeon 3s infinite alternate;
+    transition: transform 0.3s ease;
+}
+
+.nav-brand:hover .huasteca-mini-flower {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 6px;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    transition: all 0.25s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #fff;
+    background: rgba(255, 0, 127, 0.2);
+    border: 1px solid rgba(255, 0, 127, 0.5);
+    box-shadow: 0 0 12px rgba(255, 0, 127, 0.35);
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-lang-toggle {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    padding: 6px 12px;
+    border-radius: 9999px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s ease;
+}
+
+.btn-lang-toggle:hover {
+    border-color: var(--neon-orange);
+    color: var(--neon-orange);
+    box-shadow: 0 0 10px rgba(255, 122, 0, 0.4);
+}
+
+.btn-nav-cv {
+    background: linear-gradient(135deg, var(--neon-pink), var(--neon-orange));
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 9999px;
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-nav-cv:hover {
+    transform: translateY(-1px) scale(1.03);
+    box-shadow: 0 0 25px rgba(255, 0, 127, 0.7);
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   HERO SECTION (Cyberpunk Huasteco HUD + Avatar)
+   ========================================================================== */
+.hero-section {
+    padding-top: 140px;
+    padding-bottom: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-wrapper {
+    background: rgba(20, 9, 32, 0.65);
+    border: 1px solid rgba(255, 0, 127, 0.35);
+    border-radius: var(--radius-xl);
+    padding: 48px 52px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 0 30px rgba(255, 0, 127, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    display: grid;
+    grid-template-columns: 1.15fr 0.95fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Decorative corner circuits on hero */
+.hero-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 40px;
+    width: 140px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--neon-pink), var(--neon-orange), transparent);
+}
+.hero-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: 40px;
+    width: 140px;
+    height: 2px;
+    background: linear-gradient(270deg, var(--neon-pink), var(--neon-cyan), transparent);
+}
+
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--neon-pink);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    background: rgba(255, 0, 127, 0.12);
+    border: 1px solid rgba(255, 0, 127, 0.3);
+    padding: 6px 14px;
+    border-radius: 9999px;
+}
+
+.hero-tag .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--neon-pink);
+    box-shadow: 0 0 8px var(--neon-pink);
+    animation: blinkDot 1.5s infinite;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.12;
+    margin-bottom: 12px;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+.hero-title .name-highlight {
+    background: linear-gradient(135deg, #ff007f 0%, #ff5e7e 50%, #ff9100 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(255, 0, 127, 0.4);
+}
+
+.hero-subtitle {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--neon-orange);
+    letter-spacing: 0.8px;
+    margin-bottom: 20px;
+}
+
+.hero-bio {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 30px;
+    max-width: 580px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 36px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--neon-pink), var(--neon-magenta));
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    padding: 13px 28px;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.5);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 32px rgba(255, 0, 127, 0.8);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    padding: 13px 26px;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    border-color: var(--neon-orange);
+    color: var(--neon-orange);
+    background: rgba(255, 122, 0, 0.1);
+    box-shadow: 0 0 20px rgba(255, 122, 0, 0.35);
+    transform: translateY(-2px);
+}
+
+.social-pills-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icon-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.social-icon-btn:hover {
+    border-color: var(--neon-pink);
+    color: var(--neon-pink);
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.5);
+    transform: translateY(-2px) scale(1.08);
+}
+
+/* Quick Stats Bar in Hero */
+.hero-quick-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 22px;
+}
+
+.stat-pill {
+    background: rgba(14, 6, 22, 0.6);
+    border: 1px solid rgba(255, 0, 127, 0.2);
+    border-radius: var(--radius-md);
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stat-icon {
+    font-size: 1.3rem;
+}
+
+.stat-info .stat-num {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.stat-info .stat-label {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Hero Avatar & Holographic HUD Side */
+.hero-avatar-side {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hud-cyber-frame {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background: radial-gradient(circle at center, rgba(35, 14, 56, 0.85) 0%, rgba(13, 6, 23, 0.95) 100%);
+    border: 1.5px solid rgba(255, 0, 127, 0.5);
+    box-shadow: 0 0 35px rgba(255, 0, 127, 0.3), inset 0 0 25px rgba(255, 0, 127, 0.2);
+}
+
+/* Rotating outer HUD telemetry ring */
+.hud-ring-outer {
+    position: absolute;
+    inset: 10px;
+    border-radius: inherit;
+    border: 1px dashed rgba(255, 122, 0, 0.45);
+    animation: rotateHUD 25s linear infinite;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Floating Corner Reticles */
+.reticle-tl, .reticle-tr, .reticle-bl, .reticle-br {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+    z-index: 10;
+}
+.reticle-tl { top: 12px; left: 12px; border-top: 2px solid var(--neon-cyan); border-left: 2px solid var(--neon-cyan); }
+.reticle-tr { top: 12px; right: 12px; border-top: 2px solid var(--neon-pink); border-right: 2px solid var(--neon-pink); }
+.reticle-bl { bottom: 12px; left: 12px; border-bottom: 2px solid var(--neon-pink); border-left: 2px solid var(--neon-pink); }
+.reticle-br { bottom: 12px; right: 12px; border-bottom: 2px solid var(--neon-cyan); border-right: 2px solid var(--neon-cyan); }
+
+.avatar-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 0 18px rgba(255, 0, 127, 0.25));
+    transition: transform 0.5s ease;
+}
+
+.hud-cyber-frame:hover .avatar-main-img {
+    transform: scale(1.03);
+}
+
+/* Floating HUD status badge */
+.hud-status-badge {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(14, 6, 24, 0.92);
+    border: 1px solid var(--neon-pink);
+    border-radius: 9999px;
+    padding: 6px 18px;
+    z-index: 12;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.45);
+    white-space: nowrap;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.hud-status-badge .live-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--neon-pink);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--neon-pink);
+    animation: blinkDot 1.2s infinite;
+}
+
+/* Hero HUD Quezquém Companion Badge */
+.hud-quezquem-badge {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    z-index: 15;
+    background: rgba(14, 6, 24, 0.94);
+    border: 1px solid rgba(255, 0, 127, 0.65);
+    border-radius: 14px;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 0 25px rgba(255, 0, 127, 0.5), inset 0 0 12px rgba(255, 0, 127, 0.18);
+    backdrop-filter: blur(10px);
+    animation: hudQuezquemFloat 4.5s ease-in-out infinite alternate;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: default;
+}
+
+.hud-quezquem-badge:hover {
+    transform: translateY(-5px) scale(1.06);
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 35px rgba(255, 0, 127, 0.85), inset 0 0 18px rgba(255, 0, 127, 0.3);
+}
+
+.hud-quezquem-img {
+    width: 38px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(255, 0, 127, 0.85));
+    transition: transform 0.3s ease;
+}
+
+.huasteca-mini-flower-badge-svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 8px rgba(255, 0, 127, 0.9));
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hud-quezquem-badge:hover .huasteca-mini-flower-badge-svg {
+    transform: rotate(15deg) scale(1.15);
+}
+
+.hud-quezquem-badge:hover .hud-quezquem-img {
+    transform: rotate(-3deg) scale(1.1);
+}
+
+.hud-quezquem-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.hud-quezquem-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1.5px;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.hud-quezquem-tag {
+    font-size: 0.65rem;
+    color: var(--neon-pink);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.8px;
+    margin-top: 2px;
+}
+
+@keyframes hudQuezquemFloat {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(-1.5deg);
+    }
+}
+
+/* ==========================================================================
+   SECTION COMMON STYLES
+   ========================================================================== */
+.section-pad {
+    padding: 60px 0;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--neon-pink);
+    text-transform: uppercase;
+    background: rgba(255, 0, 127, 0.1);
+    border: 1px solid rgba(255, 0, 127, 0.3);
+    padding: 5px 14px;
+    border-radius: 9999px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.section-title span.neon-glow {
+    background: linear-gradient(135deg, var(--neon-pink), var(--neon-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin: 10px auto 0;
+}
+
+/* ==========================================================================
+   1. ESENCIA Y SIMBOLOGÍA HUASTECA (Reference Image 4)
+   ========================================================================== */
+.simbologia-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.simbolo-card {
+    background: rgba(22, 10, 36, 0.65);
+    border: 1px solid rgba(255, 0, 127, 0.25);
+    border-radius: var(--radius-lg);
+    padding: 24px 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: relative;
+    cursor: pointer;
+}
+
+.simbolo-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--neon-pink);
+    background: rgba(32, 14, 52, 0.85);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 0, 127, 0.4);
+}
+
+.simbolo-card.orange:hover {
+    border-color: var(--neon-orange);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 122, 0, 0.4);
+}
+
+.simbolo-icon-box {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.simbolo-card:hover .simbolo-icon-box {
+    transform: scale(1.12);
+}
+
+.simbolo-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.simbolo-desc {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   2. ABOUT ME SECTION (Reference Images 1, 3)
+   ========================================================================== */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 28px;
+    align-items: stretch;
+}
+
+.about-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 0, 127, 0.25);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.about-card:hover {
+    border-color: rgba(255, 0, 127, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 18px rgba(255, 0, 127, 0.2);
+}
+
+.about-card-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-card-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+/* Metric Boxes in Left About Card */
+.about-metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.metric-box {
+    background: rgba(14, 6, 24, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    padding: 14px;
+    text-align: center;
+}
+
+.metric-box .metric-num {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--neon-pink);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.metric-box .metric-label {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Center Emblem Card & Subcard (Flor Huasteca Exclusiva) */
+.center-emblem-card,
+.emblem-interactive-subcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-color: rgba(255, 0, 127, 0.45);
+    box-shadow: inset 0 0 25px rgba(255, 0, 127, 0.15), 0 0 25px rgba(255, 0, 127, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.emblem-interactive-subcard {
+    margin-top: 18px;
+    background: rgba(14, 6, 24, 0.75);
+    border: 1px solid rgba(255, 0, 127, 0.35);
+    border-radius: var(--radius-md);
+    padding: 24px 18px;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+}
+
+.emblem-interactive-subcard:hover {
+    border-color: rgba(255, 0, 127, 0.6);
+    box-shadow: inset 0 0 30px rgba(255, 0, 127, 0.2), 0 0 25px rgba(255, 0, 127, 0.3);
+}
+
+.center-emblem-card::before,
+.emblem-interactive-subcard::before {
+    content: '';
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    background: radial-gradient(circle, rgba(255, 0, 127, 0.25) 0%, rgba(255, 122, 0, 0.1) 50%, transparent 70%);
+    pointer-events: none;
+    animation: pulseEmblem 4s infinite alternate;
+}
+
+.flor-huasteca-canvas {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: radial-gradient(circle, rgba(255, 0, 127, 0.16) 0%, rgba(255, 51, 102, 0.06) 50%, transparent 75%);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 0, 127, 0.35);
+    box-shadow: 0 0 30px rgba(255, 0, 127, 0.3), inset 0 0 20px rgba(255, 0, 127, 0.12);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+    z-index: 2;
+}
+
+.flor-huasteca-svg {
+    width: 175px;
+    height: 175px;
+    display: block;
+    filter: drop-shadow(0 0 14px rgba(255, 0, 127, 0.85)) drop-shadow(0 0 25px rgba(255, 51, 102, 0.45));
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
+    animation: florPulseNeon 4s ease-in-out infinite alternate;
+}
+
+.flor-wing-left {
+    transition: fill 0.3s ease, filter 0.3s ease;
+}
+
+.flor-wing-right {
+    transition: fill 0.3s ease, filter 0.3s ease;
+}
+
+.flor-core-gem {
+    filter: drop-shadow(0 0 6px #ff7a00);
+}
+
+.center-emblem-card:hover .flor-huasteca-canvas {
+    transform: scale(1.05);
+    border-color: rgba(255, 0, 127, 0.85);
+    box-shadow: 0 0 45px rgba(255, 0, 127, 0.65), inset 0 0 28px rgba(255, 0, 127, 0.25);
+}
+
+.center-emblem-card:hover .flor-huasteca-svg {
+    transform: scale(1.08) rotate(2deg);
+    filter: drop-shadow(0 0 22px rgba(255, 0, 127, 1)) drop-shadow(0 0 35px rgba(255, 122, 0, 0.8));
+}
+
+@keyframes florPulseNeon {
+    0% {
+        filter: drop-shadow(0 0 10px rgba(255, 0, 127, 0.75)) drop-shadow(0 0 18px rgba(255, 51, 102, 0.35));
+    }
+    100% {
+        filter: drop-shadow(0 0 20px rgba(255, 0, 127, 0.95)) drop-shadow(0 0 30px rgba(255, 122, 0, 0.6));
+    }
+}
+
+.emblem-caption {
+    margin-top: 20px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.emblem-subcaption {
+    font-size: 0.8rem;
+    color: var(--neon-orange);
+    letter-spacing: 0.5px;
+}
+
+/* Emblem Tabs Selector */
+.emblem-nav-pills {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 20px;
+    background: rgba(14, 6, 24, 0.85);
+    padding: 5px;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 0, 127, 0.35);
+    z-index: 5;
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.15);
+    max-width: 100%;
+}
+
+.emblem-pill-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    padding: 6px 13px;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.emblem-pill-btn .pill-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.emblem-pill-btn:hover {
+    color: #fff;
+    background: rgba(255, 0, 127, 0.15);
+}
+
+.emblem-pill-btn.active {
+    background: linear-gradient(135deg, rgba(255, 0, 127, 0.4), rgba(255, 122, 0, 0.25));
+    color: #fff;
+    border: 1px solid rgba(255, 0, 127, 0.75);
+    box-shadow: 0 0 18px rgba(255, 0, 127, 0.45);
+}
+
+.emblem-pill-btn.active .pill-dot {
+    background: var(--neon-pink);
+    box-shadow: 0 0 8px var(--neon-pink);
+}
+
+.emblem-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    animation: fadeInPanel 0.4s ease;
+}
+
+@keyframes fadeInPanel {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Quezquém Canvas in About */
+.quezquem-canvas {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: radial-gradient(circle, rgba(255, 0, 127, 0.16) 0%, rgba(255, 51, 102, 0.06) 50%, transparent 75%);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 0, 127, 0.35);
+    box-shadow: 0 0 30px rgba(255, 0, 127, 0.3), inset 0 0 20px rgba(255, 0, 127, 0.12);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+    z-index: 2;
+    min-height: 211px;
+}
+
+.quezquem-vector-svg,
+.quezquem-svg-img {
+    width: 220px;
+    height: 190px;
+    max-width: 100%;
+    display: block;
+    overflow: visible;
+    filter: drop-shadow(0 0 14px rgba(255, 0, 127, 0.85)) drop-shadow(0 0 25px rgba(255, 51, 102, 0.45));
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
+    animation: quezquemPulseNeon 4s ease-in-out infinite alternate;
+}
+
+/* Cenefa Huasteca Canvas & Vector in About */
+.cenefa-canvas-wrap {
+    min-height: 211px;
+    width: 250px;
+    max-width: 100%;
+}
+
+.cenefa-vector-svg {
+    width: 230px;
+    height: 48px;
+    max-width: 100%;
+    display: block;
+    overflow: visible;
+    filter: drop-shadow(0 0 14px rgba(255, 0, 127, 0.85)) drop-shadow(0 0 25px rgba(255, 51, 102, 0.45));
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
+    animation: florPulseNeon 4s ease-in-out infinite alternate;
+}
+
+.center-emblem-card:hover .cenefa-vector-svg {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 24px rgba(255, 0, 127, 1)) drop-shadow(0 0 35px rgba(255, 102, 178, 0.85));
+}
+
+.center-emblem-card:hover .quezquem-canvas {
+    transform: scale(1.05);
+    border-color: rgba(255, 0, 127, 0.85);
+    box-shadow: 0 0 45px rgba(255, 0, 127, 0.65), inset 0 0 28px rgba(255, 0, 127, 0.25);
+}
+
+.center-emblem-card:hover .quezquem-vector-svg,
+.center-emblem-card:hover .quezquem-svg-img {
+    transform: scale(1.08) translateY(-4px);
+    filter: drop-shadow(0 0 24px rgba(255, 0, 127, 1)) drop-shadow(0 0 35px rgba(255, 102, 178, 0.85));
+}
+
+@keyframes quezquemPulseNeon {
+    0% {
+        filter: drop-shadow(0 0 10px rgba(255, 0, 127, 0.75)) drop-shadow(0 0 18px rgba(255, 51, 102, 0.35));
+    }
+    100% {
+        filter: drop-shadow(0 0 22px rgba(255, 0, 127, 0.95)) drop-shadow(0 0 32px rgba(255, 122, 0, 0.6));
+    }
+}
+
+/* Philosophy Cards (Right Side) */
+.philo-subcard {
+    background: rgba(14, 6, 24, 0.7);
+    border: 1px solid rgba(255, 122, 0, 0.2);
+    border-radius: var(--radius-md);
+    padding: 16px 18px;
+    margin-bottom: 14px;
+}
+.philo-subcard:last-child {
+    margin-bottom: 0;
+}
+
+.philo-subcard h4 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--neon-orange);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.philo-subcard p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   3. CORPORATE LEADERSHIP & EXPERIENCE (Grupo Salinas Spotlight)
+   ========================================================================== */
+.experience-banner {
+    background: linear-gradient(135deg, rgba(26, 11, 42, 0.9), rgba(16, 7, 26, 0.95));
+    border: 1.5px solid rgba(255, 0, 127, 0.45);
+    border-radius: var(--radius-xl);
+    padding: 38px 44px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), inset 0 0 30px rgba(255, 0, 127, 0.1);
+    margin-bottom: 40px;
+}
+
+.exp-badge-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.exp-company-tag {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.exp-company-tag span.badge-cdmx {
+    background: linear-gradient(135deg, var(--neon-pink), var(--neon-orange));
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+}
+
+.exp-period {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--neon-cyan);
+    background: rgba(0, 240, 255, 0.1);
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    padding: 5px 14px;
+    border-radius: 9999px;
+}
+
+.exp-role-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--neon-orange);
+    margin-bottom: 14px;
+}
+
+.exp-summary-text {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 24px;
+}
+
+/* Production platforms subgrid - 3 en primera fila, 2 en segunda fila centradas */
+.gs-systems-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.gs-system-item {
+    flex: 0 1 calc((100% - 32px) / 3);
+    width: calc((100% - 32px) / 3);
+    max-width: calc((100% - 32px) / 3);
+    background: rgba(14, 6, 22, 0.8);
+    border: 1px solid rgba(255, 0, 127, 0.25);
+    border-radius: var(--radius-md);
+    padding: 18px 16px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.gs-system-item:hover {
+    border-color: var(--neon-pink);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(255, 0, 127, 0.25);
+}
+
+.gs-system-icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.gs-system-name {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.gs-system-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.45;
+    margin-bottom: 12px;
+    flex-grow: 1;
+}
+
+.gs-system-tag {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--neon-pink);
+    background: rgba(255, 0, 127, 0.12);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* Other experience grid (MGO, Eufonia, Carrizales) */
+.other-exp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.other-exp-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 122, 0, 0.25);
+    border-radius: var(--radius-lg);
+    padding: 24px 22px;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+}
+
+.other-exp-card:hover {
+    border-color: var(--neon-orange);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 18px rgba(255, 122, 0, 0.25);
+}
+
+.other-exp-card h4 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.other-exp-card .company {
+    font-size: 0.82rem;
+    color: var(--neon-orange);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.other-exp-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   4. PROJECTS SHOWCASE (Google-Optimized Hierarchy)
+   ========================================================================== */
+.projects-filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 38px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: rgba(20, 9, 32, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--text-muted);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 9px 22px;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+    color: #fff;
+    border-color: rgba(255, 0, 127, 0.4);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, rgba(255, 0, 127, 0.35), rgba(255, 122, 0, 0.35));
+    border-color: var(--neon-pink);
+    color: #fff;
+    box-shadow: 0 0 18px rgba(255, 0, 127, 0.4);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* ==========================================================================
+   PROJECT CYBER CARDS (Design Inspired by Nexora / Mindful / Roamia Showcase)
+   ========================================================================== */
+.project-cyber-card {
+    background: linear-gradient(180deg, rgba(28, 13, 44, 0.78) 0%, rgba(15, 6, 26, 0.95) 100%);
+    border: 1px solid rgba(255, 0, 127, 0.22);
+    border-radius: 22px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    position: relative;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55);
+}
+
+.project-cyber-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 0, 127, 0.65);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 35px rgba(255, 0, 127, 0.35);
+}
+
+.project-thumb-box {
+    height: 220px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 35%, rgba(255, 0, 127, 0.14) 0%, rgba(28, 10, 44, 0.7) 50%, rgba(12, 5, 20, 0.95) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-mockup-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-cyber-card:hover .project-mockup-svg {
+    transform: scale(1.05);
+}
+
+.project-thumb-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 55px;
+    background: linear-gradient(to bottom, transparent 0%, rgba(15, 6, 26, 0.95) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.project-badge-top {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(14, 6, 24, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 0, 127, 0.4);
+    color: var(--neon-pink);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 4px 11px;
+    border-radius: 9999px;
+    z-index: 3;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
+}
+
+.project-body {
+    padding: 22px 24px 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.project-header-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 5px 0;
+    line-height: 1.25;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.project-card-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.84rem;
+    font-weight: 500;
+    color: rgba(255, 122, 0, 0.95);
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+}
+
+.project-card-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+.project-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.project-tags-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+}
+
+.tech-tag-pill {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.75);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    transition: all 0.25s ease;
+}
+
+.project-cyber-card:hover .tech-tag-pill {
+    border-color: rgba(255, 0, 127, 0.35);
+    background: rgba(255, 0, 127, 0.08);
+    color: #ffffff;
+}
+
+.project-circle-btn {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 0, 127, 0.4);
+    background: rgba(255, 0, 127, 0.08);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    flex-shrink: 0;
+    padding: 0;
+}
+
+.project-circle-btn i {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project-cyber-card:hover .project-circle-btn {
+    background: linear-gradient(135deg, var(--neon-pink), var(--neon-orange));
+    border-color: transparent;
+    box-shadow: 0 0 22px rgba(255, 0, 127, 0.7);
+    transform: scale(1.08);
+}
+
+.project-cyber-card:hover .project-circle-btn i {
+    transform: translate(2px, -2px);
+}
+
+.project-circle-btn:hover {
+    transform: scale(1.15) rotate(8deg) !important;
+    box-shadow: 0 0 28px rgba(255, 0, 127, 0.9), 0 0 12px rgba(255, 122, 0, 0.6) !important;
+}
+
+/* ==========================================================================
+   5. SKILLS MATRIX (Tech Stack)
+   ========================================================================== */
+.skills-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.skill-category-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 0, 127, 0.25);
+    border-radius: var(--radius-lg);
+    padding: 26px 22px;
+    backdrop-filter: blur(14px);
+    transition: all 0.3s ease;
+}
+
+.skill-category-card:hover {
+    border-color: var(--neon-pink);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 0, 127, 0.3);
+}
+
+.skill-cat-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 10px;
+}
+
+.skill-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skill-name {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-level-bar {
+    width: 90px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.skill-level-fill {
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--neon-pink), var(--neon-orange));
+    box-shadow: 0 0 8px var(--neon-pink);
+}
+
+/* ==========================================================================
+   6. HOBBIES & PASIONES CULTURALES (Reference Image 3)
+   ========================================================================== */
+.hobbies-neon-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+}
+
+.hobby-neon-card {
+    background: rgba(20, 9, 32, 0.65);
+    border: 1px solid rgba(255, 0, 127, 0.22);
+    border-radius: var(--radius-lg);
+    padding: 22px 14px;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(12px);
+}
+
+.hobby-neon-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-pink);
+    background: rgba(30, 14, 48, 0.85);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 18px rgba(255, 0, 127, 0.35);
+}
+
+.hobby-neon-icon {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgba(255, 0, 127, 0.4));
+    transition: transform 0.3s ease;
+}
+
+.hobby-neon-card:hover .hobby-neon-icon {
+    transform: scale(1.15);
+}
+
+.hobby-neon-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.hobby-neon-sub {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   7. CONTACT SECTION (Reference Images 1, 3, 5)
+   ========================================================================== */
+.contact-wrapper {
+    background: rgba(20, 9, 32, 0.65);
+    border: 1.5px solid rgba(255, 0, 127, 0.35);
+    border-radius: var(--radius-xl);
+    padding: 48px 52px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 0 30px rgba(255, 0, 127, 0.08);
+    backdrop-filter: blur(16px);
+    display: grid;
+    grid-template-columns: 0.9fr 1.3fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.neon-phone-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: rgba(255, 0, 127, 0.15);
+    border: 2px solid var(--neon-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--neon-pink);
+    box-shadow: 0 0 30px rgba(255, 0, 127, 0.5), inset 0 0 15px rgba(255, 0, 127, 0.3);
+    margin-bottom: 24px;
+    animation: phonePulse 2.5s infinite;
+}
+
+.contact-left h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.contact-left p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-direct-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.contact-chip {
+    background: rgba(14, 6, 24, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    padding: 10px 16px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.25s ease;
+}
+
+.contact-chip:hover {
+    border-color: var(--neon-pink);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    background: rgba(14, 6, 24, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    padding: 14px 18px;
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
+}
+
+.form-input:focus, .form-textarea:focus {
+    outline: none;
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.35);
+    background: rgba(22, 10, 36, 0.9);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-submit-contact {
+    background: linear-gradient(135deg, var(--neon-pink), var(--neon-orange));
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 14px 28px;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(255, 0, 127, 0.5);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-submit-contact:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 35px rgba(255, 0, 127, 0.8);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer-cyber {
+    border-top: 1px solid rgba(255, 0, 127, 0.25);
+    background: rgba(10, 4, 18, 0.95);
+    padding: 40px 0 30px;
+    text-align: center;
+    margin-top: 70px;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1.5px;
+}
+
+.huasteca-mini-quezquem {
+    width: 28px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(255, 0, 127, 0.85));
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
+}
+
+.footer-logo:hover .huasteca-mini-quezquem {
+    transform: scale(1.22) rotate(-5deg);
+    filter: drop-shadow(0 0 16px rgba(255, 0, 127, 1));
+}
+
+/* Ambient Floating Background Quezquém Ornaments */
+.ambient-huasteco-decor {
+    position: absolute;
+    width: 170px;
+    height: 140px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.12;
+    filter: drop-shadow(0 0 30px rgba(255, 0, 127, 0.6));
+    transition: opacity 0.5s ease;
+}
+
+.ambient-huasteco-decor img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: ambientFloat 10s ease-in-out infinite alternate;
+}
+
+.ambient-left {
+    left: -35px;
+    top: 25%;
+    transform: rotate(-10deg);
+}
+
+.ambient-right {
+    right: -35px;
+    top: 65%;
+    transform: rotate(10deg);
+}
+
+@keyframes ambientFloat {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-22px) rotate(4deg);
+    }
+}
+
+.footer-copy {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+.footer-huasteco-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--neon-orange);
+    background: rgba(255, 122, 0, 0.1);
+    border: 1px solid rgba(255, 122, 0, 0.3);
+    padding: 4px 14px;
+    border-radius: 9999px;
+}
+
+/* ==========================================================================
+   ANIMATIONS & KEYFRAMES
+   ========================================================================== */
+@keyframes pulseGlow {
+    0% { filter: drop-shadow(0 0 6px var(--neon-pink)); }
+    100% { filter: drop-shadow(0 0 16px var(--neon-orange)); }
+}
+
+@keyframes pulseEmblem {
+    0% { transform: scale(0.9); opacity: 0.4; }
+    100% { transform: scale(1.15); opacity: 0.8; }
+}
+
+@keyframes rotateHUD {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes blinkDot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+@keyframes phonePulse {
+    0%, 100% { box-shadow: 0 0 25px rgba(255, 0, 127, 0.45); }
+    50% { box-shadow: 0 0 45px rgba(255, 0, 127, 0.8), 0 0 15px rgba(255, 122, 0, 0.5); }
+}
+
+
+/* ==========================================================================
+   HERO INTERACTIVE PLAY & CULTURAL SIDE TOTEMS
+   (Left: Vertical Totem with Flor Huasteca Top + Crisp Quezquém + Flor Huasteca Bottom UNDERNEATH main card)
+   (Right: 4 Cultural Neon Badges in Pure Vector SVG matching user's Image 2 reference)
+   ========================================================================== */
+
+/* Global Full-Page Interactive Background Canvas (Dots & Filaments Parallax) */
+.cyber-global-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.65;
+}
+
+.hero-bg-canvas {
+    display: none;
+}
+
+.hero-container-rel {
+    position: relative;
+    z-index: 2;
+}
+
+/* 2. Main Hero Card (Elevated with Solid Frosted Glass to cover inner halves of side totems) */
+.hero-wrapper {
+    position: relative;
+    z-index: 5 !important;
+    background: rgba(16, 7, 26, 0.94) !important;
+    border: 1px solid rgba(255, 0, 127, 0.4) !important;
+    border-radius: var(--radius-xl);
+    padding: 48px 52px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), inset 0 0 35px rgba(255, 0, 127, 0.1) !important;
+    backdrop-filter: blur(24px) !important;
+    -webkit-backdrop-filter: blur(24px) !important;
+    display: grid;
+    grid-template-columns: 1.15fr 0.95fr;
+    gap: 40px;
+    align-items: center;
+    transform: translate3d(calc(var(--shift-x, 0) * 4px), calc(var(--shift-y, 0) * 4px), 0);
+    transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 3. Left Side: Vertical Totem of 3 Huasteca Icons (Flor Superior + Quezquém + Flor Inferior) UNDERNEATH Main Card */
+.hero-left-totem-stack {
+    position: absolute;
+    left: -105px;
+    top: 50%;
+    transform: translateY(-50%) translate3d(calc(var(--shift-x, 0) * -16px), calc(var(--shift-y, 0) * -16px), 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    z-index: 1 !important; /* Strictly BEHIND .hero-wrapper (z-index: 5) */
+    pointer-events: none;
+    transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Top & Bottom Flor Huasteca */
+.totem-flower-item {
+    width: 95px;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.totem-flower-top {
+    transform: translateX(-10px);
+    animation: totemTopDrift 5s ease-in-out infinite alternate;
+}
+
+.totem-flower-bottom {
+    transform: translateX(-8px);
+    animation: totemBottomDrift 5.4s ease-in-out infinite alternate;
+}
+
+.totem-flower-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: drop-shadow(0 0 6px #ff007f) drop-shadow(0 0 14px rgba(255, 0, 127, 0.6));
+}
+
+@keyframes totemTopDrift {
+    0% { transform: translateX(-10px) translateY(0px) rotate(0deg); }
+    100% { transform: translateX(-10px) translateY(-7px) rotate(-3deg); }
+}
+
+@keyframes totemBottomDrift {
+    0% { transform: translateX(-8px) translateY(0px) rotate(0deg); }
+    100% { transform: translateX(-8px) translateY(7px) rotate(3deg); }
+}
+
+/* Center Quezquém (Clean, readable embroidery with dark garment backing and crisp 5px glow) */
+.totem-quezquem-item {
+    width: 250px;
+    height: 195px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.totem-quezquem-rotator {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-20deg);
+    animation: totemQuezquemDrift 6.5s ease-in-out infinite alternate;
+}
+
+.totem-quezquem-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* Crisp drop shadow so stitches and embroidery stay sharp and legible */
+    filter: drop-shadow(0 0 5px #ff007f) drop-shadow(0 0 10px rgba(255, 0, 127, 0.55));
+}
+
+@keyframes totemQuezquemDrift {
+    0% {
+        transform: rotate(-20deg) translate(0px, 0px);
+    }
+    100% {
+        transform: rotate(-17deg) translate(8px, -12px);
+    }
+}
+
+/* 4. Right Side: Cascading Stack of 4 Mexican/Huasteco Cultural Badges (Authentic Gemini Neon Cards) */
+.hero-right-decor-stack {
+    position: absolute;
+    right: -75px;
+    top: 50%;
+    transform: translateY(-50%) translate3d(calc(var(--shift-x, 0) * 15px), calc(var(--shift-y, 0) * 15px), 0);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 6;
+    pointer-events: auto;
+    transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.decor-badge-item {
+    display: block;
+    cursor: pointer;
+    perspective: 600px;
+}
+
+.decor-glass-box {
+    width: 96px;
+    height: 96px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.decor-card-asset {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+    display: block;
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 12px rgba(255, 0, 127, 0.4));
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
+}
+
+.cultural-vector-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: visible;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cultural-vector-svg.svg-pink {
+    filter: drop-shadow(0 0 5px #ff007f) drop-shadow(0 0 12px rgba(255, 0, 127, 0.65));
+}
+
+.cultural-vector-svg.svg-orange {
+    filter: drop-shadow(0 0 5px #ff7a00) drop-shadow(0 0 12px rgba(255, 122, 0, 0.65));
+}
+
+/* Alternating Card Rotations & Float Keyframes matching user's Image 2 */
+.badge-corazon-sagrado .decor-glass-box {
+    transform: rotate(-8deg);
+    animation: floatBadge1 4.8s ease-in-out infinite alternate;
+}
+
+.badge-roseta-cempasuchil .decor-glass-box {
+    transform: rotate(7deg) translateX(8px);
+    animation: floatBadge2 5.3s ease-in-out infinite alternate;
+}
+
+.badge-mandala-huasteco .decor-glass-box {
+    transform: rotate(-6deg);
+    animation: floatBadge3 5.0s ease-in-out infinite alternate;
+}
+
+.badge-corona-floral .decor-glass-box {
+    transform: rotate(8deg) translateX(6px);
+    animation: floatBadge4 5.5s ease-in-out infinite alternate;
+}
+
+.badge-roseta-cempasuchil .decor-card-asset,
+.badge-corona-floral .decor-card-asset {
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 12px rgba(255, 122, 0, 0.4));
+}
+
+/* Hover Reactions */
+.decor-badge-item:hover .decor-glass-box {
+    transform: scale(1.18) rotate(0deg) translateZ(25px) !important;
+    z-index: 20;
+}
+
+.decor-badge-item:hover .decor-card-asset {
+    transform: scale(1.06);
+    filter: drop-shadow(0 14px 26px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 25px rgba(255, 0, 127, 0.9));
+}
+
+.badge-roseta-cempasuchil:hover .decor-card-asset,
+.badge-corona-floral:hover .decor-card-asset {
+    filter: drop-shadow(0 14px 26px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 25px rgba(255, 122, 0, 0.95));
+}
+
+.decor-badge-item:hover .cultural-vector-svg {
+    transform: scale(1.12);
+}
+
+@keyframes floatBadge1 {
+    0% { transform: rotate(-8deg) translateY(0px); }
+    100% { transform: rotate(-6deg) translateY(-8px); }
+}
+@keyframes floatBadge2 {
+    0% { transform: rotate(7deg) translateX(8px) translateY(0px); }
+    100% { transform: rotate(9deg) translateX(8px) translateY(-9px); }
+}
+@keyframes floatBadge3 {
+    0% { transform: rotate(-6deg) translateY(0px); }
+    100% { transform: rotate(-4deg) translateY(-8px); }
+}
+@keyframes floatBadge4 {
+    0% { transform: rotate(8deg) translateX(6px) translateY(0px); }
+    100% { transform: rotate(6deg) translateX(6px) translateY(-7px); }
+}
+
+/* 5. Mobile & Responsive Layout Rules */
+@media (max-width: 1200px) {
+    .hero-left-totem-stack {
+        left: -80px;
+        transform: translateY(-50%) scale(0.85);
+    }
+    .hero-right-decor-stack {
+        right: -60px;
+        transform: translateY(-50%) scale(0.85);
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-left-totem-stack,
+    .hero-right-decor-stack {
+        display: none !important;
+    }
+}
+
+/* Vector Quezquém Icon in Footer */
+.huasteca-mini-quezquem-svg {
+    width: 28px;
+    height: 23px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+    filter: drop-shadow(0 0 5px rgba(255, 0, 127, 0.85));
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
+}
+
+.footer-logo:hover .huasteca-mini-quezquem-svg {
+    transform: scale(1.22) rotate(-5deg);
+    filter: drop-shadow(0 0 14px rgba(255, 0, 127, 1));
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .hero-left-half-quezquem {
+        display: none;
+    }
+    .hero-right-decor-stack {
+        display: none;
+    }
+    .hero-wrapper {
+        grid-template-columns: 1fr;
+        padding: 36px 30px;
+    }
+    .hero-avatar-side {
+        order: -1;
+    }
+    .hud-cyber-frame {
+        max-width: 380px;
+    }
+    .hud-quezquem-badge {
+        top: -10px;
+        right: 10px;
+        padding: 6px 10px;
+    }
+    .hud-quezquem-img {
+        width: 30px;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    .gs-system-item {
+        flex: 0 1 calc((100% - 16px) / 2);
+        width: calc((100% - 16px) / 2);
+        max-width: calc((100% - 16px) / 2);
+    }
+    .other-exp-grid {
+        grid-template-columns: 1fr;
+    }
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .simbologia-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .skills-grid-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hobbies-neon-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        padding: 36px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    .mobile-toggle {
+        display: block;
+    }
+    .hero-title {
+        font-size: 2.4rem;
+    }
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    .hero-quick-stats {
+        grid-template-columns: 1fr;
+    }
+    .gs-system-item {
+        flex: 0 1 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .simbologia-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .skills-grid-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .hobbies-neon-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Typewriter Cursor & Subtitle Animation */
+.hero-subtitle {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--neon-orange);
+    letter-spacing: 0.8px;
+    margin-bottom: 20px;
+    min-height: 2.4rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.typewriter-cursor {
+    display: inline-block;
+    color: var(--neon-pink);
+    font-weight: 300;
+    margin-left: 4px;
+    animation: blinkCursor 0.8s infinite;
+}
+
+@keyframes blinkCursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.social-icon-btn svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.25s ease;
+}
+
+.social-icon-btn:hover svg {
+    transform: scale(1.15);
+}
+
+/* ==========================================================================
+   DUAL ACTION BUTTONS (Experience Section)
+   ========================================================================== */
+.exp-actions-dual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 24px;
+    width: 100%;
+}
+
+.btn-exp-action {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 24px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+}
+
+.btn-exp-experience {
+    background: linear-gradient(135deg, rgba(255, 0, 127, 0.15), rgba(18, 6, 32, 0.85));
+    border: 1px solid rgba(255, 0, 127, 0.35);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.btn-exp-experience:hover {
+    border-color: var(--neon-pink);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(255, 0, 127, 0.35);
+    background: linear-gradient(135deg, rgba(255, 0, 127, 0.25), rgba(28, 8, 48, 0.95));
+}
+
+.btn-exp-education {
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.15), rgba(18, 6, 32, 0.85));
+    border: 1px solid rgba(0, 240, 255, 0.35);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.btn-exp-education:hover {
+    border-color: #00f0ff;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.35);
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.25), rgba(8, 24, 48, 0.95));
+}
+
+.btn-action-icon {
+    font-size: 2.2rem;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.btn-exp-action:hover .btn-action-icon {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+.btn-action-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.btn-action-main {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    color: #fff;
+    transition: color 0.25s ease;
+}
+
+.btn-exp-experience:hover .btn-action-main {
+    color: var(--neon-pink);
+}
+
+.btn-exp-education:hover .btn-action-main {
+    color: #00f0ff;
+}
+
+.btn-action-sub {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.35;
+}
+
+.btn-action-arrow {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    opacity: 0.7;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.btn-exp-action:hover .btn-action-arrow {
+    transform: translate(4px, -4px);
+    opacity: 1;
+}
+
+.btn-exp-experience:hover .btn-action-arrow {
+    color: var(--neon-pink);
+}
+
+.btn-exp-education:hover .btn-action-arrow {
+    color: #00f0ff;
+}
+
+@media (max-width: 768px) {
+    .exp-actions-dual {
+        grid-template-columns: 1fr;
+    }
+}

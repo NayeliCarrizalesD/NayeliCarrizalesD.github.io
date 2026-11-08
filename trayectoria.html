@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trayectoria & Educación — Nayeli Carrizales Díaz</title>
+    
+    <!-- Meta tags for SEO & Social Sharing -->
+    <meta name="description" content="Trayectoria profesional detallada y formación académica de Nayeli Carrizales Díaz — Ingeniera en TIC, Full Stack & Cloud Solutions.">
+    <meta name="theme-color" content="#07030c">
+
+    <!-- Stylesheets & Favicons -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon-flor-huasteca.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        .page-header-trayectoria {
+            padding: 140px 0 60px;
+            text-align: center;
+            position: relative;
+        }
+        .page-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 18px;
+            background: rgba(255, 0, 127, 0.12);
+            border: 1px solid rgba(255, 0, 127, 0.35);
+            border-radius: 999px;
+            color: var(--neon-pink);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .trayectoria-nav-pills {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .trayectoria-nav-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        .trayectoria-nav-pill:hover, .trayectoria-nav-pill.active {
+            background: rgba(255, 0, 127, 0.15);
+            border-color: var(--neon-pink);
+            color: #fff;
+            box-shadow: 0 0 20px rgba(255, 0, 127, 0.3);
+            transform: translateY(-2px);
+        }
+        .trayectoria-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+            margin-top: 40px;
+        }
+        .trayectoria-company-card {
+            background: linear-gradient(135deg, rgba(20, 10, 32, 0.85) 0%, rgba(12, 6, 20, 0.92) 100%);
+            border: 1px solid rgba(255, 0, 127, 0.25);
+            border-radius: 20px;
+            padding: 36px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .trayectoria-company-card:hover {
+            border-color: rgba(255, 0, 127, 0.5);
+            transform: translateY(-3px);
+        }
+        .trayectoria-company-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 18px;
+        }
+        .company-name-wrap {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .company-title-main {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+        .company-badge-loc {
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .badge-salinas {
+            background: rgba(255, 0, 127, 0.2);
+            border: 1px solid rgba(255, 0, 127, 0.5);
+            color: #ff3399;
+        }
+        .badge-mgo {
+            background: rgba(255, 122, 0, 0.2);
+            border: 1px solid rgba(255, 122, 0, 0.5);
+            color: #ff9d00;
+        }
+        .badge-eufonia {
+            background: rgba(0, 240, 255, 0.2);
+            border: 1px solid rgba(0, 240, 255, 0.5);
+            color: #00f0ff;
+        }
+        .badge-carrizales {
+            background: rgba(147, 51, 234, 0.2);
+            border: 1px solid rgba(147, 51, 234, 0.5);
+            color: #c084fc;
+        }
+        .badge-queretaro {
+            background: rgba(50, 205, 50, 0.2);
+            border: 1px solid rgba(50, 205, 50, 0.5);
+            color: #32cd32;
+        }
+        .badge-odisea {
+            background: rgba(14, 165, 233, 0.2);
+            border: 1px solid rgba(14, 165, 233, 0.5);
+            color: #38bdf8;
+        }
+        .company-period {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .role-highlight {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--neon-orange);
+            margin-bottom: 14px;
+        }
+        .company-desc-text {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 24px;
+        }
+        .card-subgrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 24px;
+        }
+        .card-subitem {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        .card-subitem:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 0, 127, 0.3);
+            transform: translateY(-2px);
+        }
+        .subitem-icon-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        .subitem-icon {
+            font-size: 1.4rem;
+        }
+        .subitem-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #fff;
+        }
+        .subitem-desc {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        .subitem-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .subitem-tag {
+            font-size: 0.72rem;
+            padding: 3px 8px;
+            background: rgba(255, 0, 127, 0.1);
+            border: 1px solid rgba(255, 0, 127, 0.25);
+            border-radius: 6px;
+            color: #ff99cc;
+            font-weight: 600;
+        }
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 36px;
+        }
+        .edu-card {
+            background: linear-gradient(135deg, rgba(22, 11, 35, 0.85) 0%, rgba(14, 7, 24, 0.95) 100%);
+            border: 1px solid rgba(255, 122, 0, 0.25);
+            border-radius: 18px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .edu-card:hover {
+            border-color: rgba(255, 122, 0, 0.55);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 122, 0, 0.15);
+        }
+        .edu-header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+        .edu-icon-badge {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(255, 122, 0, 0.15);
+            border: 1px solid rgba(255, 122, 0, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        .edu-period-badge {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.65);
+            font-weight: 600;
+        }
+        .edu-degree-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 8px;
+            line-height: 1.35;
+        }
+        .edu-institution {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--neon-orange);
+            margin-bottom: 12px;
+        }
+        .edu-honors-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            background: rgba(255, 215, 0, 0.15);
+            border: 1px solid rgba(255, 215, 0, 0.4);
+            border-radius: 999px;
+            color: #ffd700;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+        .edu-desc-text {
+            font-size: 0.92rem;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        .btn-back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 28px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 999px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            margin-top: 40px;
+        }
+        .btn-back-home:hover {
+            background: rgba(255, 0, 127, 0.2);
+            border-color: var(--neon-pink);
+            box-shadow: 0 0 20px rgba(255, 0, 127, 0.4);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SVG Vector Definitions: Flor Huasteca Rosa -->
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+        <defs>
+            <symbol id="florHuastecaRosaSymbol" viewBox="0 0 33 33">
+                <defs>
+                    <linearGradient id="florRosaLeft" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#f87dd0" />
+                        <stop offset="100%" stop-color="#e058b4" />
+                    </linearGradient>
+                    <linearGradient id="florRosaRight" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#ff4d88" />
+                        <stop offset="100%" stop-color="#d8306c" />
+                    </linearGradient>
+                    <linearGradient id="florRosaFoliage" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#ff3385" />
+                        <stop offset="100%" stop-color="#c41858" />
+                    </linearGradient>
+                </defs>
+                <path class="flor-petal-orchid" fill="url(#florRosaLeft)" d="M11.08 2.08h0.84v0.84h-0.84zM11.08 3.08h0.84v0.84h-0.84zM12.08 3.08h0.84v0.84h-0.84zM11.08 4.08h0.84v0.84h-0.84zM12.08 4.08h0.84v0.84h-0.84zM13.08 4.08h0.84v0.84h-0.84zM11.08 5.08h0.84v0.84h-0.84zM12.08 5.08h0.84v0.84h-0.84zM13.08 5.08h0.84v0.84h-0.84zM14.08 5.08h0.84v0.84h-0.84zM11.08 6.08h0.84v0.84h-0.84zM14.08 6.08h0.84v0.84h-0.84zM15.08 6.08h0.84v0.84h-0.84zM11.08 7.08h0.84v0.84h-0.84zM13.08 7.08h0.84v0.84h-0.84zM14.08 7.08h0.84v0.84h-0.84zM15.08 7.08h0.84v0.84h-0.84zM11.08 8.08h0.84v0.84h-0.84zM15.08 8.08h0.84v0.84h-0.84zM11.08 9.08h0.84v0.84h-0.84zM12.08 9.08h0.84v0.84h-0.84zM13.08 9.08h0.84v0.84h-0.84zM15.08 9.08h0.84v0.84h-0.84zM11.08 10.08h0.84v0.84h-0.84zM12.08 10.08h0.84v0.84h-0.84zM15.08 10.08h0.84v0.84h-0.84zM2.08 11.08h0.84v0.84h-0.84zM3.08 11.08h0.84v0.84h-0.84zM4.08 11.08h0.84v0.84h-0.84zM5.08 11.08h0.84v0.84h-0.84zM6.08 11.08h0.84v0.84h-0.84zM7.08 11.08h0.84v0.84h-0.84zM8.08 11.08h0.84v0.84h-0.84zM9.08 11.08h0.84v0.84h-0.84zM10.08 11.08h0.84v0.84h-0.84zM12.08 11.08h0.84v0.84h-0.84zM13.08 11.08h0.84v0.84h-0.84zM14.08 11.08h0.84v0.84h-0.84zM15.08 11.08h0.84v0.84h-0.84zM3.08 12.08h0.84v0.84h-0.84zM4.08 12.08h0.84v0.84h-0.84zM5.08 12.08h0.84v0.84h-0.84zM9.08 12.08h0.84v0.84h-0.84zM10.08 12.08h0.84v0.84h-0.84zM11.08 12.08h0.84v0.84h-0.84zM13.08 12.08h0.84v0.84h-0.84zM14.08 12.08h0.84v0.84h-0.84zM15.08 12.08h0.84v0.84h-0.84zM4.08 13.08h0.84v0.84h-0.84zM5.08 13.08h0.84v0.84h-0.84zM7.08 13.08h0.84v0.84h-0.84zM9.08 13.08h0.84v0.84h-0.84zM11.08 13.08h0.84v0.84h-0.84zM12.08 13.08h0.84v0.84h-0.84zM14.08 13.08h0.84v0.84h-0.84zM15.08 13.08h0.84v0.84h-0.84zM5.08 14.08h0.84v0.84h-0.84zM6.08 14.08h0.84v0.84h-0.84zM7.08 14.08h0.84v0.84h-0.84zM11.08 14.08h0.84v0.84h-0.84zM12.08 14.08h0.84v0.84h-0.84zM13.08 14.08h0.84v0.84h-0.84zM15.08 14.08h0.84v0.84h-0.84zM6.08 15.08h0.84v0.84h-0.84zM7.08 15.08h0.84v0.84h-0.84zM8.08 15.08h0.84v0.84h-0.84zM9.08 15.08h0.84v0.84h-0.84zM10.08 15.08h0.84v0.84h-0.84zM11.08 15.08h0.84v0.84h-0.84zM12.08 15.08h0.84v0.84h-0.84zM13.08 15.08h0.84v0.84h-0.84zM14.08 15.08h0.84v0.84h-0.84zM6.08 17.08h0.84v0.84h-0.84zM7.08 17.08h0.84v0.84h-0.84zM8.08 17.08h0.84v0.84h-0.84zM9.08 17.08h0.84v0.84h-0.84zM10.08 17.08h0.84v0.84h-0.84zM11.08 17.08h0.84v0.84h-0.84zM12.08 17.08h0.84v0.84h-0.84zM13.08 17.08h0.84v0.84h-0.84zM14.08 17.08h0.84v0.84h-0.84zM5.08 18.08h0.84v0.84h-0.84zM6.08 18.08h0.84v0.84h-0.84zM7.08 18.08h0.84v0.84h-0.84zM11.08 18.08h0.84v0.84h-0.84zM12.08 18.08h0.84v0.84h-0.84zM13.08 18.08h0.84v0.84h-0.84zM15.08 18.08h0.84v0.84h-0.84zM4.08 19.08h0.84v0.84h-0.84zM5.08 19.08h0.84v0.84h-0.84zM7.08 19.08h0.84v0.84h-0.84zM9.08 19.08h0.84v0.84h-0.84zM11.08 19.08h0.84v0.84h-0.84zM12.08 19.08h0.84v0.84h-0.84zM14.08 19.08h0.84v0.84h-0.84zM15.08 19.08h0.84v0.84h-0.84zM3.08 20.08h0.84v0.84h-0.84zM4.08 20.08h0.84v0.84h-0.84zM5.08 20.08h0.84v0.84h-0.84zM9.08 20.08h0.84v0.84h-0.84zM10.08 20.08h0.84v0.84h-0.84zM11.08 20.08h0.84v0.84h-0.84zM13.08 20.08h0.84v0.84h-0.84zM14.08 20.08h0.84v0.84h-0.84zM15.08 20.08h0.84v0.84h-0.84zM2.08 21.08h0.84v0.84h-0.84zM3.08 21.08h0.84v0.84h-0.84zM4.08 21.08h0.84v0.84h-0.84zM5.08 21.08h0.84v0.84h-0.84zM6.08 21.08h0.84v0.84h-0.84zM7.08 21.08h0.84v0.84h-0.84zM8.08 21.08h0.84v0.84h-0.84zM9.08 21.08h0.84v0.84h-0.84zM10.08 21.08h0.84v0.84h-0.84zM12.08 21.08h0.84v0.84h-0.84zM13.08 21.08h0.84v0.84h-0.84zM14.08 21.08h0.84v0.84h-0.84zM15.08 21.08h0.84v0.84h-0.84zM11.08 22.08h0.84v0.84h-0.84zM12.08 22.08h0.84v0.84h-0.84zM15.08 22.08h0.84v0.84h-0.84zM11.08 23.08h0.84v0.84h-0.84zM12.08 23.08h0.84v0.84h-0.84zM13.08 23.08h0.84v0.84h-0.84zM15.08 23.08h0.84v0.84h-0.84zM11.08 24.08h0.84v0.84h-0.84zM15.08 24.08h0.84v0.84h-0.84zM11.08 25.08h0.84v0.84h-0.84zM13.08 25.08h0.84v0.84h-0.84zM14.08 25.08h0.84v0.84h-0.84zM15.08 25.08h0.84v0.84h-0.84zM11.08 26.08h0.84v0.84h-0.84zM14.08 26.08h0.84v0.84h-0.84zM15.08 26.08h0.84v0.84h-0.84zM11.08 27.08h0.84v0.84h-0.84zM12.08 27.08h0.84v0.84h-0.84zM13.08 27.08h0.84v0.84h-0.84zM14.08 27.08h0.84v0.84h-0.84zM11.08 28.08h0.84v0.84h-0.84zM12.08 28.08h0.84v0.84h-0.84zM13.08 28.08h0.84v0.84h-0.84zM11.08 29.08h0.84v0.84h-0.84zM12.08 29.08h0.84v0.84h-0.84zM11.08 30.08h0.84v0.84h-0.84z" />
+                <path class="flor-petal-coral" fill="url(#florRosaRight)" d="M21.08 2.08h0.84v0.84h-0.84zM20.08 3.08h0.84v0.84h-0.84zM21.08 3.08h0.84v0.84h-0.84zM19.08 4.08h0.84v0.84h-0.84zM20.08 4.08h0.84v0.84h-0.84zM21.08 4.08h0.84v0.84h-0.84zM18.08 5.08h0.84v0.84h-0.84zM19.08 5.08h0.84v0.84h-0.84zM20.08 5.08h0.84v0.84h-0.84zM21.08 5.08h0.84v0.84h-0.84zM17.08 6.08h0.84v0.84h-0.84zM18.08 6.08h0.84v0.84h-0.84zM21.08 6.08h0.84v0.84h-0.84zM17.08 7.08h0.84v0.84h-0.84zM18.08 7.08h0.84v0.84h-0.84zM19.08 7.08h0.84v0.84h-0.84zM21.08 7.08h0.84v0.84h-0.84zM17.08 8.08h0.84v0.84h-0.84zM21.08 8.08h0.84v0.84h-0.84zM17.08 9.08h0.84v0.84h-0.84zM19.08 9.08h0.84v0.84h-0.84zM20.08 9.08h0.84v0.84h-0.84zM21.08 9.08h0.84v0.84h-0.84zM17.08 10.08h0.84v0.84h-0.84zM20.08 10.08h0.84v0.84h-0.84zM21.08 10.08h0.84v0.84h-0.84zM17.08 11.08h0.84v0.84h-0.84zM18.08 11.08h0.84v0.84h-0.84zM19.08 11.08h0.84v0.84h-0.84zM20.08 11.08h0.84v0.84h-0.84zM22.08 11.08h0.84v0.84h-0.84zM23.08 11.08h0.84v0.84h-0.84zM24.08 11.08h0.84v0.84h-0.84zM25.08 11.08h0.84v0.84h-0.84zM26.08 11.08h0.84v0.84h-0.84zM27.08 11.08h0.84v0.84h-0.84zM28.08 11.08h0.84v0.84h-0.84zM29.08 11.08h0.84v0.84h-0.84zM30.08 11.08h0.84v0.84h-0.84zM17.08 12.08h0.84v0.84h-0.84zM18.08 12.08h0.84v0.84h-0.84zM19.08 12.08h0.84v0.84h-0.84zM21.08 12.08h0.84v0.84h-0.84zM22.08 12.08h0.84v0.84h-0.84zM23.08 12.08h0.84v0.84h-0.84zM27.08 12.08h0.84v0.84h-0.84zM28.08 12.08h0.84v0.84h-0.84zM29.08 12.08h0.84v0.84h-0.84zM17.08 13.08h0.84v0.84h-0.84zM18.08 13.08h0.84v0.84h-0.84zM20.08 13.08h0.84v0.84h-0.84zM21.08 13.08h0.84v0.84h-0.84zM23.08 13.08h0.84v0.84h-0.84zM25.08 13.08h0.84v0.84h-0.84zM27.08 13.08h0.84v0.84h-0.84zM28.08 13.08h0.84v0.84h-0.84zM17.08 14.08h0.84v0.84h-0.84zM19.08 14.08h0.84v0.84h-0.84zM20.08 14.08h0.84v0.84h-0.84zM21.08 14.08h0.84v0.84h-0.84zM25.08 14.08h0.84v0.84h-0.84zM26.08 14.08h0.84v0.84h-0.84zM27.08 14.08h0.84v0.84h-0.84zM18.08 15.08h0.84v0.84h-0.84zM19.08 15.08h0.84v0.84h-0.84zM20.08 15.08h0.84v0.84h-0.84zM21.08 15.08h0.84v0.84h-0.84zM22.08 15.08h0.84v0.84h-0.84zM23.08 15.08h0.84v0.84h-0.84zM24.08 15.08h0.84v0.84h-0.84zM25.08 15.08h0.84v0.84h-0.84zM26.08 15.08h0.84v0.84h-0.84zM18.08 17.08h0.84v0.84h-0.84zM19.08 17.08h0.84v0.84h-0.84zM20.08 17.08h0.84v0.84h-0.84zM21.08 17.08h0.84v0.84h-0.84zM22.08 17.08h0.84v0.84h-0.84zM23.08 17.08h0.84v0.84h-0.84zM24.08 17.08h0.84v0.84h-0.84zM25.08 17.08h0.84v0.84h-0.84zM26.08 17.08h0.84v0.84h-0.84zM17.08 18.08h0.84v0.84h-0.84zM19.08 18.08h0.84v0.84h-0.84zM20.08 18.08h0.84v0.84h-0.84zM21.08 18.08h0.84v0.84h-0.84zM25.08 18.08h0.84v0.84h-0.84zM26.08 18.08h0.84v0.84h-0.84zM27.08 18.08h0.84v0.84h-0.84zM17.08 19.08h0.84v0.84h-0.84zM18.08 19.08h0.84v0.84h-0.84zM20.08 19.08h0.84v0.84h-0.84zM21.08 19.08h0.84v0.84h-0.84zM23.08 19.08h0.84v0.84h-0.84zM25.08 19.08h0.84v0.84h-0.84zM27.08 19.08h0.84v0.84h-0.84zM28.08 19.08h0.84v0.84h-0.84zM17.08 20.08h0.84v0.84h-0.84zM18.08 20.08h0.84v0.84h-0.84zM19.08 20.08h0.84v0.84h-0.84zM21.08 20.08h0.84v0.84h-0.84zM22.08 20.08h0.84v0.84h-0.84zM23.08 20.08h0.84v0.84h-0.84zM27.08 20.08h0.84v0.84h-0.84zM28.08 20.08h0.84v0.84h-0.84zM29.08 20.08h0.84v0.84h-0.84zM17.08 21.08h0.84v0.84h-0.84zM18.08 21.08h0.84v0.84h-0.84zM19.08 21.08h0.84v0.84h-0.84zM20.08 21.08h0.84v0.84h-0.84zM22.08 21.08h0.84v0.84h-0.84zM23.08 21.08h0.84v0.84h-0.84zM24.08 21.08h0.84v0.84h-0.84zM25.08 21.08h0.84v0.84h-0.84zM26.08 21.08h0.84v0.84h-0.84zM27.08 21.08h0.84v0.84h-0.84zM28.08 21.08h0.84v0.84h-0.84zM29.08 21.08h0.84v0.84h-0.84zM30.08 21.08h0.84v0.84h-0.84zM17.08 22.08h0.84v0.84h-0.84zM20.08 22.08h0.84v0.84h-0.84zM21.08 22.08h0.84v0.84h-0.84zM17.08 23.08h0.84v0.84h-0.84zM19.08 23.08h0.84v0.84h-0.84zM20.08 23.08h0.84v0.84h-0.84zM21.08 23.08h0.84v0.84h-0.84zM17.08 24.08h0.84v0.84h-0.84zM21.08 24.08h0.84v0.84h-0.84zM17.08 25.08h0.84v0.84h-0.84zM18.08 25.08h0.84v0.84h-0.84zM19.08 25.08h0.84v0.84h-0.84zM21.08 25.08h0.84v0.84h-0.84zM17.08 26.08h0.84v0.84h-0.84zM18.08 26.08h0.84v0.84h-0.84zM21.08 26.08h0.84v0.84h-0.84zM18.08 27.08h0.84v0.84h-0.84zM19.08 27.08h0.84v0.84h-0.84zM20.08 27.08h0.84v0.84h-0.84zM21.08 27.08h0.84v0.84h-0.84zM19.08 28.08h0.84v0.84h-0.84zM20.08 28.08h0.84v0.84h-0.84zM21.08 28.08h0.84v0.84h-0.84zM20.08 29.08h0.84v0.84h-0.84zM21.08 29.08h0.84v0.84h-0.84zM21.08 30.08h0.84v0.84h-0.84z" />
+                <path class="flor-foliage-fuchsia" fill="url(#florRosaFoliage)" d="M2.08 2.08h0.84v0.84h-0.84zM3.08 2.08h0.84v0.84h-0.84zM5.08 2.08h0.84v0.84h-0.84zM27.08 2.08h0.84v0.84h-0.84zM29.08 2.08h0.84v0.84h-0.84zM30.08 2.08h0.84v0.84h-0.84zM2.08 3.08h0.84v0.84h-0.84zM3.08 3.08h0.84v0.84h-0.84zM5.08 3.08h0.84v0.84h-0.84zM7.08 3.08h0.84v0.84h-0.84zM25.08 3.08h0.84v0.84h-0.84zM27.08 3.08h0.84v0.84h-0.84zM29.08 3.08h0.84v0.84h-0.84zM30.08 3.08h0.84v0.84h-0.84zM4.08 4.08h0.84v0.84h-0.84zM7.08 4.08h0.84v0.84h-0.84zM9.08 4.08h0.84v0.84h-0.84zM23.08 4.08h0.84v0.84h-0.84zM25.08 4.08h0.84v0.84h-0.84zM28.08 4.08h0.84v0.84h-0.84zM2.08 5.08h0.84v0.84h-0.84zM3.08 5.08h0.84v0.84h-0.84zM5.08 5.08h0.84v0.84h-0.84zM7.08 5.08h0.84v0.84h-0.84zM9.08 5.08h0.84v0.84h-0.84zM23.08 5.08h0.84v0.84h-0.84zM25.08 5.08h0.84v0.84h-0.84zM27.08 5.08h0.84v0.84h-0.84zM29.08 5.08h0.84v0.84h-0.84zM30.08 5.08h0.84v0.84h-0.84zM6.08 6.08h0.84v0.84h-0.84zM9.08 6.08h0.84v0.84h-0.84zM23.08 6.08h0.84v0.84h-0.84zM26.08 6.08h0.84v0.84h-0.84zM3.08 7.08h0.84v0.84h-0.84zM4.08 7.08h0.84v0.84h-0.84zM5.08 7.08h0.84v0.84h-0.84zM7.08 7.08h0.84v0.84h-0.84zM9.08 7.08h0.84v0.84h-0.84zM23.08 7.08h0.84v0.84h-0.84zM25.08 7.08h0.84v0.84h-0.84zM27.08 7.08h0.84v0.84h-0.84zM28.08 7.08h0.84v0.84h-0.84zM29.08 7.08h0.84v0.84h-0.84zM8.08 8.08h0.84v0.84h-0.84zM24.08 8.08h0.84v0.84h-0.84zM4.08 9.08h0.84v0.84h-0.84zM5.08 9.08h0.84v0.84h-0.84zM6.08 9.08h0.84v0.84h-0.84zM7.08 9.08h0.84v0.84h-0.84zM9.08 9.08h0.84v0.84h-0.84zM23.08 9.08h0.84v0.84h-0.84zM25.08 9.08h0.84v0.84h-0.84zM26.08 9.08h0.84v0.84h-0.84zM27.08 9.08h0.84v0.84h-0.84zM28.08 9.08h0.84v0.84h-0.84zM10.08 10.08h0.84v0.84h-0.84zM22.08 10.08h0.84v0.84h-0.84zM16.08 15.08h0.84v0.84h-0.84zM0.08 16.08h0.84v0.84h-0.84zM1.08 16.08h0.84v0.84h-0.84zM2.08 16.08h0.84v0.84h-0.84zM3.08 16.08h0.84v0.84h-0.84zM4.08 16.08h0.84v0.84h-0.84zM5.08 16.08h0.84v0.84h-0.84zM15.08 16.08h0.84v0.84h-0.84zM16.08 16.08h0.84v0.84h-0.84zM17.08 16.08h0.84v0.84h-0.84zM27.08 16.08h0.84v0.84h-0.84zM28.08 16.08h0.84v0.84h-0.84zM29.08 16.08h0.84v0.84h-0.84zM30.08 16.08h0.84v0.84h-0.84zM31.08 16.08h0.84v0.84h-0.84zM32.08 16.08h0.84v0.84h-0.84zM16.08 17.08h0.84v0.84h-0.84zM10.08 22.08h0.84v0.84h-0.84zM22.08 22.08h0.84v0.84h-0.84zM4.08 23.08h0.84v0.84h-0.84zM5.08 23.08h0.84v0.84h-0.84zM6.08 23.08h0.84v0.84h-0.84zM7.08 23.08h0.84v0.84h-0.84zM9.08 23.08h0.84v0.84h-0.84zM23.08 23.08h0.84v0.84h-0.84zM25.08 23.08h0.84v0.84h-0.84zM26.08 23.08h0.84v0.84h-0.84zM27.08 23.08h0.84v0.84h-0.84zM28.08 23.08h0.84v0.84h-0.84zM8.08 24.08h0.84v0.84h-0.84zM24.08 24.08h0.84v0.84h-0.84zM3.08 25.08h0.84v0.84h-0.84zM4.08 25.08h0.84v0.84h-0.84zM5.08 25.08h0.84v0.84h-0.84zM7.08 25.08h0.84v0.84h-0.84zM9.08 25.08h0.84v0.84h-0.84zM23.08 25.08h0.84v0.84h-0.84zM25.08 25.08h0.84v0.84h-0.84zM27.08 25.08h0.84v0.84h-0.84zM28.08 25.08h0.84v0.84h-0.84zM29.08 25.08h0.84v0.84h-0.84zM6.08 26.08h0.84v0.84h-0.84zM9.08 26.08h0.84v0.84h-0.84zM23.08 26.08h0.84v0.84h-0.84zM26.08 26.08h0.84v0.84h-0.84zM2.08 27.08h0.84v0.84h-0.84zM3.08 27.08h0.84v0.84h-0.84zM5.08 27.08h0.84v0.84h-0.84zM7.08 27.08h0.84v0.84h-0.84zM9.08 27.08h0.84v0.84h-0.84zM23.08 27.08h0.84v0.84h-0.84zM25.08 27.08h0.84v0.84h-0.84zM27.08 27.08h0.84v0.84h-0.84zM29.08 27.08h0.84v0.84h-0.84zM30.08 27.08h0.84v0.84h-0.84zM4.08 28.08h0.84v0.84h-0.84zM7.08 28.08h0.84v0.84h-0.84zM9.08 28.08h0.84v0.84h-0.84zM23.08 28.08h0.84v0.84h-0.84zM25.08 28.08h0.84v0.84h-0.84zM28.08 28.08h0.84v0.84h-0.84zM2.08 29.08h0.84v0.84h-0.84zM3.08 29.08h0.84v0.84h-0.84zM5.08 29.08h0.84v0.84h-0.84zM7.08 29.08h0.84v0.84h-0.84zM25.08 29.08h0.84v0.84h-0.84zM27.08 29.08h0.84v0.84h-0.84zM29.08 29.08h0.84v0.84h-0.84zM30.08 29.08h0.84v0.84h-0.84zM2.08 30.08h0.84v0.84h-0.84zM3.08 30.08h0.84v0.84h-0.84zM5.08 30.08h0.84v0.84h-0.84zM27.08 30.08h0.84v0.84h-0.84zM29.08 30.08h0.84v0.84h-0.84zM30.08 30.08h0.84v0.84h-0.84z" />
+            </symbol>
+        </defs>
+    </svg>
+
+    <!-- Global Parallax Cyber Dots Background Canvas (Full Page) -->
+    <canvas id="cyberGlobalParticles" class="cyber-global-canvas"></canvas>
+
+    <!-- Scanlines Texture -->
+    <div class="scanlines-overlay"></div>
+
+    <!-- Huasteca Prehispanic Geometric Corner Frames -->
+    <div class="huasteca-frame-tl"></div>
+    <div class="huasteca-frame-tr"></div>
+    <div class="huasteca-frame-bl"></div>
+    <div class="huasteca-frame-br"></div>
+
+    <!-- NAVIGATION BAR -->
+    <header class="header-nav">
+        <nav class="nav-pill-container">
+            <a href="index.html#hero" class="nav-brand">
+                <svg class="huasteca-mini-flower" viewBox="0 0 33 33" aria-hidden="true">
+                    <use href="#florHuastecaRosaSymbol" />
+                </svg>
+                <span>NAYELI C. DÍAZ</span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html#hero" class="nav-link" data-es="Inicio" data-en="Home">Inicio</a></li>
+                <li><a href="#experiencia" class="nav-link" data-es="Experiencia" data-en="Experience">Experiencia</a></li>
+                <li><a href="#educacion" class="nav-link active" data-es="Educación" data-en="Education">Educación</a></li>
+                <li><a href="index.html#projects" class="nav-link" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+                <li><a href="index.html#contact" class="nav-link" data-es="Contacto" data-en="Contact">Contacto</a></li>
+            </ul>
+
+            <div class="nav-controls">
+                <button id="langToggle" class="btn-lang-toggle" title="Cambiar idioma / Toggle Language">
+                    🌐 ES | EN
+                </button>
+                <a href="CV_Nayeli_Carrizales.html" target="_blank" class="btn-nav-cv" data-es="📄 CV Español" data-en="📄 Resume ES">
+                    📄 CV Español
+                </a>
+                <button class="mobile-toggle" aria-label="Abrir Menú">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HEADER DE PÁGINA -->
+    <header class="page-header-trayectoria">
+        <div class="container">
+            <div class="page-badge" data-es="[ TRAYECTORIA PROFESIONAL & FORMACIÓN ACADÉMICA ]" data-en="[ PROFESSIONAL CAREER & ACADEMIC EDUCATION ]">
+                [ TRAYECTORIA PROFESIONAL & FORMACIÓN ACADÉMICA ]
+            </div>
+            <h1 class="section-title">
+                <span data-es="Experiencia &" data-en="Career &">Experiencia &</span>
+                <span class="neon-glow" data-es="Educación" data-en="Education">Educación</span>
+            </h1>
+            <p class="section-desc" style="max-width: 760px; margin: 0 auto;"
+               data-es="Desglose exhaustivo de los sistemas de alta concurrencia entregados a producción en Grupo Salinas, arquitecturas web industriales y pipelines de ingesta multi-API, complementado con mi formación académica con honores y certificaciones tecnológicas."
+               data-en="In-depth breakdown of nationwide high-concurrency systems delivered to production at Grupo Salinas, industrial 3-tier architectures, and multi-API pipelines, complemented by honors engineering degree and industry certifications.">
+                Desglose exhaustivo de los sistemas de alta concurrencia entregados a producción en Grupo Salinas, arquitecturas web industriales y pipelines de ingesta multi-API, complementado con mi formación académica con honores y certificaciones tecnológicas.
+            </p>
+
+            <div class="trayectoria-nav-pills">
+                <a href="#experiencia" class="trayectoria-nav-pill active">
+                    <span>💼</span>
+                    <span data-es="Experiencia Profesional (6 Entornos & Empresas)" data-en="Professional Experience (6 Environments & Companies)">Experiencia Profesional (6 Entornos & Empresas)</span>
+                </a>
+                <a href="#educacion" class="trayectoria-nav-pill">
+                    <span>🎓</span>
+                    <span data-es="Educación & Certificaciones" data-en="Education & Certifications">Educación & Certificaciones</span>
+                </a>
+                <a href="index.html" class="trayectoria-nav-pill">
+                    <span>←</span>
+                    <span data-es="Volver al Portafolio" data-en="Back to Portfolio">Volver al Portafolio</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN 1: EXPERIENCIA DETALLADA -->
+        <section id="experiencia" class="section-pad" style="padding-top: 40px;">
+            <div class="container">
+                <div class="section-header" style="text-align: left; margin-bottom: 30px;">
+                    <div class="section-label" data-es="[ TRAYECTORIA CORPORATIVA COMPLETA ]" data-en="[ COMPLETE CORPORATE CAREER ]">[ TRAYECTORIA CORPORATIVA COMPLETA ]</div>
+                    <h2 class="section-title" style="font-size: 2rem;">
+                        <span data-es="Empresas &" data-en="Companies &">Empresas &</span> 
+                        <span class="neon-glow" data-es="Sistemas en Producción" data-en="Production Systems">Sistemas en Producción</span>
+                    </h2>
+                </div>
+
+                <div class="trayectoria-timeline">
+
+                    <!-- EMPRESA 1: GRUPO SALINAS -->
+                    <article class="trayectoria-company-card">
+                        <div class="trayectoria-company-header">
+                            <div class="company-name-wrap">
+                                <span class="company-title-main">GRUPO SALINAS</span>
+                                <span class="company-badge-loc badge-salinas">CDMX · PRODUCCIÓN NACIONAL</span>
+                            </div>
+                            <div class="company-period">
+                                <span>📅</span>
+                                <span data-es="Noviembre 2025 – Actualidad" data-en="November 2025 – Present">Noviembre 2025 – Actualidad</span>
+                            </div>
+                        </div>
+
+                        <div class="role-highlight" data-es="Desarrolladora Web Front-End & Sistemas Corporativos" data-en="Frontend Web Developer & Enterprise Systems">
+                            Desarrolladora Web Front-End & Sistemas Corporativos
+                        </div>
+
+                        <p class="company-desc-text"
+                           data-es="Lideré el diseño técnico, desarrollo e implementación de <strong>5 plataformas corporativas estratégicas</strong> desplegadas con éxito en entornos de producción de alta disponibilidad. Implementé flujos de trabajo de integración y despliegue continuo mediante <strong>GitLab corporativo</strong>, administrando ramas de versión (feature, release, hotfix), revisiones de código y apego a estándares de seguridad institucional."
+                           data-en="Led technical design, development, and delivery of <strong>5 strategic enterprise platforms</strong> shipped to high-availability production. Managed CI/CD release workflows through <strong>enterprise GitLab</strong>, release branch strategies, and rigorous code reviews adhering to security compliance.">
+                            Lideré el diseño técnico, desarrollo e implementación de <strong>5 plataformas corporativas estratégicas</strong> desplegadas con éxito en entornos de producción de alta disponibilidad. Implementé flujos de trabajo de integración y despliegue continuo mediante <strong>GitLab corporativo</strong>, administrando ramas de versión (feature, release, hotfix), revisiones de código y apego a estándares de seguridad institucional.
+                        </p>
+
+                        <!-- Desglose de los 5 Sistemas Corporativos -->
+                        <div class="card-subgrid">
+                            <div class="card-subitem">
+                                <div class="subitem-icon-title">
+                                    <span class="subitem-icon">📱</span>
+                                    <span class="subitem-title" data-es="1. Registro y Onboarding Móvil" data-en="1. Mobile Onboarding & Registration">1. Registro y Onboarding Móvil</span>
+                                </div>
+                                <div class="subitem-desc"
+                                     data-es="Sistema de onboarding institucional con cobertura nacional para colaboradores y usuarios móviles. Diseñado en React 19 con arquitectura Mobile-First, validación reactiva de formularios y absorción de picos de carga."
+                                     data-en="Institutional onboarding system deployed nationwide for enterprise personnel and mobile users. Built with React 19, Mobile-First design, and robust reactive state validation.">
+                                    Sistema de onboarding institucional con cobertura nacional para colaboradores y usuarios móviles. Diseñado en React 19 con arquitectura Mobile-First, validación reactiva de formularios y absorción de picos de carga.
+                                </div>
+                                <div class="subitem-tags">
+                                    <span class="subitem-tag">React 19</span>
+                                    <span class="subitem-tag">Vite</span>
+                                    <span class="subitem-tag">Mobile First</span>
+                                    <span class="subitem-tag">Escala Nacional</span>
+                                </div>
+                            </div>
+
+                            <div class="card-subitem">
+                                <div class="subitem-icon-title">
+                                    <span class="subitem-icon">🎮</span>
+                                    <span class="subitem-title" data-es="2. Gamificación Multi-Servidor" data-en="2. Multi-Server Gamification">2. Gamificación Multi-Servidor</span>
+                                </div>
+                                <div class="subitem-desc"
+                                     data-es="Dinámicas interactivas y minijuegos web corporativos a 60 FPS. Implementó renderizado de Canvas y animaciones fluidas con Framer Motion, adaptadas modularmente a servidores heterogéneos y contenedores Docker."
+                                     data-en="Interactive corporate gamification dynamics and web minigames running at steady 60 FPS. Implemented Canvas rendering and Framer Motion adapted across diverse servers and Docker.">
+                                    Dinámicas interactivas y minijuegos web corporativos a 60 FPS. Implementó renderizado de Canvas y animaciones fluidas con Framer Motion, adaptadas modularmente a servidores heterogéneos y contenedores Docker.
+                                </div>
+                                <div class="subitem-tags">
+                                    <span class="subitem-tag">Framer Motion</span>
+                                    <span class="subitem-tag">HTML5 Canvas</span>
+                                    <span class="subitem-tag">Docker</span>
+                                    <span class="subitem-tag">60 FPS</span>
+                                </div>
+                            </div>
+
+                            <div class="card-subitem">
+                                <div class="subitem-icon-title">
+                                    <span class="subitem-icon">🔍</span>
+                                    <span class="subitem-title" data-es="3. Motor de Búsqueda Reactiva" data-en="3. Reactive Search Engine">3. Motor de Búsqueda Reactiva</span>
+                                </div>
+                                <div class="subitem-desc"
+                                     data-es="Motor de búsqueda y filtrado de alto rendimiento con indexación reactiva en cliente. Desarrollado en React y SCSS modular para permitir navegación instantánea sin latencia de red bajo concurrencia masiva."
+                                     data-en="High-performance search and instant client-side filtering engine with reactive indexing in React and modular SCSS to absorb concurrency spikes with zero noticeable latency.">
+                                    Motor de búsqueda y filtrado de alto rendimiento con indexación reactiva en cliente. Desarrollado en React y SCSS modular para permitir navegación instantánea sin latencia de red bajo concurrencia masiva.
+                                </div>
+                                <div class="subitem-tags">
+                                    <span class="subitem-tag">React</span>
+                                    <span class="subitem-tag">SCSS Modular</span>
+                                    <span class="subitem-tag">Indexación Cliente</span>
+                                    <span class="subitem-tag">Zero-Lag</span>
+                                </div>
+                            </div>
+
+                            <div class="card-subitem">
+                                <div class="subitem-icon-title">
+                                    <span class="subitem-icon">⚽</span>
+                                    <span class="subitem-title" data-es="4. Gestión Deportiva & Fixtures" data-en="4. Sports Management & Fixtures">4. Gestión Deportiva & Fixtures</span>
+                                </div>
+                                <div class="subitem-desc"
+                                     data-es="Portal institucional para administración de torneos y calendarios competitivos. Conexión de servicios REST mediante Axios y generación dinámica de minutas y constancias ejecutivas en PDF con PDFMake."
+                                     data-en="Institutional sports management portal for tournaments and schedules. Consumes REST APIs via Axios with automated executive PDF reporting and fixtures generated dynamically.">
+                                    Portal institucional para administración de torneos y calendarios competitivos. Conexión de servicios REST mediante Axios y generación dinámica de minutas y constancias ejecutivas en PDF con PDFMake.
+                                </div>
+                                <div class="subitem-tags">
+                                    <span class="subitem-tag">Axios</span>
+                                    <span class="subitem-tag">PDFMake</span>
+                                    <span class="subitem-tag">REST APIs</span>
+                                    <span class="subitem-tag">Reportería</span>
+                                </div>
+                            </div>
+
+                            <div class="card-subitem">
+                                <div class="subitem-icon-title">
+                                    <span class="subitem-icon">📊</span>
+                                    <span class="subitem-title" data-es="5. Portal de Bienestar & Analítica" data-en="5. Wellness & Analytics Portal">5. Portal de Bienestar & Analítica</span>
+                                </div>
+                                <div class="subitem-desc"
+                                     data-es="Tableros ejecutivos interactivos con gráficos en ECharts, tipado riguroso con TypeScript y validación de esquemas con Zod. Gestión de estado global con Zustand y despliegue en servidores corporativos IIS."
+                                     data-en="Executive interactive dashboards with ECharts, TypeScript, Zod schema validation, Zustand state management, and production deployment on corporate IIS servers.">
+                                    Tableros ejecutivos interactivos con gráficos en ECharts, tipado riguroso con TypeScript y validación de esquemas con Zod. Gestión de estado global con Zustand y despliegue en servidores corporativos IIS.
+                                </div>
+                                <div class="subitem-tags">
+                                    <span class="subitem-tag">TypeScript</span>
+                                    <span class="subitem-tag">ECharts</span>
+                                    <span class="subitem-tag">Zod</span>
+                                    <span class="subitem-tag">Zustand</span>
+                                    <span class="subitem-tag">IIS Servers</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- EMPRESA 2: MGO INDUSTRIAL -->
+                    <article class="trayectoria-company-card">
+                        <div class="trayectoria-company-header">
+                            <div class="company-name-wrap">
+                                <span class="company-title-main">MGO INDUSTRIAL</span>
+                                <span class="company-badge-loc badge-mgo">GUADALAJARA, JALISCO · HÍBRIDO / REMOTO</span>
+                            </div>
+                            <div class="company-period">
+                                <span>📅</span>
+                                <span data-es="Septiembre 2023 – Octubre 2025" data-en="September 2023 – October 2025">Septiembre 2023 – Octubre 2025</span>
+                            </div>
+                        </div>
+
+                        <div class="role-highlight" data-es="Desarrolladora Full Stack & Arquitectura Web" data-en="Full Stack Developer & Web Architecture">
+                            Desarrolladora Full Stack & Arquitectura Web
+                        </div>
+
+                        <p class="company-desc-text"
+                           data-es="Diseñé e implementé la <strong>arquitectura web integral en 3 capas</strong> para la gestión operativa y logística de la compañía, integrando un portal moderno para clientes, microservicios backend y tableros analíticos en tiempo real."
+                           data-en="Engineered and shipped an end-to-end <strong>3-tier web architecture</strong> for industrial supply chain and operational management, combining client portals, backend microservices, and real-time business intelligence.">
+                            Diseñé e implementé la <strong>arquitectura web integral en 3 capas</strong> para la gestión operativa y logística de la compañía, integrando un portal moderno para clientes, microservicios backend y tableros analíticos en tiempo real.
+                        </p>
+
+                        <div class="card-subgrid">
+                            <div class="card-subitem">
+                                <div class="subitem-icon-title">
+                                    <span class="subitem-icon">⚡</span>
+                                    <span class="subitem-title" data-es="Capa Frontend Reactiva" data-en="Reactive Frontend Tier">Capa Frontend Reactiva</span>
+                                </div>
+                                <div class="subitem-desc"
+                                     data-es="Desarrollada en Next.js 14 y Tailwind CSS con componentes tipados en TypeScript, logrando tiempos de carga óptimos y experiencia de usuario fluida en cotizaciones."
+                                     data-en="Built with Next.js 14 and Tailwind CSS with TypeScript typing, delivering blazing-fast page loads and responsive quote workflows.">
+                                    Desarrollada en Next.js 14 y Tailwind CSS con componentes tipados en TypeScript, logrando tiempos de carga óptimos y experiencia de usuario fluida en cotizaciones.
+                                </div>
+                                <div class="subitem-tags">
+                                    <span class="subitem-tag">Next.js 14</span>
+                                    <span class="subitem-tag">Tailwind CSS</span>
+                                    <span class="subitem-tag">TypeScript</span>
+                                </div>
+                            </div>
+
+                            <div class="card-subitem">
+                                <div class="subitem-icon-title">
+                                    <span class="subitem-icon">🗄️</span>
+                                    <span class="subitem-title" data-es="Capa Backend & Persistencia" data-en="Backend & Data Layer">Capa Backend & Persistencia</span>
+                                </div>
+                                <div class="subitem-desc"
+                                     data-es="APIs REST robustas en Node.js y Express con pooling transaccional en PostgreSQL, autenticación mediante JWT y empaquetado contenerizado en Docker."
+                                     data-en="Robust REST APIs in Node.js and Express with PostgreSQL connection pooling, secure JWT auth, and containerized Docker setup.">
+                                    APIs REST robustas en Node.js y Express con pooling transaccional en PostgreSQL, autenticación mediante JWT y empaquetado contenerizado en Docker.
+                                </div>
+                                <div class="subitem-tags">
+                                    <span class="subitem-tag">Node.js</span>
+                                    <span class="subitem-tag">Express</span>
+                                    <span class="subitem-tag">PostgreSQL</span>
+                                    <span class="subitem-tag">Docker</span>
+                                </div>
+                            </div>
+
+                            <div class="card-subitem">
+                                <div class="subitem-icon-title">
+                                    <span class="subitem-icon">📈</span>
+                                    <span class="subitem-title" data-es="Business Intelligence (Looker)" data-en="Business Intelligence (Looker)">Business Intelligence (Looker)</span>
+                                </div>
+                                <div class="subitem-desc"
+                                     data-es="Diseño de tableros ejecutivos en Google Looker Studio conectados a la base de datos para visualización de KPIs comerciales, pedidos y control de inventarios."
+                                     data-en="Executive dashboards in Google Looker Studio connected to production database for live sales KPIs, orders, and inventory monitoring.">
+                                    Diseño de tableros ejecutivos en Google Looker Studio conectados a la base de datos para visualización de KPIs comerciales, pedidos y control de inventarios.
+                                </div>
+                                <div class="subitem-tags">
+                                    <span class="subitem-tag">Looker Studio</span>
+                                    <span class="subitem-tag">KPI Analytics</span>
+                                    <span class="subitem-tag">Data Modeling</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- EMPRESA 3: EUFONIA STUDIOS -->
+                    <article class="trayectoria-company-card">
+                        <div class="trayectoria-company-header">
+                            <div class="company-name-wrap">
+                                <span class="company-title-main">EUFONIA STUDIOS</span>
+                                <span class="company-badge-loc badge-eufonia">MÉXICO · REMOTO</span>
+                            </div>
+                            <div class="company-period">
+                                <span>📅</span>
+                                <span data-es="Marzo 2024 – Diciembre 2025" data-en="March 2024 – December 2025">Marzo 2024 – Diciembre 2025</span>
+                            </div>
+                        </div>
+
+                        <div class="role-highlight" data-es="Ingeniera de Automatización & Integración de Datos" data-en="Data Integration & Automation Engineer">
+                            Ingeniera de Automatización & Integración de Datos
+                        </div>
+
+                        <p class="company-desc-text"
+                           data-es="Diseñé e implementé un <strong>pipeline de ingesta de datos multicanal y motor JSONPath</strong> en Google Apps Script y Google Sheets, integrando flujos comerciales y de streaming de múltiples plataformas digitales (Stripe, PayPal, Shopify y YouTube Analytics) sin intermediarios costosos."
+                           data-en="Architected and deployed a <strong>multi-channel ingestion pipeline with JSONPath engine</strong> in Google Apps Script, consolidating commercial and streaming metrics from Stripe, PayPal, Shopify, and YouTube Analytics.">
+                            Diseñé e implementé un <strong>pipeline de ingesta de datos multicanal y motor JSONPath</strong> en Google Apps Script y Google Sheets, integrando flujos comerciales y de streaming de múltiples plataformas digitales (Stripe, PayPal, Shopify y YouTube Analytics) sin intermediarios costosos.
+                        </p>
+
+                        <div class="card-subgrid">
+                            <div class="card-subitem">
+                                <div class="subitem-icon-title">
+                                    <span class="subitem-icon">🔄</span>
+                                    <span class="subitem-title" data-es="Motor de Ingesta Multi-API" data-en="Multi-API Ingestion Engine">Motor de Ingesta Multi-API</span>
+                                </div>
+                                <div class="subitem-desc"
+                                     data-es="Consumo automatizado de endpoints con autenticación OAuth2 y Webhooks para Stripe, PayPal y Shopify, garantizando reconciliación contable sin desfases."
+                                     data-en="Automated endpoints consumption with OAuth2 and webhooks for Stripe, PayPal, and Shopify for automated revenue reconciliation.">
+                                    Consumo automatizado de endpoints con autenticación OAuth2 y Webhooks para Stripe, PayPal y Shopify, garantizando reconciliación contable sin desfases.
+                                </div>
+                                <div class="subitem-tags">
+                                    <span class="subitem-tag">OAuth2</span>
+                                    <span class="subitem-tag">Stripe API</span>
+                                    <span class="subitem-tag">PayPal API</span>
+                                    <span class="subitem-tag">Shopify</span>
+                                </div>
+                            </div>
+
+                            <div class="card-subitem">
+                                <div class="subitem-icon-title">
+                                    <span class="subitem-icon">⚙️</span>
+                                    <span class="subitem-title" data-es="Motor de Parsing JSONPath" data-en="JSONPath Parsing Engine">Motor de Parsing JSONPath</span>
+                                </div>
+                                <div class="subitem-desc"
+                                     data-es="Algoritmo recursivo en Google Apps Script para aplanar estructuras JSON complejas y mapearlas directamente a celdas matriciales en tiempo real."
+                                     data-en="Recursive JSONPath parsing algorithm in Google Apps Script flattening nested data structures directly into matrix spreadsheets.">
+                                    Algoritmo recursivo en Google Apps Script para aplanar estructuras JSON complejas y mapearlas directamente a celdas matriciales en tiempo real.
+                                </div>
+                                <div class="subitem-tags">
+                                    <span class="subitem-tag">Apps Script</span>
+                                    <span class="subitem-tag">JSONPath</span>
+                                    <span class="subitem-tag">Automation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- EMPRESA 4: CONSULTORÍA TI & DESARROLLO FREELANCE (CLIENTE: DESPACHO CONTABLE DÍAZ) -->
+                    <article class="trayectoria-company-card">
+                        <div class="trayectoria-company-header">
+                            <div class="company-name-wrap">
+                                <span class="company-title-main">CONSULTORÍA TI & DESARROLLO FREELANCE</span>
+                                <span class="company-badge-loc badge-carrizales" style="background: rgba(255, 122, 0, 0.15); border: 1px solid rgba(255, 122, 0, 0.4); color: #ffaa00;">CLIENTE: DESPACHO CONTABLE DÍAZ</span>
+                                <span class="company-badge-loc badge-salinas">SAN LUIS POTOSÍ · FREELANCE</span>
+                            </div>
+                            <div class="company-period">
+                                <span>📅</span>
+                                <span data-es="Septiembre 2022 – Septiembre 2023" data-en="September 2022 – September 2023">Septiembre 2022 – Septiembre 2023</span>
+                            </div>
+                        </div>
+
+                        <div class="role-highlight" data-es="Desarrolladora Full Stack & Consultora de Infraestructura TI" data-en="Full Stack Developer & IT Infrastructure Consultant">
+                            Desarrolladora Full Stack & Consultora de Infraestructura TI
+                        </div>
+
+                        <p class="company-desc-text"
+                           data-es="Desarrollo de soluciones tecnológicas a la medida y modernización integral de operaciones para la firma contable. Lideré el ciclo de vida completo de la <strong>plataforma web para el Control de Honorarios y Gestión de Tareas</strong>, así como la configuración de la infraestructura de red local, políticas de ciberseguridad y respaldos automáticos en la nube."
+                           data-en="End-to-end custom software engineering and IT infrastructure modernization for the accounting firm. Spearheaded the internal <strong>Fee Control & Task Management web platform</strong> alongside secure LAN network architecture, cybersecurity enforcement, and automated cloud backups.">
+                            Desarrollo de soluciones tecnológicas a la medida y modernización integral de operaciones para la firma contable. Lideré el ciclo de vida completo de la <strong>plataforma web para el Control de Honorarios y Gestión de Tareas</strong>, así como la configuración de la infraestructura de red local, políticas de ciberseguridad y respaldos automáticos en la nube.
+                        </p>
+
+                        <div class="card-subgrid">
+                            <div class="card-subitem">
+                                <div class="subitem-icon-title">
+                                    <span class="subitem-icon">💻</span>
+                                    <span class="subitem-title" data-es="Control de Honorarios & Tareas" data-en="Fee Tracking & Task Management">Control de Honorarios & Tareas</span>
+                                </div>
+                                <div class="subitem-desc"
+                                     data-es="Plataforma web con React y Tailwind CSS en frontend, backend en Node.js y base de datos relacional PostgreSQL con control de acceso por roles (RBAC) para administración de productividad y cobranza."
+                                     data-en="Full-stack web platform built with React and Tailwind CSS frontend, Node.js backend, and PostgreSQL relational data with Role-Based Access Control (RBAC) for productivity and revenue collection.">
+                                    Plataforma web con React y Tailwind CSS en frontend, backend en Node.js y base de datos relacional PostgreSQL con control de acceso por roles (RBAC) para administración de productividad y cobranza.
+                                </div>
+                                <div class="subitem-tags">
+                                    <span class="subitem-tag">React</span>
+                                    <span class="subitem-tag">Tailwind CSS</span>
+                                    <span class="subitem-tag">Node.js</span>
+                                    <span class="subitem-tag">PostgreSQL</span>
+                                    <span class="subitem-tag">RBAC</span>
+                                </div>
+                            </div>
+
+                            <div class="card-subitem">
+                                <div class="subitem-icon-title">
+                                    <span class="subitem-icon">🌐</span>
+                                    <span class="subitem-title" data-es="Infraestructura & Redes LAN" data-en="Infrastructure & LAN Networking">Infraestructura & Redes LAN</span>
+                                </div>
+                                <div class="subitem-desc"
+                                     data-es="Configuración de routers empresariales, cableado estructurado, VLANs de aislamiento para estaciones de trabajo y aseguramiento de puntos de acceso Wi-Fi."
+                                     data-en="Deployment of enterprise routers, structured cabling, isolated VLANs for workstations, and secured Wi-Fi access points.">
+                                    Configuración de routers empresariales, cableado estructurado, VLANs de aislamiento para estaciones de trabajo y aseguramiento de puntos de acceso Wi-Fi.
+                                </div>
+                                <div class="subitem-tags">
+                                    <span class="subitem-tag">Redes LAN</span>
+                                    <span class="subitem-tag">VLANs</span>
+                                    <span class="subitem-tag">Seguridad Perimetral</span>
+                                </div>
+                            </div>
+
+                            <div class="card-subitem">
+                                <div class="subitem-icon-title">
+                                    <span class="subitem-icon">🛡️</span>
+                                    <span class="subitem-title" data-es="Copia de Seguridad & Búsqueda" data-en="Cloud Backups & Archival">Copia de Seguridad & Búsqueda</span>
+                                </div>
+                                <div class="subitem-desc"
+                                     data-es="Digitalización de archivos físicos con indexación de búsqueda y scripts automatizados de sincronización hacia nube cifrada para recuperación ante desastres (DRP)."
+                                     data-en="Physical archives digitalization with search indexing and automated encrypted cloud synchronization scripts for disaster recovery (DRP).">
+                                    Digitalización de archivos físicos con indexación de búsqueda y scripts automatizados de sincronización hacia nube cifrada para recuperación ante desastres (DRP).
+                                </div>
+                                <div class="subitem-tags">
+                                    <span class="subitem-tag">Cloud Backup</span>
+                                    <span class="subitem-tag">Cifrado AES</span>
+                                    <span class="subitem-tag">DRP</span>
+                                    <span class="subitem-tag">Digitalización</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- EMPRESA 5: SOLUCIONES DE INNOVACIÓN TECNOLÓGICA (QUERÉTARO) -->
+                    <article class="trayectoria-company-card">
+                        <div class="trayectoria-company-header">
+                            <div class="company-name-wrap">
+                                <span class="company-title-main">SOLUCIONES DE INNOVACIÓN TECNOLÓGICA</span>
+                                <span class="company-badge-loc badge-queretaro">QUERÉTARO · PRESENCIAL</span>
+                            </div>
+                            <div class="company-period">
+                                <span>📅</span>
+                                <span data-es="Marzo 2019 – Enero 2022" data-en="March 2019 – January 2022">Marzo 2019 – Enero 2022</span>
+                            </div>
+                        </div>
+
+                        <div class="role-highlight" data-es="Desarrolladora Web & Creación de Sistemas Web" data-en="Web Developer & Custom Systems Engineering">
+                            Desarrolladora Web & Creación de Sistemas Web
+                        </div>
+
+                        <p class="company-desc-text"
+                           data-es="Desarrollo de páginas y sistemas web desde cero a la medida de los requerimientos de clientes empresariales en Querétaro. Diseño de arquitectura frontend, integración de servicios backend y modelado de bases de datos relacionales, optimizando procesos de gestión y operación."
+                           data-en="Engineered custom web platforms and responsive applications from scratch for corporate clients in Querétaro. Designed frontend architecture, relational database schemas, and robust API endpoints integration.">
+                            Desarrollo de páginas y sistemas web desde cero a la medida de los requerimientos de clientes empresariales en Querétaro. Diseño de arquitectura frontend, integración de servicios backend y modelado de bases de datos relacionales, optimizando procesos de gestión y operación.
+                        </p>
+
+                        <div class="card-subgrid">
+                            <div class="card-subitem">
+                                <div class="subitem-icon-title">
+                                    <span class="subitem-icon">🖥️</span>
+                                    <span class="subitem-title" data-es="Sistemas a Medida & Maquetación" data-en="Custom Web Engineering">Sistemas a Medida & Maquetación</span>
+                                </div>
+                                <div class="subitem-desc"
+                                     data-es="Construcción de módulos interactivos, formularios de captura y paneles de control con estándares de accesibilidad, maquetación limpia y diseño responsivo para múltiples pantallas."
+                                     data-en="Built interactive modules, dynamic capture forms, and clean administration dashboards following responsive multi-device design standards.">
+                                    Construcción de módulos interactivos, formularios de captura y paneles de control con estándares de accesibilidad, maquetación limpia y diseño responsivo para múltiples pantallas.
+                                </div>
+                                <div class="subitem-tags">
+                                    <span class="subitem-tag">JavaScript ES6+</span>
+                                    <span class="subitem-tag">HTML5 / CSS3</span>
+                                    <span class="subitem-tag">UI / UX</span>
+                                    <span class="subitem-tag">Responsive</span>
+                                </div>
+                            </div>
+
+                            <div class="card-subitem">
+                                <div class="subitem-icon-title">
+                                    <span class="subitem-icon">🗄️</span>
+                                    <span class="subitem-title" data-es="Modelado Relacional & Endpoints" data-en="Relational Databases & APIs">Modelado Relacional & Endpoints</span>
+                                </div>
+                                <div class="subitem-desc"
+                                     data-es="Diseño y estructuración de bases de datos relacionales, consumo de endpoints REST y optimización de consultas para intercambio seguro de información."
+                                     data-en="Relational database schema modeling, RESTful endpoint consumption, and optimized queries ensuring data consistency and security.">
+                                    Diseño y estructuración de bases de datos relacionales, consumo de endpoints REST y optimización de consultas para intercambio seguro de información.
+                                </div>
+                                <div class="subitem-tags">
+                                    <span class="subitem-tag">Bases de Datos</span>
+                                    <span class="subitem-tag">SQL</span>
+                                    <span class="subitem-tag">REST APIs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- EMPRESA 6: DOCENCIA EN PREPARATORIA & PROYECTOS DE SOFTWARE ODISEA (SAN LUIS POTOSÍ) -->
+                    <article class="trayectoria-company-card">
+                        <div class="trayectoria-company-header">
+                            <div class="company-name-wrap">
+                                <span class="company-title-main">DOCENCIA DE BACHILLERATO & ODISEA LABS</span>
+                                <span class="company-badge-loc badge-odisea">SAN LUIS POTOSÍ</span>
+                            </div>
+                            <div class="company-period">
+                                <span>📅</span>
+                                <span data-es="Enero 2017 – Junio 2021" data-en="January 2017 – June 2021">Enero 2017 – Junio 2021</span>
+                            </div>
+                        </div>
+
+                        <div class="role-highlight" data-es="Docente de Inglés y Programación · Coordinadora Web en Odisea Labs" data-en="High School English & Programming Educator · Web Project Coordinator at Odisea Labs">
+                            Docente de Inglés y Programación · Coordinadora Web en Odisea Labs
+                        </div>
+
+                        <p class="company-desc-text"
+                           data-es="Desempeño dual simultáneo de alto impacto en San Luis Potosí: impartí cátedras a nivel preparatoria enseñando <strong>inglés técnico y fundamentos de programación</strong>, fomentando el razonamiento lógico y la comunicación bilingüe. A la par, colaboré como <strong>Coordinadora de Proyectos Web y Desarrolladora Front-End en Odisea Labs</strong> (Proyectos de Software Odisea), liderando requerimientos técnicos y diseño de interfaces."
+                           data-en="High-impact dual professional role in San Luis Potosí: taught high school courses in <strong>technical English and programming fundamentals</strong>, developing student logic and bilingual communication. Simultaneously acted as <strong>Web Project Coordinator and Front-End Developer at Odisea Labs</strong>, leading technical requirements and user interface implementations.">
+                            Desempeño dual simultáneo de alto impacto en San Luis Potosí: impartí cátedras a nivel preparatoria enseñando <strong>inglés técnico y fundamentos de programación</strong>, fomentando el razonamiento lógico y la comunicación bilingüe. A la par, colaboré como <strong>Coordinadora de Proyectos Web y Desarrolladora Front-End en Odisea Labs</strong> (Proyectos de Software Odisea), liderando requerimientos técnicos y diseño de interfaces.
+                        </p>
+
+                        <div class="card-subgrid">
+                            <div class="card-subitem">
+                                <div class="subitem-icon-title">
+                                    <span class="subitem-icon">🗣️</span>
+                                    <span class="subitem-title" data-es="Cátedra de Inglés Técnico & Lógica" data-en="Technical English & Logic Teaching">Cátedra de Inglés Técnico & Lógica</span>
+                                </div>
+                                <div class="subitem-desc"
+                                     data-es="Docencia frente a grupo a nivel bachillerato para la adquisición de competencias en comunicación y lectura de documentación técnica en inglés, además de fundamentos de algoritmia y pensamiento computacional."
+                                     data-en="Classroom educator teaching technical English comprehension, communication skills, algorithms, and computational thinking for high school students.">
+                                    Docencia frente a grupo a nivel bachillerato para la adquisición de competencias en comunicación y lectura de documentación técnica en inglés, además de fundamentos de algoritmia y pensamiento computacional.
+                                </div>
+                                <div class="subitem-tags">
+                                    <span class="subitem-tag">Inglés Técnico B2</span>
+                                    <span class="subitem-tag">Pedagogía TI</span>
+                                    <span class="subitem-tag">Algoritmia</span>
+                                    <span class="subitem-tag">Mentoría</span>
+                                </div>
+                            </div>
+
+                            <div class="card-subitem">
+                                <div class="subitem-icon-title">
+                                    <span class="subitem-icon">🚀</span>
+                                    <span class="subitem-title" data-es="Coordinación & Frontend (Odisea)" data-en="Web Coordination & Frontend (Odisea)">Coordinación & Frontend (Odisea)</span>
+                                </div>
+                                <div class="subitem-desc"
+                                     data-es="Levantamiento de requerimientos técnicos, diseño de casos de uso funcionales, cronogramas de entrega y desarrollo frontend de páginas y sistemas web responsivos."
+                                     data-en="Technical requirements discovery, functional use case design, project schedules, and frontend engineering for modern responsive web applications.">
+                                    Levantamiento de requerimientos técnicos, diseño de casos de uso funcionales, cronogramas de entrega y desarrollo frontend de páginas y sistemas web responsivos.
+                                </div>
+                                <div class="subitem-tags">
+                                    <span class="subitem-tag">Gestión de Proyectos</span>
+                                    <span class="subitem-tag">Frontend Web</span>
+                                    <span class="subitem-tag">Casos de Uso</span>
+                                    <span class="subitem-tag">Odisea Labs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: EDUCACIÓN & CERTIFICACIONES -->
+        <section id="educacion" class="section-pad" style="background: rgba(10, 5, 18, 0.4);">
+            <div class="container">
+                <div class="section-header" style="text-align: left; margin-bottom: 20px;">
+                    <div class="section-label" data-es="[ FORMACIÓN TÉCNICA RIGUROSA ]" data-en="[ RIGOROUS TECHNICAL EDUCATION ]">[ FORMACIÓN TÉCNICA RIGUROSA ]</div>
+                    <h2 class="section-title" style="font-size: 2rem;">
+                        <span data-es="Educación &" data-en="Academic &">Educación &</span> 
+                        <span class="neon-glow" data-es="Certificaciones" data-en="Certifications">Certificaciones</span>
+                    </h2>
+                    <p class="section-desc"
+                       data-es="Formación universitaria graduada con honores en Ingeniería en TIC, complementada con programas de especialización internacional en desarrollo front-end, cloud computing e inglés profesional."
+                       data-en="Honors ICT Engineering university education complemented by international specialization programs in front-end architecture, cloud computing, and certified English.">
+                        Formación universitaria graduada con honores en Ingeniería en TIC, complementada con programas de especialización internacional en desarrollo front-end, cloud computing e inglés profesional.
+                    </p>
+                </div>
+
+                <div class="edu-grid">
+
+                    <!-- 1. GRADO UNIVERSITARIO CON HONORES -->
+                    <div class="edu-card">
+                        <div>
+                            <div class="edu-header-top">
+                                <div class="edu-icon-badge">🎓</div>
+                            </div>
+                            <h3 class="edu-degree-title" data-es="Ingeniería en Tecnologías de la Información y Comunicaciones" data-en="B.S. in Information & Communications Technology Engineering">
+                                Ingeniería en Tecnologías de la Información y Comunicaciones
+                            </h3>
+                            <div class="edu-institution">TECNOLÓGICO NACIONAL DE MÉXICO (TecNM)</div>
+                            
+                            <div class="edu-honors-pill">
+                                <span>⭐</span>
+                                <span data-es="Graduada con Mención Honorífica" data-en="Graduated with Honors">Graduada con Mención Honorífica</span>
+                            </div>
+
+                            <p class="edu-desc-text"
+                               data-es="Especialidad en redes convergentes, ingeniería de software, arquitectura de bases de datos relacionales y computación distribuida en la nube. Tesis y desempeño sobresaliente acreditado con honores académicos."
+                               data-en="Specialized in convergent networks, software engineering, relational database architectures, and distributed cloud computing. Graduated with official honors.">
+                                Especialidad en redes convergentes, ingeniería de software, arquitectura de bases de datos relacionales y computación distribuida en la nube. Tesis y desempeño sobresaliente acreditado con honores académicos.
+                            </p>
+                        </div>
+                        <div class="subitem-tags">
+                            <span class="subitem-tag">Mención Honorífica</span>
+                            <span class="subitem-tag">TecNM</span>
+                            <span class="subitem-tag">Redes & Cloud</span>
+                            <span class="subitem-tag">Software Eng.</span>
+                        </div>
+                    </div>
+
+                    <!-- 2. BACHILLERATO TÉCNICO -->
+                    <div class="edu-card">
+                        <div>
+                            <div class="edu-header-top">
+                                <div class="edu-icon-badge">💻</div>
+                            </div>
+                            <h3 class="edu-degree-title" data-es="Técnico en Soporte y Mantenimiento de Cómputo" data-en="Technical Degree in Computer Support & Maintenance">
+                                Técnico en Soporte y Mantenimiento de Cómputo
+                            </h3>
+                            <div class="edu-institution">DGETI · CBTIS NO. 46 (CD. VALLES)</div>
+
+                            <div class="edu-honors-pill" style="border-color: rgba(0, 240, 255, 0.4); background: rgba(0, 240, 255, 0.12); color: #00f0ff;">
+                                <span>🏅</span>
+                                <span data-es="Excelencia Técnica & Práctica" data-en="Technical Excellence">Excelencia Técnica & Práctica</span>
+                            </div>
+
+                            <p class="edu-desc-text"
+                               data-es="Fundamentos sólidos de arquitectura de computadoras, ensamblaje de servidores, diseño y cableado de redes LAN/WAN, protocolos TCP/IP y diagnóstico de sistemas operativos."
+                               data-en="Solid foundation in computer hardware architectures, server assembly, LAN/WAN structured cabling, TCP/IP protocols, and operating system diagnostics.">
+                                Fundamentos sólidos de arquitectura de computadoras, ensamblaje de servidores, diseño y cableado de redes LAN/WAN, protocolos TCP/IP y diagnóstico de sistemas operativos.
+                            </p>
+                        </div>
+                        <div class="subitem-tags">
+                            <span class="subitem-tag">DGETI</span>
+                            <span class="subitem-tag">CBTis 46 · Cd. Valles</span>
+                            <span class="subitem-tag">Hardware</span>
+                            <span class="subitem-tag">Redes LAN</span>
+                        </div>
+                    </div>
+
+                    <!-- 3. ORACLE NEXT EDUCATION -->
+                    <div class="edu-card">
+                        <div>
+                            <div class="edu-header-top">
+                                <div class="edu-icon-badge">☕</div>
+                                <span class="edu-period-badge">2024</span>
+                            </div>
+                            <h3 class="edu-degree-title" data-es="Especialización Front-End & Java (ONE)" data-en="Front-End & Java Specialization (ONE)">
+                                Especialización Front-End & Java (ONE)
+                            </h3>
+                            <div class="edu-institution">ORACLE + ALURA LATAM</div>
+
+                            <div class="edu-honors-pill" style="border-color: rgba(255, 0, 127, 0.4); background: rgba(255, 0, 127, 0.12); color: #ff3399;">
+                                <span>📜</span>
+                                <span data-es="Programa de Alto Rendimiento (6 Meses)" data-en="Intensive High-Performance Track">Programa de Alto Rendimiento (6 Meses)</span>
+                            </div>
+
+                            <p class="edu-desc-text"
+                               data-es="Formación intensiva de 6 meses en desarrollo Front-End avanzado (JavaScript ES6+, React, accesibilidad web, manipulación del DOM) y fundamentos de programación orientada a objetos en Java."
+                               data-en="6-month immersive specialization in advanced Front-End web engineering (JavaScript ES6+, React, web accessibility, DOM) and OOP backend fundamentals in Java.">
+                                Formación intensiva de 6 meses en desarrollo Front-End avanzado (JavaScript ES6+, React, accesibilidad web, manipulación del DOM) y fundamentos de programación orientada a objetos en Java.
+                            </p>
+                        </div>
+                        <div class="subitem-tags">
+                            <span class="subitem-tag">Oracle ONE</span>
+                            <span class="subitem-tag">Alura Latam</span>
+                            <span class="subitem-tag">React</span>
+                            <span class="subitem-tag">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <!-- 4. GOOGLE CLOUD & SANTANDER -->
+                    <div class="edu-card">
+                        <div>
+                            <div class="edu-header-top">
+                                <div class="edu-icon-badge">☁️</div>
+                                <span class="edu-period-badge">2024</span>
+                            </div>
+                            <h3 class="edu-degree-title" data-es="Google Cloud Computing & Modern AI" data-en="Google Cloud Computing & Modern AI">
+                                Google Cloud Computing & Modern AI
+                            </h3>
+                            <div class="edu-institution">SANTANDER OPEN ACADEMY + GOOGLE</div>
+
+                            <div class="edu-honors-pill" style="border-color: rgba(50, 205, 50, 0.4); background: rgba(50, 205, 50, 0.12); color: #32cd32;">
+                                <span>☁️</span>
+                                <span data-es="Certificación Cloud Oficial" data-en="Official Cloud Credential">Certificación Cloud Oficial</span>
+                            </div>
+
+                            <p class="edu-desc-text"
+                               data-es="Fundamentos de infraestructura en la nube en Google Cloud Platform (GCP), contenedores con Google Kubernetes Engine (GKE), Serverless Cloud Functions y despliegue de modelos de IA generativa."
+                               data-en="Google Cloud Platform fundamentals (GCP), container orchestration with GKE, Serverless Cloud Run/Functions, and modern generative AI deployment pipelines.">
+                                Fundamentos de infraestructura en la nube en Google Cloud Platform (GCP), contenedores con Google Kubernetes Engine (GKE), Serverless Cloud Functions y despliegue de modelos de IA generativa.
+                            </p>
+                        </div>
+                        <div class="subitem-tags">
+                            <span class="subitem-tag">Google Cloud</span>
+                            <span class="subitem-tag">GCP</span>
+                            <span class="subitem-tag">Docker</span>
+                            <span class="subitem-tag">AI Pipelines</span>
+                        </div>
+                    </div>
+
+                    <!-- 5. EF SET CERTIFICACIÓN INGLÉS B2 -->
+                    <div class="edu-card">
+                        <div>
+                            <div class="edu-header-top">
+                                <div class="edu-icon-badge">🌐</div>
+                                <span class="edu-period-badge">2024</span>
+                            </div>
+                            <h3 class="edu-degree-title" data-es="Certificación Internacional de Inglés B2" data-en="EF SET English Certificate — B2 Level">
+                                Certificación Internacional de Inglés B2
+                            </h3>
+                            <div class="edu-institution">EF STANDARD ENGLISH TEST (EF SET)</div>
+
+                            <div class="edu-honors-pill" style="border-color: rgba(255, 122, 0, 0.4); background: rgba(255, 122, 0, 0.12); color: #ff7a00;">
+                                <span>🗣️</span>
+                                <span data-es="B2 Upper Intermediate (Acreditado)" data-en="B2 Upper Intermediate (Certified)">B2 Upper Intermediate (Acreditado)</span>
+                            </div>
+
+                            <p class="edu-desc-text"
+                               data-es="Competencia profesional para comunicación técnica fluida, redacción de documentación de arquitectura, code reviews bilingües y colaboración en equipos de ingeniería globales."
+                               data-en="Certified professional proficiency for technical documentation, bilingual code reviews, cross-functional collaboration, and daily engineering standups.">
+                                Competencia profesional para comunicación técnica fluida, redacción de documentación de arquitectura, code reviews bilingües y colaboración en equipos de ingeniería globales.
+                            </p>
+                        </div>
+                        <div class="subitem-tags">
+                            <span class="subitem-tag">EF SET B2</span>
+                            <span class="subitem-tag">Bilingual</span>
+                            <span class="subitem-tag">Technical English</span>
+                        </div>
+                    </div>
+
+                    <!-- 6. GOOGLE ACTÍVATE -->
+                    <div class="edu-card">
+                        <div>
+                            <div class="edu-header-top">
+                                <div class="edu-icon-badge">🔒</div>
+                                <span class="edu-period-badge">2023 – 2024</span>
+                            </div>
+                            <h3 class="edu-degree-title" data-es="Desarrollo Web & Fundamentos de Ciberseguridad" data-en="Web Development & Cybersecurity Fundamentals">
+                                Desarrollo Web & Fundamentos de Ciberseguridad
+                            </h3>
+                            <div class="edu-institution">GOOGLE ACTÍVATE</div>
+
+                            <div class="edu-honors-pill" style="border-color: rgba(255, 0, 127, 0.4); background: rgba(255, 0, 127, 0.12); color: #ff3399;">
+                                <span>🛡️</span>
+                                <span data-es="Seguridad Web & OWASP" data-en="Web Security & OWASP">Seguridad Web & OWASP</span>
+                            </div>
+
+                            <p class="edu-desc-text"
+                               data-es="Buenas prácticas de desarrollo web seguro, prevención de vulnerabilidades web (XSS, CSRF, SQL Injection) y estándares W3C de accesibilidad y SEO técnico."
+                               data-en="Secure web engineering best practices, mitigation of top web vulnerabilities (OWASP, XSS, CSRF, SQL injection), and W3C accessibility compliance.">
+                                Buenas prácticas de desarrollo web seguro, prevención de vulnerabilidades web (XSS, CSRF, SQL Injection) y estándares W3C de accesibilidad y SEO técnico.
+                            </p>
+                        </div>
+                        <div class="subitem-tags">
+                            <span class="subitem-tag">Google Actívate</span>
+                            <span class="subitem-tag">Ciberseguridad</span>
+                            <span class="subitem-tag">OWASP</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Botón de retorno al inicio -->
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="index.html" class="btn-back-home">
+                        <span>←</span>
+                        <span data-es="Volver al Portafolio Principal" data-en="Back to Main Portfolio">Volver al Portafolio Principal</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-cyber" style="border-top: 1px solid rgba(255, 0, 127, 0.2); padding: 40px 0; text-align: center; margin-top: 40px;">
+        <div class="container">
+            <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">
+                © 2026 <strong>Nayeli Carrizales Díaz</strong> · Ingeniera en TIC · Cloud & Full Stack Solutions · CDMX
+            </p>
+            <p style="color: rgba(255, 255, 255, 0.4); font-size: 0.8rem; margin-top: 6px;">
+                Cultura Huasteca Potosina × Vanguardia Tecnológica Cyberpunk
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Init Lucide Icons
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
