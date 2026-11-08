@@ -472,42 +472,148 @@ body {
     transform: translateY(-2px) scale(1.08);
 }
 
-/* Quick Stats Bar in Hero */
-.hero-quick-stats {
+/* Full Width Divider Line spanning across both columns */
+.hero-full-divider {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 127, 0.45) 15%, rgba(255, 122, 0, 0.4) 50%, rgba(255, 0, 127, 0.45) 85%, transparent);
+    margin: 24px 0 10px;
+    position: relative;
+}
+
+.hero-full-divider::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--neon-pink);
+    box-shadow: 0 0 10px var(--neon-pink);
+}
+
+/* Bottom 2-Column Grid matching Hero columns */
+.hero-bottom-grid {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.15fr 0.95fr;
+    gap: 40px;
+    width: 100%;
+}
+
+.hero-bottom-left,
+.hero-bottom-right {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding-top: 22px;
 }
 
 .stat-pill {
-    background: rgba(14, 6, 22, 0.6);
+    background: rgba(14, 6, 22, 0.65);
     border: 1px solid rgba(255, 0, 127, 0.2);
     border-radius: var(--radius-md);
-    padding: 10px 14px;
+    padding: 10px 12px;
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    min-width: 0;
+}
+
+.stat-pill:hover {
+    border-color: rgba(255, 0, 127, 0.45);
+    box-shadow: 0 4px 18px rgba(255, 0, 127, 0.18);
+    background: rgba(22, 9, 34, 0.75);
 }
 
 .stat-icon {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-info {
+    min-width: 0;
+    overflow: hidden;
 }
 
 .stat-info .stat-num {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 1.15rem;
+    font-size: 1.02rem;
     font-weight: 700;
     color: #fff;
     line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .stat-info .stat-label {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Contact Cards (Interactive Link Pills) */
+.contact-pill {
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    border-color: rgba(255, 0, 127, 0.25);
+}
+
+.contact-pill:hover {
+    border-color: var(--neon-pink);
+    background: rgba(255, 0, 127, 0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 0, 127, 0.28);
+}
+
+.contact-pill-icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 0, 127, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neon-pink);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.contact-pill:hover .contact-pill-icon {
+    background: var(--neon-pink);
+    color: #fff;
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 12px var(--neon-pink);
+}
+
+.contact-pill .arrow-indicator {
+    font-size: 0.82rem;
+    color: var(--neon-pink);
+    opacity: 0.65;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: inline-block;
+}
+
+.contact-pill:hover .arrow-indicator {
+    transform: translate(2px, -2px);
+    opacity: 1;
 }
 
 /* Hero Avatar & Holographic HUD Side */
@@ -516,12 +622,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -18px;
 }
 
 .hud-cyber-frame {
     position: relative;
     width: 100%;
-    max-width: 460px;
+    max-width: 440px;
     aspect-ratio: 1 / 1;
     border-radius: var(--radius-xl);
     overflow: hidden;
@@ -558,7 +665,8 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center 20%;
+    transform: translateY(-8px);
     position: relative;
     z-index: 1;
     filter: drop-shadow(0 0 18px rgba(255, 0, 127, 0.25));
@@ -566,7 +674,7 @@ body {
 }
 
 .hud-cyber-frame:hover .avatar-main-img {
-    transform: scale(1.03);
+    transform: scale(1.03) translateY(-8px);
 }
 
 /* Floating HUD status badge */
@@ -991,9 +1099,9 @@ body {
 .emblem-stage-layout {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 16px;
     width: 100%;
 }
 
@@ -1004,21 +1112,32 @@ body {
     justify-content: center;
 }
 
-/* Emblem Tabs Selector (Vertical next to the flower) */
+/* Fixed-dimension wrapper for the 90-degree rotated pill switch */
+.emblem-nav-pills-wrap {
+    width: 46px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+/* Emblem Tabs Selector (Horizontal Capsule Rotated 90 Degrees) */
 .emblem-nav-pills {
     display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 55px;
-    margin-bottom: 0;
-    background: rgba(14, 6, 24, 0.85);
-    padding: 7px;
-    border-radius: 20px;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    background: rgba(14, 6, 24, 0.9);
+    padding: 5px 8px;
+    border-radius: 9999px;
     border: 1px solid rgba(255, 0, 127, 0.35);
     z-index: 5;
     box-shadow: 0 0 16px rgba(255, 0, 127, 0.18);
-    flex-shrink: 0;
+    transform: rotate(90deg);
+    transform-origin: center center;
+    white-space: nowrap;
 }
 
 .emblem-pill-btn {
@@ -1027,19 +1146,17 @@ body {
     color: var(--text-muted);
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
-    font-size: 0.78rem;
-    letter-spacing: 0.6px;
+    font-size: 0.74rem;
+    letter-spacing: 0.8px;
     text-transform: uppercase;
-    padding: 8px 14px;
-    border-radius: 14px;
+    padding: 7px 16px;
+    border-radius: 9999px;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 7px;
     white-space: nowrap;
-    width: 100%;
-    justify-content: flex-start;
 }
 
 .emblem-pill-btn .pill-dot {
@@ -1069,25 +1186,20 @@ body {
     box-shadow: 0 0 8px var(--neon-pink);
 }
 
-@media (max-width: 520px) {
+@media (max-width: 580px) {
     .emblem-stage-layout {
         flex-direction: column;
         align-items: center;
         gap: 16px;
     }
 
-    .emblem-nav-pills {
-        flex-direction: row;
-        margin-top: 0;
-        border-radius: 9999px;
-        padding: 5px;
+    .emblem-nav-pills-wrap {
+        width: auto;
+        height: auto;
     }
 
-    .emblem-pill-btn {
-        border-radius: 9999px;
-        padding: 6px 12px;
-        justify-content: center;
-        width: auto;
+    .emblem-nav-pills {
+        transform: none;
     }
 }
 
@@ -2021,7 +2133,7 @@ body {
     height: 100vh;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.65;
+    opacity: 0.85;
 }
 
 .hero-bg-canvas {
@@ -2052,95 +2164,110 @@ body {
     transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* 3. Left Side: Vertical Totem of 3 Huasteca Icons (Flor Superior + Quezquém + Flor Inferior) UNDERNEATH Main Card */
+/* 3. Left Side: Vertical Totem of 5 Huasteca Stars (Zig-Zag Constellation) UNDERNEATH Main Card */
 .hero-left-totem-stack {
     position: absolute;
-    left: -105px;
+    left: -48px;
     top: 50%;
-    transform: translateY(-50%) translate3d(calc(var(--shift-x, 0) * -16px), calc(var(--shift-y, 0) * -16px), 0);
+    transform: translateY(-50%) translate3d(calc(var(--shift-x, 0) * -14px), calc(var(--shift-y, 0) * -14px), 0);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
-    z-index: 1 !important; /* Strictly BEHIND .hero-wrapper (z-index: 5) */
-    pointer-events: none;
+    gap: 12px;
+    z-index: 2 !important; /* Layer 2: Strictly BEHIND .hero-wrapper (z-index: 5) and ABOVE canvas (z-index: 0) */
+    pointer-events: auto;
     transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Top & Bottom Flor Huasteca */
+/* 5 Items in Zig-Zag: Big, Mini, Big, Mini, Big */
 .totem-flower-item {
-    width: 95px;
-    height: 95px;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
 }
 
-.totem-flower-top {
-    transform: translateX(-10px);
-    animation: totemTopDrift 5s ease-in-out infinite alternate;
+.totem-flower-item:hover {
+    filter: drop-shadow(0 0 12px #ff007f) drop-shadow(0 0 24px rgba(255, 0, 127, 0.9));
 }
 
-.totem-flower-bottom {
-    transform: translateX(-8px);
-    animation: totemBottomDrift 5.4s ease-in-out infinite alternate;
+/* Item 1: Flor Grande Superior (98px) */
+.totem-star-1 {
+    width: 98px;
+    height: 98px;
+    transform: translateX(-12px) rotate(-10deg);
+    animation: totemDrift1 5.2s ease-in-out infinite alternate;
+}
+
+/* Item 2: Mini Estrella 1 (52px) */
+.totem-star-2 {
+    width: 52px;
+    height: 52px;
+    transform: translateX(8px) rotate(14deg);
+    animation: totemDrift2 4.6s ease-in-out infinite alternate;
+}
+
+/* Item 3: Flor Grande Central (108px) */
+.totem-star-3 {
+    width: 108px;
+    height: 108px;
+    transform: translateX(-18px) rotate(8deg);
+    animation: totemDrift3 6.0s ease-in-out infinite alternate;
+}
+
+/* Item 4: Mini Estrella 2 (52px) */
+.totem-star-4 {
+    width: 52px;
+    height: 52px;
+    transform: translateX(6px) rotate(-12deg);
+    animation: totemDrift4 4.8s ease-in-out infinite alternate;
+}
+
+/* Item 5: Flor Grande Inferior (98px) */
+.totem-star-5 {
+    width: 98px;
+    height: 98px;
+    transform: translateX(-10px) rotate(-6deg);
+    animation: totemDrift5 5.6s ease-in-out infinite alternate;
 }
 
 .totem-flower-svg {
     width: 100%;
     height: 100%;
     display: block;
-    filter: drop-shadow(0 0 6px #ff007f) drop-shadow(0 0 14px rgba(255, 0, 127, 0.6));
+    filter: drop-shadow(0 0 6px #ff007f) drop-shadow(0 0 16px rgba(255, 0, 127, 0.65));
 }
 
-@keyframes totemTopDrift {
-    0% { transform: translateX(-10px) translateY(0px) rotate(0deg); }
-    100% { transform: translateX(-10px) translateY(-7px) rotate(-3deg); }
+@keyframes totemDrift1 {
+    0% { transform: translateX(-12px) translateY(0px) rotate(-10deg); }
+    100% { transform: translateX(-12px) translateY(-7px) rotate(-14deg); }
 }
 
-@keyframes totemBottomDrift {
-    0% { transform: translateX(-8px) translateY(0px) rotate(0deg); }
-    100% { transform: translateX(-8px) translateY(7px) rotate(3deg); }
+@keyframes totemDrift2 {
+    0% { transform: translateX(8px) translateY(0px) rotate(14deg); }
+    100% { transform: translateX(8px) translateY(5px) rotate(18deg); }
 }
 
-/* Center Quezquém (Clean, readable embroidery with dark garment backing and crisp 5px glow) */
-.totem-quezquem-item {
-    width: 250px;
-    height: 195px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@keyframes totemDrift3 {
+    0% { transform: translateX(-18px) translateY(0px) rotate(8deg); }
+    100% { transform: translateX(-18px) translateY(-6px) rotate(4deg); }
 }
 
-.totem-quezquem-rotator {
-    width: 100%;
-    height: 100%;
-    transform: rotate(-20deg);
-    animation: totemQuezquemDrift 6.5s ease-in-out infinite alternate;
+@keyframes totemDrift4 {
+    0% { transform: translateX(6px) translateY(0px) rotate(-12deg); }
+    100% { transform: translateX(6px) translateY(5px) rotate(-7deg); }
 }
 
-.totem-quezquem-svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-    /* Crisp drop shadow so stitches and embroidery stay sharp and legible */
-    filter: drop-shadow(0 0 5px #ff007f) drop-shadow(0 0 10px rgba(255, 0, 127, 0.55));
+@keyframes totemDrift5 {
+    0% { transform: translateX(-10px) translateY(0px) rotate(-6deg); }
+    100% { transform: translateX(-10px) translateY(7px) rotate(-2deg); }
 }
 
-@keyframes totemQuezquemDrift {
-    0% {
-        transform: rotate(-20deg) translate(0px, 0px);
-    }
-    100% {
-        transform: rotate(-17deg) translate(8px, -12px);
-    }
-}
-
-/* 4. Right Side: Cascading Stack of 4 Mexican/Huasteco Cultural Badges (Authentic Gemini Neon Cards) */
 .hero-right-decor-stack {
     position: absolute;
-    right: -75px;
+    right: -48px;
     top: 50%;
     transform: translateY(-50%) translate3d(calc(var(--shift-x, 0) * 15px), calc(var(--shift-y, 0) * 15px), 0);
     display: flex;
@@ -2309,8 +2436,13 @@ body {
         grid-template-columns: 1fr;
         padding: 36px 30px;
     }
+    .hero-bottom-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
     .hero-avatar-side {
         order: -1;
+        margin-top: 0;
     }
     .hud-cyber-frame {
         max-width: 380px;
@@ -2365,7 +2497,8 @@ body {
     .hero-subtitle {
         font-size: 1.3rem;
     }
-    .hero-quick-stats {
+    .hero-bottom-left,
+    .hero-bottom-right {
         grid-template-columns: 1fr;
     }
     .gs-system-item {
