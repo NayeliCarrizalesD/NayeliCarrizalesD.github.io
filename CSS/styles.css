@@ -1194,6 +1194,7 @@ body {
     }
 
     .emblem-nav-pills-wrap {
+        order: -1;
         width: auto;
         height: auto;
     }
