@@ -987,39 +987,59 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Emblem Tabs Selector */
+/* Emblem Stage Layout: Selector beside Flower Canvas */
+.emblem-stage-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.emblem-panels-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Emblem Tabs Selector (Vertical next to the flower) */
 .emblem-nav-pills {
     display: inline-flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    gap: 6px;
-    margin-bottom: 20px;
+    gap: 8px;
+    margin-top: 55px;
+    margin-bottom: 0;
     background: rgba(14, 6, 24, 0.85);
-    padding: 5px;
-    border-radius: 9999px;
+    padding: 7px;
+    border-radius: 20px;
     border: 1px solid rgba(255, 0, 127, 0.35);
     z-index: 5;
-    box-shadow: 0 0 15px rgba(255, 0, 127, 0.15);
-    max-width: 100%;
+    box-shadow: 0 0 16px rgba(255, 0, 127, 0.18);
+    flex-shrink: 0;
 }
 
 .emblem-pill-btn {
     background: transparent;
-    border: none;
+    border: 1px solid transparent;
     color: var(--text-muted);
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     letter-spacing: 0.6px;
     text-transform: uppercase;
-    padding: 6px 13px;
-    border-radius: 9999px;
+    padding: 8px 14px;
+    border-radius: 14px;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     white-space: nowrap;
+    width: 100%;
+    justify-content: flex-start;
 }
 
 .emblem-pill-btn .pill-dot {
@@ -1028,11 +1048,13 @@ body {
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.3);
     transition: background 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
 }
 
 .emblem-pill-btn:hover {
     color: #fff;
     background: rgba(255, 0, 127, 0.15);
+    border-color: rgba(255, 0, 127, 0.3);
 }
 
 .emblem-pill-btn.active {
@@ -1045,6 +1067,28 @@ body {
 .emblem-pill-btn.active .pill-dot {
     background: var(--neon-pink);
     box-shadow: 0 0 8px var(--neon-pink);
+}
+
+@media (max-width: 520px) {
+    .emblem-stage-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .emblem-nav-pills {
+        flex-direction: row;
+        margin-top: 0;
+        border-radius: 9999px;
+        padding: 5px;
+    }
+
+    .emblem-pill-btn {
+        border-radius: 9999px;
+        padding: 6px 12px;
+        justify-content: center;
+        width: auto;
+    }
 }
 
 .emblem-panel {
