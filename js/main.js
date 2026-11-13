@@ -1,9 +1,16 @@
-/* ==========================================================================
-   CYBERPUNK HUASTECO — JAVASCRIPT ENGINE
-   Nayeli Carrizales Díaz | Portfolio Interactive Controller
-   ========================================================================== */
+/**
+ * @fileoverview Cyberpunk Huasteco Interactive Engine.
+ * Coordinates dynamic experience calculation, bilingual localization (ES/EN),
+ * project filtering, interactive audio synthesis, HTML5 canvas particle systems,
+ * emblem showcase switching, and typewriter text animations for the portfolio.
+ *
+ * @author Nayeli Carrizales Díaz <nayeli.carrizales.diaz@gmail.com>
+ * @copyright 2026 Nayeli Carrizales Díaz. All rights reserved.
+ * @license MIT
+ */
 
 document.addEventListener('DOMContentLoaded', () => {
+    initDynamicExperience();
     initLanguage();
     initProjectFilters();
     initScrollSpy();
@@ -15,11 +22,79 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroTypewriter();
 });
 
-/* ==========================================================================
-   1. BILINGUAL LANGUAGE ENGINE (ES / EN)
-   ========================================================================== */
+/**
+ * Initializes the experience counter by calculating elapsed years from a base start year
+ * and triggering a numeric count-up animation when visible in the viewport.
+ *
+ * @function initDynamicExperience
+ * @returns {void}
+ */
+function initDynamicExperience() {
+    const el = document.getElementById('yearsExperienceNum');
+    if (!el) return;
+
+    const startYear = parseInt(el.getAttribute('data-start-year') || '2020', 10);
+    const currentYear = new Date().getFullYear();
+    const targetYears = Math.max(1, currentYear - startYear);
+
+    el.textContent = `${targetYears}+`;
+
+    if ('IntersectionObserver' in window) {
+        let hasAnimated = false;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    hasAnimated = true;
+                    animateCountUp(el, 1, targetYears, 1100, '+');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.25 });
+        observer.observe(el);
+    }
+}
+
+/**
+ * Animates a numeric transition from start to end using cubic ease-out interpolation.
+ *
+ * @function animateCountUp
+ * @param {HTMLElement} element - Target DOM element receiving the rendered value.
+ * @param {number} start - Starting integer value.
+ * @param {number} end - Final target integer value.
+ * @param {number} duration - Total animation time in milliseconds.
+ * @param {string} [suffix=''] - Optional character string appended after the number.
+ * @returns {void}
+ */
+function animateCountUp(element, start, end, duration, suffix = '') {
+    let startTime = null;
+    function step(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const elapsed = timestamp - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(ease * (end - start) + start);
+        element.textContent = `${current}${suffix}`;
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        } else {
+            element.textContent = `${end}${suffix}`;
+        }
+    }
+    window.requestAnimationFrame(step);
+}
+
+/**
+ * Current active language state ('es' or 'en').
+ * @type {'es'|'en'}
+ */
 let currentLang = 'es';
 
+/**
+ * Sets up the bilingual language toggle button listener.
+ *
+ * @function initLanguage
+ * @returns {void}
+ */
 function initLanguage() {
     const langBtn = document.getElementById('langToggle');
     if (!langBtn) return;
@@ -31,13 +106,21 @@ function initLanguage() {
     });
 }
 
+/**
+ * Applies the selected language to all DOM elements containing localized data attributes.
+ *
+ * @function applyLanguage
+ * @param {'es'|'en'} lang - Target ISO 639-1 language code.
+ * @returns {void}
+ */
 function applyLanguage(lang) {
     const langBtn = document.getElementById('langToggle');
     if (langBtn) {
-        langBtn.innerHTML = lang === 'es' ? '🌐 ES | EN' : '🌐 EN | ES';
+        langBtn.innerHTML = `<i data-lucide="globe"></i> <span>${lang === 'es' ? 'ES | EN' : 'EN | ES'}</span>`;
     }
 
-    if (typeof restartHeroTypewriter === "function") restartHeroTypewriter();
+    if (typeof restartHeroTypewriter === 'function') restartHeroTypewriter();
+
     document.querySelectorAll('[data-es][data-en]').forEach(el => {
         const text = el.getAttribute(`data-${lang}`);
         if (text) {
@@ -49,15 +132,21 @@ function applyLanguage(lang) {
         }
     });
 
-    // Update document title
+    if (window.lucide) {
+        lucide.createIcons();
+    }
+
     document.title = lang === 'es' 
         ? 'Nayeli Carrizales Díaz — Portafolio Cyberpunk Huasteco'
         : 'Nayeli Carrizales Díaz — Cyberpunk Huasteco Portfolio';
 }
 
-/* ==========================================================================
-   2. PROJECT CATEGORY FILTERS
-   ========================================================================== */
+/**
+ * Initializes interactive category filtering for portfolio project cards.
+ *
+ * @function initProjectFilters
+ * @returns {void}
+ */
 function initProjectFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-cyber-card');
@@ -65,20 +154,14 @@ function initProjectFilters() {
     function applyFilter(category) {
         projectCards.forEach(card => {
             const cardCat = card.getAttribute('data-category');
-
-            if (category === 'all') {
-                card.style.display = 'flex';
+            const shouldShow = (category === 'all' || cardCat === category);
+            card.style.display = shouldShow ? 'flex' : 'none';
+            if (shouldShow) {
                 card.style.animation = 'fadeInUp 0.4s ease forwards';
-            } else if (cardCat === category) {
-                card.style.display = 'flex';
-                card.style.animation = 'fadeInUp 0.4s ease forwards';
-            } else {
-                card.style.display = 'none';
             }
         });
     }
 
-    // Set initial display (hide personal-only from default 'all' view)
     applyFilter('all');
 
     filterBtns.forEach(btn => {
@@ -95,14 +178,23 @@ function initProjectFilters() {
     });
 }
 
-/* ==========================================================================
-   7. DUAL EMBLEM SHOWCASE CONTROLLER (FLOR HUASTECA / QUEZQUÉM)
-   ========================================================================== */
+/**
+ * Coordinates tab selection and display states between Flor Tének and Quezquém cultural showcases.
+ *
+ * @function initEmblemTabs
+ * @returns {void}
+ */
 function initEmblemTabs() {
     const tabBtns = document.querySelectorAll('.emblem-pill-btn');
-    const panels = {
-        'flor': document.getElementById('emblemPanelFlor'),
-        'quezquem': document.getElementById('emblemPanelQuezquem')
+    const tabs = {
+        flor: {
+            canvas: document.getElementById('emblemCanvasFlor'),
+            caption: document.getElementById('emblemCaptionFlor')
+        },
+        quezquem: {
+            canvas: document.getElementById('emblemCanvasQuezquem'),
+            caption: document.getElementById('emblemCaptionQuezquem')
+        }
     };
     if (!tabBtns.length) return;
 
@@ -112,9 +204,15 @@ function initEmblemTabs() {
             tabBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            Object.entries(panels).forEach(([key, panel]) => {
-                if (panel) {
-                    panel.style.display = (key === target) ? 'flex' : 'none';
+            Object.entries(tabs).forEach(([key, items]) => {
+                const isActive = (key === target);
+                if (items.canvas) {
+                    items.canvas.style.display = isActive ? 'flex' : 'none';
+                    if (isActive) items.canvas.classList.add('active');
+                    else items.canvas.classList.remove('active');
+                }
+                if (items.caption) {
+                    items.caption.style.display = isActive ? 'flex' : 'none';
                 }
             });
             playCyberBeep(700, 0.04);
@@ -122,61 +220,78 @@ function initEmblemTabs() {
     });
 }
 
-/* ==========================================================================
-   8. GLOBAL FULL-PAGE CYBER PARTICLES ENGINE & SCROLL/MOUSE PARALLAX
-   ========================================================================== */
+/**
+ * Initializes and drives the global HTML5 canvas particle constellation system
+ * with mouse parallax interaction, scroll drift, and interconnecting filaments.
+ *
+ * @function initHeroInteractive
+ * @returns {void}
+ */
 function initHeroInteractive() {
     const canvas = document.getElementById('cyberGlobalParticles') || document.getElementById('heroBgParticles');
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d', { alpha: true });
-    let width = 0;
-    let height = 0;
-
-    function resizeCanvas() {
-        width = canvas.width = window.innerWidth;
-        height = canvas.height = window.innerHeight;
-    }
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas, { passive: true });
-
-    // Luminous nodes in Rosa Mexicano & Ámbar Huasteco
+    let width = window.innerWidth;
+    let height = window.innerHeight;
     const PARTICLE_COUNT = 95;
     const particles = [];
     const colorPalette = [
-        'rgba(255, 0, 127, ',    // Rosa Mexicano
-        'rgba(255, 46, 147, ',   // Magenta Neón
-        'rgba(255, 122, 0, ',    // Ámbar Huasteco
-        'rgba(180, 50, 255, ',   // Violeta Cyber
-        'rgba(0, 240, 255, '     // Turquesa Neón
+        'rgba(255, 0, 127, ',
+        'rgba(255, 46, 147, ',
+        'rgba(255, 122, 0, ',
+        'rgba(180, 50, 255, ',
+        'rgba(0, 240, 255, '
     ];
 
-    for (let i = 0; i < PARTICLE_COUNT; i++) {
-        particles.push({
-            x: Math.random() * (width || window.innerWidth),
-            y: Math.random() * (height || window.innerHeight),
-            vx: (Math.random() - 0.5) * 0.35,
-            vy: (Math.random() - 0.5) * 0.35,
-            size: Math.random() * 2.2 + 1.2,
-            baseAlpha: Math.random() * 0.45 + 0.2,
-            colorPrefix: colorPalette[Math.floor(Math.random() * colorPalette.length)],
-            depthFactor: Math.random() * 0.6 + 0.4 // Parallax depth layer
+    function createParticles() {
+        particles.length = 0;
+        for (let i = 0; i < PARTICLE_COUNT; i++) {
+            particles.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                vx: (Math.random() - 0.5) * 0.35,
+                vy: (Math.random() - 0.5) * 0.35,
+                size: Math.random() * 2.2 + 1.2,
+                baseAlpha: Math.random() * 0.45 + 0.2,
+                colorPrefix: colorPalette[Math.floor(Math.random() * colorPalette.length)],
+                depthFactor: Math.random() * 0.6 + 0.4
+            });
+        }
+    }
+
+    function resizeCanvas() {
+        const oldWidth = width;
+        const oldHeight = height;
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+
+        if (particles.length === 0) {
+            createParticles();
+            return;
+        }
+
+        const scaleX = width / (oldWidth || width);
+        const scaleY = height / (oldHeight || height);
+
+        particles.forEach(p => {
+            p.x *= scaleX;
+            p.y *= scaleY;
+            if (p.x < 0 || p.x > width) p.x = Math.random() * width;
+            if (p.y < 0 || p.y > height) p.y = Math.random() * height;
         });
     }
 
-    // Scroll & Mouse Parallax Coordinates
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas, { passive: true });
+
     let mouseX = -1000;
     let mouseY = -1000;
     let targetShiftX = 0;
     let targetShiftY = 0;
     let currentShiftX = 0;
     let currentShiftY = 0;
-    let scrollYOffset = window.pageYOffset || 0;
-    let targetScrollY = scrollYOffset;
-
-    window.addEventListener('scroll', () => {
-        targetScrollY = window.pageYOffset || 0;
-    }, { passive: true });
+    let lastScroll = window.pageYOffset || 0;
 
     window.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
@@ -194,11 +309,7 @@ function initHeroInteractive() {
         targetShiftY = 0;
     }, { passive: true });
 
-    let lastScroll = window.pageYOffset || 0;
-
-    // 60FPS RAF Animation Loop with Smooth Lerp
     function animateHero() {
-        // Smooth lerp for scroll and mouse parallax
         currentShiftX += (targetShiftX - currentShiftX) * 0.05;
         currentShiftY += (targetShiftY - currentShiftY) * 0.05;
 
@@ -210,11 +321,8 @@ function initHeroInteractive() {
 
         for (let i = 0; i < particles.length; i++) {
             const p = particles[i];
-
-            // Parallax drift relative to scroll
             p.y -= scrollDelta * 0.18 * p.depthFactor;
 
-            // Subtle gentle mouse deflection when near cursor
             if (mouseX > 0 && mouseY > 0) {
                 const dx = mouseX - p.x;
                 const dy = mouseY - p.y;
@@ -226,25 +334,28 @@ function initHeroInteractive() {
                 }
             }
 
-            // Natural movement + mouse parallax drift
             p.x += p.vx + currentShiftX * 0.2 * p.depthFactor;
             p.y += p.vy + currentShiftY * 0.2 * p.depthFactor;
             p.vx *= 0.99;
             p.vy *= 0.99;
 
-            // Wrap around viewport edges
-            if (p.x < 0) p.x = width;
-            if (p.x > width) p.x = 0;
-            if (p.y < 0) p.y = height;
-            if (p.y > height) p.y = 0;
+            if (p.x < 0) {
+                p.x = width;
+            } else if (p.x > width) {
+                p.x = p.x > width + 40 ? Math.random() * width : 0;
+            }
 
-            // Render particle node
-            ctx.fillStyle = p.colorPrefix + p.baseAlpha + ')';
+            if (p.y < 0) {
+                p.y = height;
+            } else if (p.y > height) {
+                p.y = p.y > height + 40 ? Math.random() * height : 0;
+            }
+
+            ctx.fillStyle = `${p.colorPrefix}${p.baseAlpha})`;
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
             ctx.fill();
 
-            // Connect nearby nodes with faint cyber filaments
             for (let j = i + 1; j < particles.length; j++) {
                 const p2 = particles[j];
                 const lineDx = p.x - p2.x;
@@ -253,7 +364,7 @@ function initHeroInteractive() {
 
                 if (lineDist < 125) {
                     const lineAlpha = (1 - lineDist / 125) * 0.18;
-                    ctx.strokeStyle = 'rgba(255, 0, 127, ' + lineAlpha + ')';
+                    ctx.strokeStyle = `rgba(255, 0, 127, ${lineAlpha})`;
                     ctx.lineWidth = 0.8;
                     ctx.beginPath();
                     ctx.moveTo(p.x, p.y);
@@ -269,10 +380,20 @@ function initHeroInteractive() {
     requestAnimationFrame(animateHero);
 }
 
-/* ==========================================================================
-   AUDIO SYNTHESIZER & NAVIGATION HELPERS
-   ========================================================================== */
+/**
+ * Shared Web Audio API context singleton.
+ * @type {AudioContext|null}
+ */
 let audioCtx = null;
+
+/**
+ * Plays a procedural synthesized audio beep using an oscillator and gain exponential ramp.
+ *
+ * @function playCyberBeep
+ * @param {number} [freq=600] - Audio frequency in Hertz (Hz).
+ * @param {number} [duration=0.04] - Sound duration in seconds.
+ * @returns {void}
+ */
 function playCyberBeep(freq = 600, duration = 0.04) {
     try {
         if (!audioCtx) {
@@ -291,11 +412,33 @@ function playCyberBeep(freq = 600, duration = 0.04) {
         gain.connect(audioCtx.destination);
         osc.start();
         osc.stop(audioCtx.currentTime + duration);
-    } catch (e) {}
+    } catch (e) {
+        // Silently ignore browser autoplay security limitations
+    }
 }
 
-function initCyberAudio() {}
+/**
+ * Attaches audio feedback clicks to interactive cultural badges.
+ *
+ * @function initCyberAudio
+ * @returns {void}
+ */
+function initCyberAudio() {
+    const badges = document.querySelectorAll('.decor-badge-item');
+    badges.forEach((badge, idx) => {
+        badge.addEventListener('click', () => {
+            const freqs = [640, 720, 800, 880];
+            playCyberBeep(freqs[idx % freqs.length] || 700, 0.05);
+        });
+    });
+}
 
+/**
+ * Monitors vertical page scroll position and updates active link state in navigation menus.
+ *
+ * @function initScrollSpy
+ * @returns {void}
+ */
 function initScrollSpy() {
     const navLinks = document.querySelectorAll('.header-nav .nav-link');
     const sections = document.querySelectorAll('section[id]');
@@ -319,6 +462,12 @@ function initScrollSpy() {
     }, { passive: true });
 }
 
+/**
+ * Initializes the mobile navigation drawer toggle.
+ *
+ * @function initMobileNav
+ * @returns {void}
+ */
 function initMobileNav() {
     const toggle = document.querySelector('.mobile-toggle');
     const navMenu = document.querySelector('.nav-menu');
@@ -328,21 +477,42 @@ function initMobileNav() {
         navMenu.classList.toggle('mobile-open');
         playCyberBeep(600, 0.05);
     });
+
+    navMenu.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('mobile-open');
+        });
+    });
 }
 
+/**
+ * Contact form submit handler initializer.
+ *
+ * @function initContactForm
+ * @returns {void}
+ */
 function initContactForm() {}
 
-
-/* ==========================================================================
-   TYPEWRITER EFFECT (Hero Subtitle)
-   ========================================================================== */
+/**
+ * Active timer identifier for typewriter recursion.
+ * @type {number|null}
+ */
 let typewriterTimeout = null;
-let typewriterState = {
+
+/**
+ * Internal state for typewriter string iteration and slicing.
+ * @type {{phraseIndex: number, charIndex: number, isDeleting: boolean}}
+ */
+const typewriterState = {
     phraseIndex: 0,
     charIndex: 0,
     isDeleting: false
 };
 
+/**
+ * Bilingual subtitle phrases for hero typewriter animation.
+ * @type {{es: string[], en: string[]}}
+ */
 const heroPhrases = {
     es: [
         'End-to-End Enterprise Web Engineering',
@@ -358,6 +528,12 @@ const heroPhrases = {
     ]
 };
 
+/**
+ * Drives the cyclical character typing and backspacing animation in the hero headline.
+ *
+ * @function initHeroTypewriter
+ * @returns {void}
+ */
 function initHeroTypewriter() {
     const el = document.getElementById('heroTypewriter');
     if (!el) return;
@@ -379,23 +555,28 @@ function initHeroTypewriter() {
         let speed = typewriterState.isDeleting ? 30 : 65;
 
         if (!typewriterState.isDeleting && typewriterState.charIndex === currentPhrase.length) {
-            speed = 2200; // Pause when phrase is fully written
+            speed = 2200;
             typewriterState.isDeleting = true;
         } else if (typewriterState.isDeleting && typewriterState.charIndex === 0) {
             typewriterState.isDeleting = false;
             typewriterState.phraseIndex = (typewriterState.phraseIndex + 1) % currentList.length;
-            speed = 400; // Pause before typing next phrase
+            speed = 400;
         }
 
         typewriterTimeout = setTimeout(tick, speed);
     }
 
-    // Set initial char index based on existing text length
     typewriterState.charIndex = el.textContent.length || 0;
     typewriterState.isDeleting = true;
     typewriterTimeout = setTimeout(tick, 1800);
 }
 
+/**
+ * Resets the typewriter pointer to the beginning and restarts the animation loop.
+ *
+ * @function restartHeroTypewriter
+ * @returns {void}
+ */
 function restartHeroTypewriter() {
     if (typewriterTimeout) clearTimeout(typewriterTimeout);
     typewriterState.charIndex = 0;

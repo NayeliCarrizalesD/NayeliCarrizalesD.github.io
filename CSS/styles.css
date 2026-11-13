@@ -64,6 +64,10 @@ html {
     color-scheme: dark;
 }
 
+section[id] {
+    scroll-margin-top: 80px;
+}
+
 body {
     background-color: var(--bg-void);
     color: var(--text-primary);
@@ -191,6 +195,8 @@ body {
     font-weight: 700;
     font-size: 1.25rem;
     letter-spacing: 1.5px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .huasteca-mini-flower {
@@ -235,6 +241,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-shrink: 0;
 }
 
 .btn-lang-toggle {
@@ -246,10 +253,19 @@ body {
     padding: 6px 12px;
     border-radius: 9999px;
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
     transition: all 0.2s ease;
+}
+
+.btn-lang-toggle svg {
+    width: 14px;
+    height: 14px;
+    stroke-width: 2px;
+    flex-shrink: 0;
 }
 
 .btn-lang-toggle:hover {
@@ -268,14 +284,27 @@ body {
     border-radius: 9999px;
     box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
     transition: all 0.25s ease;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.btn-nav-cv svg {
+    width: 14px;
+    height: 14px;
+    stroke-width: 2px;
+    flex-shrink: 0;
 }
 
 .btn-nav-cv:hover {
     transform: translateY(-1px) scale(1.03);
     box-shadow: 0 0 25px rgba(255, 0, 127, 0.7);
+}
+
+.btn-nav-cv .nav-cv-text-short {
+    display: none;
 }
 
 /* Mobile Toggle */
@@ -286,6 +315,7 @@ body {
     color: #fff;
     font-size: 1.4rem;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 /* ==========================================================================
@@ -840,7 +870,7 @@ body {
 .section-desc {
     font-size: 1.05rem;
     color: var(--text-muted);
-    max-width: 650px;
+    max-width: 690px;
     margin: 10px auto 0;
 }
 
@@ -1000,13 +1030,17 @@ body {
 }
 
 .emblem-interactive-subcard {
+    position: relative;
+    overflow: visible;
     margin-top: 18px;
     background: rgba(14, 6, 24, 0.75);
     border: 1px solid rgba(255, 0, 127, 0.35);
     border-radius: var(--radius-md);
-    padding: 24px 18px;
+    padding: 30px 20px 22px;
     backdrop-filter: blur(12px);
     transition: all 0.3s ease;
+    min-height: 310px;
+    box-sizing: border-box;
 }
 
 .emblem-interactive-subcard:hover {
@@ -1025,33 +1059,183 @@ body {
     animation: pulseEmblem 4s infinite alternate;
 }
 
-.flor-huasteca-canvas {
+/* Center Emblem HUD Stage (Flower / Quezquém Canvas Frame) */
+.emblem-hud-stage {
     position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    height: 175px;
+    min-height: 175px;
+    max-height: 175px;
+    margin-top: 2px;
+}
+
+/* Floating Switch Badge crowned over the OUTER card top border (Like Avatar HUD badge) */
+.hud-switch-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    z-index: 15;
+    background: rgba(14, 6, 24, 0.95);
+    border: 1px solid rgba(255, 0, 127, 0.65);
+    border-radius: 9999px;
+    padding: 3px 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: 0 0 25px rgba(255, 0, 127, 0.35), inset 0 0 12px rgba(255, 0, 127, 0.2);
+    backdrop-filter: blur(12px);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    white-space: nowrap;
+}
+
+.hud-switch-badge:hover {
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 35px rgba(255, 0, 127, 0.65), inset 0 0 16px rgba(255, 0, 127, 0.25);
+    transform: translateY(-2px);
+}
+
+.hud-switch-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-muted);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 0.74rem;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.hud-switch-btn .pill-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+}
+
+.hud-switch-btn:hover {
+    color: #fff;
+    background: rgba(255, 0, 127, 0.15);
+}
+
+.hud-switch-btn.active {
+    background: linear-gradient(135deg, rgba(255, 0, 127, 0.45), rgba(255, 122, 0, 0.25));
+    color: #fff;
+    border: 1px solid rgba(255, 0, 127, 0.8);
+    box-shadow: 0 0 16px rgba(255, 0, 127, 0.5);
+}
+
+.hud-switch-btn.active .pill-dot {
+    background: var(--neon-pink);
+    box-shadow: 0 0 8px var(--neon-pink);
+}
+
+/* Canvases Container */
+.emblem-canvases-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    height: 175px;
+    min-height: 175px;
+    max-height: 175px;
+    flex-shrink: 0;
+}
+
+/* Cyber Reticles connecting visual language with Avatar HUD */
+.emblem-reticle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0.85;
+}
+
+.emblem-canvases-container .reticle-tl {
+    top: -4px;
+    left: -4px;
+    border-top: 2px solid var(--neon-cyan);
+    border-left: 2px solid var(--neon-cyan);
+}
+
+.emblem-canvases-container .reticle-tr {
+    top: -4px;
+    right: -4px;
+    border-top: 2px solid var(--neon-pink);
+    border-right: 2px solid var(--neon-pink);
+}
+
+.emblem-canvases-container .reticle-bl {
+    bottom: -4px;
+    left: -4px;
+    border-bottom: 2px solid var(--neon-pink);
+    border-left: 2px solid var(--neon-pink);
+}
+
+.emblem-canvases-container .reticle-br {
+    bottom: -4px;
+    right: -4px;
+    border-bottom: 2px solid var(--neon-cyan);
+    border-right: 2px solid var(--neon-cyan);
+}
+
+.emblem-canvas-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    height: 175px;
+    min-height: 175px;
+    max-height: 175px;
+    animation: fadeInPanel 0.28s ease;
+}
+
+/* Identical Dimensions for Both Canvases (Ensures ZERO height jump!) */
+.flor-huasteca-canvas,
+.quezquem-canvas {
+    position: relative;
+    width: 175px;
+    height: 175px;
+    min-height: 175px;
+    max-height: 175px;
+    box-sizing: border-box;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 18px;
+    padding: 12px;
     background: radial-gradient(circle, rgba(255, 0, 127, 0.16) 0%, rgba(255, 51, 102, 0.06) 50%, transparent 75%);
-    border-radius: 24px;
+    border-radius: 22px;
     border: 1px solid rgba(255, 0, 127, 0.35);
-    box-shadow: 0 0 30px rgba(255, 0, 127, 0.3), inset 0 0 20px rgba(255, 0, 127, 0.12);
+    box-shadow: 0 0 25px rgba(255, 0, 127, 0.25), inset 0 0 16px rgba(255, 0, 127, 0.12);
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.4s ease;
     z-index: 2;
 }
 
 .flor-huasteca-svg {
-    width: 175px;
-    height: 175px;
+    width: 135px;
+    height: 135px;
     display: block;
-    filter: drop-shadow(0 0 14px rgba(255, 0, 127, 0.85)) drop-shadow(0 0 25px rgba(255, 51, 102, 0.45));
+    filter: drop-shadow(0 0 12px rgba(255, 0, 127, 0.85)) drop-shadow(0 0 22px rgba(255, 51, 102, 0.4));
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
     animation: florPulseNeon 4s ease-in-out infinite alternate;
 }
 
-.flor-wing-left {
-    transition: fill 0.3s ease, filter 0.3s ease;
-}
-
+.flor-wing-left,
 .flor-wing-right {
     transition: fill 0.3s ease, filter 0.3s ease;
 }
@@ -1060,15 +1244,17 @@ body {
     filter: drop-shadow(0 0 6px #ff7a00);
 }
 
-.center-emblem-card:hover .flor-huasteca-canvas {
-    transform: scale(1.05);
+.center-emblem-card:hover .flor-huasteca-canvas,
+.emblem-interactive-subcard:hover .flor-huasteca-canvas {
+    transform: scale(1.04);
     border-color: rgba(255, 0, 127, 0.85);
-    box-shadow: 0 0 45px rgba(255, 0, 127, 0.65), inset 0 0 28px rgba(255, 0, 127, 0.25);
+    box-shadow: 0 0 40px rgba(255, 0, 127, 0.6), inset 0 0 24px rgba(255, 0, 127, 0.22);
 }
 
-.center-emblem-card:hover .flor-huasteca-svg {
-    transform: scale(1.08) rotate(2deg);
-    filter: drop-shadow(0 0 22px rgba(255, 0, 127, 1)) drop-shadow(0 0 35px rgba(255, 122, 0, 0.8));
+.center-emblem-card:hover .flor-huasteca-svg,
+.emblem-interactive-subcard:hover .flor-huasteca-svg {
+    transform: scale(1.06) rotate(2deg);
+    filter: drop-shadow(0 0 20px rgba(255, 0, 127, 1)) drop-shadow(0 0 30px rgba(255, 122, 0, 0.75));
 }
 
 @keyframes florPulseNeon {
@@ -1080,170 +1266,92 @@ body {
     }
 }
 
-.emblem-caption {
-    margin-top: 20px;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 700;
-    font-size: 1.15rem;
-    color: #fff;
-    letter-spacing: 1px;
-}
-
-.emblem-subcaption {
-    font-size: 0.8rem;
-    color: var(--neon-orange);
-    letter-spacing: 0.5px;
-}
-
-/* Emblem Stage Layout: Selector beside Flower Canvas */
-.emblem-stage-layout {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    width: 100%;
-}
-
-.emblem-panels-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Fixed-dimension wrapper for the 90-degree rotated pill switch */
-.emblem-nav-pills-wrap {
-    width: 46px;
-    height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    align-self: center;
-}
-
-/* Emblem Tabs Selector (Horizontal Capsule Rotated 90 Degrees) */
-.emblem-nav-pills {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 6px;
-    background: rgba(14, 6, 24, 0.9);
-    padding: 5px 8px;
-    border-radius: 9999px;
-    border: 1px solid rgba(255, 0, 127, 0.35);
-    z-index: 5;
-    box-shadow: 0 0 16px rgba(255, 0, 127, 0.18);
-    transform: rotate(90deg);
-    transform-origin: center center;
-    white-space: nowrap;
-}
-
-.emblem-pill-btn {
-    background: transparent;
-    border: 1px solid transparent;
-    color: var(--text-muted);
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 700;
-    font-size: 0.74rem;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    padding: 7px 16px;
-    border-radius: 9999px;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    white-space: nowrap;
-}
-
-.emblem-pill-btn .pill-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-    flex-shrink: 0;
-}
-
-.emblem-pill-btn:hover {
-    color: #fff;
-    background: rgba(255, 0, 127, 0.15);
-    border-color: rgba(255, 0, 127, 0.3);
-}
-
-.emblem-pill-btn.active {
-    background: linear-gradient(135deg, rgba(255, 0, 127, 0.4), rgba(255, 122, 0, 0.25));
-    color: #fff;
-    border: 1px solid rgba(255, 0, 127, 0.75);
-    box-shadow: 0 0 18px rgba(255, 0, 127, 0.45);
-}
-
-.emblem-pill-btn.active .pill-dot {
-    background: var(--neon-pink);
-    box-shadow: 0 0 8px var(--neon-pink);
-}
-
-@media (max-width: 580px) {
-    .emblem-stage-layout {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-    }
-
-    .emblem-nav-pills-wrap {
-        order: -1;
-        width: auto;
-        height: auto;
-    }
-
-    .emblem-nav-pills {
-        transform: none;
-    }
-}
-
-.emblem-panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    animation: fadeInPanel 0.4s ease;
-}
-
-@keyframes fadeInPanel {
-    from { opacity: 0; transform: scale(0.96); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-/* Quezquém Canvas in About */
-.quezquem-canvas {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 18px;
-    background: radial-gradient(circle, rgba(255, 0, 127, 0.16) 0%, rgba(255, 51, 102, 0.06) 50%, transparent 75%);
-    border-radius: 24px;
-    border: 1px solid rgba(255, 0, 127, 0.35);
-    box-shadow: 0 0 30px rgba(255, 0, 127, 0.3), inset 0 0 20px rgba(255, 0, 127, 0.12);
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.4s ease;
-    z-index: 2;
-    min-height: 211px;
+/* Quezquém Canvas */
+.center-emblem-card:hover .quezquem-canvas,
+.emblem-interactive-subcard:hover .quezquem-canvas {
+    transform: scale(1.04);
+    border-color: rgba(255, 0, 127, 0.85);
+    box-shadow: 0 0 40px rgba(255, 0, 127, 0.6), inset 0 0 24px rgba(255, 0, 127, 0.22);
 }
 
 .quezquem-vector-svg,
 .quezquem-svg-img {
-    width: 220px;
-    height: 190px;
+    width: 152px;
+    height: 134px;
     max-width: 100%;
     display: block;
     overflow: visible;
-    filter: drop-shadow(0 0 14px rgba(255, 0, 127, 0.85)) drop-shadow(0 0 25px rgba(255, 51, 102, 0.45));
+    filter: drop-shadow(0 0 14px rgba(255, 0, 127, 0.85)) drop-shadow(0 0 22px rgba(255, 51, 102, 0.4));
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
     animation: quezquemPulseNeon 4s ease-in-out infinite alternate;
+}
+
+.center-emblem-card:hover .quezquem-vector-svg,
+.emblem-interactive-subcard:hover .quezquem-vector-svg {
+    transform: scale(1.06) translateY(-2px);
+    filter: drop-shadow(0 0 22px rgba(255, 0, 127, 1)) drop-shadow(0 0 32px rgba(255, 102, 178, 0.85));
+}
+
+/* Centered Captions Container (Strictly Locked Height = ZERO Layout Shift) */
+.emblem-captions-container {
+    margin-top: 18px;
+    height: 48px;
+    min-height: 48px;
+    max-height: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.emblem-caption-item {
+    animation: fadeInPanel 0.28s ease;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.emblem-caption {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 1.25;
+}
+
+.emblem-subcaption {
+    font-size: 0.78rem;
+    color: var(--neon-orange);
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+    line-height: 1.2;
+}
+
+/* Pure Opacity Fade: Absolutely NO scale bouncing */
+@keyframes fadeInPanel {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 580px) {
+    .hud-switch-badge {
+        top: -13px;
+        right: 12px;
+        padding: 2px 4px;
+    }
+
+    .hud-switch-btn {
+        padding: 5px 10px;
+        font-size: 0.7rem;
+    }
 }
 
 /* Cenefa Huasteca Canvas & Vector in About */
@@ -1412,8 +1520,60 @@ body {
 }
 
 .gs-system-icon {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gs-system-item:nth-child(1) .gs-system-icon {
+    background: rgba(255, 0, 127, 0.12);
+    border: 1px solid rgba(255, 0, 127, 0.35);
+    color: var(--neon-pink);
+    box-shadow: 0 0 16px rgba(255, 0, 127, 0.22);
+}
+
+.gs-system-item:nth-child(2) .gs-system-icon {
+    background: rgba(192, 132, 252, 0.12);
+    border: 1px solid rgba(192, 132, 252, 0.35);
+    color: #c084fc;
+    box-shadow: 0 0 16px rgba(192, 132, 252, 0.22);
+}
+
+.gs-system-item:nth-child(3) .gs-system-icon {
+    background: rgba(0, 240, 255, 0.12);
+    border: 1px solid rgba(0, 240, 255, 0.35);
+    color: var(--neon-cyan);
+    box-shadow: 0 0 16px rgba(0, 240, 255, 0.22);
+}
+
+.gs-system-item:hover .gs-system-icon {
+    transform: translateY(-3px) scale(1.1);
+}
+
+.gs-system-item:nth-child(1):hover .gs-system-icon {
+    box-shadow: 0 0 25px rgba(255, 0, 127, 0.45);
+    border-color: var(--neon-pink);
+}
+
+.gs-system-item:nth-child(2):hover .gs-system-icon {
+    box-shadow: 0 0 25px rgba(192, 132, 252, 0.45);
+    border-color: #c084fc;
+}
+
+.gs-system-item:nth-child(3):hover .gs-system-icon {
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.45);
+    border-color: var(--neon-cyan);
+}
+
+.gs-system-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke-width: 2px;
 }
 
 .gs-system-name {
@@ -1981,6 +2141,12 @@ body {
     gap: 10px;
 }
 
+.btn-submit-contact svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2.2px;
+}
+
 .btn-submit-contact:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 35px rgba(255, 0, 127, 0.8);
@@ -2165,7 +2331,7 @@ body {
     transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* 3. Left Side: Vertical Totem of 5 Huasteca Stars (Zig-Zag Constellation) UNDERNEATH Main Card */
+/* 3. Left Side: Vertical Totem of 7 Huasteca Stars + 7 Background Constellation Stars UNDERNEATH Main Card */
 .hero-left-totem-stack {
     position: absolute;
     left: -48px;
@@ -2175,105 +2341,251 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
+    gap: 8px;
     z-index: 2 !important; /* Layer 2: Strictly BEHIND .hero-wrapper (z-index: 5) and ABOVE canvas (z-index: 0) */
     pointer-events: auto;
     transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* 5 Items in Zig-Zag: Big, Mini, Big, Mini, Big */
+/* Background Constellation: 7 Tiny Stars that ONLY float up & down without rotating */
+.totem-bg-stars-constellation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.totem-bg-star {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    opacity: 0.52;
+    filter: drop-shadow(0 0 2.5px rgba(255, 0, 127, 0.45));
+}
+
+.totem-bg-star-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Interleaved Zigzag coordinates for the 7 background stars (Diamond/Rhombus 45° angle) */
+.bg-star-1 {
+    top: 3%;
+    left: 28px;
+    animation: bgStarFloatA 4.8s ease-in-out infinite alternate;
+}
+
+.bg-star-2 {
+    top: 18%;
+    left: -26px;
+    animation: bgStarFloatB 5.4s ease-in-out infinite alternate;
+}
+
+.bg-star-3 {
+    top: 34%;
+    left: 30px;
+    animation: bgStarFloatA 4.6s ease-in-out infinite alternate;
+}
+
+.bg-star-4 {
+    top: 50%;
+    left: -32px;
+    animation: bgStarFloatB 5.8s ease-in-out infinite alternate;
+}
+
+.bg-star-5 {
+    top: 65%;
+    left: 26px;
+    animation: bgStarFloatA 5.0s ease-in-out infinite alternate;
+}
+
+.bg-star-6 {
+    top: 80%;
+    left: -24px;
+    animation: bgStarFloatB 5.5s ease-in-out infinite alternate;
+}
+
+.bg-star-7 {
+    top: 94%;
+    left: 28px;
+    animation: bgStarFloatA 4.9s ease-in-out infinite alternate;
+}
+
+/* Pure vertical floating up & down with 45deg Diamond/Rhombus orientation - ZERO spin */
+@keyframes bgStarFloatA {
+    0% { transform: translateY(-11px) rotate(45deg); }
+    100% { transform: translateY(11px) rotate(45deg); }
+}
+
+@keyframes bgStarFloatB {
+    0% { transform: translateY(11px) rotate(45deg); }
+    100% { transform: translateY(-11px) rotate(45deg); }
+}
+
+/* 7 Foreground Cultural Flowers in Zig-Zag: Small, Big, Med, Big, Med, Big, Small */
 .totem-flower-item {
+    position: relative;
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
-}
-
-.totem-flower-item:hover {
-    filter: drop-shadow(0 0 12px #ff007f) drop-shadow(0 0 24px rgba(255, 0, 127, 0.9));
-}
-
-/* Item 1: Flor Grande Superior (98px) */
-.totem-star-1 {
-    width: 98px;
-    height: 98px;
-    transform: translateX(-12px) rotate(-10deg);
-    animation: totemDrift1 5.2s ease-in-out infinite alternate;
-}
-
-/* Item 2: Mini Estrella 1 (52px) */
-.totem-star-2 {
-    width: 52px;
-    height: 52px;
-    transform: translateX(8px) rotate(14deg);
-    animation: totemDrift2 4.6s ease-in-out infinite alternate;
-}
-
-/* Item 3: Flor Grande Central (108px) */
-.totem-star-3 {
-    width: 108px;
-    height: 108px;
-    transform: translateX(-18px) rotate(8deg);
-    animation: totemDrift3 6.0s ease-in-out infinite alternate;
-}
-
-/* Item 4: Mini Estrella 2 (52px) */
-.totem-star-4 {
-    width: 52px;
-    height: 52px;
-    transform: translateX(6px) rotate(-12deg);
-    animation: totemDrift4 4.8s ease-in-out infinite alternate;
-}
-
-/* Item 5: Flor Grande Inferior (98px) */
-.totem-star-5 {
-    width: 98px;
-    height: 98px;
-    transform: translateX(-10px) rotate(-6deg);
-    animation: totemDrift5 5.6s ease-in-out infinite alternate;
+    perspective: 900px;
+    transform-style: preserve-3d;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .totem-flower-svg {
     width: 100%;
     height: 100%;
     display: block;
-    filter: drop-shadow(0 0 6px #ff007f) drop-shadow(0 0 16px rgba(255, 0, 127, 0.65));
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+    /* Defined, crisp glow preserving cross-stitch embroidery detail */
+    filter: drop-shadow(0 0 4px rgba(255, 0, 127, 0.8)) drop-shadow(0 0 9px rgba(255, 0, 127, 0.35));
+    transition: filter 0.35s ease;
 }
 
+/* Crisp, focused hover without wide fuzzy fog */
+.totem-flower-item:hover .totem-flower-svg {
+    filter: drop-shadow(0 0 6px #ff007f) drop-shadow(0 0 13px rgba(255, 51, 102, 0.7));
+}
+
+/* Item 0: Flor Pequeña Superior Extrema (42px - Rotación 3D en su eje) */
+.totem-star-top {
+    width: 42px;
+    height: 42px;
+    transform: translateX(10px) rotate(12deg);
+    animation: totemDriftTop 5.2s ease-in-out infinite alternate;
+}
+
+/* Item 1: Flor Grande Superior (88px - Sin rotación, solo arriba/abajo y a los lados) */
+.totem-star-1 {
+    width: 88px;
+    height: 88px;
+    transform: translateX(-12px);
+    animation: totemDrift1 6.4s ease-in-out infinite alternate;
+}
+
+/* Item 2: Mini Estrella 1 (48px - Rotación 3D en su eje) */
+.totem-star-2 {
+    width: 48px;
+    height: 48px;
+    transform: translateX(8px) rotate(14deg);
+    animation: totemDrift2 5.5s ease-in-out infinite alternate;
+}
+
+/* Item 3: Flor Grande Central (100px - Sin rotación, solo arriba/abajo y a los lados) */
+.totem-star-3 {
+    width: 100px;
+    height: 100px;
+    transform: translateX(-18px);
+    animation: totemDrift3 7.0s ease-in-out infinite alternate;
+}
+
+/* Item 4: Mini Estrella 2 (48px - Rotación 3D en su eje) */
+.totem-star-4 {
+    width: 48px;
+    height: 48px;
+    transform: translateX(6px) rotate(-12deg);
+    animation: totemDrift4 5.8s ease-in-out infinite alternate;
+}
+
+/* Item 5: Flor Grande Inferior (88px - Sin rotación, solo arriba/abajo y a los lados) */
+.totem-star-5 {
+    width: 88px;
+    height: 88px;
+    transform: translateX(-10px);
+    animation: totemDrift5 6.6s ease-in-out infinite alternate;
+}
+
+/* Item 6: Flor Pequeña Inferior Extrema (42px - Rotación 3D en su eje) */
+.totem-star-bottom {
+    width: 42px;
+    height: 42px;
+    transform: translateX(8px) rotate(-8deg);
+    animation: totemDriftBottom 5.4s ease-in-out infinite alternate;
+}
+
+/* 3D Spin on Own Vertical Axis (Y-Axis Rotation) SOLO para las medianas y pequeñas */
+.totem-star-top .totem-flower-svg {
+    animation: totemSpin3D_CW 11s linear infinite;
+}
+
+.totem-star-2 .totem-flower-svg {
+    animation: totemSpin3D_CCW 9.5s linear infinite;
+}
+
+.totem-star-4 .totem-flower-svg {
+    animation: totemSpin3D_CCW 10.5s linear infinite;
+}
+
+.totem-star-bottom .totem-flower-svg {
+    animation: totemSpin3D_CCW 11.5s linear infinite;
+}
+
+@keyframes totemSpin3D_CW {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+@keyframes totemSpin3D_CCW {
+    0% { transform: rotateY(360deg); }
+    100% { transform: rotateY(0deg); }
+}
+
+/* Drift keyframes for main flowers */
+@keyframes totemDriftTop {
+    0% { transform: translateX(10px) translateY(-10px) rotate(12deg); }
+    100% { transform: translateX(10px) translateY(10px) rotate(16deg); }
+}
+
+/* Las más grandes: solo arriba/abajo y a los lados, sin rotar */
 @keyframes totemDrift1 {
-    0% { transform: translateX(-12px) translateY(0px) rotate(-10deg); }
-    100% { transform: translateX(-12px) translateY(-7px) rotate(-14deg); }
+    0% { transform: translateX(-16px) translateY(-12px); }
+    100% { transform: translateX(-8px) translateY(12px); }
 }
 
 @keyframes totemDrift2 {
-    0% { transform: translateX(8px) translateY(0px) rotate(14deg); }
-    100% { transform: translateX(8px) translateY(5px) rotate(18deg); }
+    0% { transform: translateX(8px) translateY(-14px) rotate(14deg); }
+    100% { transform: translateX(8px) translateY(10px) rotate(18deg); }
 }
 
+/* Central grande: solo arriba/abajo y a los lados, sin rotar */
 @keyframes totemDrift3 {
-    0% { transform: translateX(-18px) translateY(0px) rotate(8deg); }
-    100% { transform: translateX(-18px) translateY(-6px) rotate(4deg); }
+    0% { transform: translateX(-22px) translateY(-15px); }
+    100% { transform: translateX(-14px) translateY(13px); }
 }
 
 @keyframes totemDrift4 {
-    0% { transform: translateX(6px) translateY(0px) rotate(-12deg); }
-    100% { transform: translateX(6px) translateY(5px) rotate(-7deg); }
+    0% { transform: translateX(6px) translateY(-11px) rotate(-12deg); }
+    100% { transform: translateX(6px) translateY(13px) rotate(-8deg); }
 }
 
+/* Inferior grande: solo arriba/abajo y a los lados, sin rotar */
 @keyframes totemDrift5 {
-    0% { transform: translateX(-10px) translateY(0px) rotate(-6deg); }
-    100% { transform: translateX(-10px) translateY(7px) rotate(-2deg); }
+    0% { transform: translateX(-14px) translateY(-13px); }
+    100% { transform: translateX(-6px) translateY(11px); }
+}
+
+@keyframes totemDriftBottom {
+    0% { transform: translateX(8px) translateY(-10px) rotate(-8deg); }
+    100% { transform: translateX(8px) translateY(12px) rotate(-4deg); }
 }
 
 .hero-right-decor-stack {
     position: absolute;
-    right: -48px;
+    right: -36px;
     top: 50%;
     transform: translateY(-50%) translate3d(calc(var(--shift-x, 0) * 15px), calc(var(--shift-y, 0) * 15px), 0);
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    align-items: center;
+    gap: 13px;
     z-index: 6;
     pointer-events: auto;
     transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -2282,13 +2594,61 @@ body {
 .decor-badge-item {
     display: block;
     cursor: pointer;
-    perspective: 600px;
+    text-decoration: none;
+    perspective: 800px;
+    transform-style: preserve-3d;
+    outline: none;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+/* Zigzag Horizontal Alternations for cultural badges */
+.decor-badge-item:nth-child(1),
+.badge-corazon-sagrado {
+    transform: translateX(-18px);
+}
+.decor-badge-item:nth-child(1):hover,
+.badge-corazon-sagrado:hover {
+    transform: translateX(-18px) scale(1.05);
+}
+
+.decor-badge-item:nth-child(2),
+.badge-roseta,
+.badge-roseta-cempasuchil {
+    transform: translateX(18px);
+}
+.decor-badge-item:nth-child(2):hover,
+.badge-roseta:hover,
+.badge-roseta-cempasuchil:hover {
+    transform: translateX(18px) scale(1.05);
+}
+
+.decor-badge-item:nth-child(3),
+.badge-cruz-rumbos,
+.badge-mandala-huasteco {
+    transform: translateX(-20px);
+}
+.decor-badge-item:nth-child(3):hover,
+.badge-cruz-rumbos:hover,
+.badge-mandala-huasteco:hover {
+    transform: translateX(-20px) scale(1.05);
+}
+
+.decor-badge-item:nth-child(4),
+.badge-corona,
+.badge-corona-floral {
+    transform: translateX(18px);
+}
+.decor-badge-item:nth-child(4):hover,
+.badge-corona:hover,
+.badge-corona-floral:hover {
+    transform: translateX(18px) scale(1.05);
+}
+
+/* Compact dimensions to preserve PNG pixel density and sharpness */
 .decor-glass-box {
-    width: 96px;
-    height: 96px;
-    border-radius: 20px;
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2296,17 +2656,27 @@ body {
     border: none;
     box-shadow: none;
     padding: 0;
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-style: preserve-3d;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .decor-card-asset {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border-radius: 20px;
+    border-radius: 16px;
     display: block;
-    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 12px rgba(255, 0, 127, 0.4));
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 10px rgba(255, 0, 127, 0.4));
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease;
+}
+
+.badge-roseta .decor-card-asset,
+.badge-roseta-cempasuchil .decor-card-asset,
+.badge-corona .decor-card-asset,
+.badge-corona-floral .decor-card-asset {
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 10px rgba(255, 122, 0, 0.4));
 }
 
 .cultural-vector-svg {
@@ -2325,67 +2695,66 @@ body {
     filter: drop-shadow(0 0 5px #ff7a00) drop-shadow(0 0 12px rgba(255, 122, 0, 0.65));
 }
 
-/* Alternating Card Rotations & Float Keyframes matching user's Image 2 */
+/* 3D Isometric Keyframes: Rotations on own vertical axis without completing a 360 flip */
 .badge-corazon-sagrado .decor-glass-box {
-    transform: rotate(-8deg);
-    animation: floatBadge1 4.8s ease-in-out infinite alternate;
+    animation: floatBadge3D_1 5.4s ease-in-out infinite alternate;
 }
 
+.badge-roseta .decor-glass-box,
 .badge-roseta-cempasuchil .decor-glass-box {
-    transform: rotate(7deg) translateX(8px);
-    animation: floatBadge2 5.3s ease-in-out infinite alternate;
+    animation: floatBadge3D_2 4.9s ease-in-out infinite alternate;
 }
 
+.badge-cruz-rumbos .decor-glass-box,
 .badge-mandala-huasteco .decor-glass-box {
-    transform: rotate(-6deg);
-    animation: floatBadge3 5.0s ease-in-out infinite alternate;
+    animation: floatBadge3D_3 5.8s ease-in-out infinite alternate;
 }
 
+.badge-corona .decor-glass-box,
 .badge-corona-floral .decor-glass-box {
-    transform: rotate(8deg) translateX(6px);
-    animation: floatBadge4 5.5s ease-in-out infinite alternate;
+    animation: floatBadge3D_4 5.2s ease-in-out infinite alternate;
 }
 
-.badge-roseta-cempasuchil .decor-card-asset,
-.badge-corona-floral .decor-card-asset {
-    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 12px rgba(255, 122, 0, 0.4));
-}
-
-/* Hover Reactions */
+/* Controlled hover reactions: smoothly faces forward and scales */
 .decor-badge-item:hover .decor-glass-box {
-    transform: scale(1.18) rotate(0deg) translateZ(25px) !important;
+    transform: perspective(800px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1.1) !important;
     z-index: 20;
 }
 
 .decor-badge-item:hover .decor-card-asset {
-    transform: scale(1.06);
-    filter: drop-shadow(0 14px 26px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 25px rgba(255, 0, 127, 0.9));
+    transform: scale(1.03);
+    filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 18px rgba(255, 0, 127, 0.85));
 }
 
+.badge-roseta:hover .decor-card-asset,
 .badge-roseta-cempasuchil:hover .decor-card-asset,
+.badge-corona:hover .decor-card-asset,
 .badge-corona-floral:hover .decor-card-asset {
-    filter: drop-shadow(0 14px 26px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 25px rgba(255, 122, 0, 0.95));
+    filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 18px rgba(255, 122, 0, 0.85));
 }
 
 .decor-badge-item:hover .cultural-vector-svg {
-    transform: scale(1.12);
+    transform: scale(1.08);
 }
 
-@keyframes floatBadge1 {
-    0% { transform: rotate(-8deg) translateY(0px); }
-    100% { transform: rotate(-6deg) translateY(-8px); }
+@keyframes floatBadge3D_1 {
+    0% { transform: rotateZ(-6deg) rotateX(10deg) rotateY(-22deg) translateY(-6px); }
+    100% { transform: rotateZ(-4deg) rotateX(6deg) rotateY(20deg) translateY(6px); }
 }
-@keyframes floatBadge2 {
-    0% { transform: rotate(7deg) translateX(8px) translateY(0px); }
-    100% { transform: rotate(9deg) translateX(8px) translateY(-9px); }
+
+@keyframes floatBadge3D_2 {
+    0% { transform: rotateZ(6deg) rotateX(-8deg) rotateY(22deg) translateY(6px); }
+    100% { transform: rotateZ(4deg) rotateX(-5deg) rotateY(-20deg) translateY(-6px); }
 }
-@keyframes floatBadge3 {
-    0% { transform: rotate(-6deg) translateY(0px); }
-    100% { transform: rotate(-4deg) translateY(-8px); }
+
+@keyframes floatBadge3D_3 {
+    0% { transform: rotateZ(-5deg) rotateX(12deg) rotateY(-25deg) translateY(-7px); }
+    100% { transform: rotateZ(-3deg) rotateX(7deg) rotateY(23deg) translateY(7px); }
 }
-@keyframes floatBadge4 {
-    0% { transform: rotate(8deg) translateX(6px) translateY(0px); }
-    100% { transform: rotate(6deg) translateX(6px) translateY(-7px); }
+
+@keyframes floatBadge3D_4 {
+    0% { transform: rotateZ(7deg) rotateX(-10deg) rotateY(20deg) translateY(6px); }
+    100% { transform: rotateZ(5deg) rotateX(-6deg) rotateY(-22deg) translateY(-6px); }
 }
 
 /* 5. Mobile & Responsive Layout Rules */
@@ -2486,11 +2855,92 @@ body {
 }
 
 @media (max-width: 768px) {
+    .header-nav {
+        top: 14px;
+        padding: 0 14px;
+    }
+
+    .nav-pill-container {
+        padding: 6px 14px;
+        gap: 10px;
+    }
+
+    .nav-brand {
+        font-size: 1.12rem;
+        letter-spacing: 1px;
+        gap: 8px;
+    }
+
+    .huasteca-mini-flower {
+        width: 24px;
+        height: 24px;
+    }
+
+    .nav-controls {
+        gap: 8px;
+    }
+
+    .btn-lang-toggle {
+        padding: 5px 10px;
+        font-size: 0.74rem;
+        gap: 5px;
+    }
+
+    .btn-nav-cv {
+        padding: 6px 14px;
+        font-size: 0.78rem;
+    }
+
     .nav-menu {
         display: none;
     }
-    .mobile-toggle {
+
+    .nav-menu.mobile-open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 14px;
+        right: 14px;
+        background: rgba(18, 8, 30, 0.96);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 0, 127, 0.45);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.75), 0 0 20px rgba(255, 0, 127, 0.3);
+        border-radius: 20px;
+        padding: 14px;
+        gap: 6px;
+        z-index: 999;
+        animation: fadeInPanel 0.25s ease;
+    }
+
+    .nav-menu.mobile-open .nav-link {
+        width: 100%;
         display: block;
+        padding: 10px 16px;
+        border-radius: 12px;
+        font-size: 0.95rem;
+    }
+
+    .mobile-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .mobile-toggle:hover {
+        background: rgba(255, 0, 127, 0.2);
+        border-color: rgba(255, 0, 127, 0.5);
+        color: var(--neon-pink);
     }
     .hero-title {
         font-size: 2.4rem;
@@ -2521,6 +2971,101 @@ body {
     }
     .section-title {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .header-nav {
+        top: 10px;
+        padding: 0 10px;
+    }
+
+    .nav-pill-container {
+        padding: 6px 10px;
+        gap: 8px;
+    }
+
+    .nav-brand {
+        font-size: 1.05rem;
+        letter-spacing: 0.8px;
+        gap: 6px;
+    }
+
+    .huasteca-mini-flower {
+        width: 22px;
+        height: 22px;
+    }
+
+    .nav-controls {
+        gap: 6px;
+    }
+
+    .btn-lang-toggle {
+        padding: 5px 8px;
+        font-size: 0.72rem;
+        gap: 4px;
+    }
+
+    .btn-lang-toggle svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .btn-nav-cv {
+        padding: 6px 11px;
+        font-size: 0.75rem;
+        gap: 4px;
+    }
+
+    .btn-nav-cv svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .btn-nav-cv .nav-cv-text-long {
+        display: none;
+    }
+
+    .btn-nav-cv .nav-cv-text-short {
+        display: inline;
+    }
+
+    .mobile-toggle {
+        width: 32px;
+        height: 32px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .header-nav {
+        padding: 0 6px;
+    }
+
+    .nav-pill-container {
+        padding: 5px 8px;
+        gap: 6px;
+    }
+
+    .nav-brand {
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+        gap: 5px;
+    }
+
+    .huasteca-mini-flower {
+        width: 20px;
+        height: 20px;
+    }
+
+    .btn-lang-toggle {
+        padding: 4px 6px;
+        font-size: 0.68rem;
+    }
+
+    .btn-nav-cv {
+        padding: 5px 9px;
+        font-size: 0.72rem;
     }
 }
 
@@ -2611,13 +3156,48 @@ body {
 }
 
 .btn-action-icon {
-    font-size: 2.2rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
-    transition: transform 0.3s ease;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, background 0.35s ease, border-color 0.35s ease;
 }
 
-.btn-exp-action:hover .btn-action-icon {
-    transform: scale(1.15) rotate(-5deg);
+.btn-exp-experience .btn-action-icon {
+    background: rgba(255, 0, 127, 0.15);
+    border: 1px solid rgba(255, 0, 127, 0.4);
+    color: var(--neon-pink);
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.25);
+}
+
+.btn-exp-experience:hover .btn-action-icon {
+    background: rgba(255, 0, 127, 0.28);
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 30px rgba(255, 0, 127, 0.55);
+    transform: scale(1.12) rotate(-5deg);
+}
+
+.btn-exp-education .btn-action-icon {
+    background: rgba(0, 240, 255, 0.15);
+    border: 1px solid rgba(0, 240, 255, 0.4);
+    color: var(--neon-cyan);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.25);
+}
+
+.btn-exp-education:hover .btn-action-icon {
+    background: rgba(0, 240, 255, 0.28);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.55);
+    transform: scale(1.12) rotate(-5deg);
+}
+
+.btn-action-icon svg {
+    width: 26px;
+    height: 26px;
+    stroke-width: 2px;
 }
 
 .btn-action-text {
@@ -2651,11 +3231,20 @@ body {
 }
 
 .btn-action-arrow {
-    font-size: 1.5rem;
-    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
     color: #fff;
     opacity: 0.7;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease;
+}
+
+.btn-action-arrow svg {
+    width: 22px;
+    height: 22px;
+    stroke-width: 2.2px;
 }
 
 .btn-exp-action:hover .btn-action-arrow {

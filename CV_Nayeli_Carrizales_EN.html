@@ -419,7 +419,29 @@
                 margin: 8mm 6mm;
             }
         }
+
+        .btn-lang svg, .btn-print svg {
+            width: 14px;
+            height: 14px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .skill-group h4 {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .skill-group h4 svg {
+            width: 15px;
+            height: 15px;
+            color: var(--accent-blue);
+            flex-shrink: 0;
+        }
     </style>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -431,10 +453,10 @@
         </div>
         <div style="display: flex; gap: 10px; align-items: center;">
             <a href="CV_Nayeli_Carrizales.html" class="btn-lang">
-                🌐 Versión en Español
+                <i data-lucide="globe"></i> Versión en Español
             </a>
             <button class="btn-print" onclick="window.print()">
-                🖨️ Print / Save as PDF
+                <i data-lucide="printer"></i> Print / Save as PDF
             </button>
         </div>
     </div>
@@ -470,19 +492,19 @@
         <h2 class="section-title">TECHNICAL SKILLS</h2>
         <div class="skills-grid">
             <div class="skill-group">
-                <h4>☁️ Cloud, AI & Containers</h4>
+                <h4><i data-lucide="cloud"></i> Cloud, AI & Containers</h4>
                 <p>Google Antigravity IDE & CLI, AWS Kiro AI IDE, Google Cloud Platform (Foundations), Docker, Docker Compose, Nginx Alpine, Vercel, Neon Serverless.</p>
             </div>
             <div class="skill-group">
-                <h4>📊 Business Intelligence & Google ETL</h4>
+                <h4><i data-lucide="bar-chart-3"></i> Business Intelligence & Google ETL</h4>
                 <p>Google Looker Studio, Google Apps Script, Google Sheets API, Time-driven Triggers, Automated Reporting, REST APIs / OAuth Ingestion.</p>
             </div>
             <div class="skill-group">
-                <h4>💻 Frontend & Reactive State</h4>
+                <h4><i data-lucide="layout"></i> Frontend & Reactive State</h4>
                 <p>React 19, Next.js 16 (App Router), TypeScript, Modern JavaScript (ES6+), Vite 8, Tailwind CSS v4, Zustand, React Router DOM, HTML5 / CSS3.</p>
             </div>
             <div class="skill-group">
-                <h4>⚙️ Backend, Databases & QA</h4>
+                <h4><i data-lucide="database"></i> Backend, Databases & QA</h4>
                 <p>Node.js, Express, Next.js API Routes, PostgreSQL, Drizzle ORM, Auth0, Vitest, Cypress, <strong>Corporate GitLab</strong>, GitHub.</p>
             </div>
         </div>
@@ -497,7 +519,7 @@
             <div class="item-company">Grupo Salinas · Mexico City (CDMX)</div>
             <ul class="item-bullets">
                 <li>Spearheaded frontend architecture and production rollout of <strong>strategic enterprise platforms deployed nationwide</strong>, managing releases, branching governance, and code reviews via <strong>corporate GitLab</strong>.</li>
-                <li><strong>Corporate Mobile Onboarding & Identity Validation Platform (React 19 & Vite):</strong> Architected and deployed the responsive mobile-first frontend serving nationwide corporate and field personnel, with strict client-side validation workflows.</li>
+                <li><strong>Employee Registration & Mobile Dynamics Platform (React 19 & Vite):</strong> Architected and deployed the responsive mobile-first frontend serving 7,000+ employees nationwide, with reactive data validations, corporate trivia dynamics, and an administrative portal for operational report downloads and Top 10 rankings.</li>
                 <li><strong>Multi-Server Interactive Gamification Platform:</strong> Engineered high-performance interactive dynamics (60 FPS) utilizing <strong>TypeScript, HTML5 Canvas, and Framer Motion</strong>. Modularized codebases to execute reliably across <strong>heterogeneous production servers with varied OS and infrastructure</strong>, supported by containerized environments in <strong>Docker</strong>.</li>
                 <li><strong>High-Concurrency Reactive Search Engine (React & SCSS):</strong> Built an instant client-side indexing and filtering engine engineered to handle high-velocity queries and peak concurrency during nationwide corporate campaigns.</li>
                 <li><strong>Sports Tournament Tracking & Dynamic Reporting (React & Axios):</strong> Developed interactive tournament interface with live fixtures, team rosters, and automated client-side PDF reporting using <strong>PDFMake</strong>.</li>
@@ -619,7 +641,7 @@
         <h2 class="section-title">KEY FEATURED PROJECTS</h2>
 
         <div style="font-size: 11.5px; font-weight: 700; color: #1e293b; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
-            <span style="color: var(--accent-green);">🏢</span> ENTERPRISE & PRODUCTION SYSTEMS
+            <span style="color: var(--accent-green); display: inline-flex;"><i data-lucide="building-2" style="width: 14px; height: 14px;"></i></span> ENTERPRISE & PRODUCTION SYSTEMS
         </div>
 
         <div class="project-card">
@@ -628,7 +650,7 @@
                 <span style="font-size: 11px; color: #64748b; font-weight: 500;">Grupo Salinas · GitLab · Vanilla JS / Mobile</span>
             </div>
             <p class="project-desc">
-                Nationwide enterprise platforms delivered to production. Features unified mobile onboarding platform for corporate and field personnel, and interactive web dynamics adapted to heterogeneous server environments with version control in GitLab.
+                Nationwide enterprise platforms delivered to production. Features unified mobile registration platform for 7,000+ employees, interactive corporate trivia dynamics, and an admin portal for reports and Top 10 rankings with GitLab CI/CD.
             </p>
         </div>
 
@@ -653,7 +675,7 @@
         </div>
 
         <div style="font-size: 11.5px; font-weight: 700; color: #1e293b; text-transform: uppercase; letter-spacing: 0.6px; margin-top: 14px; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
-            <span style="color: var(--accent-blue);">🚀</span> PERSONAL ENGINEERING & OPEN ARCHITECTURE PROJECTS
+            <span style="color: var(--accent-blue); display: inline-flex;"><i data-lucide="rocket" style="width: 14px; height: 14px;"></i></span> PERSONAL ENGINEERING & OPEN ARCHITECTURE PROJECTS
         </div>
 
         <div class="project-card">
@@ -749,6 +771,11 @@
 
     </div>
 
+    <script>
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
 </body>
 
 </html>

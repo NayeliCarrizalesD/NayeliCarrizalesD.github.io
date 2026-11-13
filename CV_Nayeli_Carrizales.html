@@ -419,7 +419,29 @@
                 margin: 8mm 6mm;
             }
         }
+
+        .btn-lang svg, .btn-print svg {
+            width: 14px;
+            height: 14px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .skill-group h4 {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .skill-group h4 svg {
+            width: 15px;
+            height: 15px;
+            color: var(--accent-blue);
+            flex-shrink: 0;
+        }
     </style>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -432,10 +454,10 @@
         </div>
         <div style="display: flex; gap: 10px; align-items: center;">
             <a href="CV_Nayeli_Carrizales_EN.html" class="btn-lang">
-                🌐 English Version
+                <i data-lucide="globe"></i> English Version
             </a>
             <button class="btn-print" onclick="window.print()">
-                🖨️ Imprimir / Guardar como PDF
+                <i data-lucide="printer"></i> Imprimir / Guardar como PDF
             </button>
         </div>
     </div>
@@ -472,22 +494,22 @@
         <h2 class="section-title">HABILIDADES TÉCNICAS</h2>
         <div class="skills-grid">
             <div class="skill-group">
-                <h4>☁️ Cloud, IA & Contenedores</h4>
+                <h4><i data-lucide="cloud"></i> Cloud, IA & Contenedores</h4>
                 <p>Google Antigravity IDE & CLI, AWS Kiro AI IDE, Google Cloud (Fundamentos), Docker, Docker Compose,
                     Nginx Alpine, Vercel, Neon Serverless.</p>
             </div>
             <div class="skill-group">
-                <h4>📊 Business Intelligence & ETL Google</h4>
+                <h4><i data-lucide="bar-chart-3"></i> Business Intelligence & ETL Google</h4>
                 <p>Google Looker Studio, Google Apps Script, Google Sheets API, Time-driven Triggers, Automatización de
                     reportes, Consumo de APIs REST / OAuth.</p>
             </div>
             <div class="skill-group">
-                <h4>💻 Frontend & Estado Reactivo</h4>
+                <h4><i data-lucide="layout"></i> Frontend & Estado Reactivo</h4>
                 <p>React 19, Next.js 16 (App Router), TypeScript, JavaScript (ES6+), Vite 8, Tailwind CSS v4, Zustand,
                     React Router DOM, HTML5 / CSS3.</p>
             </div>
             <div class="skill-group">
-                <h4>⚙️ Backend, Bases de Datos & QA</h4>
+                <h4><i data-lucide="database"></i> Backend, Bases de Datos & QA</h4>
                 <p>Node.js, Express, Next.js API Routes, PostgreSQL, Drizzle ORM, Auth0, Vitest, Cypress, <strong>GitLab
                         (uso corporativo)</strong>, GitHub.</p>
             </div>
@@ -503,7 +525,7 @@
             <div class="item-company">Grupo Salinas · Ciudad de México (CDMX)</div>
             <ul class="item-bullets">
                 <li>Liderazgo en arquitectura frontend y entrega a producción de <strong>plataformas web estratégicas de escala nacional</strong>, gestionando gobernanza de código, ramas de release y code reviews mediante <strong>GitLab corporativo</strong>.</li>
-                <li><strong>Sistema de Onboarding & Registro Móvil (React 19 & Vite):</strong> Diseñé e implementé la arquitectura frontend para smartphones con enfoque Mobile-First y validaciones reactivas estrictas, dando servicio con alta disponibilidad a colaboradores de corporativo y red geográfica nacional.</li>
+                <li><strong>Plataforma de Registro de Colaboradores & Dinámica Móvil (React 19 & Vite):</strong> Diseñé e implementé la arquitectura frontend mobile-first para más de 7,000 colaboradores a nivel nacional, con captura y validación reactiva de datos de empleado, módulo de trivia interactiva y panel administrativo para descarga de reportes operativos y ranking Top 10.</li>
                 <li><strong>Ecosistema de Gamificación & Engagement Multi-Servidor:</strong> Desarrollé dinámicas interactivas y minijuegos web de alto rendimiento (60 FPS) con <strong>TypeScript, HTML5 Canvas y Framer Motion</strong>. Diseñé y adapté arquitecturas de código modulares para ejecutarse con total estabilidad en <strong>múltiples servidores de producción con arquitecturas heterogéneas</strong>, complementado con prototipado contenerizado en <strong>Docker</strong>.</li>
                 <li><strong>Buscador Reactivo de Alta Concurrencia (React & SCSS):</strong> Implementé un motor dinámico de búsqueda y filtrado instantáneo en cliente, diseñado para mitigar latencia y absorber picos masivos de concurrencia simultánea en activaciones corporativas.</li>
                 <li><strong>Portal Deportivo & Reportería Dinámica (React & Axios):</strong> Desarrollé la plataforma de torneos deportivos institucionales, integrando fixtures y estadísticas en vivo, con generación y descarga automática de reportes ejecutivos en PDF en el navegador mediante <strong>PDFMake</strong>.</li>
@@ -635,7 +657,7 @@
         <h2 class="section-title">PROYECTOS DESTACADOS</h2>
 
         <div style="font-size: 11.5px; font-weight: 700; color: #1e293b; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
-            <span style="color: var(--accent-green);">🏢</span> PROYECTOS CORPORATIVOS & DE PRODUCCIÓN
+            <span style="color: var(--accent-green); display: inline-flex;"><i data-lucide="building-2" style="width: 14px; height: 14px;"></i></span> PROYECTOS CORPORATIVOS & DE PRODUCCIÓN
         </div>
 
         <div class="project-card">
@@ -644,7 +666,7 @@
                 <span style="font-size: 11px; color: #64748b; font-weight: 500;">Grupo Salinas · GitLab · Vanilla JS / Mobile</span>
             </div>
             <p class="project-desc">
-                Soluciones web de escala nacional entregadas a producción. Incluye el plataforma unificada de registro y onboarding para colaboradores corporativos y de campo en todo el país, y dinámicas web interactivas adaptados a arquitecturas de servidores heterogéneas con control de versiones en GitLab.
+                Soluciones web de escala nacional entregadas a producción. Incluye la plataforma unificada de registro para más de 7,000 colaboradores y dinámicas interactivas móviles con panel administrativo para reportes y ranking Top 10, con control de versiones en GitLab.
             </p>
         </div>
 
@@ -669,7 +691,7 @@
         </div>
 
         <div style="font-size: 11.5px; font-weight: 700; color: #1e293b; text-transform: uppercase; letter-spacing: 0.6px; margin-top: 14px; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
-            <span style="color: var(--accent-blue);">🚀</span> PROYECTOS DE INGENIERÍA PERSONAL & ARQUITECTURA OPEN
+            <span style="color: var(--accent-blue); display: inline-flex;"><i data-lucide="rocket" style="width: 14px; height: 14px;"></i></span> PROYECTOS DE INGENIERÍA PERSONAL & ARQUITECTURA OPEN
         </div>
 
         <div class="project-card">
@@ -765,6 +787,11 @@
 
     </div>
 
+    <script>
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
 </body>
 
 </html>

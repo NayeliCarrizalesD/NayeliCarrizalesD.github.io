@@ -193,7 +193,27 @@
             margin-bottom: 10px;
         }
         .subitem-icon {
-            font-size: 1.4rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 9px;
+            background: rgba(255, 0, 127, 0.12);
+            border: 1px solid rgba(255, 0, 127, 0.3);
+            color: var(--neon-pink);
+            flex-shrink: 0;
+            transition: all 0.25s ease;
+        }
+        .card-subitem:hover .subitem-icon {
+            transform: scale(1.08);
+            border-color: var(--neon-pink);
+            box-shadow: 0 0 12px rgba(255, 0, 127, 0.35);
+        }
+        .subitem-icon svg {
+            width: 18px;
+            height: 18px;
+            stroke-width: 2px;
         }
         .subitem-title {
             font-weight: 700;
@@ -250,15 +270,26 @@
             margin-bottom: 16px;
         }
         .edu-icon-badge {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
             background: rgba(255, 122, 0, 0.15);
-            border: 1px solid rgba(255, 122, 0, 0.35);
+            border: 1px solid rgba(255, 122, 0, 0.4);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            color: var(--neon-orange);
+            box-shadow: 0 0 20px rgba(255, 122, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        .edu-card:hover .edu-icon-badge {
+            transform: scale(1.08) rotate(-4deg);
+            box-shadow: 0 0 30px rgba(255, 122, 0, 0.45);
+        }
+        .edu-icon-badge svg {
+            width: 26px;
+            height: 26px;
+            stroke-width: 2px;
         }
         .edu-period-badge {
             font-size: 0.8rem;
@@ -278,6 +309,22 @@
             color: var(--neon-orange);
             margin-bottom: 12px;
         }
+        .trayectoria-nav-pill svg {
+            width: 16px;
+            height: 16px;
+            stroke-width: 2px;
+        }
+        .company-period {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .company-period svg {
+            width: 15px;
+            height: 15px;
+            stroke-width: 2px;
+            color: var(--neon-pink);
+        }
         .edu-honors-pill {
             display: inline-flex;
             align-items: center;
@@ -290,6 +337,12 @@
             font-size: 0.8rem;
             font-weight: 700;
             margin-bottom: 14px;
+        }
+        .edu-honors-pill svg {
+            width: 14px;
+            height: 14px;
+            stroke-width: 2.2px;
+            flex-shrink: 0;
         }
         .edu-desc-text {
             font-size: 0.92rem;
@@ -311,6 +364,11 @@
             font-size: 0.95rem;
             transition: all 0.3s ease;
             margin-top: 40px;
+        }
+        .btn-back-home svg {
+            width: 18px;
+            height: 18px;
+            stroke-width: 2px;
         }
         .btn-back-home:hover {
             background: rgba(255, 0, 127, 0.2);
@@ -379,10 +437,13 @@
 
             <div class="nav-controls">
                 <button id="langToggle" class="btn-lang-toggle" title="Cambiar idioma / Toggle Language">
-                    🌐 ES | EN
+                    <i data-lucide="globe"></i>
+                    <span>ES | EN</span>
                 </button>
-                <a href="CV_Nayeli_Carrizales.html" target="_blank" class="btn-nav-cv" data-es="📄 CV Español" data-en="📄 Resume ES">
-                    📄 CV Español
+                <a href="CV_Nayeli_Carrizales.html" target="_blank" class="btn-nav-cv">
+                    <i data-lucide="file-text"></i>
+                    <span class="nav-cv-text-long" data-es="CV Español" data-en="Resume ES">CV Español</span>
+                    <span class="nav-cv-text-short" data-es="CV" data-en="CV">CV</span>
                 </a>
                 <button class="mobile-toggle" aria-label="Abrir Menú">
                     <i data-lucide="menu"></i>
@@ -409,15 +470,15 @@
 
             <div class="trayectoria-nav-pills">
                 <a href="#experiencia" class="trayectoria-nav-pill active">
-                    <span>💼</span>
+                    <i data-lucide="briefcase"></i>
                     <span data-es="Experiencia Profesional (6 Entornos & Empresas)" data-en="Professional Experience (6 Environments & Companies)">Experiencia Profesional (6 Entornos & Empresas)</span>
                 </a>
                 <a href="#educacion" class="trayectoria-nav-pill">
-                    <span>🎓</span>
+                    <i data-lucide="graduation-cap"></i>
                     <span data-es="Educación & Certificaciones" data-en="Education & Certifications">Educación & Certificaciones</span>
                 </a>
                 <a href="index.html" class="trayectoria-nav-pill">
-                    <span>←</span>
+                    <i data-lucide="arrow-left"></i>
                     <span data-es="Volver al Portafolio" data-en="Back to Portfolio">Volver al Portafolio</span>
                 </a>
             </div>
@@ -446,80 +507,81 @@
                                 <span class="company-badge-loc badge-salinas">CDMX · PRODUCCIÓN NACIONAL</span>
                             </div>
                             <div class="company-period">
-                                <span>📅</span>
+                                <i data-lucide="calendar"></i>
                                 <span data-es="Noviembre 2025 – Actualidad" data-en="November 2025 – Present">Noviembre 2025 – Actualidad</span>
                             </div>
                         </div>
 
-                        <div class="role-highlight" data-es="Desarrolladora Web Front-End & Sistemas Corporativos" data-en="Frontend Web Developer & Enterprise Systems">
-                            Desarrolladora Web Front-End & Sistemas Corporativos
+                        <div class="role-highlight" data-es="Consultora Senior Front-End & Sistemas Corporativos" data-en="Senior Front-End Consultant & Enterprise Systems">
+                            Consultora Senior Front-End & Sistemas Corporativos
                         </div>
 
                         <p class="company-desc-text"
-                           data-es="Lideré el diseño técnico, desarrollo e implementación de <strong>5 plataformas corporativas estratégicas</strong> desplegadas con éxito en entornos de producción de alta disponibilidad. Implementé flujos de trabajo de integración y despliegue continuo mediante <strong>GitLab corporativo</strong>, administrando ramas de versión (feature, release, hotfix), revisiones de código y apego a estándares de seguridad institucional."
-                           data-en="Led technical design, development, and delivery of <strong>5 strategic enterprise platforms</strong> shipped to high-availability production. Managed CI/CD release workflows through <strong>enterprise GitLab</strong>, release branch strategies, and rigorous code reviews adhering to security compliance.">
-                            Lideré el diseño técnico, desarrollo e implementación de <strong>5 plataformas corporativas estratégicas</strong> desplegadas con éxito en entornos de producción de alta disponibilidad. Implementé flujos de trabajo de integración y despliegue continuo mediante <strong>GitLab corporativo</strong>, administrando ramas de versión (feature, release, hotfix), revisiones de código y apego a estándares de seguridad institucional.
+                           data-es="Consultoría técnica y liderazgo de desarrollo para <strong>5 plataformas estratégicas desplegadas a producción</strong> en entornos de alta disponibilidad. Coordinación con equipos multidisciplinarios, administración de flujos de despliegue continuo y control de versiones corporativo en <strong>GitLab</strong> (estrategias de ramas feature, release, hotfix y code reviews rigurosos), garantizando arquitecturas resilientes adaptadas a alta concurrencia."
+                           data-en="Technical consulting and front-end engineering leadership across <strong>5 strategic enterprise platforms</strong> shipped to high-availability production. Cross-functional team collaboration, CI/CD release workflow management, and corporate code governance via <strong>GitLab</strong> (feature/release/hotfix branching and rigorous code reviews), ensuring resilient high-concurrency architectures.">
+                            Consultoría técnica y liderazgo de desarrollo para <strong>5 plataformas estratégicas desplegadas a producción</strong> en entornos de alta disponibilidad. Coordinación con equipos multidisciplinarios, administración de flujos de despliegue continuo y control de versiones corporativo en <strong>GitLab</strong> (estrategias de ramas feature, release, hotfix y code reviews rigurosos), garantizando arquitecturas resilientes adaptadas a alta concurrencia.
                         </p>
 
                         <!-- Desglose de los 5 Sistemas Corporativos -->
                         <div class="card-subgrid">
                             <div class="card-subitem">
                                 <div class="subitem-icon-title">
-                                    <span class="subitem-icon">📱</span>
-                                    <span class="subitem-title" data-es="1. Registro y Onboarding Móvil" data-en="1. Mobile Onboarding & Registration">1. Registro y Onboarding Móvil</span>
+                                    <span class="subitem-icon"><i data-lucide="smartphone"></i></span>
+                                    <span class="subitem-title" data-es="1. Registro de Colaboradores & Dinámica Móvil" data-en="1. Employee Registration & Mobile Dynamics Platform">1. Registro de Colaboradores & Dinámica Móvil</span>
                                 </div>
                                 <div class="subitem-desc"
-                                     data-es="Sistema de onboarding institucional con cobertura nacional para colaboradores y usuarios móviles. Diseñado en React 19 con arquitectura Mobile-First, validación reactiva de formularios y absorción de picos de carga."
-                                     data-en="Institutional onboarding system deployed nationwide for enterprise personnel and mobile users. Built with React 19, Mobile-First design, and robust reactive state validation.">
-                                    Sistema de onboarding institucional con cobertura nacional para colaboradores y usuarios móviles. Diseñado en React 19 con arquitectura Mobile-First, validación reactiva de formularios y absorción de picos de carga.
+                                     data-es="Plataforma en React 19 y Vite para el registro ágil de más de 7,000 colaboradores y participación en trivias corporativas. Validaciones reactivas de datos de empleado y panel administrativo con reportería general y ranking Top 10."
+                                     data-en="React 19 & Vite mobile platform serving 7,000+ employees for registration and interactive corporate trivias. Features reactive data validation and an admin portal for report downloads and Top 10 rankings.">
+                                    Plataforma en React 19 y Vite para el registro ágil de más de 7,000 colaboradores y participación en trivias corporativas. Validaciones reactivas de datos de empleado y panel administrativo con reportería general y ranking Top 10.
                                 </div>
                                 <div class="subitem-tags">
                                     <span class="subitem-tag">React 19</span>
                                     <span class="subitem-tag">Vite</span>
                                     <span class="subitem-tag">Mobile First</span>
-                                    <span class="subitem-tag">Escala Nacional</span>
+                                    <span class="subitem-tag">7K+ Colaboradores</span>
+                                    <span class="subitem-tag">Panel Admin</span>
                                 </div>
                             </div>
 
                             <div class="card-subitem">
                                 <div class="subitem-icon-title">
-                                    <span class="subitem-icon">🎮</span>
-                                    <span class="subitem-title" data-es="2. Gamificación Multi-Servidor" data-en="2. Multi-Server Gamification">2. Gamificación Multi-Servidor</span>
+                                    <span class="subitem-icon"><i data-lucide="gamepad-2"></i></span>
+                                    <span class="subitem-title" data-es="2. Gamificación & Rally Web" data-en="2. Web Gamification & Interactive Rally">2. Gamificación & Rally Web</span>
                                 </div>
                                 <div class="subitem-desc"
-                                     data-es="Dinámicas interactivas y minijuegos web corporativos a 60 FPS. Implementó renderizado de Canvas y animaciones fluidas con Framer Motion, adaptadas modularmente a servidores heterogéneos y contenedores Docker."
-                                     data-en="Interactive corporate gamification dynamics and web minigames running at steady 60 FPS. Implemented Canvas rendering and Framer Motion adapted across diverse servers and Docker.">
-                                    Dinámicas interactivas y minijuegos web corporativos a 60 FPS. Implementó renderizado de Canvas y animaciones fluidas con Framer Motion, adaptadas modularmente a servidores heterogéneos y contenedores Docker.
+                                     data-es="Dinámicas interactivas y minijuegos web corporativos a 60 FPS. Implementó renderizado de Canvas y animaciones fluidas con Framer Motion, adaptadas modularmente a servidores heterogéneos con cobertura para más de 15,000 usuarios concurrentes."
+                                     data-en="Interactive corporate gamification dynamics and web minigames running at steady 60 FPS. Implemented Canvas rendering and Framer Motion adapted across diverse servers, engineered for 15,000+ concurrent users.">
+                                    Dinámicas interactivas y minijuegos web corporativos a 60 FPS. Implementó renderizado de Canvas y animaciones fluidas con Framer Motion, adaptadas modularmente a servidores heterogéneos con cobertura para más de 15,000 usuarios concurrentes.
                                 </div>
                                 <div class="subitem-tags">
                                     <span class="subitem-tag">Framer Motion</span>
                                     <span class="subitem-tag">HTML5 Canvas</span>
-                                    <span class="subitem-tag">Docker</span>
+                                    <span class="subitem-tag">15K+ Usuarios</span>
                                     <span class="subitem-tag">60 FPS</span>
                                 </div>
                             </div>
 
                             <div class="card-subitem">
                                 <div class="subitem-icon-title">
-                                    <span class="subitem-icon">🔍</span>
+                                    <span class="subitem-icon"><i data-lucide="search"></i></span>
                                     <span class="subitem-title" data-es="3. Motor de Búsqueda Reactiva" data-en="3. Reactive Search Engine">3. Motor de Búsqueda Reactiva</span>
                                 </div>
                                 <div class="subitem-desc"
-                                     data-es="Motor de búsqueda y filtrado de alto rendimiento con indexación reactiva en cliente. Desarrollado en React y SCSS modular para permitir navegación instantánea sin latencia de red bajo concurrencia masiva."
-                                     data-en="High-performance search and instant client-side filtering engine with reactive indexing in React and modular SCSS to absorb concurrency spikes with zero noticeable latency.">
-                                    Motor de búsqueda y filtrado de alto rendimiento con indexación reactiva en cliente. Desarrollado en React y SCSS modular para permitir navegación instantánea sin latencia de red bajo concurrencia masiva.
+                                     data-es="Motor de búsqueda y filtrado de alto rendimiento con indexación reactiva en cliente. Desarrollado en React y SCSS modular para permitir navegación instantánea sin latencia de red bajo concurrencia masiva de más de 15,000 usuarios."
+                                     data-en="High-performance search and instant client-side filtering engine with reactive indexing in React and modular SCSS to absorb concurrency spikes of 15,000+ users with zero latency.">
+                                    Motor de búsqueda y filtrado de alto rendimiento con indexación reactiva en cliente. Desarrollado en React y SCSS modular para permitir navegación instantánea sin latencia de red bajo concurrencia masiva de más de 15,000 usuarios.
                                 </div>
                                 <div class="subitem-tags">
                                     <span class="subitem-tag">React</span>
                                     <span class="subitem-tag">SCSS Modular</span>
                                     <span class="subitem-tag">Indexación Cliente</span>
-                                    <span class="subitem-tag">Zero-Lag</span>
+                                    <span class="subitem-tag">15K+ Usuarios</span>
                                 </div>
                             </div>
 
                             <div class="card-subitem">
                                 <div class="subitem-icon-title">
-                                    <span class="subitem-icon">⚽</span>
+                                    <span class="subitem-icon"><i data-lucide="trophy"></i></span>
                                     <span class="subitem-title" data-es="4. Gestión Deportiva & Fixtures" data-en="4. Sports Management & Fixtures">4. Gestión Deportiva & Fixtures</span>
                                 </div>
                                 <div class="subitem-desc"
@@ -537,7 +599,7 @@
 
                             <div class="card-subitem">
                                 <div class="subitem-icon-title">
-                                    <span class="subitem-icon">📊</span>
+                                    <span class="subitem-icon"><i data-lucide="bar-chart-3"></i></span>
                                     <span class="subitem-title" data-es="5. Portal de Bienestar & Analítica" data-en="5. Wellness & Analytics Portal">5. Portal de Bienestar & Analítica</span>
                                 </div>
                                 <div class="subitem-desc"
@@ -564,7 +626,7 @@
                                 <span class="company-badge-loc badge-mgo">GUADALAJARA, JALISCO · HÍBRIDO / REMOTO</span>
                             </div>
                             <div class="company-period">
-                                <span>📅</span>
+                                <i data-lucide="calendar"></i>
                                 <span data-es="Septiembre 2023 – Octubre 2025" data-en="September 2023 – October 2025">Septiembre 2023 – Octubre 2025</span>
                             </div>
                         </div>
@@ -582,7 +644,7 @@
                         <div class="card-subgrid">
                             <div class="card-subitem">
                                 <div class="subitem-icon-title">
-                                    <span class="subitem-icon">⚡</span>
+                                    <span class="subitem-icon"><i data-lucide="zap"></i></span>
                                     <span class="subitem-title" data-es="Capa Frontend Reactiva" data-en="Reactive Frontend Tier">Capa Frontend Reactiva</span>
                                 </div>
                                 <div class="subitem-desc"
@@ -599,7 +661,7 @@
 
                             <div class="card-subitem">
                                 <div class="subitem-icon-title">
-                                    <span class="subitem-icon">🗄️</span>
+                                    <span class="subitem-icon"><i data-lucide="database"></i></span>
                                     <span class="subitem-title" data-es="Capa Backend & Persistencia" data-en="Backend & Data Layer">Capa Backend & Persistencia</span>
                                 </div>
                                 <div class="subitem-desc"
@@ -617,7 +679,7 @@
 
                             <div class="card-subitem">
                                 <div class="subitem-icon-title">
-                                    <span class="subitem-icon">📈</span>
+                                    <span class="subitem-icon"><i data-lucide="trending-up"></i></span>
                                     <span class="subitem-title" data-es="Business Intelligence (Looker)" data-en="Business Intelligence (Looker)">Business Intelligence (Looker)</span>
                                 </div>
                                 <div class="subitem-desc"
@@ -642,7 +704,7 @@
                                 <span class="company-badge-loc badge-eufonia">MÉXICO · REMOTO</span>
                             </div>
                             <div class="company-period">
-                                <span>📅</span>
+                                <i data-lucide="calendar"></i>
                                 <span data-es="Marzo 2024 – Diciembre 2025" data-en="March 2024 – December 2025">Marzo 2024 – Diciembre 2025</span>
                             </div>
                         </div>
@@ -660,7 +722,7 @@
                         <div class="card-subgrid">
                             <div class="card-subitem">
                                 <div class="subitem-icon-title">
-                                    <span class="subitem-icon">🔄</span>
+                                    <span class="subitem-icon"><i data-lucide="refresh-cw"></i></span>
                                     <span class="subitem-title" data-es="Motor de Ingesta Multi-API" data-en="Multi-API Ingestion Engine">Motor de Ingesta Multi-API</span>
                                 </div>
                                 <div class="subitem-desc"
@@ -678,7 +740,7 @@
 
                             <div class="card-subitem">
                                 <div class="subitem-icon-title">
-                                    <span class="subitem-icon">⚙️</span>
+                                    <span class="subitem-icon"><i data-lucide="cpu"></i></span>
                                     <span class="subitem-title" data-es="Motor de Parsing JSONPath" data-en="JSONPath Parsing Engine">Motor de Parsing JSONPath</span>
                                 </div>
                                 <div class="subitem-desc"
@@ -704,7 +766,7 @@
                                 <span class="company-badge-loc badge-salinas">SAN LUIS POTOSÍ · FREELANCE</span>
                             </div>
                             <div class="company-period">
-                                <span>📅</span>
+                                <i data-lucide="calendar"></i>
                                 <span data-es="Septiembre 2022 – Septiembre 2023" data-en="September 2022 – September 2023">Septiembre 2022 – Septiembre 2023</span>
                             </div>
                         </div>
@@ -722,7 +784,7 @@
                         <div class="card-subgrid">
                             <div class="card-subitem">
                                 <div class="subitem-icon-title">
-                                    <span class="subitem-icon">💻</span>
+                                    <span class="subitem-icon"><i data-lucide="layout-grid"></i></span>
                                     <span class="subitem-title" data-es="Control de Honorarios & Tareas" data-en="Fee Tracking & Task Management">Control de Honorarios & Tareas</span>
                                 </div>
                                 <div class="subitem-desc"
@@ -741,7 +803,7 @@
 
                             <div class="card-subitem">
                                 <div class="subitem-icon-title">
-                                    <span class="subitem-icon">🌐</span>
+                                    <span class="subitem-icon"><i data-lucide="network"></i></span>
                                     <span class="subitem-title" data-es="Infraestructura & Redes LAN" data-en="Infrastructure & LAN Networking">Infraestructura & Redes LAN</span>
                                 </div>
                                 <div class="subitem-desc"
@@ -758,7 +820,7 @@
 
                             <div class="card-subitem">
                                 <div class="subitem-icon-title">
-                                    <span class="subitem-icon">🛡️</span>
+                                    <span class="subitem-icon"><i data-lucide="shield-check"></i></span>
                                     <span class="subitem-title" data-es="Copia de Seguridad & Búsqueda" data-en="Cloud Backups & Archival">Copia de Seguridad & Búsqueda</span>
                                 </div>
                                 <div class="subitem-desc"
@@ -784,7 +846,7 @@
                                 <span class="company-badge-loc badge-queretaro">QUERÉTARO · PRESENCIAL</span>
                             </div>
                             <div class="company-period">
-                                <span>📅</span>
+                                <i data-lucide="calendar"></i>
                                 <span data-es="Marzo 2019 – Enero 2022" data-en="March 2019 – January 2022">Marzo 2019 – Enero 2022</span>
                             </div>
                         </div>
@@ -802,7 +864,7 @@
                         <div class="card-subgrid">
                             <div class="card-subitem">
                                 <div class="subitem-icon-title">
-                                    <span class="subitem-icon">🖥️</span>
+                                    <span class="subitem-icon"><i data-lucide="monitor"></i></span>
                                     <span class="subitem-title" data-es="Sistemas a Medida & Maquetación" data-en="Custom Web Engineering">Sistemas a Medida & Maquetación</span>
                                 </div>
                                 <div class="subitem-desc"
@@ -820,7 +882,7 @@
 
                             <div class="card-subitem">
                                 <div class="subitem-icon-title">
-                                    <span class="subitem-icon">🗄️</span>
+                                    <span class="subitem-icon"><i data-lucide="database"></i></span>
                                     <span class="subitem-title" data-es="Modelado Relacional & Endpoints" data-en="Relational Databases & APIs">Modelado Relacional & Endpoints</span>
                                 </div>
                                 <div class="subitem-desc"
@@ -845,7 +907,7 @@
                                 <span class="company-badge-loc badge-odisea">SAN LUIS POTOSÍ</span>
                             </div>
                             <div class="company-period">
-                                <span>📅</span>
+                                <i data-lucide="calendar"></i>
                                 <span data-es="Enero 2017 – Junio 2021" data-en="January 2017 – June 2021">Enero 2017 – Junio 2021</span>
                             </div>
                         </div>
@@ -863,7 +925,7 @@
                         <div class="card-subgrid">
                             <div class="card-subitem">
                                 <div class="subitem-icon-title">
-                                    <span class="subitem-icon">🗣️</span>
+                                    <span class="subitem-icon"><i data-lucide="languages"></i></span>
                                     <span class="subitem-title" data-es="Cátedra de Inglés Técnico & Lógica" data-en="Technical English & Logic Teaching">Cátedra de Inglés Técnico & Lógica</span>
                                 </div>
                                 <div class="subitem-desc"
@@ -881,7 +943,7 @@
 
                             <div class="card-subitem">
                                 <div class="subitem-icon-title">
-                                    <span class="subitem-icon">🚀</span>
+                                    <span class="subitem-icon"><i data-lucide="rocket"></i></span>
                                     <span class="subitem-title" data-es="Coordinación & Frontend (Odisea)" data-en="Web Coordination & Frontend (Odisea)">Coordinación & Frontend (Odisea)</span>
                                 </div>
                                 <div class="subitem-desc"
@@ -925,7 +987,9 @@
                     <div class="edu-card">
                         <div>
                             <div class="edu-header-top">
-                                <div class="edu-icon-badge">🎓</div>
+                                <div class="edu-icon-badge">
+                                    <i data-lucide="graduation-cap"></i>
+                                </div>
                             </div>
                             <h3 class="edu-degree-title" data-es="Ingeniería en Tecnologías de la Información y Comunicaciones" data-en="B.S. in Information & Communications Technology Engineering">
                                 Ingeniería en Tecnologías de la Información y Comunicaciones
@@ -933,7 +997,7 @@
                             <div class="edu-institution">TECNOLÓGICO NACIONAL DE MÉXICO (TecNM)</div>
                             
                             <div class="edu-honors-pill">
-                                <span>⭐</span>
+                                <i data-lucide="award"></i>
                                 <span data-es="Graduada con Mención Honorífica" data-en="Graduated with Honors">Graduada con Mención Honorífica</span>
                             </div>
 
@@ -955,7 +1019,9 @@
                     <div class="edu-card">
                         <div>
                             <div class="edu-header-top">
-                                <div class="edu-icon-badge">💻</div>
+                                <div class="edu-icon-badge">
+                                    <i data-lucide="laptop"></i>
+                                </div>
                             </div>
                             <h3 class="edu-degree-title" data-es="Técnico en Soporte y Mantenimiento de Cómputo" data-en="Technical Degree in Computer Support & Maintenance">
                                 Técnico en Soporte y Mantenimiento de Cómputo
@@ -963,7 +1029,7 @@
                             <div class="edu-institution">DGETI · CBTIS NO. 46 (CD. VALLES)</div>
 
                             <div class="edu-honors-pill" style="border-color: rgba(0, 240, 255, 0.4); background: rgba(0, 240, 255, 0.12); color: #00f0ff;">
-                                <span>🏅</span>
+                                <i data-lucide="check-circle-2"></i>
                                 <span data-es="Excelencia Técnica & Práctica" data-en="Technical Excellence">Excelencia Técnica & Práctica</span>
                             </div>
 
@@ -985,7 +1051,9 @@
                     <div class="edu-card">
                         <div>
                             <div class="edu-header-top">
-                                <div class="edu-icon-badge">☕</div>
+                                <div class="edu-icon-badge">
+                                    <i data-lucide="code-2"></i>
+                                </div>
                                 <span class="edu-period-badge">2024</span>
                             </div>
                             <h3 class="edu-degree-title" data-es="Especialización Front-End & Java (ONE)" data-en="Front-End & Java Specialization (ONE)">
@@ -994,7 +1062,7 @@
                             <div class="edu-institution">ORACLE + ALURA LATAM</div>
 
                             <div class="edu-honors-pill" style="border-color: rgba(255, 0, 127, 0.4); background: rgba(255, 0, 127, 0.12); color: #ff3399;">
-                                <span>📜</span>
+                                <i data-lucide="scroll-text"></i>
                                 <span data-es="Programa de Alto Rendimiento (6 Meses)" data-en="Intensive High-Performance Track">Programa de Alto Rendimiento (6 Meses)</span>
                             </div>
 
@@ -1016,7 +1084,9 @@
                     <div class="edu-card">
                         <div>
                             <div class="edu-header-top">
-                                <div class="edu-icon-badge">☁️</div>
+                                <div class="edu-icon-badge">
+                                    <i data-lucide="cloud"></i>
+                                </div>
                                 <span class="edu-period-badge">2024</span>
                             </div>
                             <h3 class="edu-degree-title" data-es="Google Cloud Computing & Modern AI" data-en="Google Cloud Computing & Modern AI">
@@ -1025,7 +1095,7 @@
                             <div class="edu-institution">SANTANDER OPEN ACADEMY + GOOGLE</div>
 
                             <div class="edu-honors-pill" style="border-color: rgba(50, 205, 50, 0.4); background: rgba(50, 205, 50, 0.12); color: #32cd32;">
-                                <span>☁️</span>
+                                <i data-lucide="shield-check"></i>
                                 <span data-es="Certificación Cloud Oficial" data-en="Official Cloud Credential">Certificación Cloud Oficial</span>
                             </div>
 
@@ -1047,7 +1117,9 @@
                     <div class="edu-card">
                         <div>
                             <div class="edu-header-top">
-                                <div class="edu-icon-badge">🌐</div>
+                                <div class="edu-icon-badge">
+                                    <i data-lucide="globe"></i>
+                                </div>
                                 <span class="edu-period-badge">2024</span>
                             </div>
                             <h3 class="edu-degree-title" data-es="Certificación Internacional de Inglés B2" data-en="EF SET English Certificate — B2 Level">
@@ -1056,7 +1128,7 @@
                             <div class="edu-institution">EF STANDARD ENGLISH TEST (EF SET)</div>
 
                             <div class="edu-honors-pill" style="border-color: rgba(255, 122, 0, 0.4); background: rgba(255, 122, 0, 0.12); color: #ff7a00;">
-                                <span>🗣️</span>
+                                <i data-lucide="message-square-check"></i>
                                 <span data-es="B2 Upper Intermediate (Acreditado)" data-en="B2 Upper Intermediate (Certified)">B2 Upper Intermediate (Acreditado)</span>
                             </div>
 
@@ -1077,7 +1149,9 @@
                     <div class="edu-card">
                         <div>
                             <div class="edu-header-top">
-                                <div class="edu-icon-badge">🔒</div>
+                                <div class="edu-icon-badge">
+                                    <i data-lucide="shield"></i>
+                                </div>
                                 <span class="edu-period-badge">2023 – 2024</span>
                             </div>
                             <h3 class="edu-degree-title" data-es="Desarrollo Web & Fundamentos de Ciberseguridad" data-en="Web Development & Cybersecurity Fundamentals">
@@ -1086,7 +1160,7 @@
                             <div class="edu-institution">GOOGLE ACTÍVATE</div>
 
                             <div class="edu-honors-pill" style="border-color: rgba(255, 0, 127, 0.4); background: rgba(255, 0, 127, 0.12); color: #ff3399;">
-                                <span>🛡️</span>
+                                <i data-lucide="lock"></i>
                                 <span data-es="Seguridad Web & OWASP" data-en="Web Security & OWASP">Seguridad Web & OWASP</span>
                             </div>
 
@@ -1108,7 +1182,7 @@
                 <!-- Botón de retorno al inicio -->
                 <div style="text-align: center; margin-top: 50px;">
                     <a href="index.html" class="btn-back-home">
-                        <span>←</span>
+                        <i data-lucide="arrow-left"></i>
                         <span data-es="Volver al Portafolio Principal" data-en="Back to Main Portfolio">Volver al Portafolio Principal</span>
                     </a>
                 </div>

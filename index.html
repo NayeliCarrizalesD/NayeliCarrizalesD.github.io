@@ -511,10 +511,13 @@
 
             <div class="nav-controls">
                 <button id="langToggle" class="btn-lang-toggle" title="Cambiar idioma / Toggle Language">
-                    🌐 ES | EN
+                    <i data-lucide="globe"></i>
+                    <span>ES | EN</span>
                 </button>
-                <a href="CV_Nayeli_Carrizales.html" target="_blank" class="btn-nav-cv" data-es="📄 CV Español" data-en="📄 Resume ES">
-                    📄 CV Español
+                <a href="CV_Nayeli_Carrizales.html" target="_blank" class="btn-nav-cv">
+                    <i data-lucide="file-text"></i>
+                    <span class="nav-cv-text-long" data-es="CV Español" data-en="Resume ES">CV Español</span>
+                    <span class="nav-cv-text-short" data-es="CV" data-en="CV">CV</span>
                 </a>
                 <button class="mobile-toggle" aria-label="Abrir Menú">
                     <i data-lucide="menu"></i>
@@ -532,9 +535,26 @@
 
         <div class="container hero-container-rel">
             <!-- Main Central Hero Card -->
-                        <!-- Left Side: Vertical Totem of 3 Huasteca Flowers (Flor + Flor + Flor) UNDERNEATH main card -->
-            <!-- Left Side: Vertical Totem of 5 Huasteca Stars (Zig-Zag Constellation) UNDERNEATH main card -->
+                        <!-- Left Side: Vertical Totem of 7 Huasteca Stars + 7 Background Constellation Stars -->
             <div class="hero-left-totem-stack" aria-hidden="true">
+                <!-- Capa de fondo: 7 Estrellas Huastecas mini en zigzag que solo suben y bajan sin rotar -->
+                <div class="totem-bg-stars-constellation">
+                    <div class="totem-bg-star bg-star-1"><svg class="totem-bg-star-svg" viewBox="0 0 33 33"><use href="#florHuastecaRosaSymbol" /></svg></div>
+                    <div class="totem-bg-star bg-star-2"><svg class="totem-bg-star-svg" viewBox="0 0 33 33"><use href="#florHuastecaRosaSymbol" /></svg></div>
+                    <div class="totem-bg-star bg-star-3"><svg class="totem-bg-star-svg" viewBox="0 0 33 33"><use href="#florHuastecaRosaSymbol" /></svg></div>
+                    <div class="totem-bg-star bg-star-4"><svg class="totem-bg-star-svg" viewBox="0 0 33 33"><use href="#florHuastecaRosaSymbol" /></svg></div>
+                    <div class="totem-bg-star bg-star-5"><svg class="totem-bg-star-svg" viewBox="0 0 33 33"><use href="#florHuastecaRosaSymbol" /></svg></div>
+                    <div class="totem-bg-star bg-star-6"><svg class="totem-bg-star-svg" viewBox="0 0 33 33"><use href="#florHuastecaRosaSymbol" /></svg></div>
+                    <div class="totem-bg-star bg-star-7"><svg class="totem-bg-star-svg" viewBox="0 0 33 33"><use href="#florHuastecaRosaSymbol" /></svg></div>
+                </div>
+
+                <!-- 0. Flor Huasteca Pequeña Superior Extrema -->
+                <div class="totem-flower-item totem-star-top" title="Flor Huasteca Superior">
+                    <svg class="totem-flower-svg" viewBox="0 0 33 33">
+                        <use href="#florHuastecaRosaSymbol" />
+                    </svg>
+                </div>
+
                 <!-- 1. Flor Huasteca Superior (Grande) -->
                 <div class="totem-flower-item totem-star-1" title="Flor Huasteca Superior">
                     <svg class="totem-flower-svg" viewBox="0 0 33 33">
@@ -565,6 +585,13 @@
 
                 <!-- 5. Flor Huasteca Inferior (Grande) -->
                 <div class="totem-flower-item totem-star-5" title="Flor Huasteca Inferior">
+                    <svg class="totem-flower-svg" viewBox="0 0 33 33">
+                        <use href="#florHuastecaRosaSymbol" />
+                    </svg>
+                </div>
+
+                <!-- 6. Flor Huasteca Pequeña Inferior Extrema -->
+                <div class="totem-flower-item totem-star-bottom" title="Flor Huasteca Inferior">
                     <svg class="totem-flower-svg" viewBox="0 0 33 33">
                         <use href="#florHuastecaRosaSymbol" />
                     </svg>
@@ -717,32 +744,32 @@
                 </div>
             </div>
 
-            <!-- Right Side: Cascade of 4 Cultural Resource Badges -->
+            <!-- Right Side: Cascade of 4 Cultural Resource Badges (Interactive Anchor Links) -->
             <aside class="hero-right-decor-stack" aria-label="Insignias Culturales Interactivas">
-                <!-- 1. Sagrado Corazón Neón -->
-                <div class="decor-badge-item badge-corazon-sagrado" title="Sagrado Corazón Neón" data-sound="1">
+                <!-- 1. Sagrado Corazón Neón -> Proyectos -->
+                <a href="#projects" class="decor-badge-item badge-corazon-sagrado" title="Ver Proyectos Destacados (Sagrado Corazón Neón)" data-sound="1" aria-label="Ir a Proyectos Destacados">
                     <div class="decor-glass-box">
-                        <img src="assets/card-gemini-sagrado-corazon.png" alt="Sagrado Corazón Neón" class="decor-card-asset" width="126" height="126" loading="eager">
+                        <img src="assets/card-gemini-sagrado-corazon.png" alt="Sagrado Corazón Neón — Ver Proyectos" class="decor-card-asset" width="74" height="74" loading="eager">
                     </div>
-                </div>
-                <!-- 2. Roseta de Cempasúchil Neón -->
-                <div class="decor-badge-item badge-roseta" title="Roseta de Cempasúchil Neón" data-sound="2">
+                </a>
+                <!-- 2. Roseta de Cempasúchil Neón -> Experiencia -->
+                <a href="#experience" class="decor-badge-item badge-roseta" title="Ver Experiencia en Producción Real (Roseta de Cempasúchil)" data-sound="2" aria-label="Ir a Experiencia en Producción Real">
                     <div class="decor-glass-box">
-                        <img src="assets/card-gemini-roseta-cempasuchil.png" alt="Roseta de Cempasúchil Neón" class="decor-card-asset" width="126" height="126" loading="eager">
+                        <img src="assets/card-gemini-roseta-cempasuchil.png" alt="Roseta de Cempasúchil Neón — Ver Experiencia" class="decor-card-asset" width="74" height="74" loading="eager">
                     </div>
-                </div>
-                <!-- 3. Cruz de Cuatro Rumbos -->
-                <div class="decor-badge-item badge-cruz-rumbos" title="Cruz Huasteca de Cuatro Rumbos" data-sound="3">
+                </a>
+                <!-- 3. Cruz de Cuatro Rumbos -> Habilidades & Tecnologías -->
+                <a href="#skills" class="decor-badge-item badge-cruz-rumbos" title="Ver Habilidades & Tecnologías (Cruz Huasteca de Cuatro Rumbos)" data-sound="3" aria-label="Ir a Habilidades y Tecnologías">
                     <div class="decor-glass-box">
-                        <img src="assets/card-gemini-diamante-huasteco.png" alt="Cruz de Cuatro Rumbos" class="decor-card-asset" width="126" height="126" loading="eager">
+                        <img src="assets/card-gemini-diamante-huasteco.png" alt="Cruz de Cuatro Rumbos — Ver Habilidades" class="decor-card-asset" width="74" height="74" loading="eager">
                     </div>
-                </div>
-                <!-- 4. Corona Floral Neón -->
-                <div class="decor-badge-item badge-corona" title="Corona Floral Neón" data-sound="4">
+                </a>
+                <!-- 4. Corona Floral Neón -> Contacto -->
+                <a href="#contact" class="decor-badge-item badge-corona" title="Ir a Contacto (Corona Floral Neón)" data-sound="4" aria-label="Ir a Contacto">
                     <div class="decor-glass-box">
-                        <img src="assets/card-gemini-corona-floral.png" alt="Corona Floral Neón" class="decor-card-asset" width="126" height="126" loading="eager">
+                        <img src="assets/card-gemini-corona-floral.png" alt="Corona Floral Neón — Ir a Contacto" class="decor-card-asset" width="74" height="74" loading="eager">
                     </div>
-                </div>
+                </a>
             </aside>
 
             
@@ -769,7 +796,7 @@
 
                     <div class="about-metrics-grid">
                         <div class="metric-box">
-                            <div class="metric-num">3+</div>
+                            <div class="metric-num" id="yearsExperienceNum" data-start-year="2020">6+</div>
                             <div class="metric-label" data-es="Años de Experiencia" data-en="Years Experience">Años de Experiencia</div>
                         </div>
                         <div class="metric-box">
@@ -810,49 +837,62 @@
                         </p>
                     </div>
 
-                    <!-- Cultural Identity Emblems Block (Underneath Mission) -->
+                    <!-- Cultural Identity Emblems Block (HUD Frame with Floating Switch Badge) -->
                     <div class="emblem-interactive-subcard">
-                        <div class="emblem-stage-layout">
-                            <div class="emblem-panels-container">
-                                <!-- Panel 1: Flor Huasteca Tradicional -->
-                                <div class="emblem-panel" id="emblemPanelFlor">
-                                    <div class="flor-huasteca-canvas" role="img" aria-label="Flor Huasteca Auténtica Tradicional">
+                        <!-- Floating Switch Badge (Styled like Avatar Huasteca Badge on outer card contour) -->
+                        <div class="hud-switch-badge" role="tablist" aria-label="Selector de emblema">
+                            <button type="button" class="emblem-pill-btn hud-switch-btn active" data-emblem="flor" id="tabFlorBtn" data-es="<span class='pill-dot'></span> Flor Tének" data-en="<span class='pill-dot'></span> Tének Flower">
+                                <span class="pill-dot"></span> Flor Tének
+                            </button>
+                            <button type="button" class="emblem-pill-btn hud-switch-btn" data-emblem="quezquem" id="tabQuezquemBtn" data-es="<span class='pill-dot'></span> Quezquém" data-en="<span class='pill-dot'></span> Quezquém">
+                                <span class="pill-dot"></span> Quezquém
+                            </button>
+                        </div>
+
+                        <!-- Center Canvas Stage with Reticles -->
+                        <div class="emblem-hud-stage">
+                            <div class="emblem-canvases-container">
+                                <div class="emblem-reticle reticle-tl"></div>
+                                <div class="emblem-reticle reticle-tr"></div>
+                                <div class="emblem-reticle reticle-bl"></div>
+                                <div class="emblem-reticle reticle-br"></div>
+
+                                <!-- Canvas 1: Flor Tének -->
+                                <div class="emblem-canvas-item active" id="emblemCanvasFlor">
+                                    <div class="flor-huasteca-canvas" role="img" aria-label="Flor Tének Auténtica Tradicional">
                                         <svg class="flor-huasteca-svg" viewBox="0 0 33 33">
                                             <use href="#florHuastecaSymbol" />
                                         </svg>
                                     </div>
-                                    <div class="emblem-caption" data-es="FLOR HUASTECA • TRADICIONAL" data-en="HUASTECA STAR • TRADITIONAL">
-                                        FLOR HUASTECA • TRADICIONAL
-                                    </div>
-                                    <div class="emblem-subcaption" data-es="Bordado Tradicional Tének Multicolor (SVG Puro)" data-en="Multicolor Tének Traditional Embroidery (Pure SVG)">
-                                        Bordado Tradicional Tének Multicolor (SVG Puro)
-                                    </div>
                                 </div>
 
-                                <!-- Panel 2: Quezquém Huasteco -->
-                                <div class="emblem-panel" id="emblemPanelQuezquem" style="display: none;">
+                                <!-- Canvas 2: Quezquém Huasteco -->
+                                <div class="emblem-canvas-item" id="emblemCanvasQuezquem" style="display: none;">
                                     <div class="quezquem-canvas" role="img" aria-label="Quezquém Huasteco Exclusivo">
                                         <svg class="quezquem-vector-svg" viewBox="0 0 320 280">
                                             <use href="#huastecoQuezquemSymbol" />
                                         </svg>
                                     </div>
-                                    <div class="emblem-caption" data-es="QUEZQUÉM HUASTECO • IDENTIDAD" data-en="HUASTECO QUEZQUÉM • IDENTITY">
-                                        QUEZQUÉM HUASTECO • IDENTIDAD
-                                    </div>
-                                    <div class="emblem-subcaption" data-es="Bordado Tradicional Tének en Punto de Cruz Neón" data-en="Traditional Tének Cross-Stitch Neon Embroidery">
-                                        Bordado Tradicional Tének en Punto de Cruz Neón
-                                    </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="emblem-nav-pills-wrap">
-                                <div class="emblem-nav-pills" role="tablist" aria-label="Selector de emblema">
-                                    <button type="button" class="emblem-pill-btn active" data-emblem="flor" id="tabFlorBtn" data-es="<span class='pill-dot'></span> Flor Tradicional" data-en="<span class='pill-dot'></span> Traditional Star">
-                                        <span class="pill-dot"></span> Flor Tradicional
-                                    </button>
-                                    <button type="button" class="emblem-pill-btn" data-emblem="quezquem" id="tabQuezquemBtn" data-es="<span class='pill-dot'></span> Quezquém" data-en="<span class='pill-dot'></span> Quezquém">
-                                        <span class="pill-dot"></span> Quezquém
-                                    </button>
+                        <!-- Bottom Explanation: Centered below Canvas -->
+                        <div class="emblem-captions-container">
+                            <div class="emblem-caption-item" id="emblemCaptionFlor">
+                                <div class="emblem-caption" data-es="FLOR TÉNEK • HUASTECA" data-en="TÉNEK FLOWER • HUASTECA">
+                                    FLOR TÉNEK • HUASTECA
+                                </div>
+                                <div class="emblem-subcaption" data-es="Bordado Tradicional Tének Multicolor (SVG Puro)" data-en="Multicolor Tének Traditional Embroidery (Pure SVG)">
+                                    Bordado Tradicional Tének Multicolor (SVG Puro)
+                                </div>
+                            </div>
+                            <div class="emblem-caption-item" id="emblemCaptionQuezquem" style="display: none;">
+                                <div class="emblem-caption" data-es="QUEZQUÉM HUASTECO • IDENTIDAD" data-en="HUASTECO QUEZQUÉM • IDENTITY">
+                                    QUEZQUÉM HUASTECO • IDENTIDAD
+                                </div>
+                                <div class="emblem-subcaption" data-es="Bordado Tradicional Tének en Punto de Cruz Neón" data-en="Traditional Tének Cross-Stitch Neon Embroidery">
+                                    Bordado Tradicional Tének en Punto de Cruz Neón
                                 </div>
                             </div>
                         </div>
@@ -874,9 +914,9 @@
                     <span class="neon-glow" data-es="Producción Real" data-en="Real Production">Producción Real</span>
                 </h2>
                 <p class="section-desc" 
-                   data-es="Liderazgo técnico en sistemas corporativos de alta concurrencia y alcance nacional."
-                   data-en="Technical leadership in high-concurrency enterprise systems deployed nationwide.">
-                    Liderazgo técnico en sistemas corporativos de alta concurrencia y alcance nacional.
+                   data-es="Arquitectura front-end, gobernanza de código y entrega de sistemas corporativos de alta concurrencia."
+                   data-en="Front-end architecture, code governance, and delivery of high-concurrency enterprise systems.">
+                    Arquitectura front-end, gobernanza de código y entrega de sistemas corporativos de alta concurrencia.
                 </p>
             </div>
 
@@ -892,58 +932,72 @@
                     </div>
                 </div>
 
-                <div class="exp-role-title" data-es="Desarrolladora Web Front-End & Sistemas Corporativos" data-en="Frontend Web Developer & Enterprise Systems">
-                    Desarrolladora Web Front-End & Sistemas Corporativos
+                <div class="exp-role-title" data-es="Consultora Senior Front-End & Sistemas Corporativos" data-en="Senior Front-End Consultant & Enterprise Systems">
+                    Consultora Senior Front-End & Sistemas Corporativos
                 </div>
 
                 <p class="exp-summary-text" 
-                   data-es="Lideré y entregué exitosamente <strong>5 plataformas estratégicas a producción</strong>, administrando ramas de despliegue, control de versiones corporativo y code reviews mediante <strong>GitLab</strong>. Arquitecturas adaptadas a alta concurrencia y servidores heterogéneos."
-                   data-en="Spearheaded and successfully shipped <strong>5 strategic production platforms</strong>, managing releases, branch workflows, and code reviews via <strong>enterprise GitLab</strong> across heterogeneous server environments.">
-                    Lideré y entregué exitosamente <strong>5 plataformas estratégicas a producción</strong>, administrando ramas de despliegue, control de versiones corporativo y code reviews mediante <strong>GitLab</strong>. Arquitecturas adaptadas a alta concurrencia y servidores heterogéneos.
+                   data-es="Consultoría técnica y liderazgo de desarrollo para <strong>5 plataformas estratégicas desplegadas a producción</strong>. Coordinación con equipos multidisciplinarios, administración de flujos de despliegue y control de versiones corporativo en <strong>GitLab</strong>, garantizando arquitecturas resilientes preparadas para alta concurrencia y entornos heterogéneos."
+                   data-en="Technical consulting and front-end leadership across <strong>5 strategic enterprise platforms delivered to production</strong>. Cross-functional team collaboration, deployment workflow management, and corporate code governance via <strong>GitLab</strong>, delivering resilient architectures engineered for massive concurrency.">
+                    Consultoría técnica y liderazgo de desarrollo para <strong>5 plataformas estratégicas desplegadas a producción</strong>. Coordinación con equipos multidisciplinarios, administración de flujos de despliegue y control de versiones corporativo en <strong>GitLab</strong>, garantizando arquitecturas resilientes preparadas para alta concurrencia y entornos heterogéneos.
                 </p>
 
                 <!-- Top 3 Signature Platform Cards in Single Balanced Row -->
                 <div class="gs-systems-grid">
                     <div class="gs-system-item">
-                        <div class="gs-system-icon">📱</div>
-                        <div class="gs-system-name" data-es="Registro y Onboarding Móvil" data-en="Corporate Mobile Onboarding">Registro y Onboarding Móvil</div>
-                        <div class="gs-system-desc" data-es="Sistema móvil corporativo con cobertura nacional en React 19 con enfoque Mobile-First y validaciones reactivas." data-en="Enterprise mobile onboarding deployed nationwide built with React 19, Mobile-First UX, and reactive validation.">Sistema móvil corporativo con cobertura nacional en React 19 con enfoque Mobile-First y validaciones reactivas.</div>
-                        <span class="gs-system-tag">React 19 · Mobile First</span>
+                        <div class="gs-system-icon">
+                            <i data-lucide="smartphone"></i>
+                        </div>
+                        <div class="gs-system-name" data-es="Registro de Colaboradores & Trivia" data-en="Employee Registration & Trivia">Registro de Colaboradores & Trivia</div>
+                        <div class="gs-system-desc" data-es="Sistema móvil en React 19 para más de 7,000 colaboradores con registro de empleados, trivia interactiva y panel administrativo con reportería." data-en="Mobile system built in React 19 serving 7,000+ employees with user registration, interactive trivia, and admin reporting panel.">Sistema móvil en React 19 para más de 7,000 colaboradores con registro de empleados, trivia interactiva y panel administrativo con reportería.</div>
+                        <span class="gs-system-tag">React 19 · 7K+ Empleados</span>
                     </div>
 
                     <div class="gs-system-item">
-                        <div class="gs-system-icon">🎮</div>
-                        <div class="gs-system-name" data-es="Gamificación Multi-Servidor" data-en="Multi-Server Gamification">Gamificación Multi-Servidor</div>
-                        <div class="gs-system-desc" data-es="Dinámicas interactivas y juegos web (60 FPS) adaptados a infraestructuras heterogéneas y Docker." data-en="Interactive minigames & gamified dynamics (60 FPS) modularly adapted across diverse servers and Docker.">Dinámicas interactivas y juegos web (60 FPS) adaptados a infraestructuras heterogéneas y Docker.</div>
-                        <span class="gs-system-tag">Framer Motion · Canvas</span>
+                        <div class="gs-system-icon">
+                            <i data-lucide="gamepad-2"></i>
+                        </div>
+                        <div class="gs-system-name" data-es="Gamificación & Rally Web" data-en="Web Gamification & Interactive Rally">Gamificación & Rally Web</div>
+                        <div class="gs-system-desc" data-es="Dinámicas interactivas y juegos web a 60 FPS con Canvas y Framer Motion, con cobertura para más de 15,000 usuarios concurrentes." data-en="Interactive minigames & gamified dynamics at 60 FPS with Canvas & Framer Motion, engineered for 15,000+ concurrent corporate users.">Dinámicas interactivas y juegos web a 60 FPS con Canvas y Framer Motion, con cobertura para más de 15,000 usuarios concurrentes.</div>
+                        <span class="gs-system-tag">Framer Motion · 15K+ Usuarios</span>
                     </div>
 
                     <div class="gs-system-item">
-                        <div class="gs-system-icon">🔍</div>
+                        <div class="gs-system-icon">
+                            <i data-lucide="search"></i>
+                        </div>
                         <div class="gs-system-name" data-es="Motor de Búsqueda Reactiva" data-en="Reactive Search Engine">Motor de Búsqueda Reactiva</div>
-                        <div class="gs-system-desc" data-es="Motor reactivo en React y SCSS con filtrado instantáneo en cliente para absorber picos masivos de concurrencia." data-en="Reactive search and instant client-side filtering engine engineered to absorb massive concurrency spikes.">Motor reactivo en React y SCSS con filtrado instantáneo en cliente para absorber picos masivos de concurrencia.</div>
-                        <span class="gs-system-tag">React · Indexación</span>
+                        <div class="gs-system-desc" data-es="Motor reactivo en React y SCSS con filtrado instantáneo en cliente, diseñado para absorber picos de más de 15,000 usuarios sin latencia." data-en="Reactive search and instant client-side filtering engine in React and SCSS engineered to absorb 15,000+ user traffic spikes with zero latency.">Motor reactivo en React y SCSS con filtrado instantáneo en cliente, diseñado para absorber picos de más de 15,000 usuarios sin latencia.</div>
+                        <span class="gs-system-tag">React · 15K+ Usuarios</span>
                     </div>
                 </div>
 
                 <!-- Dual Action Hub (Experiencia Completa & Educación) -->
                 <div class="exp-actions-dual">
                     <a href="trayectoria.html#experiencia" class="btn-exp-action btn-exp-experience">
-                        <div class="btn-action-icon">💼</div>
+                        <div class="btn-action-icon">
+                            <i data-lucide="briefcase"></i>
+                        </div>
                         <div class="btn-action-text">
                             <span class="btn-action-main" data-es="Ver Experiencia Completa" data-en="View Full Career & Experience">Ver Experiencia Completa</span>
                             <span class="btn-action-sub" data-es="Grupo Salinas · MGO Industrial · Eufonia · Freelance" data-en="Grupo Salinas · MGO Industrial · Eufonia · Freelance">Grupo Salinas · MGO Industrial · Eufonia · Freelance</span>
                         </div>
-                        <div class="btn-action-arrow">↗</div>
+                        <div class="btn-action-arrow">
+                            <i data-lucide="arrow-up-right"></i>
+                        </div>
                     </a>
 
                     <a href="trayectoria.html#educacion" class="btn-exp-action btn-exp-education">
-                        <div class="btn-action-icon">🎓</div>
+                        <div class="btn-action-icon">
+                            <i data-lucide="graduation-cap"></i>
+                        </div>
                         <div class="btn-action-text">
                             <span class="btn-action-main" data-es="Ver Educación & Certificaciones" data-en="View Education & Certifications">Ver Educación & Certificaciones</span>
                             <span class="btn-action-sub" data-es="Título con Honores · TecNM · Oracle ONE · Google Actívate" data-en="Honors Degree · TecNM · Oracle ONE · Google Actívate">Título con Honores · TecNM · Oracle ONE · Google Actívate</span>
                         </div>
-                        <div class="btn-action-arrow">↗</div>
+                        <div class="btn-action-arrow">
+                            <i data-lucide="arrow-up-right"></i>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -957,15 +1011,15 @@
         
         <div class="container">
             <div class="section-header">
-                <div class="section-label" data-es="[ SELECCIÓN DESTACADA ]" data-en="[ FEATURED SHOWCASE ]">[ SELECCIÓN DESTACADA ]</div>
+                <div class="section-label" data-es="[ ARQUITECTURA & DESPLIEGUES ]" data-en="[ ARCHITECTURE & DEPLOYMENTS ]">[ ARQUITECTURA & DESPLIEGUES ]</div>
                 <h2 class="section-title">
                     <span data-es="Proyectos" data-en="Featured">Proyectos</span> 
-                    <span class="neon-glow" data-es="Principales" data-en="Projects">Principales</span>
+                    <span class="neon-glow" data-es="Destacados" data-en="Projects">Destacados</span>
                 </h2>
                 <p class="section-desc" 
-                   data-es="Selección estratégica de 6 proyectos de alto impacto técnico: arquitectura corporativa de escala nacional (Grupo Salinas), pipelines cloud multi-API, SaaS full-stack moderno y motores de alta concurrencia."
-                   data-en="Strategic selection of 6 high-impact engineering projects: national-scale corporate architecture (Grupo Salinas), multi-API cloud pipelines, modern full-stack SaaS, and high-concurrency engines.">
-                    Selección estratégica de 6 proyectos de alto impacto técnico: arquitectura corporativa de escala nacional (Grupo Salinas), pipelines cloud multi-API, SaaS full-stack moderno y motores de alta concurrencia.
+                   data-es="Soluciones web de grado empresarial construidas para miles de usuarios: sistemas corporativos de alcance nacional en Grupo Salinas, pipelines de datos multi-API, interfaces reactivas para más de 15,000 colaboradores y arquitectura full-stack de alto rendimiento."
+                   data-en="Enterprise-grade web solutions built for thousands of active users: nationwide corporate systems at Grupo Salinas, multi-API data pipelines, reactive interfaces for 15,000+ personnel, and high-performance full-stack architecture.">
+                    Soluciones web de grado empresarial construidas para miles de usuarios: sistemas corporativos de alcance nacional en Grupo Salinas, pipelines de datos multi-API, interfaces reactivas para más de 15,000 colaboradores y arquitectura full-stack de alto rendimiento.
                 </p>
             </div>
 
@@ -1049,14 +1103,14 @@
                     <!-- Bottom Content Area (Reference Card Style) -->
                     <div class="project-body">
                         <div class="project-header-info">
-                            <h3 class="project-card-title" data-es="Sistema Corporativo de Registro y Onboarding Móvil" data-en="Corporate Mobile Onboarding & Registration Platform">
-                                Sistema Corporativo de Registro y Onboarding Móvil
+                            <h3 class="project-card-title" data-es="Plataforma de Registro de Colaboradores & Dinámica Móvil" data-en="Employee Registration & Mobile Dynamics Platform">
+                                Plataforma de Registro de Colaboradores & Dinámica Móvil
                             </h3>
-                            <div class="project-card-subtitle" data-es="Arquitectura Frontend Móvil · Cobertura Nacional" data-en="Enterprise Mobile Frontend · Nationwide Deployment">
-                                Arquitectura Frontend Móvil · Cobertura Nacional
+                            <div class="project-card-subtitle" data-es="Arquitectura Mobile-First · 7K+ Colaboradores · Panel Admin" data-en="Mobile-First Architecture · 7K+ Employees · Admin Portal">
+                                Arquitectura Mobile-First · 7K+ Colaboradores · Panel Admin
                             </div>
-                            <p class="project-card-desc" data-es="Arquitectura frontend corporativa lanzada para dispositivos móviles a escala nacional para colaboradores de corporativo y red geográfica en Grupo Salinas." data-en="Enterprise mobile onboarding platform deployed nationwide for corporate and field personnel across Mexico at Grupo Salinas.">
-                                Arquitectura frontend corporativa lanzada para dispositivos móviles a escala nacional para colaboradores de corporativo y red geográfica en Grupo Salinas.
+                            <p class="project-card-desc" data-es="Plataforma mobile-first desarrollada en React 19 y Vite para el registro ágil de más de 7,000 colaboradores a nivel nacional y participación en trivias corporativas. Incluye validaciones reactivas de datos de empleado y un panel administrativo para la gestión de resultados y descarga de reportes operativos y ranking Top 10." data-en="Mobile-first platform engineered with React 19 & Vite serving over 7,000 nationwide employees for rapid registration and interactive corporate trivias. Features client-side reactive validations and a dedicated administrative dashboard for analytics and automated report exports, including Top 10 rankings.">
+                                Plataforma mobile-first desarrollada en React 19 y Vite para el registro ágil de más de 7,000 colaboradores a nivel nacional y participación en trivias corporativas. Incluye validaciones reactivas de datos de empleado y un panel administrativo para la gestión de resultados y descarga de reportes operativos y ranking Top 10.
                             </p>
                         </div>
 
@@ -1066,8 +1120,9 @@
                                 <span class="tech-tag-pill">React 19</span>
                                 <span class="tech-tag-pill">Vite</span>
                                 <span class="tech-tag-pill">Mobile First</span>
+                                <span class="tech-tag-pill">7K+ Colaboradores</span>
+                                <span class="tech-tag-pill">Panel Admin & Reportes</span>
                                 <span class="tech-tag-pill">GitLab</span>
-                                <span class="tech-tag-pill">Alta Concurrencia</span>
                             </div>
                             <button type="button" class="project-circle-btn" aria-label="Detalles de Arquitectura & Código" title="Detalles de Arquitectura & Código">
                                 <i data-lucide="arrow-up-right"></i>
@@ -1756,9 +1811,9 @@
                         <textarea id="contactMsg" class="form-textarea" placeholder="Cuéntame sobre la vacante o proyecto..." required></textarea>
                     </div>
 
-                    <button type="submit" class="btn-submit-contact" data-es="📩 Enviar Mensaje" data-en="📩 Send Message">
+                    <button type="submit" class="btn-submit-contact">
                         <i data-lucide="send"></i>
-                        <span>Enviar Mensaje</span>
+                        <span data-es="Enviar Mensaje" data-en="Send Message">Enviar Mensaje</span>
                     </button>
                 </form>
             </div>
@@ -1771,8 +1826,8 @@
     <footer class="footer-cyber">
         <div class="container footer-content">
             <div class="footer-logo">
-                <svg class="huasteca-mini-flower" viewBox="0 0 33 33" aria-hidden="true">
-                    <use href="#florHuastecaSymbol" />
+                <svg class="huasteca-mini-flower" viewBox="0 0 33 33" aria-hidden="true" title="Flor Huasteca Rosa">
+                    <use href="#florHuastecaRosaSymbol" />
                 </svg>
                 <svg class="huasteca-mini-quezquem-svg" viewBox="0 0 320 280" aria-hidden="true" title="Quezquém Huasteco">
                     <use href="#huastecoQuezquemSymbol" />
@@ -1781,7 +1836,9 @@
             </div>
 
             <div class="footer-huasteco-badge" title="Trayectoria: Ciudad Valles ➔ Querétaro ➔ Guadalajara ➔ CDMX">
-                <span>✨ CD. VALLES ➔ QRO ➔ GDL ➔ CDMX ✨</span>
+                <i data-lucide="sparkles" style="width: 13px; height: 13px;"></i>
+                <span>CD. VALLES ➔ QRO ➔ GDL ➔ CDMX</span>
+                <i data-lucide="sparkles" style="width: 13px; height: 13px;"></i>
             </div>
 
             <p class="footer-copy" data-es="Diseñado con orgullo huasteco e ingeniería cloud moderna © 2026. Todos los derechos reservados." data-en="Crafted with Huastecan pride and modern cloud engineering © 2026. All rights reserved.">
